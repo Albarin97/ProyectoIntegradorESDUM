@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeCrochet</title>
-    <h1>Albar De La Torre</h1>
+    <title>nav-bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
-    <p>Cambios Brand</p>
-    <h1>Gonzalo_Andrei</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" >
+        <div class="container-fluid">
+            
+            <!-- <a class="navbar-brand" href="#">Barra de navegación<nav></nav></a> -->
+            <!-- imagen logo -->
+
+
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse align-items-center gap-3" id="navbarNav">
+                <!-- Input de busqueda en el catalogo -->
+                <form class="form-inline my-2 my-lg-0 d-flex flex-column flex-lg-row busqueda">
+                    <button class="btn btn-outline-danger my-2 my-sm-0 d-flex justify-content-center border-0 rounded-circle" type="submit">
+                        <i class="material-symbols-outlined ">Search</i>
+                    </button>
+                    <input class="form-control mr-sm-2 border-0 rounded-circle pl-0 pr-0" type="search" placeholder="Buscar" aria-label="Search">
+                </form>
+                <!-- Logo -->
+                <div class="container-fluid d-flex justify-content-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="./resources/logo/logo.png" width="270" height="100" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                                <i class="material-symbols-outlined">Favorite</i>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                            <i class="material-symbols-outlined">Person</i>
+                        </a>
+                    </div>
+                    <li class="nav-item">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                                <i class="material-symbols-outlined">Shopping_Cart</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-itemz">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                                    
+                                <i class="material-symbols-outlined">Menu</i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-nav"></div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

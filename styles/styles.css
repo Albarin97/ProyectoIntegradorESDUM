@@ -1,0 +1,11 @@
+.material-symbols-outlined{
+    color: #fda2ef;
+}
+.busqueda{
+    border: #fda2ef;
+    border-radius: 20px;
+    border-style: solid;
+}
+.btn:hover{
+    color: #4964f3;
+}
