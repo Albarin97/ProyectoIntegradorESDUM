@@ -1,0 +1,27 @@
+
+*{
+    font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+    background-color: #4964F3;
+    color: white;
+}
+
+.footer-content {
+    color: black;
+}
+
+.copy-footer{
+    color: white;
+}
+
+.contact-us{
+    color: palevioletred;
+}
+
+.redes {
+    color: #4964F3;
+    text-decoration: none;
+}
