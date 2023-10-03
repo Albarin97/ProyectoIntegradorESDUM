@@ -37,3 +37,13 @@
     color: #4964F3;
     text-decoration: none;
 }
+
+.navbar-item, .main-item {
+    width: 100% !important;
+    height: 300px;
+}
+
+.footer-item{
+    width: 100% !important;
+    height: 700px !important;
+}
