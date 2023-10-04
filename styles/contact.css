@@ -1,0 +1,12 @@
+.cardForm{
+    border: 2px solid #4964F3;
+    border-radius: 15px;
+    padding: 15px;
+    justify-items: center;
+    font-family:'Century Gothic';
+    width: 50%;
+}
+
+.contact{
+    color:  #EF5268;
+}
