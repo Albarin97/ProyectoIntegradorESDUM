@@ -1,0 +1,102 @@
+/* Estilo de los textos*/
+.textMisionVision {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    font-family:'Century Gothic', sans-serif;
+    color: #000;
+    font-size: 20;
+}
+
+/* Estilo de las imagenes */
+.imgMisionVision{
+    width: 400px;
+    height: 250px;
+}
+
+/* Estilo subtitulos */
+.colorWordsSignificativas{
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+}
+
+/* Estilo borde division de secciones */
+.divSecciones{
+    border-top: 2px solid #4964F3;
+}
+
+
+/* Estilo título "Desarrolladores" */
+.titleDevs {
+    text-align: center;
+    font-size: 32px;
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+} 
+
+/* Estilo foto desarrolladores */
+.imageDev {
+    width: 150px;
+    height:150px;
+} 
+
+/* Estilo nombre desarrolladores*/
+.nameDev {
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    text-align: center;
+}
+
+/* Orientación 4 desarrolladores */
+.upDevs{
+    text-align: center;
+    align-items: center;
+} 
+
+.img {
+    display: flex;
+    justify-content:space-around;
+}
+
+.name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    font-family:'Century Gothic', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.downDevs {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col-md-4 {
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    color: #4964F3;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+   .container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .container1 h4{
+    color: #EF5268;
+    margin-bottom: 20px;
+  }
