@@ -1,17 +1,19 @@
-
-.material-symbols-outlined{
+.material-symbols-outlined {
     color: #fda2ef;
 }
-.busqueda{
+
+.busqueda {
     border: #fda2ef;
     border-radius: 20px;
     border-style: solid;
 }
-.btn:hover{
+
+.btn:hover {
     color: #4964f3;
 
 }
-*{
+
+* {
     font-family: 'Century Gothic', sans-serif;
 
 }
@@ -25,11 +27,11 @@
     color: black;
 }
 
-.copy-footer{
+.copy-footer {
     color: white;
 }
 
-.contact-us{
+.contact-us {
     color: palevioletred;
 }
 
@@ -38,12 +40,31 @@
     text-decoration: none;
 }
 
-.navbar-item, .main-item {
+.navbar-item,
+.main-item {
     width: 100% !important;
     height: 300px;
 }
 
-.footer-item{
+.footer-item {
     width: 100% !important;
     height: 700px !important;
+}
+
+.wrapper {
+    min-height: 100vh;
+    /* Establece el alto mínimo del wrapper al alto de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div iframe {
+    flex-grow: 1;
+    border: none;
+    /* Para eliminar el borde del iframe si lo deseas */
 }
