@@ -43,6 +43,13 @@
     padding-left: 2%;
     padding-right: 2%;
 }
+.devs h3, a{
+    color:#4964F3;
+    text-decoration: none;
+}
+.devs h3:hover{
+    text-decoration: underline;
+}
 .nameDev {
     color: #EF5268;
     font-family:'Century Gothic';
