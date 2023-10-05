@@ -49,6 +49,21 @@
 }
 .devs h3:hover{
     text-decoration: underline;
+    color: #EF5268;
+    
+}
+
+.devs i {
+    height: 50px;
+    width: 50px;
+
+}
+
+
+.devs i:hover {
+    height: 200px;
+    width: 200px;
+
 }
 .nameDev {
     color: #EF5268;
@@ -78,13 +93,14 @@
     margin-bottom: 20px;
   }
 
-   .container1 {
+   .valores {
+    font-family:'Century Gothic';
     display: flex;
     align-items: center;
     justify-content: center;
   } 
 
-  .container1 h4{
+  .valores h4{
     color: #EF5268;
     margin-bottom: 20px;
   }
