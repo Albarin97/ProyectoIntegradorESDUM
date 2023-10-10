@@ -5,52 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/product.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!--Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+    <!--Icons Fontawesome CDN-->
+    <script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <title>Product</title>
 </head>
 
 <body>
-    <div class="container-fluid text-center container-product">
+    <div class="container-fluid text-center product-container">
         <div class="row">
-            <div class="col-4">
-                <img class="img-product" src="https://m.media-amazon.com/images/I/611arNpQf9L._AC_SL1500_.jpg" alt="ControlPeleas"
-                    srcset="">
+            <div class="col-1 col-img-thumbnail">
+                <div class="thumbnail">
+                    <img class="img-thumbnail" src="https://m.media-amazon.com/images/I/411kApYV4wL._AC_.jpg"
+                        alt="Imagen 1">
+                </div>
+                <div class="thumbnail">
+                    <img class="img-thumbnail" src="https://m.media-amazon.com/images/I/410qVtCJaBL._AC_.jpg"
+                        alt="Imagen 2">
+                </div>
+                <div class="thumbnail">
+                    <img class="img-thumbnail" src="https://m.media-amazon.com/images/I/41E8qYeFu8L._AC_.jpg"
+                        alt="Imagen 3">
+                </div>
+                <div class="thumbnail">
+                    <img class="img-thumbnail" src="https://m.media-amazon.com/images/I/41nrIAAOdBL._AC_.jpg"
+                        alt="Imagen 4">
+                </div>
             </div>
-            <div class="col-8">
-                <div class="row">
+            <div class="col-4 col-img-main">
+                <img class="img-product" src="https://m.media-amazon.com/images/I/611arNpQf9L._AC_SL1500_.jpg"
+                    alt="ControlPeleas" srcset="">
+            </div>
+            <div class="col-7 col-name-price-desc">
+                <div class="row product-name">
                     <h1>MAYFLASH Arcade Stick F300 Elite</h1>
                 </div>
-                <div class="row">
+                <div class="row product-price justify-content-center">
+                    <div class="col-1">
+                        <h1>$1700</h1>
+                    </div>
+                    <div class="col-1 mt-1">
+                        <i class="fa-regular fa-heart fa-lg" style="color: #fda2ef;"></i>
+                    </div>
+                </div>
+                <div class="row product-description">
                     <p>Acerca de este artículo
-                        Compatible con Switch, Xbox Series X, PS4, PS3, Xbox One/S, Xbox 360, PC Windows, macOS, Steam Deck,
-                        Android, NEOGEO mini y NeoGeo Arcade Stick Pro. F300 Elite es compatible con PS5 de MAYFLASH Magic-S
+                        Compatible con Switch, Xbox Series X, PS4, PS3, Xbox One/S, Xbox 360, PC Windows, macOS, Steam
+                        Deck,
+                        Android, NEOGEO mini y NeoGeo Arcade Stick Pro. F300 Elite es compatible con PS5 de MAYFLASH
+                        Magic-S
                         Pro o controladores PS4 de terceros. Actualizar al último Firmware de mayflash.com
-                        Mediante el uso de componentes Sanwa de alta calidad: 9 botones altamente sensibles y un joystick de
-                        precisión de 4 vías, puedes golpear de forma fiable al instante y segura, juego tras juego, mientras
+                        Mediante el uso de componentes Sanwa de alta calidad: 9 botones altamente sensibles y un
+                        joystick de
+                        precisión de 4 vías, puedes golpear de forma fiable al instante y segura, juego tras juego,
+                        mientras
                         mantiene el máximo rendimiento
                         Soporta XINPUT y DINPUT cuando se utiliza en PC. Soporta Turbo.
                         El F300 Elite fue diseñado para los entusiastas de la modificación, por lo que el interior de la
                         plataforma es accesible para una mayor personalización, y el joystick y los botones se pueden
                         cambiar para adaptarse a tu estilo de juego.
-                        [Compra con confianza] Tu garantía comienza a funcionar tan pronto como hagas un pedido. Todos los
+                        [Compra con confianza] Tu garantía comienza a funcionar tan pronto como hagas un pedido. Todos
+                        los
                         productos MAYFLASH se prueban completamente y estrictamente antes del envío. Si tienes alguna
-                        pregunta o tienes alguna dificultad para operar el dispositivo, ponte en contacto con nuestro equipo
+                        pregunta o tienes alguna dificultad para operar el dispositivo, ponte en contacto con nuestro
+                        equipo
                         de servicio y estaremos encantados de ayudarte.
                     </p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-auto">
-                        <button type="button" class="btn btn-success btn-lg">Comprar</button>
-
+                <div class="row justify-content-center butons">
+                    <div class="col-md-auto text-center">
+                        <button type="button" class="btn btn-lg btn-cart">Agregar al Carrito</button>
+                        
                     </div>
                 </div>
+                <div class="row justify-content-center mt-2">
+                    <div class="col-md-auto text-center">
+                        <button type="button" class="btn btn-lg btn-shop">Comprar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <h2>Mas Productos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">IMG de Producto</div>
+            <div class="col">IMG de Producto</div>
+            <div class="col">IMG de Producto</div>
+            <div class="col">IMG de Producto</div>
+            <div class="col">IMG de Producto</div>
+        </div>
+        <div class="row mt-5 reviews-title">
+            <h2>Reseñas de Otros Compradores</h2>
+        </div>
+        <div class="row justify-content-center mt-2 reviews-coments">
+            <div class="col-7">
+                <h3>Juan</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque modi iure illum, ratione beatae porro, nostrum quod animi maiores at maxime quisquam unde vero cum. Sint, veniam a. A?</p>
+            </div>
+            <div class="col-7">
+                <h3>Pedro</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque modi iure illum, ratione beatae porro, nostrum quod animi maiores at maxime quisquam unde vero cum. Sint, veniam a. A?</p>
+            </div>
+            <div class="col-7">
+                <h3>Albar</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores eaque modi iure illum, ratione beatae porro, nostrum quod animi maiores at maxime quisquam unde vero cum. Sint, veniam a. A?</p>
             </div>
         </div>
     </div>
