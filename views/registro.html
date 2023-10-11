@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros</title>
+  <!-- Etiqueta de CSS para bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Etiqueta para coenctar CSS -->
+  <link rel="stylesheet" href="../styles/stylesRegistro.css">
+  <!--Link de iconos-->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <div class="container text-center mt-4 mb-4">
+    <div class="row">
+      <div class="col order-last">
+        <img class="vaquita mb-4" src="../resources/logo/Vaquita.jpg" alt="Vaquita Crochet">
+      </div>
+      <h2 class="titulo mt-2 mb-4">Registrate</h2>
+      <div class="row justify-content-center align-items-center col formulario">
+        <form>
+          <div class="mb-3">
+              <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="nombreUsuario" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Calle, número, municipio, ciudad, código postal.">
+          </div>
+
+          <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo">
+          </div>
+
+          <div class="mb-3">
+            <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
+            <input type="email" class="form-control" id="correoConfirmacion">
+          </div>
+
+          <div class="mb-3">
+            <label for="contraseña" class="form-label">Contraseña</label>
+            <input type="password" id="contraseña" class="form-control" aria-describedby="passwordHelpBlock">
+          </div>
+
+          <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-3" >Regístrate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

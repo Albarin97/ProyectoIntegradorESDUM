@@ -1,0 +1,33 @@
+.formulario {
+  display: flex;
+  align-items: center;
+text-align: justify;
+  font-family:'Century Gothic', sans-serif;
+  color: #000;
+  font-size: 20px;
+  border: 2px solid #4964F3;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-left: 50px;
+  height: 550px;
+  margin-bottom: 20px;
+
+}
+
+.vaquita{
+  height: 600px;
+  border-radius: 15px;
+}
+
+.titulo{
+  color: #EF5268;
+  font-family:'Century Gothic', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.subtitulo{
+  color: #EF5268;
+  font-family:'Century Gothic', sans-serif;
+  font-size: 27px;
+}
