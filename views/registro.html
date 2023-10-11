@@ -23,38 +23,60 @@
         <img class="vaquita mb-4" src="../resources/logo/Vaquita.jpg" alt="Vaquita Crochet">
       </div>
       <h2 class="titulo mt-2 mb-4">Registrate</h2>
+
       <div class="row justify-content-center align-items-center col formulario">
-        <form>
-          <div class="mb-3">
-              <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
-              <input type="text" class="form-control" id="nombreUsuario" aria-describedby="emailHelp">
+
+        <form method="post" id="form">
+          <div class="subtitulo text-center">
+            Usuario
+          </div>
+          <div>
+              <label for="" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="nombreUsuario" >
           </div>
 
-          <div class="mb-3">
-            <label for="direccion" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Calle, número, municipio, ciudad, código postal.">
+          <div>
+            <label for="" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo"  aria-describedby="emailHelp">
+        </div>
+
+        <div>
+          <label for="" class="form-label">Confirma tu correo electrónico</label>
+          <input type="email" class="form-control" id="correoConfirmacion" aria-describedby="emailHelp">
+        </div>
+
+        <div>
+          <label for="" class="form-label">Contraseña</label>
+          <input type="password" id="contraseña" class="form-control"  aria-describedby="passwordHelpBlock">
+        </div>
+
+
+          <div class="subtitulo text-center">
+            Dirección
+          </div>
+          <div>
+            <label for="" class="form-label">Calle y número</label>
+            <input type="text" class="form-control" id="calle">
+          </div>
+          <div>
+            <label for="" class="form-label">Municipio o Ciudad</label>
+            <input type="text" class="form-control" id="ciudad">
+          </div>
+          <div>
+            <label for="" class="form-label">Código postal</label>
+            <input type="number" class="form-control" id="codigoPostal">
           </div>
 
-          <div class="mb-3">
-              <label for="correo" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" id="correo">
-          </div>
-
-          <div class="mb-3">
-            <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
-            <input type="email" class="form-control" id="correoConfirmacion">
-          </div>
-
-          <div class="mb-3">
-            <label for="contraseña" class="form-label">Contraseña</label>
-            <input type="password" id="contraseña" class="form-control" aria-describedby="passwordHelpBlock">
-          </div>
 
           <div class="text-center">
           <button type="submit" class="btn btn-primary mt-3" >Regístrate</button>
           </div>
+
+          <p class="advertencias" id="advertencias"></p>
         </form>
       </div>
     </div>
   </div>
-</body>
+
+
+  <script src="../Js/jsRegistro.js"></script>
