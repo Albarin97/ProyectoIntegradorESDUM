@@ -1,0 +1,40 @@
+  .title-container {
+    display: flex;
+  }
+  .title-container img {
+    transform: rotate(180deg);
+    margin-right: 14px;
+  }
+  .title {
+    font-size: var(--lg);
+    font-weight: bold;
+  }
+  
+  .cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+  }
+  .cart figure {
+    margin: 0;
+  }
+  .cart figure img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+  }
