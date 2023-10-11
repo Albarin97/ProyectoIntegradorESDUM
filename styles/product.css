@@ -38,6 +38,18 @@
     font-size: 27px;
 }
 
+.more-title {
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 27px;
+}
+
+.more-price {
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 27px;
+}
+
 .reviews-coments h3 {
     color:#4964F3;
     font-size: 25px;
