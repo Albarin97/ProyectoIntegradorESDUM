@@ -1,0 +1,46 @@
+.principal h1{
+    color: red;
+}
+
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.carta{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.botonesProducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonCarrito{
+    height:30px;
+    width:100%;
+}
+
+.botonBorrar{
+    width: 50%;
+}
+
+.botonComprar{
+    width: 50%;
+}
+
+
+.botonCantidad{
+    height: 30px;
+    width: 150px;
+}
+.contenedorBotones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
