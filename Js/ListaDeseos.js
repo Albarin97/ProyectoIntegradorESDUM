@@ -3,23 +3,57 @@ console.log("Conectado");
 const baseDeDatos = [
     {
         id: 1,
-        amigurumis: 'Patata',
-        modelo: 'shrek',
-        descripcion: 'alto',
-        precio: 1,
-        imagen: 'http://1.bp.blogspot.com/-PP9_iUE36Oc/UqJKUJmZZrI/AAAAAAAABF8/i5c2z5wGsJY/s1600/IMG_20131117_195342.jpg'
-
+        clase: 'Amigurumi',
+        modelo: 'Buho',
+        descripcion: 'Rosa',
+        precio: 200,
+        cantidad: 10,
+        cantidadacomprar: 1,
+        imagen:"https://images.saymedia-content.com/.image/t_share/MTc2NDY0ODQ1MjQyMTgxNTk0/free-crochet-pattern-pink-owl-amigurumi-doll.jpg"
     },
     {
         id: 2,
-        Prenda: 'Gorro',
-        modelo: 'Puerquito',
-        descripcion: 'Rosa',
-        precio: 2,
-        imagen: 'http://1.bp.blogspot.com/-PP9_iUE36Oc/UqJKUJmZZrI/AAAAAAAABF8/i5c2z5wGsJY/s1600/IMG_20131117_195342.jpg'
+        clase: 'Amigurumi',
+        modelo: 'Panda',
+        descripcion: 'Mediano',
+        precio: 180,
+        cantidad: 15,
+        cantidadacomprar: 1,
+        imagen: 'https://i.pinimg.com/originals/43/d5/f3/43d5f3715ba492858d8fe947f4472090.jpg'
+    },
+    {
+        id: 3,
+        clase: 'Amigurumi',
+        modelo: 'Buho',
+        descripcion: 'Petite Morado',
+        precio: 150,
+        cantidad: 10,
+        cantidadacomprar: 1,
+        imagen: 'https://i.pinimg.com/736x/94/3c/df/943cdfe611cce6689558bc7ed7d9781a.jpg'
+    },
+    {
+        id: 4,
+        clase: 'Amigurumi',
+        modelo: 'Koala',
+        descripcion: 'Petite',
+        precio: 150,
+        cantidad: 10,
+        cantidadacomprar: 1,
+        imagen: 'https://4.bp.blogspot.com/-bqcbXYSkCxI/WLklNFGJypI/AAAAAAAACOM/lh9Ec5vqWXMuSw-ycv1rBtDbm-gN7hRUwCEw/s1600/KoalaFront.jpg'
+    },
+    {
+        id: 5,
+        clase: 'Amigurumi',
+        modelo: 'Oso',
+        descripcion: 'Cafe',
+        precio: 150,
+        cantidad: 3,
+        cantidadacomprar: 1,
+        imagen: 'https://images4-g.ravelrycache.com/uploads/PatchworkMoose/481838697/Theo_1_Photo_background_Ravelry_medium.jpg'
     }
 ];
 
+localStorage.setItem('carrito',0);
 let carrito = [];
 
 
@@ -33,54 +67,59 @@ function renderizarProductos() {
         CARTA.classList.add("carta");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
         const CONTENEDORIMAGEN = document.createElement('div');
-        CONTENEDORIMAGEN.classList.add("contenedorImagen");
+        CONTENEDORIMAGEN.classList.add("contenedorImagen","d-flex", "justify-content-center");
         const CONTENEDORDESCRIPCION = document.createElement('div');
-        CONTENEDORDESCRIPCION.classList.add("contenedorProducto");
+        CONTENEDORDESCRIPCION.classList.add("contenedorProducto", "text-center");
         const CONTENEDORBOTONES = document.createElement('div');
-        CONTENEDORBOTONES.classList.add("contenedorBotones");
+        CONTENEDORBOTONES.classList.add("contenedorBotones","d-flex", "flex-column", "justify-content-center", "align-items-center");
 
 
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src",info.imagen);
         // Agregamos clases de imagen 
-        IMAGEN.classList.add("col-md-4")
+        IMAGEN.classList.add("col-md-4");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
 
 
         // Cargamos descripcion en el contenedor de descripcion y su titulo
-        const TITULO = document.createElement('H2');
-
+        const TITULO = document.createElement('h2');
+        TITULO.classList.add("subtitulo");
         const DESCRIPCION = document.createElement ('p');
+        const PRECIO = document.createElement('p');
+        PRECIO.classList.add ("precio");
+        DESCRIPCION.classList.add("descripcion");
         TITULO.textContent = info.modelo;
         DESCRIPCION.textContent = info.descripcion;
+        DESCRIPCION.textContent = DESCRIPCION.textContent 
+        PRECIO.textContent = "Precio:" + String(info.precio);
         CONTENEDORDESCRIPCION.classList.add("col-md-4");
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
-
+        CONTENEDORDESCRIPCION.appendChild(PRECIO);
 
         // Cargamos botones en el contenedor de botones y agregamos su titulo
 
 
         const agregarCarrito = document.createElement('button');
         agregarCarrito.textContent = "Agregar al carrito";
-        agregarCarrito.classList.add("botonCarrito");
+        agregarCarrito.classList.add("botonCarrito","w-50");
         agregarCarrito.dataset.item = info;
         agregarCarrito.addEventListener('click',()=>agregarProductoCarrito(info));
         //Creamos un Div para los botones de en medio
         const divBotonesMedio = document.createElement('div');
         // Agregamos atributos y clases de bootsrap para el div de los botones
-        divBotonesMedio.classList.add("divMedio","d-flex");
+        divBotonesMedio.classList.add("divMedio","d-flex","mt-4","w-50");
         // Creamos los botones de borrar y comprar
         const borrarCarrito = document.createElement('button');
         borrarCarrito.textContent = "Borrar";
         borrarCarrito.dataset.id = info.id;
         borrarCarrito.addEventListener('click', eliminarProductoCarrito);
-        borrarCarrito.classList.add("botonBorrar");
+        borrarCarrito.classList.add("botonBorrar","w-50");
         const comprarItem = document.createElement('button');
         comprarItem.textContent = "Comprar";
-        comprarItem.classList.add("botonComprar");
+        comprarItem.classList.add("botonComprar","w-50");
         comprarItem.dataset.item = info;
         comprarItem.addEventListener('click', () => comprarProductoCarrito(info));
         // Los agregamos al div
@@ -108,33 +147,49 @@ function redenrizarBotonesFinales(){
     const divBotonesFinales = document.getElementsByClassName("botonesFinales");
     const botonVaciarLista = document.createElement("button");
     const botonComprarLista = document.createElement("button");
-    botonVaciar.addEventListener('click', () => vaciarLista());
-    botonComprar.addEventListener('click', () => comprarCarrito());
+    botonComprarLista.textContent = "Comprar lista";
+    botonComprarLista.classList.add("botonComprarLista");
+    botonVaciarLista.textContent = "Vaciar lista";
+    botonVaciarLista.classList.add("botonVaciarLista");
+    botonVaciarLista.addEventListener('click', vaciarLista);
+    botonComprarLista.addEventListener('click', comprarLista);
     divBotonesFinales[0].append(botonComprarLista);
     divBotonesFinales[0].append(botonVaciarLista);
     
 }
 
-
-
-
-function comprarCarrito(){
-    localStorage.setItem("carrito", baseDeDatos);
+function comprarLista(){
+    localStorage.setItem("carrito", JSON.stringify(baseDeDatos));
     window.location.href = "../views/carritoCompra.html";
 }
 
-
-
 function vaciarLista(){
-    
-    elementToRemove.remove();
+    const elementToRemove = document.getElementsByClassName("principal");
+    // console.log(elementToRemove);
+    elementToRemove[0].remove();
+    // Se actualiza localstorage
+    //localStorage.removeItem("carrito");
 }
 
 function eliminarProductoCarrito(evento) {
     // console.log(evento.target.dataset.id);
     const elementToRemove = document.getElementById(evento.target.dataset.id);
     elementToRemove.remove();
+    // Obtén la lista de productos desde el almacenamiento local
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    
+    // Encuentra el índice del elemento a eliminar en la lista de productos
+    const indexToRemove = carrito.findIndex(item => item.id === element.id);
+    
+    // Si se encuentra el elemento en la lista, elimínalo
+    if (indexToRemove !== -1) {
+    carrito.splice(indexToRemove, 1);
+    
+    // Actualiza el almacenamiento local con la lista actualizada
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
 }
+
 
 function comprarProductoCarrito(producto) {
     carrito.push(producto);
@@ -144,16 +199,19 @@ function comprarProductoCarrito(producto) {
 }
 
 function agregarProductoCarrito(producto) {
+    // Lista de carrito se carga con el producto 
     carrito.push(producto);
     console.log(carrito);
+    // Se actualiza el boton, cambiamos su contenido
     const divcarta = document.getElementById(producto.id);
     const button = divcarta.getElementsByClassName("botonCarrito");
     button[0].textContent = "Producto agregado al carrito";
     button[0].disabled = true;
-    //deshacer.addEventListener('click', () => eliminarProductoCarrito(producto));
-    //contenedorBtns[0].append()
+    //Se actualiza carrito en local Storage
+    localStorage.setItem("carrito",JSON.stringify(carrito));
 }
 
 
 
 renderizarProductos();
+redenrizarBotonesFinales();
