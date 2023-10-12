@@ -1,0 +1,72 @@
+.body{
+    font-family:'Century Gothic', sans-serif;
+}
+
+.tarjeta{
+    margin-top: 40px;
+    border: #4964f3;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.titulo{
+    color:#EF5268;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.subtitulo{
+    color:#EF5268;
+    font-size: 30px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.texto{
+    font-size: 20px;
+    text-align: start;
+    font-weight: 500;
+}
+
+.contenedorImagen{
+    width: 25%;
+    height: 25%;
+}
+
+
+
+.boton{
+    background-color: #4964f3;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.boton:hover{
+    background-color: #EF5268;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+.parrafo{
+    font-size: 30px;
+    text-align: end;
+    margin-right: 50px;
+    color: #EF5268;
+    font-weight: 600;
+}
+
+
+.inputCantidadElementos{
+    border-radius: 20px;
+    border-color: #4964f3;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
