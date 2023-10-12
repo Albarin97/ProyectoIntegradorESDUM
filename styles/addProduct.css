@@ -11,10 +11,24 @@
     font-size: 30px;
 }
 
-.btn{
-    color: #EF5268;
+.colorLabel{
+    color: #4964F3;
+    font-size: 25px;
 }
 
-.image{
-    margin-top: 20px;
+.imagen input{
+    display: none;
+}
+
+.imgEjemplo{
+    width: 350px;
+    height: auto;
+}
+
+.imagen label{
+    background-color: #EF5268;
+    color: white;
+    padding: 6px 20px;
+    cursor: pointer;
+    border-radius: 3px;
 }
