@@ -5,7 +5,7 @@
     text-align: justify;
     font-family:'Century Gothic', sans-serif;
     color: #000;
-    font-size: 20;
+    font-size: 20px;
 }
 
 /* Estilo de las imagenes */
@@ -14,25 +14,26 @@
     height: 250px;
 }
 
-/* Estilo subtitulos */
-.colorWordsSignificativas{
+/* Estilo titulos */
+.titulo{
     color: #EF5268;
     font-family:'Century Gothic', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 2rem;
 }
+
+.subtitulo{
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 27px;
+}
+
 
 /* Estilo borde division de secciones */
 .divSecciones{
     border-top: 2px solid #4964F3;
 }
-
-
-.titleDevs {
-    text-align: center;
-    font-size: 40px;
-    color: #EF5268;
-    font-family:'Century Gothic', sans-serif;
-    font-weight: bold;
-} /*Título "Desarrolladores*/
 
 .imageDev {
     width: 150px;
@@ -43,35 +44,19 @@
     padding-left: 2%;
     padding-right: 2%;
 }
-.devs h3, a{
+.devs a{
     color:#4964F3;
     text-decoration: none;
-}
-.devs h3:hover{
-    text-decoration: underline;
-    color: #EF5268;
-    
+    font-size: 25px;
+    font-family:'Century Gothic', sans-serif;
 }
 
-.devs i {
-    height: 50px;
-    width: 50px;
-
-}
-
-
-.devs i:hover {
+.bi:hover {
     height: 200px;
     width: 200px;
-
-}
-.nameDev {
     color: #EF5268;
-    font-family:'Century Gothic';
-    font-size: 30px;
-    font-weight: bold;
-
-} /*Nombre desarrolladores*/
+}
+/*Nombre desarrolladores*/
 
 
 .descriptionDev {
@@ -98,9 +83,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 20px;
   } 
 
-  .valores h4{
-    color: #EF5268;
-    margin-bottom: 20px;
+  .valores p{
+    text-align: justify;
   }
