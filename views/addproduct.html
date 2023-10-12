@@ -11,23 +11,46 @@
     <!--Bootstrap Link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-    <!--Bootstrap Script-->  
+
+    <!--Bootstrap Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container mt-5 cardForm">
-        <h1 class="nuevoProducto text-center"> Agregar nuevo Producto</h1>
-        <div class="row">   
+    <form id="form">
+        <div class="alert-container mt-5 cardForm">
+            <h1 class="nuevoProducto text-center"> Agregar nuevo Producto</h1>
+            <div class="row">
 
-            <!-- Primer div a la izquierda -->
-            <div class="col-md-6 mt-5">
-                <div class="form-group">
-                    <label for="nombreProducto" class="form-label">Nombre del Producto</label>
-                    <input type="text" class="form-control" id="nombreProducto">
+                <!-- Primer div a la izquierda -->
+                <div class="col-md-6 mt-5">
+                    <div class="form-group">
+                        <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombreProducto">
+                    </div>
+
+                    <div class="form-group mt-5">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="precio" placeholder="$">
+                    </div>
+
+                    <div class="form-group mt-5">
+                        <label for="inputAddress" class="form-label">Categoria</label>
+                        <input type="text" class="form-control" id="categoria">
+                    </div>
+
+                    
+                </div>
+
+                <!-- Segundo div a la derecha -->
+                <div class="container col-md-6">
+                    <div class="form-group mt-5">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" placeholder="Tamaño, Colores, Material"
+                            rows="10"></textarea>
+                    </div>
                 </div>
 
                 <div class="form-group mt-5 image">
@@ -35,31 +58,15 @@
                         <input type="file" name="imagen">
                     </form>
                 </div>
-            </div>
-            
-            <!-- Segundo div a la derecha -->
-            <div class="container col-md-6">    
-                <div class="form-group mt-5">
-                    <label for="precio" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="precio" placeholder="$">
-                </div>
-                
-                <div class="form-group mt-5">
-                    <label for="inputAddress" class="form-label">Categoria</label>
-                    <input type="text" class="form-control" id="inputAddress">
-                </div>
-                
-                <div class="form-group mt-5">
-                    <label for="descripcion" class="form-label">Descripción</label>
-                    <textarea class="form-control" id="descripcion" placeholder="Tamaño, Colores, Material" rows="10"></textarea>
+
+                <div class="d-flex justify-content-center mt-20">
+                    <button type="submit" class="btn btn-primary mt-3">Cargar</button>
                 </div>
             </div>
-            
-        <div class="d-flex justify-content-center mt-20">
-            <button type="submit" class="btn btn-primary mt-3">Cargar</button>
         </div>
-        </div>
-    </div>
+    </form>
+
+    <script src="../Js/addProduct.js"></script>
 </body>
 
 </html>
