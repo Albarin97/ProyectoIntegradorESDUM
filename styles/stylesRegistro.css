@@ -1,48 +1,57 @@
-.formulario {
+.contenedor {
   display: flex;
-  align-items: center;
-  text-align: justify;
-  font-family:'Century Gothic', sans-serif;
-  color: #000;
-  font-size: 20px;
-  border: 2px solid #4964F3;
-  border-radius: 15px;
-  margin-top: 30px;
-  margin-left: 50px;
-  height: 700px;
-  margin-bottom: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-left: 10px;
 }
 
-.vaquita{
-  height: 750px;
-  border-radius: 15px;
-  padding-left: 10px;
+.contenedor > div {
+  width: 50%;
+
 }
 
 .titulo{
   color: #EF5268;
   font-family:'Century Gothic', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .subtitulo{
   color: #EF5268;
   font-family:'Century Gothic', sans-serif;
-  font-size: 27px;
-  padding: 5px;
-}
-
-.advertencias{
-  width: 300px;
+  font-size: 35px;
+  font-weight: bold;
   text-align: center;
-  margin: auto;
-  color: red;
-  padding-top: 50px;
-  padding-bottom: 30px;
-  font-size: 15px;
+  margin-top: 10px;
 }
 
-.form-control{
-  padding: 5px;
+#form{
+  border: 2px solid #4964F3;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100vh;
+  margin-top: 40px;
+  font-family:'Century Gothic', sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  
+}
+
+#imagen{
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100vh;
+  padding-left: 80px;
+  margin-top: 40px;
+
+}
+
+.btn{
+  color: #FFDFE2;
 }
