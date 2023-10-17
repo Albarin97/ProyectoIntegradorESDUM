@@ -64,7 +64,7 @@ function renderizarProductos() {
         // Div donde estara el producto
         const CARTA = document.createElement('div');
         CARTA.id = info.id;
-        CARTA.classList.add("carta");
+        CARTA.classList.add("carta","d-flex","flex-column","flex-md-row","flex-lg-row","justify-content-sm-center","pb-3");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
         const CONTENEDORIMAGEN = document.createElement('div');
         CONTENEDORIMAGEN.classList.add("contenedorImagen","d-flex", "justify-content-center");
@@ -78,7 +78,7 @@ function renderizarProductos() {
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src",info.imagen);
         // Agregamos clases de imagen 
-        IMAGEN.classList.add("col-md-4");
+        IMAGEN.classList.add("col-md-4","img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
 
@@ -145,12 +145,13 @@ function renderizarProductos() {
 //Funcion que crea los botones de Vaciar y Comprar la lista de deseos
 function redenrizarBotonesFinales(){
     const divBotonesFinales = document.getElementsByClassName("botonesFinales");
+    divBotonesFinales[0].classList.add("mt-4")
     const botonVaciarLista = document.createElement("button");
     const botonComprarLista = document.createElement("button");
     botonComprarLista.textContent = "Comprar lista";
-    botonComprarLista.classList.add("botonComprarLista");
+    botonComprarLista.classList.add("botonComprarLista","ms-3");
     botonVaciarLista.textContent = "Vaciar lista";
-    botonVaciarLista.classList.add("botonVaciarLista");
+    botonVaciarLista.classList.add("botonVaciarLista","ms-3");
     botonVaciarLista.addEventListener('click', vaciarLista);
     botonComprarLista.addEventListener('click', comprarLista);
     divBotonesFinales[0].append(botonComprarLista);
