@@ -1,54 +1,82 @@
-const nombre= document.getElementById("nombreUsuario")
-const email= document.getElementById("correo")
-const emailConfirmacion= document.getElementById("correoConfirmacion")
-const password= document.getElementById("contraseña")
-const codPos= document.getElementById("codigoPostal")
-const form= document.getElementById("form")
-const parrafo= document.getElementById("advertencias")
+// Se asigna el evento al boton
+document.getElementById('form').addEventListener('submit', function(event) {
 
-form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let advertencias= ""
-    let entrar=false
-    let registroEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    let registroEmailConfirmacion=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-
-
-    parrafo.innerHTML= ""
-    if(nombre.value.length <6){
-        advertencias += `El nombre no es valido <br>`
-        entrar=true
+    //Declaracion de variables para completar la validacion por cada campo
+    let nombreUsuario = document.getElementById('nombreUsuario').value;
+    let correo = document.getElementById('correo').value;
+    let correoConfirmacion = document.getElementById('correoConfirmacion').value;
+    let contraseña = document.getElementById('contraseña').value;
+    let direccion= document.getElementById('direccion').value;
+    let estado = document.getElementById('estado').value;
+    var codigoPostal = document.getElementById('codigoPostal').value;
+  
+    //Ciclo if para validar cada campo 
+    if (nombreUsuario.length < 6) {
+        document.getElementById('invalido').style.display = 'block';
+        setTimeout(function () {
+            document.getElementById('invalido').style.display = 'none';
+        }, 1500);
+    }
+  
+    if (!correo.includes('@') || !correo.includes('.') || correo.length < 5) {
+      document.getElementById('invalidoCorreo').style.display = 'block';
+      setTimeout(function() {
+        document.getElementById('invalidoCorreo').style.display = 'none';
+    }, 1500);
+    }
+  
+    if (correoConfirmacion !== correo) {
+      document.getElementById('invalidoConfimacion').style.display = 'block';
+      setTimeout(function(){
+        document.getElementById('invalidoConfimacion').style.display = 'none';
+    }, 1500);
+    }
+  
+    if (contraseña.length < 6) {
+      document.getElementById('invalidoContraseña').style.display = 'block';
+      setTimeout(function(){
+        document.getElementById('invalidoContraseña').style.display = 'none';
+      }, 1500);
+    }
+  
+    if (direccion.length < 6) {
+      document.getElementById('invalidoDireccion').style.display = 'block';
+      setTimeout(function(){
+        document.getElementById('invalidoDireccion').style.display='none';
+      }, 1500);
+    }
+  
+    if (estado === '') {
+      document.getElementById('invalidoEstado').style.display = 'block';
+      setTimeout(function(){
+        document.getElementById('invalidoEstado').style.display = 'none';
+      }, 1500);
     }
 
-    if(!registroEmail.test(email.value)){
-        advertencias += `El email no es valido <br>`
-        entrar=true
+    if (codigoPostal.length !==5) {
+      document.getElementById('invalidoCodigoPostal').style.display = 'block';
+      event.preventDefault();
+      setTimeout(function(){
+        document.getElementById('invalidoCodigoPostal').style.display = 'none';
+      }, 1500);
     }
+// Validacion de todos los campos para enviar el formulario, muestra la alerta de exito
+if (
+    nombreUsuario.length >= 6 &&
+    correo.includes('@') &&
+    correo.includes('.') &&
+    correo.length >= 5 &&
+    correoConfirmacion === correo &&
+    contraseña.length >= 6 &&
+    direccion.length >= 6 &&
+    estado !== '' &&
+    codigoPostal.length === 5
+) {
+    document.getElementById('exito').style.display = 'block'
+    setTimeout(function () {
+        document.getElementById('exito').style.display = 'none';
+    }, 5000);
+    event.preventDefault();
+}
 
-    if(!registroEmailConfirmacion.test(emailConfirmacion.value)){
-        advertencias += `El email no es valido <br>`
-        entrar=true
-    }
-
-    if(!(email.value == emailConfirmacion.value)){
-        advertencias += `El email no coincide <br>`
-        entrar=true
-    }
-
-    if(password.value.length <8){
-        advertencias += `La contraseña no es valida <br>`
-        entrar=true
-    }
-
-    if(codPos.value.length !==5){
-        advertencias += `Codigo postal no valido <br>`
-        entrar=true
-    }
-
-    if(entrar){
-        parrafo.innerHTML= advertencias
-    }else{
-        parrafo.innerHTML= "Registro completado"
-        console.log(nombre.value, address.value, email.value, emailConfirmacion.value, password.value)
-    }
-})
+});
