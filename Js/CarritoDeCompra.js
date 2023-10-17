@@ -13,22 +13,21 @@ function renderizarProductos(listaProductos) {
     listaProductos.forEach(element => {
         const Tarjeta = document.createElement("div");
         Tarjeta.id = element.id;
-        Tarjeta.classList.add("tarjeta", "d-flex", "mt-2", "justify-content-around");
-        const rowWrapper = document.createElement("div");
-        rowWrapper.classList.add("row", "g.0", "justify-content-around");
+        Tarjeta.classList.add("tarjeta","d-flex","ms-2","mt-2","flex-column","flex-md-row","flex-lg-row");
+        Tarjeta.classList.add("align-items-center","justify-content-md-around","mb-1","pb-3","pt-3","me-2");   
         // Creamos los contenedores para imagen, descripcion y botones
         const CONTENEDORIMAGEN = document.createElement('div');
-        CONTENEDORIMAGEN.classList.add("contenedorImagen", "justify-content-around");
+        CONTENEDORIMAGEN.classList.add("contenedorImagen","d-flex","justify-content-center");
         const CONTENEDORDESCRIPCION = document.createElement('div');
-        CONTENEDORDESCRIPCION.classList.add("contenedorProducto");
+        CONTENEDORDESCRIPCION.classList.add("contenedorProducto","d-flex","flex-column","justify-content-center","align-items-center");
         const CONTENEDORBOTONES = document.createElement('div');
-        CONTENEDORBOTONES.classList.add("contenedorBotones", "col-md-4", "d-flex", "flex-column",
-            "align-items-center");
+        CONTENEDORBOTONES.classList.add("contenedorBotones","d-flex", "flex-column",
+            "justify-content-center");
 
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", element.imagen);
-        IMAGEN.classList.add("img-fluid", "w-25", "h-25",);
+        IMAGEN.classList.add("img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
 
@@ -52,13 +51,13 @@ function renderizarProductos(listaProductos) {
         //Boton para borrar el producto de carrito de compras
         const borrarProducto = document.createElement('button');
         borrarProducto.textContent = "Borrar del carrito";
-        borrarProducto.classList.add("botonBorrarProducto", "w-50", "mt-4", "boton");
+        borrarProducto.classList.add("botonBorrarProducto", "w-100", "boton");
         borrarProducto.dataset.item = element;
         borrarProducto.addEventListener('click', () => borrarProductoCarrito(element));
 
         // Boton e input para elegir la cantidad de element
         const inputCantidadProducto = document.createElement('input');
-        inputCantidadProducto.classList.add("inputCantidadElementos", "w-50", "mt-3");
+        inputCantidadProducto.classList.add("inputCantidadElementos","mt-3","w-100");
         inputCantidadProducto.type = "number";
         inputCantidadProducto.min = 1;
         inputCantidadProducto.max = element.cantidad;
@@ -97,25 +96,34 @@ function estableCantidadAComprar(listaProductos, element, valor) {
 //Funcion que crea los botones de Comprar Carrito y Vaciar Carrito
 function renderizarBotonesFinales(listaProductos) {
     // Creamos los elementos de HTML para el boton y para el texto
+    const divPrimeraParte = document.createElement("div");
+    const divSegundaParte = document.createElement("div");
     const divBotonesFinales = document.getElementsByClassName("totalBotonesFinales");
     const botonVaciarCarrito = document.createElement("button");
     const botonComprarCarrito = document.createElement("button");
     const parrafoPrecioTotal = document.createElement('p');
     //  Se agregan las clases para el div de Botones Finales
-    divBotonesFinales[0].classList.add("d-flex", "mt-2", "align-items-center");
+    divBotonesFinales[0].classList.add("d-flex","flex-column","flex-md-row","mt-2");
+    
+
     //  Se agregan las clases y algunos atributos se modifican de los botones y el texto
     parrafoPrecioTotal.innerText = "Total : $ ";
-    parrafoPrecioTotal.classList.add("parrafo", "ms-auto", "h-auto");
+    parrafoPrecioTotal.classList.add("parrafo","h-auto","mt-2");
     botonComprarCarrito.textContent = "Comprar carrito";
-    botonComprarCarrito.classList.add("boton", "b-comprar", "h-75");
+    botonComprarCarrito.classList.add("boton","b-comprar","h-auto","mt-2","ms-3");
     botonVaciarCarrito.textContent = "Vaciar carrito";
-    botonVaciarCarrito.classList.add("boton", "ms-3", "b-vaciar", "h-75");
+    botonVaciarCarrito.classList.add("boton", "b-vaciar", "h-auto","mt-2","ms-3");
     botonVaciarCarrito.addEventListener('click', vaciarCarrito);
     botonComprarCarrito.addEventListener('click', comprarCarrito);
     //Cargamos los botones y el texto con el total
-    divBotonesFinales[0].append(botonComprarCarrito);
-    divBotonesFinales[0].append(botonVaciarCarrito);
-    divBotonesFinales[0].append(parrafoPrecioTotal);
+    divPrimeraParte.append(botonComprarCarrito);
+    divPrimeraParte.append(botonVaciarCarrito);
+    divPrimeraParte.classList.add("d-flex","flex-column","flex-md-row");
+    divPrimeraParte.classList.add("align-items-center","col-md-6");
+    divSegundaParte.append(parrafoPrecioTotal);
+    divSegundaParte.classList.add("d-flex","justify-content-center","ms-auto");
+    divBotonesFinales[0].append(divPrimeraParte);
+    divBotonesFinales[0].append(divSegundaParte);
     obtenerPrecioTotal(listaProductos);
 }
 
@@ -123,7 +131,7 @@ function renderizarBotonesFinales(listaProductos) {
 function obtenerPrecioTotal(listaProductos) {
     if (listaProductos.length == 0) {
         const divBotonesFinales = document.getElementById("final2");
-        divBotonesFinales.children[2].innerText = "Total: $ 0";
+        divBotonesFinales.children[1].children[0].innerText = "Total: $ 0";
     }
     else {
         let precioTotal = 0;
@@ -132,7 +140,7 @@ function obtenerPrecioTotal(listaProductos) {
         });
         // de momento borra el contenido de los div, investigar
         const divBotonesFinales = document.getElementById("final2");
-        divBotonesFinales.children[2].innerText = "Total: $ " + precioTotal;
+        divBotonesFinales.children[1].children[0].innerText = "Total: "+precioTotal;
     }
 
 }
