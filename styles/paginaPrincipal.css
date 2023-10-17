@@ -1,12 +1,29 @@
-.productos{
+.productos, .encabezado {
     font-family:'Century Gothic', sans-serif;
 }
 
-.fotoProducto{
+.fotoProducto {
     width:200px;
     height:200px;
 }
 
-.btn{
+.btn {
    color: #FFDFE2;
+   font-family:'Century Gothic', sans-serif;
+}
+
+.redes{
+    color: #4964F3;
+    text-decoration: none;
+}
+
+.presentacion{
+        border-top: 1px solid #FDA2EF;
+        border-bottom: 1px solid #FDA2EF;
+        font-size: 20px;
+}
+
+.saludo{
+    font-size: 40px;
+    color: #EF5268;
 }
