@@ -17,66 +17,121 @@
 
 <body>
 
-  <div class="container text-center mt-4 mb-4">
-    <div class="row">
-      <div class="col order-last">
-        <img class="vaquita mb-4" src="../resources/logo/Vaquita.jpg" alt="Vaquita Crochet">
+  <h1 class="titulo">Registrate</h1>
+  
+  <div class="contenedor">
+    <!--Inicia formulario-->
+    <form class="row g-2 needs-validation" id="form" novalidate>
+      <!--Etiqueta de cada campo, Boostrap-->
+    <h1 class="subtitulo">Usuario</h1>
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre de usuario</label>
+        <input type="text" class="form-control" id="nombreUsuario" required>
+        <div class="alert alert-danger" role="alert" id="invalido" style="display: none">
+          Introduce un nombre válido
+        </div>
       </div>
-      <h2 class="titulo mt-2 mb-4">Registrate</h2>
 
-      <div class="row justify-content-center align-items-center col formulario">
-
-        <form method="post" id="form">
-          <div class="subtitulo text-center">
-            Usuario
-          </div>
-          <div>
-              <label for="" class="form-label">Nombre de Usuario</label>
-              <input type="text" class="form-control" id="nombreUsuario" >
-          </div>
-
-          <div>
-            <label for="" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="correo"  aria-describedby="emailHelp">
+      <div class="col-md-6">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+        <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none">
+          Introduce un correo válido
+        </div>
         </div>
 
-        <div>
-          <label for="" class="form-label">Confirma tu correo electrónico</label>
-          <input type="email" class="form-control" id="correoConfirmacion" aria-describedby="emailHelp">
+      <div class="col-md-6">
+        <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
+        <input type="email" class="form-control" id="correoConfirmacion" required>
+        <div class="alert alert-danger" role="alert" id="invalidoConfimacion" style="display: none">
+          Los correos no coinciden
         </div>
-
-        <div>
-          <label for="" class="form-label">Contraseña</label>
-          <input type="password" id="contraseña" class="form-control"  aria-describedby="passwordHelpBlock">
-        </div>
-
-
-          <div class="subtitulo text-center">
-            Dirección
-          </div>
-          <div>
-            <label for="" class="form-label">Calle y número</label>
-            <input type="text" class="form-control" id="calle">
-          </div>
-          <div>
-            <label for="" class="form-label">Municipio o Ciudad</label>
-            <input type="text" class="form-control" id="ciudad">
-          </div>
-          <div>
-            <label for="" class="form-label">Código postal</label>
-            <input type="number" class="form-control" id="codigoPostal">
-          </div>
-
-
-          <div class="text-center">
-          <button type="submit" class="btn btn-primary mt-3" >Regístrate</button>
-          </div>
-
-          <p class="advertencias" id="advertencias"></p>
-        </form>
       </div>
+
+      <div class="col-md-6">
+        <label for="contraseña" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña" required>
+        <div class="alert alert-danger" role="alert" id="invalidoContraseña" style="display: none">
+          Contraseña inválida
+        </div>
+      </div>
+
+      <h1 class="subtitulo">Dirección</h1>
+      <div class="col-md-6">
+        <label for="direccion" class="form-label">Calle, número y colonia</label>
+        <input type="text" class="form-control" id="direccion" required>
+        <div class="alert alert-danger" role="alert" id="invalidoDireccion" style="display: none">
+          Por favor ingresa tu calle, número y colonia
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-select" id="estado" required>
+          <option selected disabled value="">Elige...</option>
+          <option>Aguascalientes</option>
+            <option>Baja California </option>
+            <option>Baja California Sur </option>
+            <option>Campeche </option>
+            <option>Chiapas </option>
+            <option>Chihuahua </option>
+            <option>Ciudad de México </option>
+            <option>Coahuila </option>
+            <option>Colima </option>
+            <option>Durango </option>
+            <option>Estado de México</option>
+            <option>Guanajuato</option>
+            <option>Guerrero </option>
+            <option>Hidalgo </option>
+            <option>Jalisco</option>
+            <option>Michoacán </option>
+            <option>Morelos </option>
+            <option>Nayarit</option>
+            <option>Nuevo León </option>
+            <option>Oaxaca </option>
+            <option>Puebla</option>
+            <option>Querétaro</option>
+            <option>Quintana Roo </option>
+            <option>San Luis Potosí </option>
+            <option>Sinaloa </option>
+            <option>Sonora </option>
+            <option>Tabasco </option>
+            <option>Tamaulipas </option>
+            <option>Tlaxcala </option>
+            <option>Veracruz </option>
+            <option>Yucatán </option>
+            <option>Zacatecas</option>
+        </select>
+        <div class="alert alert-danger" role="alert" id="invalidoEstado" style="display: none;">
+          Por favor selecciona un estado
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <label for="codigoPostal" class="form-label">Código Postal</label>
+        <input type="number" class="form-control" id="codigoPostal" required>
+        <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none;">
+          Por favor escribe tu código postal
+        </div>
+      </div>
+
+      <div class="alert alert-success" role="alert" id="exito" style="display:none;">
+        Registro Completado con Éxito!
+      </div>
+      <!--Termina formulario-->
+      
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">Regístrate</button>
+      </div>
+    </form>
+
+    <div id="imagen">
+      <img class="vaquita img-fluid" src="../resources/logo/Vaquita-removebg-preview.png" width="380px" alt="Vaquita Crochet">
     </div>
   </div>
+  
 
 
   <script src="../Js/jsRegistro.js"></script>
+
+</body>
