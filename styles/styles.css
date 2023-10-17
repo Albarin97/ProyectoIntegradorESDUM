@@ -40,10 +40,13 @@
     text-decoration: none;
 }
 
-.navbar-item,
+.navbar-item{
+    width: 100% !important;
+    height: 130px !important;
+}
 .main-item {
     width: 100% !important;
-    height: 300px;
+    height: 100vh;
 }
 
 .footer-item {
