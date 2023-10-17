@@ -15,42 +15,42 @@ document.getElementById('form').addEventListener('submit', function(event) {
         document.getElementById('invalido').style.display = 'block';
         setTimeout(function () {
             document.getElementById('invalido').style.display = 'none';
-        }, 1500);
+        }, 3500);
     }
   
     if (!correo.includes('@') || !correo.includes('.') || correo.length < 5) {
       document.getElementById('invalidoCorreo').style.display = 'block';
       setTimeout(function() {
         document.getElementById('invalidoCorreo').style.display = 'none';
-    }, 1500);
+    }, 3500);
     }
   
     if (correoConfirmacion !== correo) {
       document.getElementById('invalidoConfimacion').style.display = 'block';
       setTimeout(function(){
         document.getElementById('invalidoConfimacion').style.display = 'none';
-    }, 1500);
+    }, 3500);
     }
   
     if (contraseña.length < 6) {
       document.getElementById('invalidoContraseña').style.display = 'block';
       setTimeout(function(){
         document.getElementById('invalidoContraseña').style.display = 'none';
-      }, 1500);
+      }, 3500);
     }
   
     if (direccion.length < 6) {
       document.getElementById('invalidoDireccion').style.display = 'block';
       setTimeout(function(){
         document.getElementById('invalidoDireccion').style.display='none';
-      }, 1500);
+      }, 3500);
     }
   
     if (estado === '') {
       document.getElementById('invalidoEstado').style.display = 'block';
       setTimeout(function(){
         document.getElementById('invalidoEstado').style.display = 'none';
-      }, 1500);
+      }, 3500);
     }
 
     if (codigoPostal.length !==5) {
@@ -58,7 +58,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
       event.preventDefault();
       setTimeout(function(){
         document.getElementById('invalidoCodigoPostal').style.display = 'none';
-      }, 1500);
+      }, 3500);
     }
 // Validacion de todos los campos para enviar el formulario, muestra la alerta de exito
 if (
