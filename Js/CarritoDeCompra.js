@@ -27,7 +27,7 @@ function renderizarProductos(listaProductos) {
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", element.imagen);
-        IMAGEN.classList.add("img-fluid");
+        IMAGEN.classList.add("col-md-4","img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
 
