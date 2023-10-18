@@ -1,4 +1,4 @@
-const principal = document.getElementById('princpal');
+const principal = document.getElementById('principal');
 const nosotros = document.getElementById('nosotros');
 const contact = document.getElementById('contact-us');
 const wish = document.getElementById('wish');
@@ -12,7 +12,7 @@ const main = document.getElementById('main-item');
 
 
 principal.addEventListener('click', () => {
-    main.src = "views/paginaProducto.html";
+    main.src = "views/paginaPrincipal.html";
 });
 
 nosotros.addEventListener('click', () => {
