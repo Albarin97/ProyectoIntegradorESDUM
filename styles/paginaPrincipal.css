@@ -7,9 +7,23 @@
     height:200px;
 }
 
-.btn {
-   color: #FFDFE2;
-   font-family:'Century Gothic', sans-serif;
+.btn.btn-primary {
+    background-color: #4964f3;
+    color: #FFDFE2;
+    border-radius: 20px;
+    border-color: transparent;   
+}
+
+.btn.btn-primary:hover{
+    background-color: #EF5268;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+}
+
+.productoNombre{
+    font-size: 20px;
+    color: #EF5268;
 }
 
 .redes{
