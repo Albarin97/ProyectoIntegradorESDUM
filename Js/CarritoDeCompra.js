@@ -114,7 +114,9 @@ function renderizarBotonesFinales(listaProductos) {
     botonVaciarCarrito.textContent = "Vaciar carrito";
     botonVaciarCarrito.classList.add("boton", "b-vaciar", "h-auto","mt-2","ms-3");
     botonVaciarCarrito.addEventListener('click', vaciarCarrito);
-    botonComprarCarrito.addEventListener('click', comprarCarrito);
+    botonComprarCarrito.addEventListener('click', () => {
+        comprarCarrito(listaProductos);
+    });
     //Cargamos los botones y el texto con el total
     divPrimeraParte.append(botonComprarCarrito);
     divPrimeraParte.append(botonVaciarCarrito);
@@ -172,9 +174,9 @@ function borrarProductoCarrito(element) {
     }
 }
 
-function comprarCarrito() {
-    localStorage.setItem("carrito", JSON.stringify(baseDeDatos));
-    window.location.href = "../views/carritoCompra.html";
+function comprarCarrito(listaProductos) {
+    localStorage.setItem("carrito", JSON.stringify(listaProductos));
+    window.location.href = "../views/paginaCompra.html";
 }
 
 function vaciarCarrito() {
