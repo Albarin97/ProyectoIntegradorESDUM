@@ -114,7 +114,9 @@ function renderizarBotonesFinales(listaProductos) {
     botonVaciarCarrito.textContent = "Vaciar carrito";
     botonVaciarCarrito.classList.add("boton", "b-vaciar", "h-auto","mt-2","ms-3");
     botonVaciarCarrito.addEventListener('click', vaciarCarrito);
-    botonComprarCarrito.addEventListener('click', comprarCarrito);
+    botonComprarCarrito.addEventListener('click', () => {
+        comprarCarrito(listaProductos);
+    });
     //Cargamos los botones y el texto con el total
     divPrimeraParte.append(botonComprarCarrito);
     divPrimeraParte.append(botonVaciarCarrito);
@@ -172,27 +174,23 @@ function borrarProductoCarrito(element) {
     }
 }
 
-function comprarCarrito() {
-    localStorage.setItem("carrito", JSON.stringify(baseDeDatos));
-    window.location.href = "../views/carritoCompra.html";
+function comprarCarrito(listaProductos) {
+    localStorage.setItem("carrito", JSON.stringify(listaProductos));
+    window.location.href = "../views/paginaCompra.html";
 }
 
 function vaciarCarrito() {
-    // Eliminamos todos los productos del DOM 
+    // Eliminamos todos los productos del div productos pero dejamos el div en el html
     const elementToRemove = document.getElementsByClassName("productos");
 
     // elementToRemove[0].remove(); Podriamos eliminar todo el nodo pero mejor lo vaciamos de todo su contenido
     while (elementToRemove[0].firstChild) {
         elementToRemove[0].removeChild(elementToRemove[0].firstChild);
     }
-    // Eliminamos los botones de comprar y el total porque ya no existen
-    // const total = document.getElementById("totalBotonesFinales");
-    // while (total[0].firstChild){
-    //     elementToRemove[0].removeChild(total.firstChild);
-    // }
-    // Se actualiza el local Storage
-    localStorage.setItem("carrito", []);
-    renderizaCarritoVacio(); //
+
+    // Se elimina el lita de carrito del local storage
+    localStorage.removeItem("carrito");
+    renderizaCarritoVacio(); 
 }
 
 
@@ -213,15 +211,23 @@ else { // En caso de que no existe ningun producto manda un mensaje de que no ex
 
 
 function renderizaCarritoVacio(){
+    // Se accede al div productos del html
     const divProductos = document.getElementsByClassName("productos");
     divProductos[0].classList.add("d-flex", "row", "align-items-center");
+    // Se crea un elemento p donde guardar el mensaje.
     const mensajeAgregar = document.createElement("p");
     mensajeAgregar.textContent = "No hay productos en el carrito de compras";
     mensajeAgregar.classList.add("mensaje","texto");
+    // Se agrega el parrafo al html 
     divProductos[0].append(mensajeAgregar);
+    // Se crea un boton para regresar a la pagina principal
     const buttton = document.createElement("button");
     buttton.textContent = "Regresar a explorar";
     buttton.classList.add("RegresarExplorar","boton","w-auto","ms-3","h-auto","texto");
-    buttton.addEventListener('click', () => window.location.href = "./paginaPrincipal.html");
+    buttton.addEventListener('click', () => window.location.href = "./contact.html");
     divProductos[0].append(buttton);
+    // Se elimina el contenido del div de totalbotonesfinales
+    const totalBotonesF = document.getElementsByClassName("totalBotonesFinales");
+    console.log(totalBotonesF);
+    totalBotonesF[0].innerHTML = "";
 }

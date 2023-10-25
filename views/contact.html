@@ -1,4 +1,4 @@
-html <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,26 +26,29 @@ html <!DOCTYPE html>
           <h1 class="contact text-center">Contáctanos</h1>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
-            <div class="alert alert-danger" role="alert" id="invalidoNombre" style="display: none" hidden>
-              Introduce un nombre válido
+            <input type="text" class="form-control" id="nombre">
+            <div class="alert alert-danger"  id="invalidoNombre" style="display: none">
+              <!--Ingrese nombre-->
             </div>
           </div>
           <div class="mb-3">
             <label for="correo" class="form-label">Correo electrónico</label>
             <input type="text" class="form-control" id="correo">
-            <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none" hidden>
-          Introduce un correo válido
+            <div class="alert alert-danger" id="invalidoCorreo" style="display: none">
+              <!---Ingrese correo-->
         </div>
           </div>
           <div>
             <label class="mb-2" for="mensaje">Mensaje</label>
             <textarea class="form-control" placeholder="Nos encantaría saber tu opinión" id="mensaje"
               rows="6"></textarea>
-              <div class="alert alert-danger" role="alert" id="invalidoMensaje" style="display: none" hidden>
-                Introduce un mensaje
+              <div class="alert alert-danger" id="invalidoMensaje" style="display: none">
+                <!--Ingrese mensaje-->
               </div>
           </div>
+
+          <div id="exito" class="alert alert-success" style="display: none;"></div>
+
           <div>
             <button type="submit" class="btn btn-primary mt-3">Enviar</button>
           </div>
@@ -55,7 +58,7 @@ html <!DOCTYPE html>
   </div>
 
   <!-- Link JS -->
-  <script src="../Js/contact.js"></script>
+  <script src="./Js/contactanos.js"></script>
 
 </body>
 
