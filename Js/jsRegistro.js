@@ -77,6 +77,18 @@ if (
         document.getElementById('exito').style.display = 'none';
     }, 5000);
     event.preventDefault();
+    //Declaramos una variable que contenga todos los datos del registro
+let datos = {
+  nombreUsuarioDato: nombreUsuario,
+  correoDato: correo,
+  correoConfirmacionDato: correoConfirmacion,
+  direccionDato: direccion,
+  estadoDato: estado,
+  codigoPostalDato: codigoPostal,
+};
+
+console.log(JSON.stringify(datos));
 }
+
 
 });
