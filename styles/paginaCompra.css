@@ -13,23 +13,26 @@
 }*/
 .my-order h1 {
   color: #4964F3;
-  font-size: larger;  
+  font-size: larger;
   margin-top: 15px;
   text-align: center;
-  
-;
+
+  ;
 
 }
+
 .title {
   font-size: var(--lg);
   margin-bottom: 40px;
 }
+
 .my-order-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
 
 }
+
 /*.order-content {
   display: flex;
   flex-direction: column;
@@ -39,11 +42,12 @@
 
 
 .order span {
-  font-weight: bolder
-  ;
+  font-weight: bolder;
 }
+
 .order {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
@@ -52,22 +56,26 @@
   border-radius: 8px;
   padding: 0 24px;
 }
+
 .order p:nth-child(1) {
   display: flex;
   flex-direction: column;
 }
+
 .order p span:nth-child(1) {
   font-size: var(--md);
   font-weight: bold;
 }
+
 .order p span:nth-child(2) {
   font-size: var(--sm);
   color: var(--very-light-pink);
 }
+
 .order p:nth-child(2) {
   text-align: end;
   font-weight: bold;
-} 
+}
 
 /*.shopping-cart {
   display: grid;
@@ -85,40 +93,61 @@
   border-radius: 10px;
   object-fit: cover;
 }
+
 .shopping-cart p:nth-child(2) {
   color: var(--very-light-pink);
 }
+
 .shopping-cart p {
   font-size: var(--md);
   font-weight: bold;
 }
 
 #products {
-  color: hotpink;
+  color: #EF5268;
 }
+
 .direction-user {
   font-size: var(--md);
   display: flexbox;
   place-items: left;
 
 }
+
 .product-container {
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   border: 2px solid #4964F3;
-  display:flex;
+  display: flex;
   border-radius: 30px;
   width: 100%;
-  
+
 }
 
 .product-details {
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 10px;
 }
+
 .total-general {
-  color: hotpink;
-  display:flex;
-  align-items: center; 
+  color: #EF5268;
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.boton {
+  background-color: #4964f3;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.boton:hover {
+  background-color: #EF5268;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
 }
