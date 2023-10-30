@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,73 +21,104 @@
     <script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" >
-        <div class="container-fluid">
-            
-            <!-- <a class="navbar-brand" href="#">Barra de navegación<nav></nav></a> -->
-            <!-- imagen logo -->
-
-
-            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse align-items-center gap-3" id="navbarNav">
-                <!-- Input de busqueda en el catalogo -->
-                <form class="form-inline my-2 my-lg-0 d-flex flex-row busqueda">
-                    <button class="btn my-2 my-sm-0 d-flex justify-content-center border-0" type="submit">
+    <!-- Barra de navegación -->
+    <nav class="barranav">
+        <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+            <!-- Input de busqueda en el catalogo -->
+            <div class="d-flex mt-3 w-25 d-none d-md-block">
+                <div class="d-flex flex-row w-75 busqueda">
+                    <button class="btn d-flex justify-content-center border-0" type="submit">
                         <i class="material-symbols-outlined ">Search</i>
                     </button>
-                    <input class="form-control rounded-circle border-0" type="search" placeholder="Buscar" aria-label="Search">
-                </form>
-                <!-- Logo -->
-                <div class="container-fluid d-flex justify-content-center">
-                    <a class="navbar-brand" href="#">
-                        <img src="../resources/logo/logo.png" width="270" height="100" class="d-inline-block align-top" alt="">
+                    <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="container-fluid d-flex justify-content-center w-50">
+                <a class="navbar-brand " href="./main.html">
+                    <img src="../resources/logo/logo.png" width="270" height="100"
+                        class="d-inline-block align-top img-fluid" alt="">
+                </a>
+            </div>
+            <!-- Botones  -->
+            <div class="d-flex flex-row align-items-center justify-content-end w-25">
+                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                    <a class="navbar-brand" href="./listaDeseos.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <i class="material-symbols-outlined">Favorite</i>
                     </a>
                 </div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                                <i class="material-symbols-outlined">Favorite</i>
-                            </a>
-                        </div>
-                    </li>
-                    <div class="d-flex ms-2 justify-content-start">
-                        <a class="navbar-brand" href="#">
-                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                    <a class="Person-icon" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top"> -->
-                            <i class="material-symbols-outlined">Person</i>
+                        <i class="material-symbols-outlined">Person</i>
+                    </a>
+                </div>
+                <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                    <a class="shopping-cart-icon" href="./carritoCompra.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <i class="material-symbols-outlined">Shopping_Cart</i>
+                    </a>
+                </div>
+                <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                    <a class="menu-icon" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                                class="material-symbols-outlined">Menu</i></button>
+                    </a>
+                </div>
+            </div>
+            <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <div class="container-fluid d-flex justify-content-center w-50">
+                        <a class="navbar-brand " href="#">
+                            <img src="../resources/logo/logo.png" width="270" height="100"
+                                class="d-inline-block align-top img-fluid" alt="">
                         </a>
                     </div>
-                    <li class="nav-item">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="d-flex w-100">
+                    <div class="d-flex flex-row w-100 busqueda">
+                        <button class="btn d-flex justify-content-center border-0" type="submit">
+                            <i class="material-symbols-outlined ">Search</i>
+                        </button>
+                        <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                    </div>
+                </div>
+                <div class="d-flex ms-3 mt-2 justify-content-start">
+                    <a class="navbar-brand" href="./listaDeseos.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
-                                <i class="material-symbols-outlined">Shopping_Cart</i>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-itemz">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                        <i class="material-symbols-outlined">Favorite</i> Lista de deseos
+                    </a>
+                </div>
+                <div class="d-flex ms-3 mt-2 justify-content-start">
+                    <a class="navbar-brand" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                        <i class="material-symbols-outlined">Person</i> Mi perfil
+                    </a>
+                </div>
+                <div class="d-flex ms-3 mt-2 justify-content-start">
+                    <a class="navbar-brand" href="./carritoCompra.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
-                                    
-                                <i class="material-symbols-outlined">Menu</i>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                        <i class="material-symbols-outlined">Shopping_Cart</i> Carrito de Compra
+                    </a>
+                </div>
             </div>
-            <div class="navbar-nav"></div>
         </div>
+        <div class="navbar-nav"></div>
     </nav>
 </body>
+
 </html>
