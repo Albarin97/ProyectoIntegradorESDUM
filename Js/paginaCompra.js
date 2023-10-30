@@ -7,7 +7,7 @@ const loadItems = () => {
   });
 
   const listElement = document.getElementById("shopping-list");
-  listElement.classList.add("d-flex","flex-column","align-items-center");
+  listElement.classList.add("d-flex", "flex-column", "align-items-center");
   const items = JSON.parse(localStorage.getItem("carrito"));
 
   if (!items || !Array.isArray(items)) {
@@ -18,9 +18,9 @@ const loadItems = () => {
   let totalAmount = 0;
   for (let item of items) {
     const div = document.createElement("div");
-    div.classList.add("w-75")
+    div.classList.add("w-75");
 
-    div.classList.add("product-container","justify-content-around","align-items-center");
+    div.classList.add("product-container", "justify-content-around", "align-items-center");
 
     const img = document.createElement("img");
     img.src = item.imagen;
@@ -29,16 +29,21 @@ const loadItems = () => {
     figure.appendChild(img);
 
     const name = document.createElement("p");
-    const price = document.createElement("p");
     const quantity = document.createElement("p");
+    const price = document.createElement("p");
     const totalPerItem = document.createElement("p");
     const newline = document.createElement("br");
 
     name.id = "products";
     name.innerHTML = `${item.clase} ${item.modelo} ${item.descripcion}`;
 
+    quantity.classList.add("item-quantity");
     quantity.innerHTML = `Cantidad: ${item.cantidadacomprar}`;
+
+    price.classList.add("item-price"); 
     price.innerHTML = `Precio por unidad: \$${item.precio}`;
+
+    totalPerItem.classList.add("item-total"); 
     totalPerItem.innerHTML = `Total por producto: \$${item.precio * item.cantidadacomprar}`;
 
     totalAmount += item.precio * item.cantidadacomprar;
@@ -59,18 +64,24 @@ const loadItems = () => {
   listElement.appendChild(totalElement);
 };
 
-function toggleEdit() {
-  const addressElement = document.getElementById("address");
-  const editButton = document.querySelector(".direction-user button");
 
-  addressElement.contentEditable = !(addressElement.contentEditable === 'true');
+//function para boton de direccion y nueva direction 
+function activarEdicion() {
+  document.getElementById("direccionTexto").style.display = "none";
 
-  if (addressElement.contentEditable === 'true') {
-    editButton.innerText = "Guardar dirección";
-  } else {
-    editButton.innerText = "Editar dirección";
-  }
+  document.getElementById("formularioEdicion").style.display = "block";
 }
 
+function guardarNuevaDireccion() {
+  let nuevaDireccion = document.getElementById("nuevaDireccion").value;
+
+  document.getElementById("direccion").innerHTML = nuevaDireccion;
+
+  document.getElementById("formularioEdicion").style.display = "none";
+  document.getElementById("direccionTexto").style.display = "block";
+}
+
+
 loadItems();
-toggleEdit();
+guardarNuevaDireccion();
+activarEdicion();
