@@ -1,0 +1,56 @@
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-left: 10px;
+  }
+  
+  .titulo{
+    color: #EF5268;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  #form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #4964F3;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-around;
+    width: 75vh;
+    height: 55vh;
+    margin-top: 20px;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+  
+  #imagen{
+    display: flex;
+    justify-content:center; /* Centra horizontalmente */
+    align-items:end; /* Centra verticalmente */
+    width: 500px;
+  
+  }
+  
+  .btn{
+    color: #FFDFE2;
+  }
+
+  .btn:hover{
+    background-color: #EF5268;
+    border: #EF5268 solid 1px;
+  }
+
+  .frase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
