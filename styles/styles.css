@@ -17,6 +17,10 @@
     outline: none;
 }
 
+.letrasCanvas{
+    color: #808080;
+}
+
 .btn:hover {
     color: #4964f3;
 
