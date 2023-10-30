@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión DeCrochet</title>
+  <!-- Etiqueta de CSS para bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Etiqueta para coenctar CSS -->
+  <link rel="stylesheet" href="../styles/stylesPaginaUsuario.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+  <h1 class="titulo">Iniciar Sesión</h1>
+  
+  <div class="contenedor">
+    <!--Inicia formulario-->
+    <form class="row g-2 needs-validation" id="form" novalidate>
+      <!--Etiqueta de cada campo, Boostrap-->
+
+      <div class="col-md-8">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+        <div class="alert alert-danger" role="alert" id="alertaCorreo" style="display: none">
+          Introduce un correo válido
+        </div>
+        </div>
+
+      <div class="col-md-8">
+        <label for="contraseña" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña" required>
+        <div class="alert alert-danger" role="alert" id="alertaContraseña" style="display: none">
+          Contraseña inválida
+        </div>
+      </div>
+
+      <!--Termina formulario-->
+      
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">Iniciar Sesion</button>
+      </div>
+
+    </form>
+
+    <div id="imagen">
+      <img class="vaquita img-fluid" src="../resources/logo/gorritoAppa.png" width="380px" alt="Gorrito Appa">
+    </div>
+  </div>
+
+    <div class="container2"> 
+        <div class="frase">
+            <p>¿No eres usuario?</p> 
+        </div>
+
+        <div class="frase">
+            <a href="./registro.html" style="color: #EF5268;">¡Regístrate!</a>
+        </div>
+    </div>
+
+  <script src="../Js/inicioSesion.js"></script>
+</body>
