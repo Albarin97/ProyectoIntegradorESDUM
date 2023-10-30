@@ -8,6 +8,15 @@
     border-style: solid;
 }
 
+.menucollapse{
+    background-color: transparent;
+    border: 0;
+}
+
+.entrada:focus{
+    outline: none;
+}
+
 .btn:hover {
     color: #4964f3;
 
@@ -40,13 +49,10 @@
     text-decoration: none;
 }
 
-.navbar-item{
-    width: 100% !important;
-    height: 130px !important;
-}
+.navbar-item,
 .main-item {
     width: 100% !important;
-    height: 100vh;
+    height: 300px;
 }
 
 .footer-item {
@@ -70,4 +76,9 @@
     flex-grow: 1;
     border: none;
     /* Para eliminar el borde del iframe si lo deseas */
+}
+
+.img-product {
+    height: 400px;
+    width: 400px;
 }
