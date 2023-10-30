@@ -1,0 +1,165 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    box-sizing:content-box;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 20px;
+}
+
+.leftMenu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 2;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightMenuRow{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    border: 1px solid white;
+    box-shadow: -10px 8px 20px #acbaff;
+    border-radius: 25px;
+    flex: 9;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.card{
+    margin: 15px;
+}
+
+.cardbody{
+    height: auto;
+}
+
+img{
+    border: 10px #FFDFE2 solid;
+    border-radius: 50%;
+    background-color: #FFDFE2;
+    margin: 40px;
+}
+
+.icon{
+    width: 18px;
+    fill: #FDA2EF;
+}
+
+.icon-link{
+    text-decoration: none;
+    color: #FFDFE2;
+    padding: 5px;
+}
+
+#card-title{
+    text-align: center;
+    color: #FFDFE2;
+}
+
+.menuSub{
+    color: #FFDFE2;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6{
+    text-decoration: none;
+    color: #EF5268;
+    font-size: 30px;
+}
+
+#iconCard1, #iconCard2, #iconCard3, #iconCard4, #iconCard5, #iconCard6{
+    width: 25px;
+    fill: #FDA2EF;
+    margin-bottom: 20px;
+}
+
+p{
+    margin: 50px;
+}
+
+
+
+
+
+.material-symbols-outlined {
+    color: #fda2ef;
+}
+
+.busqueda {
+    border: #fda2ef;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.btn:hover {
+    color: #4964f3;
+
+}
+
+* {
+    font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+    background-color: #4964F3;
+    color: white;
+}
+
+.footer-content {
+    color: black;
+}
+
+.copy-footer {
+    color: white;
+}
+
+.contact-us {
+    color: palevioletred;
+}
+
+.redes {
+    color: #4964F3;
+    text-decoration: none;
+}
+
+.navbar-item{
+    width: 100% !important;
+    height: 130px !important;
+}
+.main-item {
+    width: 100% !important;
+    height: 100vh;
+}
+
+.footer-item {
+    width: 100% !important;
+    height: 700px !important;
+}
+
+.wrapper {
+    min-height: 100vh;
+    /* Establece el alto mínimo del wrapper al alto de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div iframe {
+    flex-grow: 1;
+    border: none;
+    /* Para eliminar el borde del iframe si lo deseas */
+}
