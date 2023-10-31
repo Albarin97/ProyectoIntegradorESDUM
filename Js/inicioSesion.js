@@ -3,52 +3,38 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("form");
 
     // Agrega un event listener al formulario para el evento "submit", que se llama validarFormulario cuando se envía el formulario.
-    form.addEventListener("submit", validarFormulario);
+    form.addEventListener("submit", iniciarSesion);
 
-    function validarFormulario(evento) {
+    function iniciarSesion(evento) {
         // Previene el comportamiento predeterminado del formulario (envío).
         evento.preventDefault();
 
-        const datos = {
+        //Se obtienen el correo y la contraseña ingresados 
             // Crea un objeto "datos" con valores de los campos del formulario.
-            correo: document.getElementById("correo").value,
-            contraseña: document.getElementById("contraseña").value,
-        };
+            const correo= document.getElementById("correo").value;
+            const contraseña= document.getElementById("contraseña").value;
 
-        //***  Validaciones   ****//
+        //Vamos a obtener los datos de registro del LocalStorage
+        const datosGuardados= localStorage.getItem("datosUsuario");
 
-        // Validar correo
-        if (datos.correo.trim() === "") {
-            // Comprueba si el campo está en blanco.
-            mostrarAlerta("Por favor, ingrese un correo.", "alertaCorreo");
-            return;
+        if (datosGuardados){
+            //Parseamos los datos del local storage
+            const datos= JSON.parse(datosGuardados);
+
+              //***  Validaciones   ****//
+              if (correo === datos.correo && contraseña === datos.contraseña) {
+                console.log("Sesion iniciada");
+                window.location.href="../views/paginaPrincipal.html";
+              } else {
+                //Validar contraseña
+                mostrarAlerta("Contraseña incorrecta", "alertaContraseña");
+              }
+            } else {
+                //Validar correo
+                mostrarAlerta("Ups! Parece que no estas registrado", "alertaCorreo")
+                 /*** FIN Validaciones ****/
+            }
         }
-
-        // Validar contraseña
-        if (datos.contraseña.trim() === "") {
-            // Comprueba si el campo de contraseña está en blanco.
-            mostrarAlerta("Por favor, ingrese una contraseña.", "alertaContraseña");
-            return;
-        }
-
-        /*** FIN Validaciones ****/
-
-        //Se ocupa .stringify en el objeto para convertirla en cadena JSON y se imprime en consola el formato JSON
-        const datosJSON = JSON.stringify(datos);
-        console.log(datosJSON);
-        
-        localStorage.setItem("datosUsuario", datosJSON)
-       
-         // Analiza el JSON de nuevo a un objeto
-         const datosParseados = JSON.parse(datosJSON);
-         console.log(typeof(datosParseados));
-         console.log(datosParseados);
-
-        mostrarAlerta("Formulario enviado con éxito.", "success");
-        // Restablece el formulario después de enviar los datos.
-        form.reset();
-
-    }
 
     // Esta función muestra alertas en el formulario.
     function mostrarAlerta(mensaje, tipo) {
@@ -70,5 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 3000);
         }
     }
+
+    let datosGuardados= localStorage.getItem("datosRegistro");
+
+    if(datosGuardados) {
+        var datos=JSON.parse(datosGuardados);
+    } else {
+    
+    }
+    console.log(JSON.stringify(datos));
 
 });

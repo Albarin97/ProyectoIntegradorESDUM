@@ -75,20 +75,25 @@ if (
     document.getElementById('exito').style.display = 'block'
     setTimeout(function () {
         document.getElementById('exito').style.display = 'none';
-    }, 5000);
+        window.location.href="../views/paginaPrincipal.html"
+    }, 3000);
     event.preventDefault();
     //Declaramos una variable que contenga todos los datos del registro
-let datos = {
+var datos = {
   nombreUsuarioDato: nombreUsuario,
   correoDato: correo,
   correoConfirmacionDato: correoConfirmacion,
   direccionDato: direccion,
   estadoDato: estado,
   codigoPostalDato: codigoPostal,
+
+
 };
+
+//Guardamos en local Storage
+localStorage.setItem("datosRegistro", JSON.stringify(datos));
 
 console.log(JSON.stringify(datos));
 }
-
 
 });
