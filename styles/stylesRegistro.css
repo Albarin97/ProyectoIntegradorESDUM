@@ -1,3 +1,58 @@
+/*Navbar*/
+.material-symbols-outlined {
+  color: #fda2ef;
+}
+
+.busqueda {
+  border: #fda2ef;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.menucollapse{
+  background-color: transparent;
+  border: 0;
+}
+
+.entrada:focus{
+  outline: none;
+}
+
+.letrasCanvas{
+  color: #808080;
+}
+
+.btn:hover {
+  color: #4964f3;
+
+}
+
+* {
+  font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+  background-color: #4964F3;
+  color: white;
+}
+
+.footer-content {
+  color: black;
+}
+
+.copy-footer {
+  color: white;
+}
+
+.border-0{
+  border-radius: 100px;
+  width: 100px;
+}
+
+
+/*Pagina Registro*/
+
 .contenedor {
   display: flex;
   flex-direction: row;
@@ -7,15 +62,10 @@
   margin-left: 10px;
 }
 
-.contenedor > div {
-  width: 50%;
-
-}
-
 .titulo{
   color: #EF5268;
   font-family:'Century Gothic', sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
   margin-top: 15px;
@@ -24,34 +74,40 @@
 .subtitulo{
   color: #EF5268;
   font-family:'Century Gothic', sans-serif;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #form{
+  display: flex;
   border: 2px solid #4964F3;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  width: 100vh;
-  margin-top: 40px;
+  justify-content: space-around; 
+  align-items: end; /* Centra verticalmente */
+  width: 90vh;
+  height: auto;
+  margin-top: 20px;
   font-family:'Century Gothic', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 15px;
-  padding: 10px;
-  
+  padding: 15px;
 }
 
 #imagen{
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  width: 100vh;
-  padding-left: 80px;
-  margin-top: 40px;
+  display: flex;
+  justify-content: end; /* Centra horizontalmente */
+  align-items: end; /* Centra verticalmente */
+  width: 600px;
 
 }
 
 .btn{
+  color: #FFDFE2;
+}
+
+.btn:hover{
+  background-color: #EF5268;
+  border: #EF5268 solid 1px;
   color: #FFDFE2;
 }
