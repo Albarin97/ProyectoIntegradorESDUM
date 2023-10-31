@@ -570,3 +570,71 @@ function removerProductos() {
 
 categoriasEventos();
 
+
+//Función que muestra el precio máximo de los productos al inicializar la página
+function eventoPrecio (){
+    const precioMaximo= document.getElementsByClassName("precioMaximo");
+    precioMaximo[0].textContent="$"+obtenerPrecioMaximo();
+ }
+ 
+ eventoPrecio();
+ 
+     
+ // Modifica precio seleccionado en barra
+ function precioSeleccionado (){
+     const barraPrecio = document.getElementById("customRange1");
+     const precioMaximo= document.getElementsByClassName("precioMaximo"); 
+ 
+     barraPrecio.addEventListener("input", function() {
+     const precio = this.value;
+     precioMaximo[0].textContent = `$${precio}`; 
+ });
+ }
+ 
+ precioSeleccionado();
+ 
+ //Función para saber qué casillas están marcadas
+ function obtenerCategoriaSeleccionada() {
+     if (document.getElementById("flexCheckAmigurumis").checked) {
+         return "Amigurumi";
+     } else if (document.getElementById("flexCheckRopa").checked) {
+         return "Ropa";
+     } else if (document.getElementById("flexCheckAccesorios").checked) {
+         return "Accesorio";
+     } else {
+         return "";
+     }
+ }
+ 
+ // Función que filtra por precio y categoría
+ function filtrarProductosPrecioyCategoria() {
+     const precioMaximo = document.getElementById("customRange1").value;
+     const categoriaSeleccionada = obtenerCategoriaSeleccionada();
+ 
+     const productosFiltrados = baseDeDatos.filter((producto) => {
+         return producto.clase === categoriaSeleccionada && producto.precio <= precioMaximo;
+     });
+ 
+     const principal = document.querySelector(".principal");
+         while (principal.firstChild) {
+         principal.removeChild(principal.firstChild);
+      }
+ 
+     renderizarProductos(productosFiltrados);
+ }
+ 
+ 
+ //Se muestra el precio seleccionado en barra 
+ const barraPrecio = document.getElementById("customRange1");
+ const precioActual = document.querySelector(".precioMaximo");
+ 
+ barraPrecio.addEventListener("input", function () {
+     const precio = this.value;
+     precioActual.textContent = `$${precio}`;
+ });
+ 
+ 
+ // Evento de barra de precios
+ barraPrecio.addEventListener("input", function () {
+     filtrarProductosPrecioyCategoria();
+ });
