@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
               //***  Validaciones   ****//
               if (correo === datos.correo && contraseña === datos.contraseña) {
                 console.log("Sesion iniciada");
+                //Almacenamos en cookie el estado de la sesion
+                localStorage.setItem("sesionIniciada","true")
                 window.location.href="../views/paginaPrincipal.html";
               } else {
                 //Validar contraseña
@@ -67,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(JSON.stringify(datos));
 
 });
+
