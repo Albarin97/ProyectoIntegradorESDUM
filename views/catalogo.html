@@ -25,31 +25,33 @@
     <div class="d-flex flex-row controles">
         <div class="precios col-md-6">
             <h2 class="subtitulo">Filtrar por precio</h2>
-            <div class="p-4 d-flex flex-row">
-                <label for="customRange1" class="form-label">Rango de precios</label>
-                <input type="range" class="form-range w-50" id="customRange1">
+            <div class="p-2 d-flex flex-column align-items-evenly">
+                <div class="p-2 d-flex flex-row justify-content-around">
+                <label class="precioMinimo">$0</label>
+                <input type="range" class="form-range w-75" min="0" max="500" id="customRange1">
+                <label class="precioMaximo"></label>
+                </div>
+                <div class="p-2 d-flex flex-row justify-content-around">
+                    <label class="precioMarcado"></label>
+                </div>
             </div>
         </div>
-        <div class="categorias col-md-6">
-            <h2 class="subtitulo">Filtrar por categorias</h2>
-            <div >
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckAmigurumis">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Amigurumis
-                    </label>
-                </div>
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckRopa">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Ropa
-                    </label>
-                </div>
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckAccesorios">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Accesorios
-                    </label>
+       
+        <div class="categorias col-md-6 mr-4">
+            <h2 class="p-2 subtitulo d-flex justify-content-end">Filtrar por categorías</h2>
+            <div class="p-1">
+                <div class="d-flex justify-content-end">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-Amigurumis">
+                            <input type="checkbox" id="flexCheckAmigurumis"> Amigurumis
+                        </label>
+                        <label class="btn btn-Ropa">
+                            <input type="checkbox" id="flexCheckRopa"> Ropa
+                        </label>
+                        <label class="btn btn-Accesorios">
+                            <input type="checkbox" id="flexCheckAccesorios"> Accesorios
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
