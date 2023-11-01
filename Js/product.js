@@ -8,3 +8,13 @@ for (let i = 1; i <= 4; i++) {
       imgMain.src = e.target.src;
     });
   }
+
+
+  // Obtener el parámetro de ID de la página Catálogo
+  const parametro = new URLSearchParams(window.location.search);
+  const productoId = parametro.get("id");
+
+  if (productoId !== null && productoId !== "") {
+    console.log("ID del producto:", productoId);
+  }
+  
