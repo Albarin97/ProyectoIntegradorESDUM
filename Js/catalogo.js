@@ -1,5 +1,7 @@
 console.log("Conectado");
 // Variables
+import baseDeDatos from '../baseDeDatos/baseDeDatos.js';
+console.log(baseDeDatos);
 
 
 function renderizarProductos(Productos) {
@@ -23,6 +25,8 @@ function renderizarProductos(Productos) {
         IMAGEN.classList.add("col-md-4", "img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
+
+        
         // Cargamos descripcion en el contenedor de descripcion y su titulo
         const TITULO = document.createElement('h2');
         TITULO.classList.add("subtitulo");
@@ -53,6 +57,10 @@ function renderizarProductos(Productos) {
             // Puedes utilizar otro arreglo para almacenar los productos favoritos.
         });
 
+        // Evento imagen redirecciona a página producto (se envía el id)
+        IMAGEN.addEventListener('click', () => {
+        window.location.href = `../views/product.html?id=${info.id}`;
+        });
 
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
@@ -66,6 +74,7 @@ function renderizarProductos(Productos) {
 
     });
 }
+
 
 
 //Se añaden los eventos a los botones de filtrado 
