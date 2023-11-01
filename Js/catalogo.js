@@ -6,20 +6,20 @@ const baseDeDatos = [
         clase: 'Amigurumi',
         modelo: 'Jengibre',
         descripcion: 'Navideño',
-        precio: 200,
+        precio: 300,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen:  "../resources/logo/jengibre.jpeg"
+        imagen: "./Resources/jengibre.jpeg"
     },
     {
         id: 2,
         clase: 'Amigurumi',
         modelo: 'Sirena',
         descripcion: 'Colores',
-        precio: 180,
+        precio: 220,
         cantidad: 15,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sirena.jpeg"
+        imagen: "./Resources/sirena.jpeg"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/aguacate.jpeg"
+        imagen: "./Resources/aguacate.jpeg"
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/jakeElPerro.jpeg"
+        imagen: "./Resources/jakeElPerro.jpeg"
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/Sith.jpeg"
+        imagen: "./Resources/Sith.jpeg"
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/corazon.jpeg"
+        imagen: "./Resources/corazon.jpeg"
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sincara.jpeg"
+        imagen: "./Resources/sincara.jpeg"
     },
     {
         id: 8,
@@ -79,7 +79,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/hellokitty.jpeg"
+        imagen: "./Resources/hellokitty.jpeg"
     },
     {
         id: 9,
@@ -89,7 +89,7 @@ const baseDeDatos = [
         precio: 200,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/yoshi.jpeg"
+        imagen: "./Resources/yoshi.jpeg"
     },
     {
         id: 10,
@@ -99,7 +99,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/miranda.jpeg"
+        imagen: "./Resources/miranda.jpeg"
     },
     {
         id: 11,
@@ -109,7 +109,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/hamtaro.jpeg"
+        imagen: "./Resources/hamtaro.jpeg"
     },
     {
         id: 12,
@@ -119,7 +119,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/koala.jpeg"
+        imagen: "./Resources/koala.jpeg"
     },
     {
         id: 13,
@@ -129,7 +129,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/moana.jpeg"
+        imagen: "./Resources/moana.jpeg"
     },
     {
         id: 14,
@@ -139,7 +139,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/mario.jpeg"
+        imagen: "./Resources/mario.jpeg"
     },
     {
         id: 15,
@@ -149,7 +149,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/suculenta.jpeg"
+        imagen: "./Resources/suculenta.jpeg"
     },
     {
         id: 16,
@@ -159,7 +159,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 10,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/camisa1.jpeg"
+        imagen: "./Resources/camisa1.jpeg"
     },
     {
         id: 17,
@@ -169,7 +169,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/camisa2.jpeg"
+        imagen: "./Resources/camisa2.jpeg"
     },
     {
         id: 18,
@@ -179,7 +179,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sueterHombre.jpeg"
+        imagen: "./Resources/sueterHombre.jpeg"
     },
     {
         id: 19,
@@ -189,7 +189,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/camisa3.jpeg"
+        imagen: "./Resources/camisa3.jpeg"
     },
     {
         id: 20,
@@ -199,7 +199,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/dinosaco.jpeg"
+        imagen: "./Resources/dinosaco.jpeg"
     },
     {
         id: 21,
@@ -209,7 +209,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/conjuntoRosa.jpeg"
+        imagen: "./Resources/conjuntoRosa.jpeg"
     },
     {
         id: 22,
@@ -219,7 +219,7 @@ const baseDeDatos = [
         precio: 300,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/pantalon.jpeg"
+        imagen: "./Resources/pantalon.jpeg"
     },
     {
         id: 23,
@@ -229,7 +229,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/conjuntoNegro.jpeg"
+        imagen: "./Resources/conjuntoNegro.jpeg"
     },
     {
         id: 24,
@@ -239,7 +239,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/polloBebe.jpeg"
+        imagen: "./Resources/polloBebe.jpeg"
     },
     {
         id: 25,
@@ -249,7 +249,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/poohBebe.jpeg"
+        imagen: "./Resources/poohBebe.jpeg"
     },
     {
         id: 26,
@@ -259,7 +259,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/calbazaBebe.jpeg"
+        imagen: "./Resources/calbazaBebe.jpeg"
     },
     {
         id: 27,
@@ -269,7 +269,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/nocheEstrelladaSueter.jpeg"
+        imagen: "./Resources/nocheEstrelladaSueter.jpeg"
     },
     {
         id: 28,
@@ -279,7 +279,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/conjunto70.jpeg"
+        imagen: "./Resources/conjunto70.jpeg"
     },
     {
         id: 29,
@@ -289,7 +289,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sueterRosa.jpeg"
+        imagen: "./Resources/sueterRosa.jpeg"
     },
     {
         id: 30,
@@ -299,7 +299,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/cobija.jpeg"
+        imagen: "./Resources/cobija.jpeg"
     },
     {
         id: 31,
@@ -309,7 +309,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/gorroSonrisa.jpeg"
+        imagen: "./Resources/gorroSonrisa.jpeg"
     },
     {
         id: 32,
@@ -319,7 +319,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/bolsaFurby.jpeg"
+        imagen: "./Resources/bolsaFurby.jpeg"
     },
     {
         id: 33,
@@ -329,7 +329,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/dinoAretes.jpeg"
+        imagen: "./Resources/dinoAretes.jpeg"
     },
     {
         id: 34,
@@ -339,7 +339,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/bufanda.jpeg"
+        imagen: "./Resources/bufanda.jpeg"
     },
     {
         id: 35,
@@ -349,7 +349,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/gorroJirafa.jpeg"
+        imagen: "./Resources/gorroJirafa.jpeg"
     },
     {
         id: 36,
@@ -359,7 +359,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/aretesFresa.jpeg"
+        imagen: "./Resources/aretesFresa.jpeg"
     },
     {
         id: 37,
@@ -369,7 +369,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/gorroEmoji.jpeg"
+        imagen: "./Resources/gorroEmoji.jpeg"
     },
     {
         id: 38,
@@ -379,7 +379,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/llaveroCerezas.jpeg"
+        imagen: "./Resources/llaveroCerezas.jpeg"
     },
     {
         id: 39,
@@ -389,7 +389,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sombreroVaca.jpeg"
+        imagen: "./Resources/sombreroVaca.jpeg"
     },
     {
         id: 40,
@@ -399,7 +399,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/aretesFlor.jpeg"
+        imagen: "./Resources/aretesFlor.jpeg"
     },
     {
         id: 41,
@@ -409,27 +409,27 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/hongoBolsa.jpeg"
+        imagen: "./Resources/hongoBolsa.jpeg"
     },
     {
         id: 42,
         clase: 'Accesorio',
         modelo: 'Mochila cámara',
         descripcion: 'Aqua, petite',
-        precio: 150,
+        precio: 120,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/camaraBolsa.jpeg"
+        imagen: "./Resources/camaraBolsa.jpeg"
     },
     {
         id: 43,
         clase: 'Accesorio',
         modelo: 'Sombrero de oso',
         descripcion: 'Café',
-        precio: 150,
+        precio: 145,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/sombreroOso.jpeg"
+        imagen: "./Resources/sombreroOso.jpeg"
     },
     {
         id: 44,
@@ -439,7 +439,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/mochilaVideojuego.jpeg"
+        imagen: "./Resources/mochilaVideojuego.jpeg"
     },
     {
         id: 45,
@@ -449,7 +449,7 @@ const baseDeDatos = [
         precio: 150,
         cantidad: 3,
         cantidadacomprar: 1,
-        imagen: "../resources/logo/bolsaPan.jpeg"
+        imagen: "./Resources/bolsaPan.jpeg"
     }
 
 ];
@@ -486,10 +486,31 @@ function renderizarProductos(Productos) {
         DESCRIPCION.textContent = info.descripcion;
         DESCRIPCION.textContent = DESCRIPCION.textContent
         PRECIO.textContent = "Precio:" + String(info.precio);
-        //CONTENEDORDESCRIPCION.classList.add("col-md-4");
+    
+        // Agregar botón de carrito
+        const botonCarrito = document.createElement('button');
+        botonCarrito.classList.add("btn", "btn-primary", "m-2");
+        botonCarrito.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+        botonCarrito.addEventListener('click', () => {
+            // Agregar lógica para agregar este producto al carrito
+            // Puedes utilizar un arreglo para almacenar los productos en el carrito.
+        });
+
+        // Agregar botón de favoritos
+        const botonFavoritos = document.createElement('button');
+        botonFavoritos.classList.add("btn", "btn-primary", "m-2");
+        botonFavoritos.innerHTML = '<i class="fas fa-heart"></i>';
+        botonFavoritos.addEventListener('click', () => {
+            // Agregar lógica para agregar este producto a la lista de favoritos
+            // Puedes utilizar otro arreglo para almacenar los productos favoritos.
+        });
+
+
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
         CONTENEDORDESCRIPCION.appendChild(PRECIO);
+        CONTENEDORDESCRIPCION.appendChild(botonCarrito);
+        CONTENEDORDESCRIPCION.appendChild(botonFavoritos);
 
         CARTA.appendChild(CONTENEDORIMAGEN);
         CARTA.appendChild(CONTENEDORDESCRIPCION);
@@ -498,7 +519,6 @@ function renderizarProductos(Productos) {
     });
 }
 
-//renderizarProductos();
 
 //Se añaden los eventos a los botones de filtrado 
 //Se crea función que añada eventos 
@@ -512,7 +532,7 @@ function categoriasEventos() {
         if (categoriaAmigurumi.target.checked) {
             filtrarProductos("Amigurumi");
         } else {
-            removerProductos();
+            removerProductos("Amigurumi");
             if (document.getElementById("flexCheckAccesorios").checked) {
                 filtrarProductos("Accesorio");
             }
@@ -550,91 +570,136 @@ function categoriasEventos() {
         }
     });
 }
+categoriasEventos();
+
+let ordenCategorias=[];
+
+function ordendeCategorias (){
+const categoriaAmigurumi = document.getElementById("flexCheckAmigurumis");
+const categoriaRopa = document.getElementById("flexCheckRopa");
+const categoriaAccesorios = document.getElementById("flexCheckAccesorios");
+categoriaAmigurumi.addEventListener('change', () => {
+    if (categoriaAmigurumi.checked) {
+        filtrarProductos("Amigurumi");
+        ordenCategorias.push("Amigurumi");
+    } 
+});
+
+categoriaRopa.addEventListener('change', () => {
+    if (categoriaRopa.checked) {
+        filtrarProductos("Ropa");
+        ordenCategorias.push("Ropa");
+    }
+});
+
+categoriaAccesorios.addEventListener('change', () => {
+    if (categoriaAccesorios.checked) {
+        filtrarProductos("Accesorio");
+        ordenCategorias.push("Accesorio");
+    } 
+});
+    return ordenCategorias;
+}
+
+ordendeCategorias ();
+
 
 // Se crea la función que renderiza lo seleccionado en checkbox
 function filtrarProductos(categoria) {
+
     let categoriaSeleccionada = baseDeDatos.filter(producto => producto.clase === categoria);
     renderizarProductos(categoriaSeleccionada);
 }
 
+//Se crea función que obtiene el precio máximo de los productos 
+function obtenerPrecioMaximo(){
+    let precioMaximo = 0;
+    baseDeDatos.forEach(producto =>{
+        if (producto.precio>precioMaximo){
+            precioMaximo = producto.precio;
+        }
+    })
+    return precioMaximo;
+}
+
+
 //Se crea función que elimina si se deselecciona categoria
-function removerProductos() {
-    
+function removerProductos(categoria) {
     const elementToRemove = document.getElementsByClassName("principal");
     while (elementToRemove[0].firstChild) {
        elementToRemove[0].removeChild(elementToRemove[0].firstChild);
     }
-
 }
 
-
-categoriasEventos();
-
+//categoriasEventos();
 
 //Función que muestra el precio máximo de los productos al inicializar la página
 function eventoPrecio (){
-    const precioMaximo= document.getElementsByClassName("precioMaximo");
-    precioMaximo[0].textContent="$"+obtenerPrecioMaximo();
- }
- 
- eventoPrecio();
- 
-     
- // Modifica precio seleccionado en barra
- function precioSeleccionado (){
-     const barraPrecio = document.getElementById("customRange1");
-     const precioMaximo= document.getElementsByClassName("precioMaximo"); 
- 
-     barraPrecio.addEventListener("input", function() {
-     const precio = this.value;
-     precioMaximo[0].textContent = `$${precio}`; 
- });
- }
- 
- precioSeleccionado();
- 
- //Función para saber qué casillas están marcadas
- function obtenerCategoriaSeleccionada() {
-     if (document.getElementById("flexCheckAmigurumis").checked) {
-         return "Amigurumi";
-     } else if (document.getElementById("flexCheckRopa").checked) {
-         return "Ropa";
-     } else if (document.getElementById("flexCheckAccesorios").checked) {
-         return "Accesorio";
-     } else {
-         return "";
-     }
- }
- 
- // Función que filtra por precio y categoría
- function filtrarProductosPrecioyCategoria() {
-     const precioMaximo = document.getElementById("customRange1").value;
-     const categoriaSeleccionada = obtenerCategoriaSeleccionada();
- 
-     const productosFiltrados = baseDeDatos.filter((producto) => {
-         return producto.clase === categoriaSeleccionada && producto.precio <= precioMaximo;
-     });
- 
-     const principal = document.querySelector(".principal");
-         while (principal.firstChild) {
-         principal.removeChild(principal.firstChild);
-      }
- 
-     renderizarProductos(productosFiltrados);
- }
- 
- 
- //Se muestra el precio seleccionado en barra 
- const barraPrecio = document.getElementById("customRange1");
- const precioActual = document.querySelector(".precioMaximo");
- 
- barraPrecio.addEventListener("input", function () {
-     const precio = this.value;
-     precioActual.textContent = `$${precio}`;
- });
- 
- 
- // Evento de barra de precios
- barraPrecio.addEventListener("input", function () {
-     filtrarProductosPrecioyCategoria();
- });
+   const precioMaximo= document.getElementsByClassName("precioMaximo");
+   precioMaximo[0].textContent="$"+obtenerPrecioMaximo();
+}
+
+eventoPrecio();
+
+    
+// Modifica precio seleccionado en barra
+function precioSeleccionado (){
+    const barraPrecio = document.getElementById("customRange1");
+    const precioMaximo = document.getElementsByClassName("precioMaximo"); 
+    
+    barraPrecio.addEventListener("input", function() {
+    const precio = this.value;
+    precioMaximo[0].textContent = `$${precio}`; 
+});
+}
+
+precioSeleccionado();
+
+//Función para saber qué casillas están marcadas en qué orden
+function obtenerCategoriasSeleccionadas() {
+    const categoriasSeleccionadas = ordenCategorias;
+    //console.log(categoriasSeleccionadas);
+    return categoriasSeleccionadas;
+}
+
+
+// Función que filtra por precio y categoría
+function filtrarProductosPrecioyCategoria() {
+    const precioMaximo = document.getElementById("customRange1").value;
+    const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
+    console.log(categoriasSeleccionadas);
+    const productosFiltrados = baseDeDatos.filter((producto) => {
+        return categoriasSeleccionadas.includes(producto.clase) && producto.precio <= precioMaximo;
+    });
+
+    // Ordenar los productos en el orden de las categorías seleccionadas
+    const productosOrdenados = [];
+    categoriasSeleccionadas.forEach((categoria) => {
+        const productosDeCategoria = productosFiltrados.filter((producto) => producto.clase === categoria);
+        productosOrdenados.push(...productosDeCategoria);
+    });
+
+    //limpia "principal"
+    const principal = document.querySelector(".principal");
+    while (principal.firstChild) {
+        principal.removeChild(principal.firstChild);
+    }
+
+    //renderizarProductos(productosOrdenados);
+    renderizarProductos(productosFiltrados);
+}
+
+//Se muestra el precio seleccionado en barra 
+const barraPrecio = document.getElementById("customRange1");
+const precioActual = document.querySelector(".precioMaximo");
+
+//Evento barra de precios
+barraPrecio.addEventListener("input", function () {
+    filtrarProductosPrecioyCategoria();
+    const precio = this.value;
+    precioActual.textContent = `$${precio}`;
+});
+
+
+
+

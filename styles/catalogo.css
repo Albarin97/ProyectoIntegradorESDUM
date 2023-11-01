@@ -1,6 +1,6 @@
-.body{
+body{
     font-family:'Century Gothic', sans-serif;
-    background-image:url('../Resources/Fondo2.png');
+    background-image:url('../resources/logo/Fondo2.png');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat; 
@@ -32,6 +32,8 @@
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
+    box-shadow: 5px 5px 10px #4964f3;
+    background-color: white; 
 }
 
 .contenedorImagen img {
@@ -41,11 +43,14 @@
 .contenedorProducto {
     text-align: center;
 }
- 
+
+
 /*Botones de selección categoría**/
 .btn.btn-Ropa,.btn.btn-Amigurumis,.btn.btn-Accesorios{
     background-color: #4964F3;
     color: #FFDFE2; 
+    box-shadow: 5px 5px 10px #4964F3; 
+    border-radius: 10px; 
 }
 
 .btn.btn-primary{
@@ -74,12 +79,16 @@
     border-color:  #4964F3;
     height: 10px; 
     border-top:2px;
+    box-shadow: 5px 5px 10px #4964F3; 
+    border-radius: 10px; 
+    margin-top: 5px;
 }
 
 
 .precioMinimo,.precioMaximo {
     color: #EF5268;
     font-size: 15px;
+    font-weight: bold;
 }
 
 
