@@ -1,4 +1,94 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+/*Navbar*/
+.material-symbols-outlined {
+    color: #fda2ef;
+}
+
+.busqueda {
+    border: #fda2ef;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.menucollapse{
+    background-color: transparent;
+    border: 0;
+}
+
+.entrada:focus{
+    outline: none;
+}
+
+.letrasCanvas{
+    color: #808080;
+}
+
+.btn:hover {
+    color: #4964f3;
+
+}
+
+* {
+    font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+    background-color: #4964F3;
+    color: white;
+}
+
+.footer-content {
+    color: black;
+}
+
+.copy-footer {
+    color: white;
+}
+
+.contact-us {
+    color: palevioletred;
+}
+
+.redes {
+    color: #4964F3;
+    text-decoration: none;
+}
+
+.navbar-item,
+.main-item {
+    width: 100% !important;
+    height: 300px;
+}
+
+.footer-item {
+    width: 100% !important;
+    height: 700px !important;
+}
+
+.wrapper {
+    min-height: 100vh;
+    /* Establece el alto mínimo del wrapper al alto de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-div iframe {
+    flex-grow: 1;
+    border: none;
+    /* Para eliminar el borde del iframe si lo deseas */
+}
+
+.img-product {
+    height: 400px;
+    width: 400px;
+}
+
 
 /*Pagina de usuario*/
 
@@ -29,12 +119,17 @@
     flex-direction: row;
     flex-flow: wrap;
     border: 1px solid white;
-    box-shadow: -10px 8px 20px #acbaff;
+    /*box-shadow: -10px 8px 20px #acbaff;*/
     border-radius: 25px;
     flex: 9;
     justify-content: space-around;
     align-items: center;
-    margin-left: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.card-text{
+    font-size: 20px;
 }
 
 .card{
@@ -45,7 +140,7 @@
     height: auto;
 }
 
-img{
+#fotoPerfil{
     border: 10px #FFDFE2 solid;
     border-radius: 50%;
     background-color: #FFDFE2;
@@ -59,8 +154,8 @@ img{
 
 .icon-link{
     text-decoration: none;
+    margin: 7px;
     color: #FFDFE2;
-    padding: 5px;
 }
 
 #card-title{
@@ -86,4 +181,12 @@ img{
 
 p{
     margin: 50px;
+}
+
+#card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
+    transform: scale(0.90);
+}
+
+.icon:hover{
+    transform: scale(1.5);
 }
