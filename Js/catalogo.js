@@ -28,8 +28,6 @@ function renderizarProductos(Productos) {
         IMAGEN.classList.add("col-md-4", "img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
-
-        
         // Cargamos descripcion en el contenedor de descripcion y su titulo
         const TITULO = document.createElement('h2');
         TITULO.classList.add("subtitulo");
@@ -47,8 +45,7 @@ function renderizarProductos(Productos) {
         botonCarrito.classList.add("btn", "btn-primary", "m-2");
         botonCarrito.innerHTML = '<i class="fas fa-shopping-cart"></i>';
         botonCarrito.addEventListener('click', () => {
-            // Agregar lógica para agregar este producto al carrito
-            // Puedes utilizar un arreglo para almacenar los productos en el carrito.
+            
         });
 
         // Agregar botón de favoritos
@@ -56,8 +53,7 @@ function renderizarProductos(Productos) {
         botonFavoritos.classList.add("btn", "btn-primary", "m-2");
         botonFavoritos.innerHTML = '<i class="fas fa-heart"></i>';
         botonFavoritos.addEventListener('click', () => {
-            // Agregar lógica para agregar este producto a la lista de favoritos
-            // Puedes utilizar otro arreglo para almacenar los productos favoritos.
+            
         });
 
         // Evento imagen redirecciona a página producto (se envía el id)
