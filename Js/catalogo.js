@@ -1,3 +1,6 @@
+import baseDeDatos from "../baseDeDatos/baseDeDatos.js";
+
+console.log(baseDeDatos);
 console.log("Conectado");
 // Variables
 
@@ -192,6 +195,8 @@ function removerProductos(categoria) {
 function eventoPrecio (){
    const precioMaximo= document.getElementsByClassName("precioMaximo");
    precioMaximo[0].textContent="$"+obtenerPrecioMaximo();
+   const barra = document.getElementById("customRange1");
+   barra.setAttribute("max",obtenerPrecioMaximo());
 }
 
 eventoPrecio();
