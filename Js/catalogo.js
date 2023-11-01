@@ -1,6 +1,4 @@
-import baseDeDatos from "../baseDeDatos/baseDeDatos.js";
 
-console.log(baseDeDatos);
 console.log("Conectado");
 // Variables
 import baseDeDatos from '../baseDeDatos/baseDeDatos.js';
