@@ -582,13 +582,18 @@ categoriaAmigurumi.addEventListener('change', () => {
     if (categoriaAmigurumi.checked) {
         filtrarProductos("Amigurumi");
         ordenCategorias.push("Amigurumi");
-    } 
+    } else {
+        ordenCategorias.pop("Amigurumi");
+
+    }
 });
 
 categoriaRopa.addEventListener('change', () => {
     if (categoriaRopa.checked) {
         filtrarProductos("Ropa");
         ordenCategorias.push("Ropa");
+    } else {
+        ordenCategorias.pop("Ropa");
     }
 });
 
@@ -596,7 +601,9 @@ categoriaAccesorios.addEventListener('change', () => {
     if (categoriaAccesorios.checked) {
         filtrarProductos("Accesorio");
         ordenCategorias.push("Accesorio");
-    } 
+    } else {
+        ordenCategorias.pop("Accesorio");
+    }
 });
     return ordenCategorias;
 }
@@ -655,18 +662,13 @@ function precioSeleccionado (){
 
 precioSeleccionado();
 
-//Función para saber qué casillas están marcadas en qué orden
-function obtenerCategoriasSeleccionadas() {
-    const categoriasSeleccionadas = ordenCategorias;
-    //console.log(categoriasSeleccionadas);
-    return categoriasSeleccionadas;
-}
+
 
 
 // Función que filtra por precio y categoría
 function filtrarProductosPrecioyCategoria() {
     const precioMaximo = document.getElementById("customRange1").value;
-    const categoriasSeleccionadas = obtenerCategoriasSeleccionadas();
+    const categoriasSeleccionadas = ordenCategorias;
     console.log(categoriasSeleccionadas);
     const productosFiltrados = baseDeDatos.filter((producto) => {
         return categoriasSeleccionadas.includes(producto.clase) && producto.precio <= precioMaximo;
@@ -686,7 +688,7 @@ function filtrarProductosPrecioyCategoria() {
     }
 
     //renderizarProductos(productosOrdenados);
-    renderizarProductos(productosFiltrados);
+    renderizarProductos(productosOrdenados);
 }
 
 //Se muestra el precio seleccionado en barra 
@@ -699,7 +701,6 @@ barraPrecio.addEventListener("input", function () {
     const precio = this.value;
     precioActual.textContent = `$${precio}`;
 });
-
 
 
 
