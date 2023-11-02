@@ -20,7 +20,7 @@ const loadItems = () => {
     const div = document.createElement("div");
     div.classList.add("w-75");
 
-    div.classList.add("product-container", "justify-content-around", "align-items-center");
+    div.classList.add("product-container", "justify-content-around", "align-items-center","mb-1","pb-3","pt-3","me-2" );
 
     const img = document.createElement("img");
     img.src = item.imagen;
