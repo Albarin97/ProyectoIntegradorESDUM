@@ -61,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let datosGuardados= localStorage.getItem("datosRegistro");
 
+    console.log(nombreGuardado);
+    
     if(datosGuardados) {
         var datos=JSON.parse(datosGuardados);
     } else {
