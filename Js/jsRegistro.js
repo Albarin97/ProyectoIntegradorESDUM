@@ -97,7 +97,7 @@ var address=direccion;
 var state=estado;
 var zipCode= codigoPostal;
 
-//Guardamos en local Storage
+//Guardamos en local Storage, con estos nombres obtenemos los datos del local storage
 localStorage.setItem("datosRegistro", JSON.stringify(datos));
 localStorage.setItem("nombreUsuarioDato", JSON.stringify(name));
 localStorage.setItem("correoDato", JSON.stringify(email));
