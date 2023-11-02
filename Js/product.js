@@ -33,6 +33,8 @@ if (productoId !== null && productoId !== "") {
   precio.textContent = "$ " + productoActual.precio;
   const descripcion = document.getElementById("pdescription");
   descripcion.textContent = productoActual.descripcion;
+  const botonListaDeseos = document.getElementById("add_wishList");
+  botonListaDeseos.addEventListener("click",()=>agregarLD(productoActual));
   const botonCarrito = document.getElementById("add_cart");
   if (estaEnCarrito(productoActual)) {
     botonCarrito.textContent = "Este producto ya esta en el carrito";
@@ -85,7 +87,7 @@ function agregarProductoCarrito(producto) {
   if (carrito != null && carrito) {
     console.log("Existe");
     // Si existe es necesario verificar que no hayamos agregado el producto al carrito
-    let carritoLs = JSON.parse(localStorage.getItem("carrito"));
+    let carritoLs = JSON.parse(carrito);
     carritoLs.push(producto);
     console.log(carrito);
     // Se actualiza el boton, cambiamos su contenido
@@ -111,6 +113,55 @@ function agregarProductoCarrito(producto) {
 
 // Esta funcion lee el carrito para ver si un producto se encuentra en el mismo.
 function estaEnCarrito(info) {
+  let encontrado = false;
+  if (localStorage.getItem("carrito")) {
+    const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));
+    if (copiaCarrito != null && copiaCarrito) {
+      copiaCarrito.forEach(producto => {
+        if (producto.id == info.id) {
+          encontrado = true;
+        }
+      });
+    }
+  }
+  return (encontrado);
+}
+
+// Funcion que agrega un producto en la Lista de Deseos
+function agregarLD(producto) {
+  // Preguntamos si lista deseos existe en el local Storage
+  let listadeseos = localStorage.getItem("listadeseos");
+  if (listadeseos != null && listadeseos.length>0) {
+    console.log("Existe");
+    // Si existe agregamos nuestro producto
+    let ListaD = JSON.parse(listadeseos);
+    ListaD.push(producto);
+    console.log(listadeseos);
+    // Se actualiza el icono
+    const icono = document.getElementById("add_wishList");
+    icono.removeEventListener("click",agregarLD);
+    icono.classList.remove("bi-heart");
+    icono.classList.add("bi-heart-fill");
+    //Se actualiza carrito en local Storage
+    localStorage.setItem("listadeseos", JSON.stringify(ListaD));
+  }
+  else { // Si no existe se carga con el contenido de nuestra lista
+    console.log("no existe ??");
+    let listaD = [];
+    listaD.push(producto);
+    console.log(listaD);
+    // Se actualiza el icono
+    const icono = document.getElementById("add_wishList");
+    icono.removeEventListener("click",agregarLD);
+    icono.classList.remove("bi-heart");
+    icono.classList.add("bi-heart-fill");
+    //Se actualiza carrito en local Storage
+    localStorage.setItem("listadeseos", JSON.stringify(listaD));
+  }
+}
+
+// Esta funcion lee la lista de deseos para ver si un producto se encuentra en el mismo.
+function estaEnListaD(info) {
   let encontrado = false;
   if (localStorage.getItem("carrito")) {
     const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));

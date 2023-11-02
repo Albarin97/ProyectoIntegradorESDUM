@@ -224,7 +224,7 @@ function renderizaCarritoVacio(){
     const buttton = document.createElement("button");
     buttton.textContent = "Regresar a explorar";
     buttton.classList.add("RegresarExplorar","boton","w-auto","ms-3","h-auto","texto");
-    buttton.addEventListener('click', () => window.location.href = "./contact.html");
+    buttton.addEventListener('click', () => window.location.href = "./paginaPrincipal.html");
     divProductos[0].append(buttton);
     // Se elimina el contenido del div de totalbotonesfinales
     const totalBotonesF = document.getElementsByClassName("totalBotonesFinales");
