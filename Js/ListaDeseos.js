@@ -227,7 +227,6 @@ function comprarProductoCarrito(producto) {
         agregarProductoCarrito(producto);
         window.location.href = "../views/carritoCompra.html";
     }
-
 }
 
 function agregarProductoCarrito(producto) {
