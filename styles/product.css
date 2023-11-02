@@ -2,10 +2,9 @@
     height: 400px;
     width: 400px;
 }
-/* div {
-    border: 2px solid black;
-} */
-.bi{
+
+
+.bi {
     color: #EF5268;
 }
 
@@ -14,63 +13,72 @@
     width: 100px;
 }
 
-.subtitulo{
+.tarjetaP{
+    height: 400px;
+}
+
+.subtitulo {
     font-family: 'Century Gothic', sans-serif;
     font-size: 30px;
 }
 
-.texto{
+.texto {
     font-family: 'Century Gothic', sans-serif;
     font-size: 20px;
 }
 
-.product-name h1{
+.product-name h1 {
     color: #EF5268;
-    font-family:'Century Gothic', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 40px;
     font-weight: bold;
     padding: 2rem;
 }
 
 .product-description p {
-    font-family:'Century Gothic' sans-serif;
+    font-family: 'Century Gothic' sans-serif;
     font-size: 20px;
     display: flex;
     justify-content: space-around;
 }
 
 .product-price {
-    font-family:'Century Gothic' sans-serif;
+    font-family: 'Century Gothic' sans-serif;
     font-size: 25px;
+}
+
+.imagen {
+    height: 200px;
+    width: 200px;
 }
 
 .reviews-title {
     color: #EF5268;
-    font-family:'Century Gothic', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 27px;
 }
 
 .more-title {
     color: #EF5268;
-    font-family:'Century Gothic', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 27px;
 }
 
 .more-price {
     color: #EF5268;
-    font-family:'Century Gothic', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 27px;
 }
 
 .reviews-coments h3 {
-    color:#4964F3;
+    color: #4964F3;
     font-size: 25px;
-    font-family:'Century Gothic', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     text-align: left;
 }
 
 .reviews-coments p {
-    font-family:'Century Gothic';
+    font-family: 'Century Gothic';
     font-size: 20px;
     display: flex;
     justify-content: space-around;
@@ -80,7 +88,7 @@
 .btn {
     border-radius: 25px !important;
     color: white !important;
-    font-family:'Century Gothic' sans-serif !important;
+    font-family: 'Century Gothic' sans-serif !important;
     font-weight: bold !important;
 }
 
@@ -95,4 +103,3 @@
 .btn-wl {
     background-color: #EF5268 !important;
 }
-
