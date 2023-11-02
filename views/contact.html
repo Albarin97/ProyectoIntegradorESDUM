@@ -22,12 +22,12 @@
   <div class="container-fluid text-center pt-5">
     <div class="row justify-content-center align-items-center mx-auto cardForm">
       <div class="col">
-        <form id="contactForm">
+        <form id="form">
           <h1 class="contact text-center">Contáctanos</h1>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombre">
-            <div class="alert alert-danger"  id="invalidoNombre" style="display: none">
+            <div class="alert alert-danger" id="invalidoNombre" style="display: none">
               <!--Ingrese nombre-->
             </div>
           </div>
@@ -36,17 +36,18 @@
             <input type="text" class="form-control" id="correo">
             <div class="alert alert-danger" id="invalidoCorreo" style="display: none">
               <!---Ingrese correo-->
-        </div>
+            </div>
           </div>
           <div>
             <label class="mb-2" for="mensaje">Mensaje</label>
             <textarea class="form-control" placeholder="Nos encantaría saber tu opinión" id="mensaje"
               rows="6"></textarea>
-              <div class="alert alert-danger" id="invalidoMensaje" style="display: none">
-                <!--Ingrese mensaje-->
-              </div>
+            <div class="alert alert-danger" id="invalidoMensaje" style="display: none">
+              <!--Ingrese mensaje-->
+            </div>
           </div>
 
+        
           <div id="exito" class="alert alert-success" style="display: none;"></div>
 
           <div>
@@ -63,3 +64,4 @@
 </body>
 
 </html>
+

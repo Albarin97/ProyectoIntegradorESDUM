@@ -1,81 +1,78 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("form");
+    const exitoMensaje = document.getElementById("exito");
 
-    document.getElementById('contactForm').addEventListener('submit', function (event) {
+    form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        //Obtener los valores de los campos
-        const nombre = document.getElementById('nombre').value;
-        const correo = document.getElementById('correo').value;
-        const mensaje = document.getElementById('mensaje').value;
-        const exitoMensaje = document.getElementById('exito');
+        const datos = {
+            nombre: document.getElementById('nombre').value,
+            correo: document.getElementById('correo').value,
+            mensaje: document.getElementById('mensaje').value,
+        };
 
-        //Funcion de validaciones
-        function validarCampos() {
-            let isValid = true;
+        const isValid = validarCampos(datos);
 
-            //Revisa campo de nombre que no esté vacío
-            if (nombre === '') { 
-                isValid = false;
-                console.log("no hay nombre");
-                alerta ("invalidoNombre", "Por favor, ingrese su nombre");
-                
-            } else{
-                noAlerta("invalidoNombre");
-                console.log("si hay nombre");
-            }
-
-            //Revisa campo de correo que no esté vacío y sea válido
-            if (!correo.includes('@') || !correo.includes('.') || correo.length < 5) {
-                isValid = false;
-                console.log("no hay correo");
-                alerta("invalidoCorreo", "Por favor, ingrese un correo valido");
-            } else{
-                noAlerta("invalidoCorreo");
-                console.log("si hay correo");
-            }
-
-            //Revisa campo de mensaje que no esté vacío 
-            if (mensaje === '') { 
-                isValid = false;
-                console.log("no hay mensaje");
-                alerta("invalidoMensaje","Por favor, ingrese mensaje");
-            }else{
-                noAlerta("invalidoMensaje");
-                console.log("si hay mensaje");
-            }
-
-            return isValid;
+        if (!isValid) {
+            return;
         }
 
-        // Función para mostrar alertas de Bootstrap
-        function alerta(id, mensaje) {
+        const datosJSON = JSON.stringify(datos);
+        console.log(datosJSON);
+
+        mostrarAlerta("Formulario enviado con éxito.", "success");
+
+        form.reset();
+    });
+
+    function validarCampos(datos) {
+        let isValid = true;
+
+        if (datos.nombre === '') {
+            isValid = false;
+            alerta("invalidoNombre", "Por favor, ingrese su nombre");
+        } else {
+            noAlerta("invalidoNombre");
+        }
+
+        if (!datos.correo.includes('@') || !datos.correo.includes('.') || datos.correo.length < 5) {
+            isValid = false;
+            alerta("invalidoCorreo", "Por favor, ingrese un correo válido");
+        } else {
+            noAlerta("invalidoCorreo");
+            
+        }
+
+        if (datos.mensaje === '') {
+            isValid = false;
+            
+            alerta("invalidoMensaje", "Por favor, ingrese mensaje");
+        } else {
+            noAlerta("invalidoMensaje");
+            
+        }
+
+        return isValid;
+    }
+
+    function alerta(id, mensaje) {
         const alerta = document.getElementById(id);
         alerta.style.display = 'block';
         alerta.textContent = mensaje;
-        }
+    }
 
-        // Función para ocultar alertas de Bootstrap
-        function noAlerta(id) {
+    function noAlerta(id) {
         const alerta = document.getElementById(id);
         alerta.style.display = 'none';
-        }
+    }
 
-        // Ejecutar función validación
-        if (!validarCampos()) {
-        return;
-        } 
-
-        // Función para mostrar un mensaje de éxito
-        function mostrarExitoMensaje() {
-            exitoMensaje.style.display = 'block';
-            exitoMensaje.textContent = 'Formulario enviado con éxito';
-        }
-
-        // Ejecutar función validación
-        if (validarCampos()) {
-            // Mostrar mensaje de éxito si el formulario es válido
-            mostrarExitoMensaje(); 
-        }
-
-    });
+    function mostrarAlerta(mensaje) {
+        exitoMensaje.textContent = mensaje;
+        exitoMensaje.style.display = 'block';
+    
+        // Oculta la alerta después de 3 segundos
+        setTimeout(function () {
+            exito.style.display = 'none';
+        }, 3000);
+    }
 });
