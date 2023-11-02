@@ -15,7 +15,7 @@
         crossorigin="anonymous"></script>
 
     <!--Icons Fontawesome CDN-->
-    <script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <title>Product</title>
@@ -24,7 +24,7 @@
 <body>
     <div class="container-fluid text-center product-container">
         <div class="row">
-            <div class="col-md-1 col-img-thumbnail">
+            <!-- <div class="col-md-1 col-img-thumbnail">
                 <div class="thumbnail mt-1">
                     <img class="img-thumbnail" id="img-thumbnail-1"
                         src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-087891113019552-167113_1200x.jpg?v=1689082628"
@@ -45,26 +45,26 @@
                         src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-117891113155656-954526_1200x.jpg?v=1689109116"
                         alt="Imagen 4">
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-4 col-img-main ">
                 <img class="img-product img-fluid" id="img-product"
                     src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-animal-ballcirculo429066-127891113155670-814922_1200x.jpg?v=1689109116"
                     alt="ControlPeleas" srcset="">
             </div>
-            <div class="col-md-7 col-name-price-desc">
+            <div class="col-md-8 col-name-price-desc d-flex flex-column justify-content-evenly">
                 <div class="row product-name">
-                    <h1>KITS AMIGURUMIS - COLECCIÓN ANIMAL BALL</h1>
+                    <h1 id="productTitle">KITS AMIGURUMIS - COLECCIÓN ANIMAL BALL</h1>
                 </div>
-                <div class="row product-price justify-content-center">
-                    <div class="col-md-3">
-                        <h1>$400</h1>
+                <div class="d-flex flex-row product-price justify-content-center">
+                    <div class="h1 subtitulo">
+                        <h1 id="productprice">$400</h1>
                     </div>
-                    <div class="col-md-1 mt-1">
-                        <i class="fa-regular fa-heart fa-lg" style="color: #fda2ef;"></i>
+                    <div class="ms-2 mt-1">
+                        <i class="bi bi-heart"></i>
                     </div>
                 </div>
-                <div class="row product-description">
-                    <p>Acerca de este artículo
+                <div class="row product-description justify-content-center mb-2">
+                    <p class="texto" id="pdescription">Acerca de este artículo
                         Cada paquete viene con el material necesario para la confección de un amigurumi.
 
                         Son cinco hermosos modelos a elegir: Unicornio, Dinosaurio, Zorro, Tigre y Oso.
@@ -103,72 +103,72 @@
                 <h2>Mas Productos</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidadcirculo429031-017891113110631-357991_1400x.jpg?v=1689082628"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
+        <div class="d-flex flex-row tarjetasOtros justify-content-around overflow-x-auto" id="tarjetas">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="justify-content-center">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidadcirculo429031-017891113110631-357991_1400x.jpg?v=1689082628"
+                        class="col-md-4 img-fluid" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
                         <h5 class="card-title">Otro Producto 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <p class="card-text more-price">$355.5</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
+                        <a href="#" class="btn btn-primary w-50 align-self-center">Ver Más</a>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-halloween-2023circulo436780-027891113161503-770550_1200x.jpg?v=1691093636"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="justify-content-center">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-halloween-2023circulo436780-027891113161503-770550_1200x.jpg?v=1691093636"
+                        class="col-md-4 img-fluid" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
                         <h5 class="card-title">Otro Producto 2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <p class="card-text more-price">$355.5</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
+                        <a href="#" class="btn btn-primary w-50 align-self-center">Ver Más</a>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-perros-y-gatoscirculo429040-017891113091565-533035_1200x.jpg?v=1689108929"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="justify-content-center">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-perros-y-gatoscirculo429040-017891113091565-533035_1200x.jpg?v=1689108929"
+                        class="col-md-4 img-fluid" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
                         <h5 class="card-title">Otro Producto 3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <p class="card-text more-price">$355.5</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
+                        <a href="#" class="btn btn-primary w-50 align-self-center">Ver Más</a>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidad-2023circulo436836-017891113161633-752553_1200x.jpg?v=1691093638"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="justify-content-center">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-navidad-2023circulo436836-017891113161633-752553_1200x.jpg?v=1691093638"
+                        class="col-md-4 img-fluid" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
                         <h5 class="card-title">Otro Producto 4</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <p class="card-text more-price">$355.5</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
+                        <a href="#" class="btn btn-primary w-50 align-self-center">Ver Más</a>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-pascuacirculo429813-017891113135825-852190_1200x.jpg?v=1689082625"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
+                <div class="h-100 d-flex flex-column col-12 col-md-2">
+                    <div class="justify-content-center">
+                        <img src="https://crochetstores.mx/cdn/shop/products/kits-amigurumis-coleccion-pascuacirculo429813-017891113135825-852190_1200x.jpg?v=1689082625"
+                        class="col-md-4 img-fluid" alt="...">
+                    </div>
+                    <div class="d-flex flex-column">
                         <h5 class="card-title">Otro Producto 5</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
                         <p class="card-text more-price">$355.5</p>
-                        <a href="#" class="btn btn-primary">Ver Más</a>
+                        <a href="#" class="btn btn-primary w-50 align-self-center">Ver Más</a>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="row mt-5 reviews-title">
             <h2>Reseñas de Otros Compradores</h2>
@@ -192,7 +192,7 @@
         </div>
     </div>
 
-    <script src="../js/product.js"></script>
+    <script type="module" src="../js/product.js"></script>
 </body>
 
 </html>
