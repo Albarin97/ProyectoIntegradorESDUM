@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderizarProductos(baseDeDatos) {
     const DomContainer = document.getElementsByClassName("principal");
-    const idAlmacenado = localStorage.getItem('Id');
-    console.log(`mi id es: ${idAlmacenado}`);
+    // const idAlmacenado = localStorage.getItem('Id');
+    // console.log(`mi id es: ${idAlmacenado}`);
 
-    
-        // Filtra los productos que coinciden con el ID almacenado
-        let productosFiltrados = baseDeDatos.find(info => info.id == idAlmacenado);
-        console.log(productosFiltrados);
+
+    // // Filtra los productos que coinciden con el ID almacenado
+    // let productosFiltrados = baseDeDatos.find(info => info.id == idAlmacenado);
+    // console.log(productosFiltrados);
         
-        productosFiltrados.forEach(info => {
+        baseDeDatos.forEach(info => {
     
         // Div donde estara el producto
         const CARTA = document.createElement('div');
