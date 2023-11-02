@@ -33,8 +33,14 @@ if (productoId !== null && productoId !== "") {
   precio.textContent = "$ " + productoActual.precio;
   const descripcion = document.getElementById("pdescription");
   descripcion.textContent = productoActual.descripcion;
-  const botonListaDeseos = document.getElementById("add_wishList");
-  botonListaDeseos.addEventListener("click",()=>agregarLD(productoActual));
+  const icono = document.getElementById("add_wishList");
+  if(estaEnListaD(productoActual)){
+    icono.classList.remove("bi-heart");
+    icono.classList.add("bi-heart-fill");
+  }else{
+    icono.addEventListener("click",()=>agregarLD(productoActual));
+  }
+  
   const botonCarrito = document.getElementById("add_cart");
   if (estaEnCarrito(productoActual)) {
     botonCarrito.textContent = "Este producto ya esta en el carrito";
@@ -139,7 +145,7 @@ function agregarLD(producto) {
     console.log(listadeseos);
     // Se actualiza el icono
     const icono = document.getElementById("add_wishList");
-    icono.removeEventListener("click",agregarLD);
+    icono.replaceWith(icono.cloneNode(true));
     icono.classList.remove("bi-heart");
     icono.classList.add("bi-heart-fill");
     //Se actualiza carrito en local Storage
@@ -152,7 +158,7 @@ function agregarLD(producto) {
     console.log(listaD);
     // Se actualiza el icono
     const icono = document.getElementById("add_wishList");
-    icono.removeEventListener("click",agregarLD);
+    icono.replaceWith(icono.cloneNode(true));
     icono.classList.remove("bi-heart");
     icono.classList.add("bi-heart-fill");
     //Se actualiza carrito en local Storage
@@ -163,8 +169,8 @@ function agregarLD(producto) {
 // Esta funcion lee la lista de deseos para ver si un producto se encuentra en el mismo.
 function estaEnListaD(info) {
   let encontrado = false;
-  if (localStorage.getItem("carrito")) {
-    const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));
+  if (localStorage.getItem("listadeseos")) {
+    const copiaCarrito = JSON.parse(localStorage.getItem("listadeseos"));
     if (copiaCarrito != null && copiaCarrito) {
       copiaCarrito.forEach(producto => {
         if (producto.id == info.id) {
