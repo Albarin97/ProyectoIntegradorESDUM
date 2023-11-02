@@ -42,17 +42,26 @@ function renderizarProductos(Productos) {
         const botonCarrito = document.createElement('button');
         botonCarrito.classList.add("btn", "btn-primary", "m-2");
         botonCarrito.innerHTML = '<i class="fas fa-shopping-cart"></i>';
-        botonCarrito.addEventListener('click', () => {
+        //botonCarrito.addEventListener('click', () => {
+            if (estaEnCarrito(info)) {
+                botonCarrito.disabled = true;
+              }
+              else {
+                botonCarrito.addEventListener('click', () => agregarProductoCarrito(info));
+              }
             
-        });
+        
 
         // Agregar botón de favoritos
         const botonFavoritos = document.createElement('button');
         botonFavoritos.classList.add("btn", "btn-primary", "m-2");
         botonFavoritos.innerHTML = '<i class="fas fa-heart"></i>';
-        botonFavoritos.addEventListener('click', () => {
-            
-        });
+        //Enevnto para agregar en favoritos
+        //botonFavoritos.addEventListener('click', () => {
+        //const id = info.id; // Obtener el ID del objeto
+        //localStorage.setItem('Id', id); // Almacenar solo el ID en localStorage
+        
+        
 
         // Evento imagen redirecciona a página producto (se envía el id)
         IMAGEN.addEventListener('click', () => {
@@ -137,7 +146,7 @@ const seleccionarCheckbox = parametro.get("seleccionarCheckbox");
         } else{
             if (seleccionarCheckbox =="flexCheckRopa"){
                 filtrarProductos("Ropa");
-            }else{
+            } else{
                 if (seleccionarCheckbox =="flexCheckAccesorios"){
                     filtrarProductos("Accesorio");
                 }
@@ -296,5 +305,51 @@ barraPrecio.addEventListener("input", function () {
     precioActual.textContent = `$${precio}`;
 });
 
+function agregarProductoCarrito(producto) {
+    // Preguntamos si el archivo existe
+    let carrito = localStorage.getItem("carrito");
+    if (carrito != null && carrito) {
+      console.log("Existe");
+      // Si existe es necesario verificar que no hayamos agregado el producto al carrito
+      let carritoLs = JSON.parse(carrito);
+      carritoLs.push(producto);
+      console.log(carrito);
+      // Se actualiza el boton, cambiamos su contenido
+      const button = document.getElementById("add_cart");
+      button.textContent = "Producto agregado al carrito";
+      button.disabled = true;
+      //Se actualiza carrito en local Storage
+      localStorage.setItem("carrito", JSON.stringify(carritoLs));
+    }
+    else { // Si no existe se carga con el contenido de nuestra lista
+      console.log("no existe ??");
+      let ncarrito = [];
+      ncarrito.push(producto);
+      console.log(ncarrito);
+      // Se actualiza el boton, cambiamos su contenido
+      const button = document.getElementById("add_cart");
+      button.textContent = "Producto agregado al carrito";
+      button.disabled = true;
+      //Se actualiza carrito en local Storage
+      localStorage.setItem("carrito", JSON.stringify(ncarrito));
+    }
+  }
 
+
+
+// Esta funcion lee el carrito para ver si un producto se encuentra en el mismo.
+function estaEnCarrito(info) {
+    let encontrado = false;
+    if (localStorage.getItem("carrito")) {
+      const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));
+      if (copiaCarrito != null && copiaCarrito) {
+        copiaCarrito.forEach(producto => {
+          if (producto.id == info.id) {
+            encontrado = true;
+          }
+        });
+      }
+    }
+    return (encontrado);
+  }
 
