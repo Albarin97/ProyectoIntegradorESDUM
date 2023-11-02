@@ -90,10 +90,29 @@ var datos = {
 
 };
 
+var name=nombreUsuario;
+var email=correo;
+var emailConfirm=correoConfirmacion;
+var address=direccion;
+var state=estado;
+var zipCode= codigoPostal;
+
 //Guardamos en local Storage
 localStorage.setItem("datosRegistro", JSON.stringify(datos));
+localStorage.setItem("nombreUsuarioDato", JSON.stringify(name));
+localStorage.setItem("correoDato", JSON.stringify(email));
+localStorage.setItem("correoConfirmacionDato", JSON.stringify(emailConfirm));
+localStorage.setItem("direccionDato", JSON.stringify(address));
+localStorage.setItem("estadoDato", JSON.stringify(state));
+localStorage.setItem("codigoPostalDato", JSON.stringify(zipCode));
 
 console.log(JSON.stringify(datos));
+console.log(JSON.stringify(name));
+console.log(JSON.stringify(email));
+console.log(JSON.stringify(emailConfirm));
+console.log(JSON.stringify(address));
+console.log(JSON.stringify(state));
+console.log(JSON.stringify(zipCode));
 }
 
 });

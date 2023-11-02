@@ -27,8 +27,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+
 </head>
 <body>
+  <header >DeCrochet, tu imaginacion en un tejido</header>
       <!-- Barra de navegación -->
       <nav class="barranav">
         <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
@@ -137,12 +139,13 @@
 
     <!--Inicia pagina usuario-->
     <div class="container w-100">
-
+      <!-- Este menu se muestra en pantallas pequeñas -->
+      <div class="col-12 d-sm-block d-md-none"> 
         <div class="leftMenu">
             <div class="card" style="width: 18rem; background-color: #4964F3; border-radius: 25px;" >
                 <img id="fotoPerfil" src="../resources/logo/perritoTriste.png" alt="">
                 <div class="card-body">
-                  <h4 id="card-title">Hola, Usuario!</h4>
+                  <h4 id="card-title"></h4>
                 <br>
                 <h5 class="card-subtitle" style="color: #FFDFE2;">Principal</h5>
                 <br>
@@ -172,26 +175,189 @@
                   </a>
                 <br>
                 <br>
-                <h5 class="card-subtitle" style="color: #FFDFE2">Detalles</h5>
+
+                 
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
+                  <h5 class="card-subtitle" style="color: #FFDFE2">Detalles</h5>
+                  <br>
+
+<!--iNICIA TEXTO PARA EDITAR CUENTA-->
+<!--Texto boton que abre offcanvas-->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" viewBox="0 0 16 16">
+                      <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                    </svg>
+                    <a class="icon-link" href="#">
+                      Editar cuenta
+                      <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                    
+                    </a>
+                </button>
+<!--Offcanvas que se despliega para editar cuenta-->
+                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel" >Edita tu cuenta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                        <div class="col-md-6">
+                          <label for="nombre" class="form-label">Nombre de usuario</label>
+                          <input type="text" class="form-control" id="nombreUsuario" required>
+                          <div class="alert alert-danger" role="alert" id="invalido" style="display: none">
+                            Introduce un nombre válido
+                          </div>
+                        </div>
+                  
+                        <div class="col-md-6">
+                          <label for="correo" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="correo" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none">
+                            Introduce un correo válido
+                          </div>
+                          </div>
+                  
+                        <div class="col-md-6">
+                          <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
+                          <input type="email" class="form-control" id="correoConfirmacion" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoConfimacion" style="display: none">
+                            Los correos no coinciden
+                          </div>
+                        </div>
+                  
+                        <div class="col-md-6">
+                          <label for="contraseña" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="contraseña" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoContraseña" style="display: none">
+                            Contraseña inválida
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="telefono" class="form-label">Celular</label>
+                          <input type="text" class="form-control" id="telefono" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoTelefono" style="display: none">
+                            Numero no valido
+                          </div>
+                        </div>
+
+                        <div class="text-center">
+                          <button class="btn btn-primary" id="btnCuenta" type="submit">Confirmar</button>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+
                 <br>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" viewBox="0 0 16 16">
-                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-                  </svg>
-                  <a class="icon-link" href="#">
-                    Editar cuenta
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                    
-                  </a>
-                <br>
+
+<!--FIN DE EDICION DE CUENTA-->                
+
+<!--INICIA TEXTO PARA EDITAR LA DIRECCION-->                
+                <!--Texto boton que despliega off canvas-->
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightDireccion" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-geo-alt" viewBox="0 0 16 16">
                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                   </svg>
                   <a class="icon-link" href="#">
                     Editar direccion
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                   
+                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                   
                   </a>
+                  </button>
+                    <!--Offcanvas que se despliega para editar direccion-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightDireccion" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Edita tu direccion de envio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+
+                      <div class="col-md-12">
+                        <label for="calle" class="form-label">Calle</label>
+                        <input type="text" class="form-control" id="calle" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaCalle" style="display: none">
+                          Introduce un nombre válido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="colonia" class="form-label">Colonia</label>
+                        <input type="text" class="form-control" id="colonia" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaColonia" style="display: none">
+                          Introduce un nombre valido
+                        </div>
+                        </div>
+                
+                      <div class="col-md-12">
+                        <label for="numeroCasa" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="numeroCasa" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumeroCasa" style="display: none">
+                          Introduce un numero valido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select class="form-select" id="estado" required>
+                          <option selected disabled value="">Elige...</option>
+                          <option>Aguascalientes</option>
+                            <option>Baja California </option>
+                            <option>Baja California Sur </option>
+                            <option>Campeche </option>
+                            <option>Chiapas </option>
+                            <option>Chihuahua </option>
+                            <option>Ciudad de México </option>
+                            <option>Coahuila </option>
+                            <option>Colima </option>
+                            <option>Durango </option>
+                            <option>Estado de México</option>
+                            <option>Guanajuato</option>
+                            <option>Guerrero </option>
+                            <option>Hidalgo </option>
+                            <option>Jalisco</option>
+                            <option>Michoacán </option>
+                            <option>Morelos </option>
+                            <option>Nayarit</option>
+                            <option>Nuevo León </option>
+                            <option>Oaxaca </option>
+                            <option>Puebla</option>
+                            <option>Querétaro</option>
+                            <option>Quintana Roo </option>
+                            <option>San Luis Potosí </option>
+                            <option>Sinaloa </option>
+                            <option>Sonora </option>
+                            <option>Tabasco </option>
+                            <option>Tamaulipas </option>
+                            <option>Tlaxcala </option>
+                            <option>Veracruz </option>
+                            <option>Yucatán </option>
+                            <option>Zacatecas</option>
+                        </select>
+                        <div class="alert alert-danger" role="alert" id="invalidoEstado" style="display: none;">
+                          Por favor selecciona un estado
+                        </div>
+  
+                      <div class="col-md-12">
+                        <label for="codigoPostal" class="form-label">CodigoPostal</label>
+                        <input type="text" class="form-control" id="codigoPostal" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none">
+                          Por favor introduce un numero valido
+                        </div>
+                      </div>
+  
+                      <div class="text-center">
+                        <button class="btn btn-primary" id="btnDireccion" type="submit">Confirmar</button>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
                   <br>
+
+<!--FINDE EDICION DIRECCION-->                  
+
+<!--INICIA TEXTO PARA EDITAR EL METODO DE PAGO-->
+                  <!--Texto boton que abre offcanvas-->
+                  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightTarjeta" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-card" viewBox="0 0 16 16">
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
                     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
@@ -199,18 +365,83 @@
                   <a class="icon-link" href="#">
                     Metodo de pago
                     <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                   
                   </a>
+                </button>
+                <!--Offcanvas que se despliega para editar metodo de pago-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightTarjeta" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Edita tu metodo de pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                      <div class="col-md-12">
+                        <label for="nombreTitula" class="form-label">Nombre del titular</label>
+                        <input type="text" class="form-control" id="nombreTitular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoTitular" style="display: none">
+                          Introduce un nombre válido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="doceDigitos" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                        <input type="text" class="form-control" id="doceDigitos" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumero" style="display: none">
+                          Introduce un correo válido
+                        </div>
+                        </div>
+                
+                      <div class="col-md-12">
+                        <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
+                        <input type="month" class="form-control" id="vencimiento" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaFecha" style="display: none">
+                          Los correos no coinciden
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCvv" style="display: none">
+                          Contraseña inválida
+                        </div>
+                      </div>
+  
+                      </div>
+  
+                      <div class="text-center">
+                        <button class="btn btn-primary" id="btnTarjeta" type="submit">Confirmar</button>
+                      </div>
+                    </form>
+                  </div>
+                  </div>
+                </div>
+                
                   <br>
                   <br>
 
                   
                 </div>
               </div>
-        </div>
+      </div>
+    </div>
 
+<!--FINALIZA EDICION DE METODO DE PAGO-->
+
+ <!-- Este menu es para pantallas grandes y medianas -->
+ <div class="saludo">
+    <img id="fotoPerfil2" src="../resources/logo/perritoTriste.png" alt="">
+    <div class="card-body">
+      <h4 id="card-title2"></h4>
+
+    </div>
+</div>
+
+      <div class="col-md-12 d-md-block d-none">
         <div class="rightMenuRow">
-          
+
+          <!--Tarjeta boton que redirige a la pagina lista de deseos-->
+              <button type="button" id="btnDeseos" style="border: none; background-color: white;">
                 <div class="card" id="card1" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-heart" id="iconCard1" viewBox="0 0 16 16">
@@ -220,12 +451,13 @@
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                             Lista de deseos
                           </a>
-                        
                         <p class="card-text">Accede a tus productos favoritos.</p>
                     </div>
                 </div>
-
+              </button>
            
+              <!--Tarjeta boton que redirige a la pagina carrito-->
+              <button type="button" id="btnOrde" style="border: none; background-color: white;">
                 <div class="card" id="card2" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-cart3" id="iconCard1" viewBox="0 0 16 16">
@@ -239,8 +471,10 @@
                         <p class="card-text">Gestiona los productos en tu carrito. </p>
                     </div>
                 </div>
-          
-
+              </button>
+              
+              <!--Tarjeta boton que redirige a la pagina orden-->
+              <button type="button" id="btnOrde" style="border: none; background-color: white;">
                 <div class="card" id="card3" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-file-earmark-text" id="iconCard3" viewBox="0 0 16 16">
@@ -254,21 +488,82 @@
                         <p class="card-text">Hecha un vistazo a los detalles de tu orden.</p>
                     </div>
                 </div>
-        
+              </button>
 
+<!--INICIA TARJETA PARA EDITAR CUENTA-->
+              <!--Tarjeta boton que despliega offcanvas Cuenta-->
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingCuenta" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
                 <div class="card" id="card4" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
-                    <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" id="iconCard4" viewBox="0 0 16 16">
-                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-                          </svg>
-                          <a class="icon-link" id="icon4"  href="#">
-                            <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                            Editar cuenta
-                          </a>
-                        <p class="card-text">Edita los detalles de tu cuenta</p>
-                    </div>
+                  <div class="card-body">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" id="iconCard4" viewBox="0 0 16 16">
+                          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                        </svg>
+                        <a class="icon-link" id="icon4"  href="#">
+                          <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                          Editar cuenta
+                        </a>
+                      <p class="card-text">Edita los detalles de tu cuenta</p>
+                  </div>
+              </div>
+              </button>
+              <!--Off canvas para editar la informacion de la cuenta-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingCuenta" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="tarjetaCuenta">Edita tu cuenta</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <div class="col-md-12">
+                      <label for="nombre" class="form-label">Nombre de usuario</label>
+                      <input type="text" class="form-control" id="nombreUsuario" required>
+                      <div class="alert alert-danger" role="alert" id="invalido" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="correo" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="correo" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none">
+                        Introduce un correo válido
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
+                      <input type="email" class="form-control" id="correoConfirmacion" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoConfimacion" style="display: none">
+                        Los correos no coinciden
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="contraseña" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="contraseña" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoContraseña" style="display: none">
+                        Contraseña inválida
+                      </div>
+                    </div>
 
+                    <div class="col-md-12">
+                      <label for="telefono" class="form-label">Celular</label>
+                      <input type="text" class="form-control" id="telefono" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoTelefono" style="display: none">
+                        Numero no valido
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnCuenta" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+<!--TERMINA TARJETA PARA EDITAR CUENTA-->
+
+              <!--Tarjeta boton que despliega offcanvas Envio-->
+              <button class="btn btn-primary" id="btnEnvio" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingDireccion" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
                 <div class="card" id="card5" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-geo-alt" id="iconCard5" viewBox="0 0 16 16">
@@ -282,22 +577,165 @@
                         <p class="card-text">Edita y configura tu dirección de envío.</p>
                     </div>
                 </div>
+              </button>
+              <!--Off canvas para editar la direccion de envio-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingDireccion" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Edita tu direccion</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
 
-                <div class="card" id="card6" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
+                    <div class="col-md-12">
+                      <label for="calle" class="form-label">Calle</label>
+                      <input type="text" class="form-control" id="calle" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaCalle" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="colonia" class="form-label">Colonia</label>
+                      <input type="text" class="form-control" id="colonia" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaColonia" style="display: none">
+                        Introduce un nombre valido
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="numeroCasa" class="form-label">Numero</label>
+                      <input type="text" class="form-control" id="numeroCasa" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoNumeroCasa" style="display: none">
+                        Introduce un numero valido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="estado" class="form-label">Estado</label>
+                      <select class="form-select" id="estado" required>
+                        <option selected disabled value="">Elige...</option>
+                        <option>Aguascalientes</option>
+                          <option>Baja California </option>
+                          <option>Baja California Sur </option>
+                          <option>Campeche </option>
+                          <option>Chiapas </option>
+                          <option>Chihuahua </option>
+                          <option>Ciudad de México </option>
+                          <option>Coahuila </option>
+                          <option>Colima </option>
+                          <option>Durango </option>
+                          <option>Estado de México</option>
+                          <option>Guanajuato</option>
+                          <option>Guerrero </option>
+                          <option>Hidalgo </option>
+                          <option>Jalisco</option>
+                          <option>Michoacán </option>
+                          <option>Morelos </option>
+                          <option>Nayarit</option>
+                          <option>Nuevo León </option>
+                          <option>Oaxaca </option>
+                          <option>Puebla</option>
+                          <option>Querétaro</option>
+                          <option>Quintana Roo </option>
+                          <option>San Luis Potosí </option>
+                          <option>Sinaloa </option>
+                          <option>Sonora </option>
+                          <option>Tabasco </option>
+                          <option>Tamaulipas </option>
+                          <option>Tlaxcala </option>
+                          <option>Veracruz </option>
+                          <option>Yucatán </option>
+                          <option>Zacatecas</option>
+                      </select>
+                      <div class="alert alert-danger" role="alert" id="invalidoEstado" style="display: none;">
+                        Por favor selecciona un estado
+                      </div>
+
+                    <div class="col-md-12">
+                      <label for="codigoPostal" class="form-label">CodigoPostal</label>
+                      <input type="text" class="form-control" id="codigoPostal" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none">
+                        Por favor introduce un numero valido
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnDireccion" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+
+              <!--Tarjeta boton que despliega offcanvas tarjeta-->
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingTarjeta" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
+                <div class="card" id="card5" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-alt" id="iconCard6" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-                          </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-card" id="iconCard6" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                      </svg>
                           <a class="icon-link" id="icon5" href="#">
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                            Tarjetas
+                            Editar tarjetas
                           </a>
-                        <p class="card-text">Agrega o edita las tarjetas de tu cuenta.</p>
+                        <p class="card-text">Edita y configura tu metodo de pago.</p>
                     </div>
                 </div>
-        </div>
+              </button>
+              <!--Off canvas para editar la informacion de la tarjeta-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingTarjeta" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Edita tu metodo de pago</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <div class="col-md-12">
+                      <label for="nombreTitula" class="form-label">Nombre del titular</label>
+                      <input type="text" class="form-control" id="nombreTitular" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoTitular" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="doceDigitos" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                      <input type="text" class="form-control" id="doceDigitos" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoNumero" style="display: none">
+                        Introduce un correo válido
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
+                      <input type="month" class="form-control" id="vencimiento" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaFecha" style="display: none">
+                        Los correos no coinciden
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="cvv" class="form-label">CVV</label>
+                      <input type="text" class="form-control" id="cvv" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCvv" style="display: none">
+                        Contraseña inválida
+                      </div>
+                    </div>
 
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnTarjeta" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                </div>
+                </div>
+              </div>
+        </div>
+      </div>
     </div>
+
+
+    <script src="../Js/jsUserPage.js"></script>
 </body>
 </html>

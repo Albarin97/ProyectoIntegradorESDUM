@@ -125,11 +125,11 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 70px;
-    padding-bottom: 70px;
 }
 
 .card-text{
     font-size: 20px;
+    text-align:start;
 }
 
 .card{
@@ -138,6 +138,7 @@
 
 .cardbody{
     height: auto;
+    text-align: start;
 }
 
 #fotoPerfil{
@@ -145,11 +146,14 @@
     border-radius: 50%;
     background-color: #FFDFE2;
     margin: 40px;
+    height: 200px;
+
 }
 
 .icon{
     width: 18px;
     fill: #FDA2EF;
+    align-items: start;
 }
 
 .icon-link{
@@ -189,4 +193,54 @@ p{
 
 .icon:hover{
     transform: scale(1.5);
+}
+
+#btnCuenta{
+    color: #FFDFE2;
+}
+
+#btnCuenta:hover{
+    background-color: #EF5268;
+    border: #EF5268 solid 1px;
+    color: #FFDFE2;
+}
+
+.offcanvas-title{
+    color: #EF5268; 
+    font-size: 30px;
+}
+
+.btn-close{
+    color: #FDA2EF;
+}
+
+header{
+    color: #FFDFE2;
+    background-color: #4964F3;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    border: #FFDFE2 solid 3px;
+}
+
+.saludo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.saludo img{
+    border: 10px #FFDFE2 solid;
+    border-radius: 50%;
+    background-color: #FFDFE2;
+    margin: 40px;
+    height: 200px;
+
+}
+
+#card-title2{
+    color: #EF5268;
+    font-size: 30px;
 }
