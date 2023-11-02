@@ -124,10 +124,34 @@ function categoriasEventos() {
         }
     });
 }
+
+// Evaluamos que valor recibimos desde paginaPrincipal para seleccionar checkbox
+const parametro = new URLSearchParams(window.location.search);
+const seleccionarCheckbox = parametro.get("seleccionarCheckbox");
+
+    if (seleccionarCheckbox) {
+      document.getElementById(seleccionarCheckbox).checked = true;
+      //console.log(seleccionarCheckbox);
+        if (seleccionarCheckbox =="flexCheckAmigurumis"){
+            filtrarProductos("Amigurumi");
+        } else{
+            if (seleccionarCheckbox =="flexCheckRopa"){
+                filtrarProductos("Ropa");
+            }else{
+                if (seleccionarCheckbox =="flexCheckAccesorios"){
+                    filtrarProductos("Accesorio");
+                }
+            }
+        }
+    }
+
+
+
 categoriasEventos();
 
 let ordenCategorias=[];
 
+//Funcion que ordena las categorias segun fueron marcadas, importante para renderizar con barra de precios
 function ordendeCategorias (){
 const categoriaAmigurumi = document.getElementById("flexCheckAmigurumis");
 const categoriaRopa = document.getElementById("flexCheckRopa");
@@ -136,9 +160,13 @@ categoriaAmigurumi.addEventListener('change', () => {
     if (categoriaAmigurumi.checked) {
         filtrarProductos("Amigurumi");
         ordenCategorias.push("Amigurumi");
-    } else {
-        ordenCategorias.pop("Amigurumi");
-
+    } else { //para eliminar categoria del vector cuando se deseleccione el checkbox
+       let eliminarCategoria = "Amigurumi";
+       let indice = ordenCategorias.indexOf(eliminarCategoria);
+        console.log(indice);
+       if (indice !== -1) {
+         ordenCategorias.splice(indice, 1);
+        }
     }
 });
 
@@ -147,7 +175,12 @@ categoriaRopa.addEventListener('change', () => {
         filtrarProductos("Ropa");
         ordenCategorias.push("Ropa");
     } else {
-        ordenCategorias.pop("Ropa");
+        let eliminarCategoria = "Ropa";
+       let indice = ordenCategorias.indexOf(eliminarCategoria);
+        console.log(indice);
+       if (indice !== -1) {
+         ordenCategorias.splice(indice, 1);
+        }
     }
 });
 
@@ -156,7 +189,12 @@ categoriaAccesorios.addEventListener('change', () => {
         filtrarProductos("Accesorio");
         ordenCategorias.push("Accesorio");
     } else {
-        ordenCategorias.pop("Accesorio");
+        let eliminarCategoria = "Accesorio";
+       let indice = ordenCategorias.indexOf(eliminarCategoria);
+        console.log(indice);
+       if (indice !== -1) {
+         ordenCategorias.splice(indice, 1);
+        }
     }
 });
     return ordenCategorias;
