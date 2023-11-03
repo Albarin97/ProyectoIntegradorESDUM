@@ -67,9 +67,8 @@ header{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-
+  justify-content: center;
+  align-items: center; 
 }
 
 .titulo{
