@@ -140,7 +140,7 @@ CREATE TABLE order_status (
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
 -- En esta tabla almacenamos el registro de una orden de compra haciendo una referencia al cliente que la realizo, el subtotal de su orden, costo de envio, el costo tributario de los impuestos trasladados y la direccion a la que se envia
-CREATE TABLE orders (
+    CREATE TABLE orders (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_orders PRIMARY KEY (id),
     customer_id BIGINT,
@@ -150,6 +150,8 @@ CREATE TABLE orders (
     taxes DOUBLE PRECISION DEFAULT 0 NOT NULL,
     address_id BIGINT,
     FOREIGN KEY (address_id) REFERENCES addresses (id) ON DELETE CASCADE,
+    payment_id BIGINT,
+    FOREIGN KEY (payment_id) REFERENCES payment (id) ON DELETE CASCADE,
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
@@ -443,14 +445,15 @@ VALUES ('Placed'),
     ('On route'),
     ('Arrived'),
     ('Fulfilled');
-INSERT INTO orders (customer_id, subtotal, shipping, taxes)
-VALUES (1, 7200, 360, 1152),
-    (2, 9800, 490, 1568),
-    (4, 3600, 180, 576),
-    (4, 4150, 207.5, 664),
-    (4, 960, 48, 153.6),
-    (5, 1500, 75, 240),
-    (5, 3100, 155, 496);
+    ('Canceled')
+INSERT INTO orders (customer_id, subtotal, shipping, taxes, address_id, payment_id)
+VALUES (1, 7200, 360, 1152, 4, 1),
+    (2, 9800, 490, 1568, 1, 1),
+    (4, 3600, 180, 576, 2, 3),
+    (4, 4150, 207.5, 664, 2, 4),
+    (4, 960, 48, 153.6, 2, 3),
+    (5, 1500, 75, 240, 6, 5),
+    (5, 3100, 155, 496. 6, 5);
 INSERT INTO order_statuses (order_id, status_id)
 VALUES (1, 8),
     (2, 8),
