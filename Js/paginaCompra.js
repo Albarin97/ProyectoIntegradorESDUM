@@ -66,33 +66,46 @@ const loadItems = () => {
 
 
 //function para boton de direccion y nueva direction 
-function activarEdicion() {
+/*function activarEdicion() {
   document.getElementById("direccionTexto").style.display = "none";
 
   document.getElementById("formularioEdicion").style.display = "block";
-}
+}*/
 
-function guardarNuevaDireccion() {
+/*function guardarNuevaDireccion() {
   let nuevaDireccion = document.getElementById("nuevaDireccion").value;
 
   document.getElementById("direccion").innerHTML = nuevaDireccion;
 
   document.getElementById("formularioEdicion").style.display = "none";
   document.getElementById("direccionTexto").style.display = "block";
-}
+}*/
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Suponiendo que has almacenado la dirección en localStorage con la clave 'userAddress'
+  // Suponiendo que has almacenado la dirección, estado y código postal en localStorage
   const storedAddress = localStorage.getItem('direccionDato');
+  const storedState = localStorage.getItem('estadoDato');
+  const storedPostalCode = localStorage.getItem('codigoPostalDato');
 
   // Verifica si la dirección existe en localStorage
   if (storedAddress) {
     // Establece la dirección recuperada en el span 'direccion'
     document.getElementById('direccion').textContent = storedAddress;
   }
+
+  // Verifica si el estado existe en localStorage
+  if (storedState) {
+    // Establece el estado recuperado en el span 'estado'
+    document.getElementById('estado').textContent = storedState;
+  }
+
+  // Verifica si el código postal existe en localStorage
+  if (storedPostalCode) {
+    // Establece el código postal recuperado en el span 'codigoPostal'
+    document.getElementById('codigoPostal').textContent = storedPostalCode;
+  }
 });
 
-
 loadItems();
-guardarNuevaDireccion();
-activarEdicion();
+//guardarNuevaDireccion();
+//activarEdicion();
