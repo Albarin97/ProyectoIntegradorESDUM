@@ -66,20 +66,20 @@ const loadItems = () => {
 
 
 //function para boton de direccion y nueva direction 
-function activarEdicion() {
+/*function activarEdicion() {
   document.getElementById("direccionTexto").style.display = "none";
 
   document.getElementById("formularioEdicion").style.display = "block";
-}
+}*/
 
-function guardarNuevaDireccion() {
+/*function guardarNuevaDireccion() {
   let nuevaDireccion = document.getElementById("nuevaDireccion").value;
 
   document.getElementById("direccion").innerHTML = nuevaDireccion;
 
   document.getElementById("formularioEdicion").style.display = "none";
   document.getElementById("direccionTexto").style.display = "block";
-}
+}*/
 
 document.addEventListener('DOMContentLoaded', function () {
   // Suponiendo que has almacenado la dirección en localStorage con la clave 'userAddress'
@@ -94,5 +94,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 loadItems();
-guardarNuevaDireccion();
-activarEdicion();
+//guardarNuevaDireccion();
+//activarEdicion();
