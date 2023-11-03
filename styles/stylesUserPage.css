@@ -190,8 +190,22 @@ p{
     margin: 50px;
 }
 
+#card1, #card2, #card3, #card3, #card4, #card5, #card6{
+    box-shadow: -10px 0px 10px #FFDFE2;
+
+}
+
 #card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
     transform: scale(0.90);
+    animation: moverSombra 1s infinite alternate;
+    @keyframes moverSombra {
+        from {
+            box-shadow: -10px 0px 10px #4964F3;
+        }
+        to {
+            box-shadow: 10px 0px 10px #FDA2EF;
+        }
+        }
 }
 
 .icon:hover{
