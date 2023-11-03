@@ -248,6 +248,17 @@ function obtenerPrecioMaximo() {
     return precioMaximo;
 }
 
+//Se crea función que obtiene el precio minimo de los productos 
+function obtenerPrecioMinimo() {
+    let precioMaximo = obtenerPrecioMaximo();
+    baseDeDatos.forEach(producto => {
+        if (producto.precio < precioMaximo) {
+            precioMaximo = producto.precio;
+        }
+    })
+    return precioMaximo;
+}
+
 
 //Se crea función que elimina si se deselecciona categoria
 function removerProductos(categoria) {
@@ -263,8 +274,12 @@ function removerProductos(categoria) {
 function eventoPrecio() {
     const precioMaximo = document.getElementsByClassName("precioMaximo");
     precioMaximo[0].textContent = "$" + obtenerPrecioMaximo();
+    const precioMinimo = document.getElementsByClassName("precioMinimo");
+    precioMinimo[0].textContent = "$" + obtenerPrecioMinimo();
     const barra = document.getElementById("customRange1");
     barra.setAttribute("max", obtenerPrecioMaximo());
+    barra.setAttribute("min", obtenerPrecioMinimo());
+    
 }
 
 eventoPrecio();

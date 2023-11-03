@@ -95,6 +95,9 @@ function renderizarProductos(baseDeDatos) {
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", info.imagen);
+        IMAGEN.addEventListener("click",()=>{
+            window.location.href = "../views/product.html?id="+info.id;
+        })
         // Agregamos clases de imagen 
         IMAGEN.classList.add("col-md-4", "img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);

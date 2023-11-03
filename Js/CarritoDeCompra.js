@@ -28,6 +28,9 @@ function renderizarProductos(listaProductos) {
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", element.imagen);
         IMAGEN.classList.add("col-md-4","img-fluid");
+        IMAGEN.addEventListener("click",()=>{
+            window.location.href = "../views/product.html?id="+element.id;
+        })
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
 
