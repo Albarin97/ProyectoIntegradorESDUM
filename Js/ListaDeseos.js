@@ -1,6 +1,6 @@
 console.log("Conectado");
 // Variables
-const baseDeDatos = [
+const baseDeDatosAux = [
     {
         id: 1,
         clase: 'Amigurumi',
@@ -56,11 +56,29 @@ const baseDeDatos = [
 // localStorage.setItem('carrito',[]);
 let carrito = [];
 
+//Obtener el id desde local Storage
+document.addEventListener('DOMContentLoaded', () => {
+    const productoInfo = localStorage.getItem('Id');
+    
+    if (productoInfo) {
+        console.log(productoInfo);
+    }
+});
 
-function renderizarProductos() {
+
+
+function renderizarProductos(baseDeDatos) {
     const DomContainer = document.getElementsByClassName("principal");
+    // const idAlmacenado = localStorage.getItem('Id');
+    // console.log(`mi id es: ${idAlmacenado}`);
 
-    baseDeDatos.forEach((info) => {
+
+    // // Filtra los productos que coinciden con el ID almacenado
+    // let productosFiltrados = baseDeDatos.find(info => info.id == idAlmacenado);
+    // console.log(productosFiltrados);
+        
+        baseDeDatos.forEach(info => {
+    
         // Div donde estara el producto
         const CARTA = document.createElement('div');
         CARTA.id = info.id;
@@ -193,10 +211,14 @@ function comprarLista() {
 
 function vaciarLista() {
     const elementToRemove = document.getElementsByClassName("principal");
-    // console.log(elementToRemove);
-    elementToRemove[0].remove();
+
+    // elementToRemove[0].remove(); Podriamos eliminar todo el nodo pero mejor lo vaciamos de todo su contenido
+    while (elementToRemove[0].firstChild) {
+        elementToRemove[0].removeChild(elementToRemove[0].firstChild);
+    }
     // Se actualiza localstorage
-    //localStorage.removeItem("carrito");
+    localStorage.removeItem("listadeseos");
+    renderizaCarritoVacio();
 }
 
 function eliminarProductoCarrito(evento) {
@@ -227,7 +249,6 @@ function comprarProductoCarrito(producto) {
         agregarProductoCarrito(producto);
         window.location.href = "../views/carritoCompra.html";
     }
-
 }
 
 function agregarProductoCarrito(producto) {
@@ -249,23 +270,52 @@ function agregarProductoCarrito(producto) {
     }
     else { // Si no existe se carga con el contenido de nuestra lista
         console.log("no existe ??");
-        ncarrito = [];
-        ncarrito.push(producto);
-        console.log(ncarrito);
+        carrito = [];
+        carrito.push(producto);
+        console.log(carrito);
         // Se actualiza el boton, cambiamos su contenido
         const divcarta = document.getElementById(producto.id);
         const button = divcarta.getElementsByClassName("botonCarrito");
         button[0].textContent = "Producto agregado al carrito";
         button[0].disabled = true;
         //Se actualiza carrito en local Storage
-        localStorage.setItem("carrito", JSON.stringify(ncarrito));
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }
     // Lista de carrito se carga con el producto
 
 
 }
 
+function renderizaCarritoVacio(){
+    // Se accede al div productos del html
+    const divProductos = document.getElementsByClassName("principal");
+    divProductos[0].classList.add("d-flex", "flex-column", "align-items-center");
+    // Se crea un elemento p donde guardar el mensaje.
+    const mensajeAgregar = document.createElement("p");
+    mensajeAgregar.textContent = "No hay productos en la lista de deseos";
+    mensajeAgregar.classList.add("mensaje","texto","justify-self-center");
+    // Se agrega el parrafo al html 
+    divProductos[0].append(mensajeAgregar);
+    // Se crea un boton para regresar a la pagina principal
+    const buttton = document.createElement("button");
+    buttton.textContent = "Regresar a explorar";
+    buttton.classList.add("RegresarExplorar","boton","w-auto","ms-3","h-auto","texto");
+    buttton.addEventListener('click', () => window.location.href = "./paginaPrincipal.html");
+    divProductos[0].append(buttton);
+    // Se elimina el contenido del div de totalbotonesfinales
+    const totalBotonesF = document.getElementsByClassName("botonesFinales");
+    console.log(totalBotonesF);
+    totalBotonesF[0].innerHTML = "";
+}
 
+let listaProductos = localStorage.getItem("listadeseos");
 
-renderizarProductos();
-redenrizarBotonesFinales();
+// Evaluamos si existe algun producto y si existe renderiza
+if (listaProductos!=null && listaProductos.length > 0) {
+    listaProductos = JSON.parse(listaProductos);
+    renderizarProductos(listaProductos);
+    redenrizarBotonesFinales();
+}
+else { // En caso de que no existe ningun producto manda un mensaje de que no existe nigun producto
+    renderizaCarritoVacio();
+}

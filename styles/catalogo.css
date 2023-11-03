@@ -54,6 +54,10 @@
 
 .body{
     font-family:'Century Gothic', sans-serif;
+    background-image:url('../resources/logo/Fondo2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
 }
 
 .titulo {
@@ -78,13 +82,13 @@
     margin-top: 40px;
     margin-left: 1px;
     margin-right: 1px;
-    border: #4964f3;
+    border: #d9d8d8;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-
-    
-
+    box-shadow: 5px 5px 10px #d9d8d8; 
+    /*transform: scale(0.90);**/
+    background-color: white;
 }
 
 .contenedorImagen img {
@@ -94,3 +98,54 @@
 .contenedorProducto {
     text-align: center;
 }
+
+
+/*Botones de selección categoría**/
+.btn.btn-Ropa,.btn.btn-Amigurumis,.btn.btn-Accesorios{
+    background-color: #4964F3;
+    color: #FFDFE2; 
+    box-shadow: 5px 5px 10px #4964F3; 
+    border-radius: 10px; 
+}
+
+.btn.btn-primary{
+    background-color: #4964F3;
+    color: #FFDFE2; 
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+.btn.btn-primary:hover{
+    background-color: #EF5268;
+    color: #FFDFE2; 
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+.precios {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.form-range {
+    background-color: #4964F3;
+    color: #fff;
+    border-color:  #4964F3;
+    height: 10px; 
+    border-top:2px;
+    box-shadow: 5px 5px 10px #4964F3; 
+    border-radius: 10px; 
+    margin-top: 5px;
+}
+
+
+.precioMinimo,.precioMaximo {
+    color: #EF5268;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+

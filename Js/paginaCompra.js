@@ -20,7 +20,7 @@ const loadItems = () => {
     const div = document.createElement("div");
     div.classList.add("w-75");
 
-    div.classList.add("product-container", "justify-content-around", "align-items-center");
+    div.classList.add("product-container", "justify-content-around", "align-items-center","mb-1","pb-3","pt-3","me-2" );
 
     const img = document.createElement("img");
     img.src = item.imagen;
@@ -80,6 +80,17 @@ function guardarNuevaDireccion() {
   document.getElementById("formularioEdicion").style.display = "none";
   document.getElementById("direccionTexto").style.display = "block";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Suponiendo que has almacenado la dirección en localStorage con la clave 'userAddress'
+  const storedAddress = localStorage.getItem('direccionDato');
+
+  // Verifica si la dirección existe en localStorage
+  if (storedAddress) {
+    // Establece la dirección recuperada en el span 'direccion'
+    document.getElementById('direccion').textContent = storedAddress;
+  }
+});
 
 
 loadItems();

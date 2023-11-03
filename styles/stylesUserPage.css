@@ -1,95 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
-
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    box-sizing:content-box;
-    justify-content: space-between;
-    align-items: center;
-    width: auto;
-    font-family:'Century Gothic', sans-serif;
-    font-size: 20px;
-}
-
-.leftMenu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 2;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.rightMenuRow{
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    border: 1px solid white;
-    box-shadow: -10px 8px 20px #acbaff;
-    border-radius: 25px;
-    flex: 9;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 100px;
-}
-
-.card{
-    margin: 15px;
-}
-
-.cardbody{
-    height: auto;
-}
-
-img{
-    border: 10px #FFDFE2 solid;
-    border-radius: 50%;
-    background-color: #FFDFE2;
-    margin: 40px;
-}
-
-.icon{
-    width: 18px;
-    fill: #FDA2EF;
-}
-
-.icon-link{
-    text-decoration: none;
-    color: #FFDFE2;
-    padding: 5px;
-}
-
-#card-title{
-    text-align: center;
-    color: #FFDFE2;
-}
-
-.menuSub{
-    color: #FFDFE2;
-}
-
-#icon1, #icon2, #icon3, #icon4, #icon5, #icon6{
-    text-decoration: none;
-    color: #EF5268;
-    font-size: 30px;
-}
-
-#iconCard1, #iconCard2, #iconCard3, #iconCard4, #iconCard5, #iconCard6{
-    width: 25px;
-    fill: #FDA2EF;
-    margin-bottom: 20px;
-}
-
-p{
-    margin: 50px;
-}
-
-
-
-
-
+/*Navbar*/
 .material-symbols-outlined {
     color: #fda2ef;
 }
@@ -98,6 +8,19 @@ p{
     border: #fda2ef;
     border-radius: 20px;
     border-style: solid;
+}
+
+.menucollapse{
+    background-color: transparent;
+    border: 0;
+}
+
+.entrada:focus{
+    outline: none;
+}
+
+.letrasCanvas{
+    color: #808080;
 }
 
 .btn:hover {
@@ -132,13 +55,10 @@ p{
     text-decoration: none;
 }
 
-.navbar-item{
-    width: 100% !important;
-    height: 130px !important;
-}
+.navbar-item,
 .main-item {
     width: 100% !important;
-    height: 100vh;
+    height: 300px;
 }
 
 .footer-item {
@@ -162,4 +82,182 @@ p{
     flex-grow: 1;
     border: none;
     /* Para eliminar el borde del iframe si lo deseas */
+}
+
+.img-product {
+    height: 400px;
+    width: 400px;
+}
+
+
+/*Pagina de usuario*/
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    box-sizing:content-box;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    font-family:'Century Gothic', sans-serif;
+    font-size: 20px;
+}
+
+.leftMenu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 2;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightMenuRow{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    border: 1px solid white;
+    /*box-shadow: -10px 8px 20px #acbaff;*/
+    border-radius: 25px;
+    flex: 9;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.card-text{
+    font-size: 20px;
+    text-align:start;
+}
+
+.card{
+    margin: 15px;
+    width: 360px;
+    box-shadow: -8px 8px 8px #d9d8d8; 
+    border: solid 1px white;
+}
+
+.cardbody{
+    height: auto;
+    text-align: start;
+}
+
+#fotoPerfil{
+    border: 10px #FFDFE2 solid;
+    border-radius: 50%;
+    background-color: #FFDFE2;
+    margin: 40px;
+    height: 200px;
+
+}
+
+.icon{
+    width: 18px;
+    fill: #FDA2EF;
+    align-items: start;
+}
+
+.icon-link{
+    text-decoration: none;
+    margin: 7px;
+    color: #FFDFE2;
+}
+
+#card-title{
+    text-align: center;
+    color: #FFDFE2;
+}
+
+.menuSub{
+    color: #FFDFE2;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6{
+    text-decoration: none;
+    color: #EF5268;
+    font-size: 30px;
+}
+
+#iconCard1, #iconCard2, #iconCard3, #iconCard4, #iconCard5, #iconCard6{
+    width: 25px;
+    fill: #FDA2EF;
+    margin-bottom: 20px;
+}
+
+p{
+    margin: 50px;
+}
+
+#card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover{
+    transform: scale(0.90);
+}
+
+.icon:hover{
+    transform: scale(1.5);
+}
+
+#btnCuenta{
+    color: #FFDFE2;
+}
+
+#btnCuenta:hover{
+    background-color: #EF5268;
+    border: #EF5268 solid 1px;
+    color: #FFDFE2;
+}
+
+.offcanvas-title{
+    color: #EF5268; 
+    font-size: 30px;
+}
+
+.btn-close{
+    color: #FDA2EF;
+}
+
+header{
+    color: #FFDFE2;
+    background-color: #4964F3;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    border: #FFDFE2 solid 3px;
+}
+
+.saludo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: -10px 0px 10px #FFDFE2;
+    animation: moverSombra 10s infinite alternate;
+}
+
+@keyframes moverSombra {
+    from {
+        box-shadow: -10px 0px 10px #4964F3;
+    }
+    to {
+        box-shadow: 10px 0px 10px #FDA2EF;
+    }
+}
+
+.saludo img{
+
+    border: 10px white solid;
+    border-radius: 50%;
+    background-color: #FFDFE2;
+    padding: 10px;
+    height: 200px;
+
+}
+
+#card-title2{
+    color: #EF5268;
+    font-size: 30px;
 }

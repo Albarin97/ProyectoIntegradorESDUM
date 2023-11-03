@@ -30,6 +30,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- Incluye el script de Bootstrap para el funcionamiento de los elementos Bootstrap. -->
 
+    <!--JS para el estado de la sesion-->
+   <script src="../Js/estadoSesion.js"></script>
+
+
     <title>Pagina Principal</title>
 </head>
 <body>
@@ -63,7 +67,7 @@
                     </a>
                 </div>
                 <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="Person-icon" href="../views/inicioSesion.html">
+                    <a class="Person-icon" id="btnUser">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top"> -->
                         <i class="material-symbols-outlined">Person</i>
@@ -233,26 +237,13 @@
         <div class="row">
             <div class="col-md-4 d-flex">
                 <div class="productos text-center">
-                    <!-- Contenido de la sección "Accesorios" -->
-                    <img class="fotoProducto" src="../resources/logo/accesorio_crochet.png" alt="Imagen de accesorios">
-                    <div class="container fluid justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-3 mb-3">ACCESORIOS</button>
-                    <p class="productoNombre text-center">Accesorios DeCrochet</p>
-                    <p class="text-center">Nuestros accesorios de crochet son la manera perfecta de añadir un toque de originalidad a tu atuendo. Desde bufandas y gorros hasta bolsos y cinturones, nuestros accesorios están diseñados para hacerte destacar con elegancia y originalidad.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex">
-                <div class="productos text-center">
                     <!-- Contenido de la sección "Amigurumis" -->
                     <img class="fotoProducto" src="../resources/logo/amigurumi_crochet.png" alt="Imagen de Amigurumis">
                     <div class="container fluid justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-4 mb-3">AMIGURUMIS</button>
+                        <button type="submit" class="btn btn-primary mt-4 mb-3" id="amigurumiBtn">AMIGURUMIS</button>
                     <p class="productoNombre text-center">Amigurumis DeCrochet</p>
                     <p class="text-center">Nuestros amigurumis crochet son regalos excepcionales que muestran aprecio y cariño. Cada pieza es única y confeccionada con amor, lo que los convierte en regalos perfectos para cualquier ocasión.</p>
                     </div>
-                    
-                    
                 </div>
             </div>
             <div class="col-md-4 d-flex">
@@ -260,12 +251,22 @@
                     <!-- Contenido de la sección "Ropa" -->
                     <img class="fotoProducto justify-content-center" src="../resources/logo/ropa_crochet.png" alt="Imagen Ropa">
                     <div class="container fluid justify-content-center">
-                    <button type="submit" class="btn btn-primary mt-3 mb-3">ATUENDOS</button>
+                    <button type="submit" class="btn btn-primary mt-3 mb-3" id="ropaBtn">ROPA</button>
                     <p class="productoNombre text-center">Ropa DeCrochet</p>
                     <p class="text-center">Descubre nuestra exclusiva colección de ropa crochet. 
                     Cada prenda está cuidadosamente tejida a mano para brindarte un estilo único y confort inigualable. Desde blusas y vestidos hasta suéteres, nuestros diseños de crochet destacarán tu belleza natural.</p>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="productos text-center">
+                    <!-- Contenido de la sección "Accesorios" -->
+                    <img class="fotoProducto" src="../resources/logo/accesorio_crochet.png" alt="Imagen de accesorios">
+                    <div class="container fluid justify-content-center">
+                        <button type="submit" class="btn btn-primary mt-3 mb-3" id="accesoriosBtn">ACCESORIOS</button>
+                    <p class="productoNombre text-center">Accesorios DeCrochet</p>
+                    <p class="text-center">Nuestros accesorios de crochet son la manera perfecta de añadir un toque de originalidad a tu atuendo. Desde bufandas y gorros hasta bolsos y cinturones, nuestros accesorios están diseñados para hacerte destacar con elegancia y originalidad.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -274,6 +275,7 @@
     
        <!-- Footer -->
 
+<!--JS paginaPrincipal-->
 <script src="../Js/paginaPrincipal.js"></script>
 
 </body>

@@ -56,14 +56,12 @@ body{
   font-family: "Century Gothic", sans-serif;
 }
 
-
+/* Estilos para pantallas más grandes */
 .my-order h1 {
-  color:#EF5268;
+  color: #EF5268;
   font-size: 40px;
   text-align: center;
   font-weight: 600;
-  ;
-
 }
 
 .title {
@@ -75,7 +73,6 @@ body{
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
-
 }
 
 .order span {
@@ -85,26 +82,22 @@ body{
 .order {
   display: flex;
   flex-direction: column;
-  grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
   background-color: var(--text-input-field);
   margin-bottom: 24px;
   border-radius: 8px;
   padding: 0 24px;
-
 }
 
 .order p:nth-child(1) {
   display: flex;
   flex-direction: column;
-
 }
 
 .order p span:nth-child(1) {
   font-size: var(--md);
   font-weight: bold;
-
 }
 
 .order p span:nth-child(2) {
@@ -118,11 +111,11 @@ body{
 
 .shopping-cart figure img {
   width: 160px;
-  height: 160px;
+  height: 170px;
   border-radius: 10px;
-  object-fit: cover;
+  margin-top: 30px;
+  margin-left: 20px;
 }
-
 
 .shopping-cart p {
   font-size: var(--md);
@@ -132,13 +125,14 @@ body{
 #products {
   color: #EF5268;
   font-size: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .direction-user {
   font-size: var(--md);
   display: flexbox;
   place-items: left;
-
 }
 
 .product-container {
@@ -147,7 +141,6 @@ body{
   display: flex;
   border-radius: 30px;
   width: 100%;
-
 }
 
 .product-details {
@@ -179,27 +172,54 @@ body{
   border-radius: 20px;
   border-color: transparent;
 }
-div .item-quantity, div .item-price, div .item-total{
+
+div .item-quantity,
+div .item-price,
+div .item-total {
   color: #4964f3;
-  font-size: 20px;
+  font-size: 18px;
+  margin-right: 70px;
 }
 
 div .total-general {
-  
   font-size: 30px;
 }
 
-#placement, #cancellation {
+#placement,
+#cancellation {
   font-size: 20px;
 }
 
 #nuevaDireccion {
   border: none;
-  color: #4964f3; /* Cambia el color del texto a azul */
-  font-size: 20px; /* Cambia el tamaño del texto a 16px */
-
-}
-.new-Direction , #direccionTexto{
   color: #4964f3;
   font-size: 20px;
+}
+
+.new-Direction,
+#direccionTexto {
+  color: #4964f3;
+  font-size: 20px;
+}
+
+/* Estilos  para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+  .my-order-container {
+    width: 100%;
+  }
+
+  .order {
+    padding: 0 16px;
+  }
+
+  .shopping-cart figure img {
+    width: 80%;
+    height: auto;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+
+  }
 }

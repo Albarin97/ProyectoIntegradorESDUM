@@ -134,44 +134,50 @@
     <div class="container-fluid titulo mt-3">
         <h1>Catálogo</h1>
     </div>
-    <div class="d-flex flex-row controles">
-        <div class="precios col-md-6">
-            <h2 class="subtitulo">Filtrar por precio</h2>
-            <div class="p-4 d-flex flex-row">
-                <label for="customRange1" class="form-label">Rango de precios</label>
-                <input type="range" class="form-range w-50" id="customRange1">
+    <div class="controles">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="precios">
+                    <h2 class="subtitulo text-center">Filtrar por precio</h2>
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex flex-row justify-content-around">
+                            <label class="precioMinimo">$0</label>
+                            <input type="range" class="form-range w-75" min="0" max="500" id="customRange1" style="touch-action: none;">
+                            <label class="precioMaximo"></label>
+                        </div>
+                        <div class="d-flex flex-row justify-content-around">
+                            <label class="precioMarcado"></label>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="categorias col-md-6">
-            <h2 class="subtitulo">Filtrar por categorias</h2>
-            <div >
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckAmigurumis">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Amigurumis
-                    </label>
-                </div>
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckRopa">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Ropa
-                    </label>
-                </div>
-                <div>
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckAccesorios">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Accesorios
-                    </label>
+            <div class="col-md-6">
+                <div class="categorias">
+                    <h2 class="subtitulo text-center">Filtrar por categorías</h2>
+                    <div class="d-flex justify-content-center">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-Amigurumis">
+                                <input type="checkbox" id="flexCheckAmigurumis"> Amigurumis
+                            </label>
+                            <label class="btn btn-Ropa">
+                                <input type="checkbox" id="flexCheckRopa"> Ropa
+                            </label>
+                            <label class="btn btn-Accesorios">
+                                <input type="checkbox" id="flexCheckAccesorios"> Accesorios
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="principal d-flex flex-row col-md-12 flex-wrap justify-content-around">
 
+    <div class="principal d-flex flex-row flex-wrap justify-content-around">
+        <!-- Contenido principal -->
     </div>
-    
 
-    <script src="../Js/catalogo.js"></script>
+    <script type="module" src="../Js/catalogo.js"></script>
 </body>
+
 
 </html>

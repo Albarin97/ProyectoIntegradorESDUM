@@ -3,204 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+     <!--Bootstrap Link-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+ <!--Bootstrap Script-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"></script>
+
+ <!--Fontawesome Iconos-->
+ <script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+ <!--JS para botones de la navbar-->
+ <script src="../Js/navbar.js"></script>
+
+
+    <title>Pagina de Usuario</title>
     <link rel="stylesheet" href="../styles/stylesUserPage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
-<!--Bootstrap Link-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-<!--Bootstrap Script-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-crossorigin="anonymous"></script>
-
-<!--Fontawesome Iconos-->
-<script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-
-
-
 </head>
 <body>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" >
-        <div class="container-fluid">
-            
-            <!-- <a class="navbar-brand" href="#">Barra de navegación<nav></nav></a> -->
-            <!-- imagen logo -->
-
-
-            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse align-items-center gap-3" id="navbarNav">
-                <!-- Input de busqueda en el catalogo -->
-                <form class="form-inline my-2 my-lg-0 d-flex flex-row busqueda">
-                    <button class="btn my-2 my-sm-0 d-flex justify-content-center border-0" type="submit">
+  <header >DeCrochet, tu imaginacion en un tejido</header>
+      <!-- Barra de navegación -->
+      <nav class="barranav">
+        <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+            <!-- Input de busqueda en el catalogo -->
+            <div class="d-flex mt-3 w-25 d-none d-md-block">
+                <div class="d-flex flex-row w-75 busqueda">
+                    <button class="btn d-flex justify-content-center border-0" type="submit">
                         <i class="material-symbols-outlined ">Search</i>
                     </button>
-                    <input class="form-control rounded-circle border-0" type="search" placeholder="Buscar" aria-label="Search">
-                </form>
-                <!-- Logo -->
-                <div class="container-fluid d-flex justify-content-center">
-                    <a class="navbar-brand" href="#">
-                        <img src="../resources/logo/logo.png" width="270" height="100" class="d-inline-block align-top" alt="">
+                    <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="container-fluid d-flex justify-content-center w-50">
+                <a class="navbar-brand " href="./paginaPrincipal.html">
+                    <img src="../resources/logo/logo.png" width="270" height="100"
+                        class="d-inline-block align-top img-fluid" alt="">
+                </a>
+            </div>
+            <!-- Botones  -->
+            <div class="d-flex flex-row align-items-center justify-content-end w-25">
+                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                    <a class="navbar-brand" href="./listaDeseos.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <i class="material-symbols-outlined">Favorite</i>
                     </a>
                 </div>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                                <i class="material-symbols-outlined">Favorite</i>
-                            </a>
-                        </div>
-                    </li>
-                    <div class="d-flex ms-2 justify-content-start">
-                        <a class="navbar-brand" href="#">
-                            <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                    <a class="Person-icon" id="btnUser" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top"> -->
-                            <i class="material-symbols-outlined">Person</i>
+                        <i class="material-symbols-outlined">Person</i>
+                    </a>
+                </div>
+                <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                    <a class="shopping-cart-icon" href="./carritoCompra.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <i class="material-symbols-outlined">Shopping_Cart</i>
+                    </a>
+                </div>
+                <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                    <a class="menu-icon" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                    class="d-inline-block align-text-top"> -->
+                        <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                                class="material-symbols-outlined">Menu</i></button>
+                    </a>
+                </div>
+            </div>
+            <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <div class="container-fluid d-flex justify-content-center w-50">
+                        <a class="navbar-brand " href="#">
+                            <img src="../resources/logo/logo.png" width="270" height="100"
+                                class="d-inline-block align-top img-fluid" alt="">
                         </a>
                     </div>
-                    <li class="nav-item">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="d-flex w-100">
+                    <div class="d-flex flex-row w-100 busqueda">
+                        <button class="btn d-flex justify-content-center border-0" type="submit">
+                            <i class="material-symbols-outlined ">Search</i>
+                        </button>
+                        <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                    </div>
+                </div>
+                <div class="d-flex ms-3 mt-3 justify-content-start">
+                    <a class="navbar-brand" href="./listaDeseos.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
-                                <i class="material-symbols-outlined">Shopping_Cart</i>
-                            </a>
+                        <div class="letrasCanvas d-flex flex-row">
+                            <i class="material-symbols-outlined">Favorite</i>
+                            <p class="ms-3">Carrito de Compra</p>
                         </div>
-                    </li>
-                    <li class="nav-itemz">
-                        <div class="d-flex ms-2 justify-content-start">
-                            <a class="navbar-brand" href="#">
-                                <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                    </a>
+                </div>
+                <div class="d-flex ms-3 mt-2 justify-content-start">
+                    <a class="navbar-brand" href="#">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                                <div class="letrasCanvas d-flex flex-row">
+                                    <i class="material-symbols-outlined">Person</i>
+                                    <p class="ms-3">Perfil</p>
+                                </div>
+                    </a>
+                </div>
+                <div class="d-flex ms-3 mt-2 justify-content-start">
+                    <a class="navbar-brand" href="./carritoCompra.html">
+                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
-                                    
-                                <i class="material-symbols-outlined">Menu</i>
-                            </a>
+                        <div class="letrasCanvas d-flex flex-row">
+                            <i class="material-symbols-outlined">Shopping_Cart</i>
+                            <p class="ms-3">Carrito de Compra</p>
                         </div>
-                    </li>
-                </ul>
+                    </a>
+                </div>
             </div>
-            <div class="navbar-nav"></div>
         </div>
+        <div class="navbar-nav"></div>
     </nav>
-
-
-
-
-
-
-
-
 
     <!--Inicia pagina usuario-->
     <div class="container w-100">
-
+      <!-- Este menu se muestra en pantallas pequeñas -->
+      <div class="col-12 d-sm-block d-md-none"> 
         <div class="leftMenu">
             <div class="card" style="width: 18rem; background-color: #4964F3; border-radius: 25px;" >
-                <img src="../resources/logo/perritoTriste.png" alt="">
+                <img id="fotoPerfil" src="../resources/logo/perritoTriste.png" alt="">
                 <div class="card-body">
-                  <h4 id="card-title">Hola, Usuario!</h4>
+                  <h4 id="card-title"></h4>
                 <br>
                 <h5 class="card-subtitle" style="color: #FFDFE2;">Principal</h5>
                 <br>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-heart" viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                  </svg>
-                  <a class="icon-link" href="#">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/> 
+                  </svg>  
+                  <a class="icon-link" id="leftText1" href="listaDeseos.html" style>    
+                    Lista de Deseos
                     <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                    Lista de deseos
                   </a>
                 <br>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-cart3" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                   </svg>
-                  <a class="icon-link" href="#">
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                  <a class="icon-link" href="carritoCompra.html">
                     Carrito de compras
+                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                   </a>
                 <br>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-file-earmark-text" viewBox="0 0 16 16">
                     <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
                     <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
                   </svg>
-                  <a class="icon-link" href="#">
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                  <a class="icon-link" href="paginaCompra.html">
                     Mi orden
+                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                   
                   </a>
                 <br>
                 <br>
-                <h5 class="card-subtitle" style="color: #FFDFE2">Detalles</h5>
+
+                 
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
+                  <h5 class="card-subtitle" style="color: #FFDFE2">Detalles</h5>
+                  <br>
+
+<!--iNICIA TEXTO PARA EDITAR CUENTA-->
+<!--Texto boton que abre offcanvas-->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" viewBox="0 0 16 16">
+                      <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                    </svg>
+                    <a class="icon-link" href="#">
+                      Editar cuenta
+                      <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                    
+                    </a>
+                </button>
+<!--Offcanvas que se despliega para editar cuenta-->
+                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel" >Edita tu cuenta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formCuentaCelular" novalidate>
+                        <div class="col-md-6">
+                          <label for="nombreUser" class="form-label">Nombre de usuario</label>
+                          <input type="text" class="form-control" id="nombreUser" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoNombreUser" style="display: none">
+                            Introduce un nombre válido
+                          </div>
+                        </div>
+                  
+                        <div class="col-md-6">
+                          <label for="correoCelular" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="correoCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoCorreoCelular" style="display: none">
+                            Introduce un correo válido
+                          </div>
+                          </div>
+                  
+                        <div class="col-md-6">
+                          <label for="correoConfirmacionCelular" class="form-label">Confirma tu correo electrónico</label>
+                          <input type="email" class="form-control" id="correoConfirmacionCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoConfimacionCelular" style="display: none">
+                            Los correos no coinciden
+                          </div>
+                        </div>
+                  
+                        <div class="col-md-6">
+                          <label for="contraseñaCelular" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="contraseñaCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoContraseñaCelular" style="display: none">
+                            Contraseña inválida
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="telefonoCelular" class="form-label">Celular</label>
+                          <input type="number" class="form-control" id="telefonoCelular" pattern="[0-9]+" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoTelefonoCelular" style="display: none">
+                            Numero no valido
+                          </div>
+                        </div>
+
+                        <div class="text-center">
+                          <button class="btn btn-primary" id="btnCuentaCelular" type="submit">Confirmar</button>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+
                 <br>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" viewBox="0 0 16 16">
-                    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-                  </svg>
-                  <a class="icon-link" href="#">
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                    Editar cuenta
-                  </a>
-                <br>
+
+<!--FIN DE EDICION DE CUENTA-->                
+
+<!--INICIA TEXTO PARA EDITAR LA DIRECCION-->                
+                <!--Texto boton que despliega off canvas-->
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightDireccion" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-geo-alt" viewBox="0 0 16 16">
                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                   </svg>
                   <a class="icon-link" href="#">
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                     Editar direccion
+                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>                   
                   </a>
+                  </button>
+                    <!--Offcanvas que se despliega para editar direccion-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightDireccion" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Edita tu direccion de envio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formDireccionCelular" novalidate>
+
+                      <div class="col-md-12">
+                        <label for="calleCelular" class="form-label">Calle</label>
+                        <input type="text" class="form-control" id="calleCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaCalleCelular" style="display: none">
+                          Introduce un nombre válido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="coloniaCelular" class="form-label">Colonia</label>
+                        <input type="text" class="form-control" id="coloniaCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaColoniaCelular" style="display: none">
+                          Introduce un nombre valido
+                        </div>
+                        </div>
+                
+                      <div class="col-md-12">
+                        <label for="numeroCasaCelular" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="numeroCasaCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumeroCasaCelular" style="display: none">
+                          Introduce un numero valido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="estadoCelular" class="form-label">Estado</label>
+                        <select class="form-select" id="estadoCelular" required>
+                          <option selected disabled value="">Elige...</option>
+                          <option>Aguascalientes</option>
+                            <option>Baja California </option>
+                            <option>Baja California Sur </option>
+                            <option>Campeche </option>
+                            <option>Chiapas </option>
+                            <option>Chihuahua </option>
+                            <option>Ciudad de México </option>
+                            <option>Coahuila </option>
+                            <option>Colima </option>
+                            <option>Durango </option>
+                            <option>Estado de México</option>
+                            <option>Guanajuato</option>
+                            <option>Guerrero </option>
+                            <option>Hidalgo </option>
+                            <option>Jalisco</option>
+                            <option>Michoacán </option>
+                            <option>Morelos </option>
+                            <option>Nayarit</option>
+                            <option>Nuevo León </option>
+                            <option>Oaxaca </option>
+                            <option>Puebla</option>
+                            <option>Querétaro</option>
+                            <option>Quintana Roo </option>
+                            <option>San Luis Potosí </option>
+                            <option>Sinaloa </option>
+                            <option>Sonora </option>
+                            <option>Tabasco </option>
+                            <option>Tamaulipas </option>
+                            <option>Tlaxcala </option>
+                            <option>Veracruz </option>
+                            <option>Yucatán </option>
+                            <option>Zacatecas</option>
+                        </select>
+                        <div class="alert alert-danger" role="alert" id="invalidoEstadoCelular" style="display: none;">
+                          Por favor selecciona un estado
+                        </div>
+  
+                      <div class="col-md-12">
+                        <label for="codigoPostalCelular" class="form-label">CodigoPostal</label>
+                        <input type="number" class="form-control" id="codigoPostalCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCodigoPostalCelular" style="display: none">
+                          Por favor introduce un numero valido
+                        </div>
+                      </div>
+  
+                      <div class="text-center">
+                        <button class="btn btn-primary" id="btnDireccionCelular" type="submit">Confirmar</button>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
                   <br>
+
+<!--FINDE EDICION DIRECCION-->                  
+
+<!--INICIA TEXTO PARA EDITAR EL METODO DE PAGO-->
+                  <!--Texto boton que abre offcanvas-->
+                  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightTarjeta" aria-controls="offcanvasRight" style="border: none; background-color: #4964F3;">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-card" viewBox="0 0 16 16">
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
                     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
                   </svg>
                   <a class="icon-link" href="#">
-                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                     Metodo de pago
+                    <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                   </a>
+                </button>
+                <!--Offcanvas que se despliega para editar metodo de pago-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightTarjeta" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Edita tu metodo de pago</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <form class="row g-2 needs-validation" id="formTarjetaCelular" novalidate>
+                      <div class="col-md-12">
+                        <label for="nombreTitularCelular" class="form-label">Nombre del titular</label>
+                        <input type="text" class="form-control" id="nombreTitularCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoTitularCelular" style="display: none">
+                          Introduce un nombre válido
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="numTarjetaCelular" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                        <input type="number" class="form-control" id="numTarjetaCelular"" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumTarjetaCelular" style="display: none">
+                          Introduce los 12 digitos de tu tarjeta
+                        </div>
+                        </div>
+                
+                      <div class="col-md-12">
+                        <label for="vencimientoCelular" class="form-label">Fecha de vencimiento</label>
+                        <input type="month" class="form-control" id="vencimientoCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaVencimiento" style="display: none">
+                          Fecha no valida
+                        </div>
+                      </div>
+                
+                      <div class="col-md-12">
+                        <label for="cvvCelular" class="form-label">CVV</label>
+                        <input type="number" class="form-control" id="cvvCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCvvCelular" style="display: none">
+                          Numero invalido
+                        </div>
+                      </div>
+  
+                      </div>
+  
+                      <div class="text-center">
+                        <button class="btn btn-primary" id="btnTarjetaCelular" type="submit">Confirmar</button>
+                      </div>
+                    </form>
+                  </div>
+                  </div>
+                </div>
+                
                   <br>
                   <br>
 
                   
                 </div>
               </div>
-        </div>
+      </div>
+    </div>
 
+<!--FINALIZA EDICION DE METODO DE PAGO-->
+
+ <!-- Este menu es para pantallas grandes y medianas -->
+
+      <div class="col-md-12 d-md-block d-none">
+        <div class="saludo">
+          <img id="fotoPerfil" src="../resources/logo/perritoTriste.png" alt="">
+          <h4 id="card-title2"></h4>
+        </div>
+        
         <div class="rightMenuRow">
-          
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
+
+          <!--Tarjeta boton que redirige a la pagina lista de deseos-->
+              <button type="button" id="btnDeseos" style="border: none; background-color: white;">
+                <div class="card" id="card1" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-heart" id="iconCard1" viewBox="0 0 16 16">
                             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                           </svg>
-                          <a class="icon-link" id="icon1" href="#">
+                          <a class="icon-link" id="icon1" href="listaDeseos.html">
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                             Lista de deseos
                           </a>
-                        
                         <p class="card-text">Accede a tus productos favoritos.</p>
                     </div>
                 </div>
-
+              </button>
            
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
+              <!--Tarjeta boton que redirige a la pagina carrito-->
+              <button type="button" id="btnOrde" style="border: none; background-color: white;">
+                <div class="card" id="card2" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-cart3" id="iconCard1" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                           </svg>
-                          <a class="icon-link" id="icon1" href="#">
+                          <a class="icon-link" id="icon1" href="carritoCompra.html">
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                             Carrito
                           </a>
@@ -208,37 +469,101 @@ crossorigin="anonymous"></script>
                         <p class="card-text">Gestiona los productos en tu carrito. </p>
                     </div>
                 </div>
-          
-
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
+              </button>
+              
+              <!--Tarjeta boton que redirige a la pagina orden-->
+              <button type="button" id="btnOrde" style="border: none; background-color: white;">
+                <div class="card" id="card3" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-file-earmark-text" id="iconCard3" viewBox="0 0 16 16">
                             <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
                             <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
                           </svg>
-                          <a class="icon-link" id="icon3" href="#">
+                          <a class="icon-link" id="icon3" href="paginaCompra.html">
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
                             Mi orden
                           </a>
                         <p class="card-text">Hecha un vistazo a los detalles de tu orden.</p>
                     </div>
                 </div>
-        
+              </button>
 
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
-                    <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" id="iconCard4" viewBox="0 0 16 16">
-                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
-                          </svg>
-                          <a class="icon-link" id="icon4"  href="#">
-                            <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                            Editar cuenta
-                          </a>
-                        <p class="card-text">Edita los detalles de tu cuenta</p>
-                    </div>
+<!--INICIA TARJETA PARA EDITAR CUENTA-->
+              <!--Tarjeta boton que despliega offcanvas Cuenta-->
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingCuenta" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
+                <div class="card" id="card4" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
+                  <div class="card-body">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-person-gear" id="iconCard4" viewBox="0 0 16 16">
+                          <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                        </svg>
+                        <a class="icon-link" id="icon4"  href="#">
+                          <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+                          Editar cuenta
+                        </a>
+                      <p class="card-text">Edita los detalles de tu cuenta</p>
+                  </div>
+              </div>
+              </button>
+              <!--Off canvas para editar la informacion de la cuenta-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingCuenta" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="tarjetaCuenta">Edita tu cuenta</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <div class="col-md-12">
+                      <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
+                      <input type="text" class="form-control" id="nombreUsuario" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoName" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="correo" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="correo" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none">
+                        Introduce un correo válido
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
+                      <input type="email" class="form-control" id="correoConfirmacion" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoConfimacion" style="display: none">
+                        Los correos no coinciden
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="contraseña" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="contraseña" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoContraseña" style="display: none">
+                        Contraseña inválida
+                      </div>
+                    </div>
 
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
+                    <div class="col-md-12">
+                      <label for="telefono" class="form-label">Celular</label>
+                      <input type="number" class="form-control" id="telefono" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoTelefono" style="display: none">
+                        Numero no valido
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnCuenta" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+<!--TERMINA TARJETA PARA EDITAR CUENTA-->
+
+<!--INICIA TARJETA PARA EDITAR DIRECCION-->
+              <!--Tarjeta boton que despliega offcanvas Envio-->
+              <button class="btn btn-primary" id="btnEnvio" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingDireccion" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
+                <div class="card" id="card5" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-geo-alt" id="iconCard5" viewBox="0 0 16 16">
                             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
@@ -251,22 +576,165 @@ crossorigin="anonymous"></script>
                         <p class="card-text">Edita y configura tu dirección de envío.</p>
                     </div>
                 </div>
+              </button>
+              <!--Off canvas para editar la direccion de envio-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingDireccion" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Edita tu direccion</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formDireccion" novalidate>
 
-                <div class="card" style="width: 360px; box-shadow: -8px 8px 8px #FFDFE2; border: solid 1px white;">
+                    <div class="col-md-12">
+                      <label for="calle" class="form-label">Calle</label>
+                      <input type="text" class="form-control" id="calle" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaCalle" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="colonia" class="form-label">Colonia</label>
+                      <input type="text" class="form-control" id="colonia" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaColonia" style="display: none">
+                        Introduce un nombre valido
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="numeroCasa" class="form-label">Numero</label>
+                      <input type="text" class="form-control" id="numeroCasa" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoNumeroCasa" style="display: none">
+                        Introduce un numero valido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="estado" class="form-label">Estado</label>
+                      <select class="form-select" id="estado" required>
+                        <option selected disabled value="">Elige...</option>
+                        <option>Aguascalientes</option>
+                          <option>Baja California </option>
+                          <option>Baja California Sur </option>
+                          <option>Campeche </option>
+                          <option>Chiapas </option>
+                          <option>Chihuahua </option>
+                          <option>Ciudad de México </option>
+                          <option>Coahuila </option>
+                          <option>Colima </option>
+                          <option>Durango </option>
+                          <option>Estado de México</option>
+                          <option>Guanajuato</option>
+                          <option>Guerrero </option>
+                          <option>Hidalgo </option>
+                          <option>Jalisco</option>
+                          <option>Michoacán </option>
+                          <option>Morelos </option>
+                          <option>Nayarit</option>
+                          <option>Nuevo León </option>
+                          <option>Oaxaca </option>
+                          <option>Puebla</option>
+                          <option>Querétaro</option>
+                          <option>Quintana Roo </option>
+                          <option>San Luis Potosí </option>
+                          <option>Sinaloa </option>
+                          <option>Sonora </option>
+                          <option>Tabasco </option>
+                          <option>Tamaulipas </option>
+                          <option>Tlaxcala </option>
+                          <option>Veracruz </option>
+                          <option>Yucatán </option>
+                          <option>Zacatecas</option>
+                      </select>
+                      <div class="alert alert-danger" role="alert" id="invalidoEstado" style="display: none;">
+                        Por favor selecciona un estado
+                      </div>
+
+                    <div class="col-md-12">
+                      <label for="codigoPostal" class="form-label">CodigoPostal</label>
+                      <input type="number" class="form-control" id="codigoPostal" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none">
+                        Por favor introduce un numero valido
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnDireccion" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+
+              <!--Tarjeta boton que despliega offcanvas tarjeta-->
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingTarjeta" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
+                <div class="card" id="card5" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
                     <div class="card-body">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-alt" id="iconCard6" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-                            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-                          </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon bi-credit-card" id="iconCard6" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                      </svg>
                           <a class="icon-link" id="icon5" href="#">
                             <svg class="bi" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-                            Tarjetas
+                            Editar tarjetas
                           </a>
-                        <p class="card-text">Agrega o edita las tarjetas de tu cuenta.</p>
+                        <p class="card-text">Edita y configura tu metodo de pago.</p>
                     </div>
                 </div>
-        </div>
+              </button>
+              <!--Off canvas para editar la informacion de la tarjeta-->
+              <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingTarjeta" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Edita tu metodo de pago</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form class="row g-2 needs-validation" id="formTarjeta" novalidate>
+                    <div class="col-md-12">
+                      <label for="nombreTitula" class="form-label">Nombre del titular</label>
+                      <input type="text" class="form-control" id="nombreTitular" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoTitular" style="display: none">
+                        Introduce un nombre válido
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="numTarjeta" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                      <input type="number" class="form-control" id="numTarjeta" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoNumTarjeta" style="display: none">
+                        Introduce los 12 digitos de tu tarjeta
+                      </div>
+                      </div>
+              
+                    <div class="col-md-12">
+                      <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
+                      <input type="month" class="form-control" id="vencimiento" required>
+                      <div class="alert alert-danger" role="alert" id="invalidaFecha" style="display: none">
+                        Por favor introduce la fecha de vencimiento
+                      </div>
+                    </div>
+              
+                    <div class="col-md-12">
+                      <label for="cvv" class="form-label">CVV</label>
+                      <input type="number" class="form-control" id="cvv" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoCvv" style="display: none">
+                        Cvv invalido
+                      </div>
+                    </div>
 
+                    <div class="text-center">
+                      <button class="btn btn-primary" id="btnTarjeta" type="submit">Confirmar</button>
+                    </div>
+                  </form>
+                </div>
+                </div>
+              </div>
+        </div>
+      </div>
     </div>
+
+
+    <script src="../Js/jsUserPage.js"></script>
 </body>
 </html>
