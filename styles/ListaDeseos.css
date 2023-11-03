@@ -94,21 +94,23 @@ header{
     margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    border: #4964f3;
+    border: solid 1px white;
     border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: -10px 0px 10px #FFDFE2;
-    animation: moverSombra 10s infinite alternate;
+    box-shadow: -10px 0px 10px #b2b2b2;
+}
+
+.carta:hover{
+  box-shadow: -10px 0px 10px #b2b2b2;
+  animation: moverSombra 10s infinite alternate;
 }
 
 @keyframes moverSombra {
-    from {
-        box-shadow: -10px 0px 10px #4964F3;
-    }
-    to {
-        box-shadow: 10px 0px 10px #FDA2EF;
-    }
+  from {
+      box-shadow: -10px 0px 10px #4964F3;
+  }
+  to {
+      box-shadow: 10px 0px 10px #FDA2EF;
+  }
 
 }
 
