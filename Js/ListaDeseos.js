@@ -130,7 +130,7 @@ function renderizarProductos(baseDeDatos) {
         // Boton agregar al carrito - se verifica que algun producto ya este en el carrito.
         const agregarCarrito = document.createElement('button');
         if (estaEnCarrito(info)) {
-            agregarCarrito.textContent = "Este producto ya esta en el carrito";
+            agregarCarrito.textContent = "Ya está en carrito";
             agregarCarrito.classList.add("botonCarrito", "w-75","h-auto");
             agregarCarrito.disabled = true;
         }
