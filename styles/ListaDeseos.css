@@ -302,3 +302,8 @@ header{
   text-align: center;
   font-size: 15px;
 }
+
+.contenedorImagen{
+  height: 200px;
+  width: 200px;
+} 

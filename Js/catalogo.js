@@ -12,7 +12,7 @@ function renderizarProductos(Productos) {
         // Div donde estara el producto
         const CARTA = document.createElement('div');
         CARTA.id = info.id;
-        CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3", "mb-4");
+        CARTA.classList.add("carta", "col-12", "col-sm-6", "col-md-4", "col-lg-3", "mb-4");
         //CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
         const CONTENEDORIMAGEN = document.createElement('div');
