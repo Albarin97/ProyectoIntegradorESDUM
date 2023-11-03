@@ -18,8 +18,8 @@
 </head>
 <body>
     <header >DeCrochet, tu imaginacion en un tejido</header>
-    <!-- Barra de navegacion -->
-    <nav class="barranav">
+       <!-- Barra de navegacion -->
+       <nav class="barranav">
         <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
             <!-- Input de busqueda en el catalogo -->
             <div class="d-flex mt-3 w-25 d-none d-md-block">
@@ -40,7 +40,7 @@
             <!-- Botones  -->
             <div class="d-flex flex-row align-items-center justify-content-end w-25">
                 <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="navbar-brand" href="./listaDeseos.html">
+                    <a class="navbar-brand" id="btnCorazon" href="#">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
                         <i class="material-symbols-outlined">Favorite</i>
@@ -54,7 +54,7 @@
                     </a>
                 </div>
                 <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
-                    <a class="shopping-cart-icon" href="./carritoCompra.html">
+                    <a class="shopping-cart-icon" id="btnCarrito" href="#">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
                         <i class="material-symbols-outlined">Shopping_Cart</i>
@@ -71,7 +71,8 @@
                 </div>
             </div>
             <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
+                aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                     <div class="container-fluid d-flex justify-content-center w-50">
                         <a class="navbar-brand " href="#">
@@ -90,7 +91,7 @@
                     </div>
                 </div>
                 <div class="d-flex ms-3 mt-3 justify-content-start">
-                    <a class="navbar-brand" href="./listaDeseos.html">
+                    <a class="navbar-brand" id="btnDeseos" href="#">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
                         <div class="letrasCanvas d-flex flex-row">
@@ -100,17 +101,17 @@
                     </a>
                 </div>
                 <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" id="btnPerfil" href="#">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top"> -->
-                                <div class="letrasCanvas d-flex flex-row">
-                                    <i class="material-symbols-outlined">Person</i>
-                                    <p class="ms-3">Perfil</p>
-                                </div>
+                        <div class="letrasCanvas d-flex flex-row">
+                            <i class="material-symbols-outlined">Person</i>
+                            <p class="ms-3">Perfil</p>
+                        </div>
                     </a>
                 </div>
                 <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" href="./carritoCompra.html">
+                    <a class="navbar-brand" id="btnCompras" href="#">
                         <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                     class="d-inline-block align-text-top"> -->
                         <div class="letrasCanvas d-flex flex-row">
