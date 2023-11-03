@@ -57,7 +57,7 @@
 
 .fotoProducto {
     width:200px;
-    height:200px;
+    height:auto;
 }
 
 .btn.btn-primary {
@@ -108,4 +108,23 @@
     width: auto;
     object-fit: cover;
     filter: brightness(0.7);
+}
+
+.divTarget{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divTarget .productos{
+    border-radius: 8px;
+    box-shadow: 0 2px 2px #808080;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+.divTarget .productos:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 10px 10px 10px #d9d8d8;
 }
