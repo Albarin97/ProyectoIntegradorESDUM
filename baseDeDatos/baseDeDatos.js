@@ -32,7 +32,7 @@ const baseDeDatos = [
     {
         id: 4,
         clase: 'Amigurumi',
-        modelo: 'Jake Hora de aventura',
+        modelo: 'Jake',
         descripcion: 'Amarillo',
         precio: 150,
         cantidad: 10,
