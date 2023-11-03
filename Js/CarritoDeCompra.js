@@ -22,7 +22,7 @@ function renderizarProductos(listaProductos) {
         CONTENEDORDESCRIPCION.classList.add("contenedorProducto","d-flex","flex-column","justify-content-center","align-items-center");
         const CONTENEDORBOTONES = document.createElement('div');
         CONTENEDORBOTONES.classList.add("contenedorBotones","d-flex", "flex-column",
-            "justify-content-center");
+            "justify-content-center","mb-3");
 
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');

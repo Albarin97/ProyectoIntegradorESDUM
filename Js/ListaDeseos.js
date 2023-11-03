@@ -86,11 +86,11 @@ function renderizarProductos(baseDeDatos) {
         CARTA.classList.add("justify-content-md-around");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
         const CONTENEDORIMAGEN = document.createElement('div');
-        CONTENEDORIMAGEN.classList.add("contenedorImagen", "d-flex","flex-row","justify-content-center");
+        CONTENEDORIMAGEN.classList.add("contenedorImagen", "d-flex","flex-row","align-self-center");
         const CONTENEDORDESCRIPCION = document.createElement('div');
         CONTENEDORDESCRIPCION.classList.add("contenedorProducto","d-flex","flex-column","align-items-center","justify-content-center");
         const CONTENEDORBOTONES = document.createElement('div');
-        CONTENEDORBOTONES.classList.add("contenedorBotones", "d-flex", "flex-column", "justify-content-center", "align-items-center","mb-2");
+        CONTENEDORBOTONES.classList.add("contenedorBotones", "d-flex", "flex-column", "justify-content-center", "align-items-center");
 
 
         // Cargamos imagen en el contenedor de imagen 
@@ -125,7 +125,7 @@ function renderizarProductos(baseDeDatos) {
         //Creamos un Div para los botones de en medio los cuales son eliminar producto y comprar directa.
         const divBotonesMedio = document.createElement('div');
         // Agregamos atributos y clases de bootsrap para el div de los botones
-        divBotonesMedio.classList.add("divMedio", "d-flex", "mt-4", "w-75");
+        divBotonesMedio.classList.add("divMedio", "d-flex","flex-row","justify-content-evenly", "mt-4", "w-75");
 
         // Boton agregar al carrito - se verifica que algun producto ya este en el carrito.
         const agregarCarrito = document.createElement('button');
@@ -136,7 +136,7 @@ function renderizarProductos(baseDeDatos) {
         }
         else {
             agregarCarrito.textContent = "Agregar al carrito";
-            agregarCarrito.classList.add("botonCarrito", "w-50");
+            agregarCarrito.classList.add("botonCarrito", "w-auto");
             agregarCarrito.dataset.item = info;
             agregarCarrito.addEventListener('click', () => agregarProductoCarrito(info));
         }
@@ -147,12 +147,12 @@ function renderizarProductos(baseDeDatos) {
         borrarCarrito.textContent = "Borrar";
         borrarCarrito.dataset.id = info.id;
         borrarCarrito.addEventListener('click', eliminarProductoCarrito);
-        borrarCarrito.classList.add("botonBorrar", "w-50");
+        borrarCarrito.classList.add("botonBorrar", "w-auto");
 
         // Boton comprar Item
         const comprarItem = document.createElement('button');
         comprarItem.textContent = "Comprar";
-        comprarItem.classList.add("botonComprar", "w-50");
+        comprarItem.classList.add("botonComprar", "w-auto");
         comprarItem.dataset.item = info;
         comprarItem.addEventListener('click', () => comprarProductoCarrito(info));
         // Los agregamos al div
