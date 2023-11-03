@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const sesionIniciada= localStorage.getItem("sesionIniciada");
 
         if(sesionIniciada==="true"){
-            window.location.href= "../carritoCompra.html";
+            window.location.href= "../views/carritoCompra.html";
         }else{
             window.location.href="../views/inicioSesion.html";
         }
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function(){
         const sesionIniciada= localStorage.getItem("sesionIniciada");
 
         if(sesionIniciada==="true"){
-            window.location.href= "../carritoCompra.html";
+            window.location.href= "../views/carritoCompra.html";
         }else{
             window.location.href="../views/inicioSesion.html";
         }
