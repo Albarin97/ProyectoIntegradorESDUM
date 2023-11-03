@@ -208,7 +208,8 @@ function estaEnCarrito(info) {
 }
 
 function comprarLista() {
-    localStorage.setItem("carrito", JSON.stringify(baseDeDatos));
+    let carrito = localStorage.getItem("listadeseos");
+    localStorage.setItem("carrito", carrito);
     window.location.href = "../views/carritoCompra.html";
 }
 
@@ -228,18 +229,21 @@ function eliminarProductoCarrito(evento) {
     // console.log(evento.target.dataset.id);
     const elementToRemove = document.getElementById(evento.target.dataset.id);
     elementToRemove.remove();
-    // Obtén la lista de productos desde el almacenamiento local
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    // Encuentra el índice del elemento a eliminar en la lista de productos
-    const indexToRemove = carrito.findIndex(item => item.id === element.id);
-
-    // Si se encuentra el elemento en la lista, elimínalo
-    if (indexToRemove !== -1) {
-        carrito.splice(indexToRemove, 1);
-
-        // Actualiza el almacenamiento local con la lista actualizada
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+    let carritoActualizado = localStorage.getItem("listadeseos");
+    carritoActualizado = JSON.parse(carritoActualizado);
+    carritoActualizado = carritoActualizado.filter((element, item) => {
+        if (item.id != element.id) {
+            return item;
+        }
+    })
+    // Esa lista se carga a el almacenamiento local
+    // Es necesario validar que la lista no este vacia porque podria afectar al 
+    // renderizado de la pagina
+    if (carritoActualizado.length > 0) {
+        localStorage.setItem("listadeseos", JSON.stringify(carritoActualizado));
+    }
+    else {
+        vaciarCarrito();
     }
 }
 
