@@ -61,6 +61,12 @@ header{
 
    /*Fin Navbar*/
 
+.row{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .img-product {
     height: 400px;
     width: 400px;
@@ -108,6 +114,7 @@ header{
     font-size: 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .product-price {
@@ -173,6 +180,7 @@ header{
     background-color: #EF5268 !important;
 }
 
+/*Footer*/
 .containerFooter-fluid{
   display: flex;
   flex-direction: column;
