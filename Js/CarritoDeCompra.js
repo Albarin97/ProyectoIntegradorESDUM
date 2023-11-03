@@ -14,7 +14,7 @@ function renderizarProductos(listaProductos) {
         const Tarjeta = document.createElement("div");
         Tarjeta.id = element.id;
         Tarjeta.classList.add("tarjeta","d-flex","ms-2","mt-2","flex-column","flex-md-row","flex-lg-row");
-        Tarjeta.classList.add("align-items-center","justify-content-md-around","mb-1","pb-3","pt-3","me-2");   
+        Tarjeta.classList.add("align-items-center","justify-content-md-around","mb-2","mt-4");   
         // Creamos los contenedores para imagen, descripcion y botones
         const CONTENEDORIMAGEN = document.createElement('div');
         CONTENEDORIMAGEN.classList.add("contenedorImagen","d-flex","justify-content-center");
@@ -27,7 +27,7 @@ function renderizarProductos(listaProductos) {
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", element.imagen);
-        IMAGEN.classList.add("col-md-4","img-fluid");
+        IMAGEN.classList.add("img-fluid","h-100");
         IMAGEN.addEventListener("click",()=>{
             window.location.href = "../views/product.html?id="+element.id;
         })
