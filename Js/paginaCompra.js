@@ -81,6 +81,17 @@ function guardarNuevaDireccion() {
   document.getElementById("direccionTexto").style.display = "block";
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Suponiendo que has almacenado la dirección en localStorage con la clave 'userAddress'
+  const storedAddress = localStorage.getItem('direccionDato');
+
+  // Verifica si la dirección existe en localStorage
+  if (storedAddress) {
+    // Establece la dirección recuperada en el span 'direccion'
+    document.getElementById('direccion').textContent = storedAddress;
+  }
+});
+
 
 loadItems();
 guardarNuevaDireccion();
