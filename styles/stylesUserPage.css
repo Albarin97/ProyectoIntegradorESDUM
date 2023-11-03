@@ -134,6 +134,9 @@
 
 .card{
     margin: 15px;
+    width: 360px;
+    box-shadow: -8px 8px 8px #d9d8d8; 
+    border: solid 1px white;
 }
 
 .cardbody{
@@ -229,13 +232,27 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: -10px 0px 10px #FFDFE2;
+    animation: moverSombra 10s infinite alternate;
+}
+
+@keyframes moverSombra {
+    from {
+        box-shadow: -10px 0px 10px #4964F3;
+    }
+    to {
+        box-shadow: 10px 0px 10px #FDA2EF;
+    }
 }
 
 .saludo img{
-    border: 10px #FFDFE2 solid;
+
+    border: 10px white solid;
     border-radius: 50%;
     background-color: #FFDFE2;
-    margin: 40px;
+    padding: 10px;
     height: 200px;
 
 }

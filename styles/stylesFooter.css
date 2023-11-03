@@ -1,0 +1,42 @@
+.container-fluid{
+    border: 10px black solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 2px solid green;
+}
+
+.right{
+
+    border: 1px solid red;
+}
+
+.iconosRedes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    border: 1px blue solid;
+    padding: 10px;
+    width: 400px;
+}
+
+.me-4{
+    color: blue;
+}
+
+.cuerpo{
+    border: 1px fuchsia solid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -56,11 +56,29 @@ const baseDeDatosAux = [
 // localStorage.setItem('carrito',[]);
 let carrito = [];
 
+//Obtener el id desde local Storage
+document.addEventListener('DOMContentLoaded', () => {
+    const productoInfo = localStorage.getItem('Id');
+    
+    if (productoInfo) {
+        console.log(productoInfo);
+    }
+});
+
+
 
 function renderizarProductos(baseDeDatos) {
     const DomContainer = document.getElementsByClassName("principal");
+    // const idAlmacenado = localStorage.getItem('Id');
+    // console.log(`mi id es: ${idAlmacenado}`);
 
-    baseDeDatos.forEach((info) => {
+
+    // // Filtra los productos que coinciden con el ID almacenado
+    // let productosFiltrados = baseDeDatos.find(info => info.id == idAlmacenado);
+    // console.log(productosFiltrados);
+        
+        baseDeDatos.forEach(info => {
+    
         // Div donde estara el producto
         const CARTA = document.createElement('div');
         CARTA.id = info.id;
@@ -252,16 +270,16 @@ function agregarProductoCarrito(producto) {
     }
     else { // Si no existe se carga con el contenido de nuestra lista
         console.log("no existe ??");
-        ncarrito = [];
-        ncarrito.push(producto);
-        console.log(ncarrito);
+        carrito = [];
+        carrito.push(producto);
+        console.log(carrito);
         // Se actualiza el boton, cambiamos su contenido
         const divcarta = document.getElementById(producto.id);
         const button = divcarta.getElementsByClassName("botonCarrito");
         button[0].textContent = "Producto agregado al carrito";
         button[0].disabled = true;
         //Se actualiza carrito en local Storage
-        localStorage.setItem("carrito", JSON.stringify(ncarrito));
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }
     // Lista de carrito se carga con el producto
 

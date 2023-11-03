@@ -198,49 +198,49 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <form class="row g-2 needs-validation" id="formCuentaCelular" novalidate>
                         <div class="col-md-6">
-                          <label for="nombre" class="form-label">Nombre de usuario</label>
-                          <input type="text" class="form-control" id="nombreUsuario" required>
-                          <div class="alert alert-danger" role="alert" id="invalido" style="display: none">
+                          <label for="nombreUser" class="form-label">Nombre de usuario</label>
+                          <input type="text" class="form-control" id="nombreUser" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoNombreUser" style="display: none">
                             Introduce un nombre válido
                           </div>
                         </div>
                   
                         <div class="col-md-6">
-                          <label for="correo" class="form-label">Correo electrónico</label>
-                          <input type="email" class="form-control" id="correo" required>
-                          <div class="alert alert-danger" role="alert" id="invalidoCorreo" style="display: none">
+                          <label for="correoCelular" class="form-label">Correo electrónico</label>
+                          <input type="email" class="form-control" id="correoCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoCorreoCelular" style="display: none">
                             Introduce un correo válido
                           </div>
                           </div>
                   
                         <div class="col-md-6">
-                          <label for="correoConfirmacion" class="form-label">Confirma tu correo electrónico</label>
-                          <input type="email" class="form-control" id="correoConfirmacion" required>
-                          <div class="alert alert-danger" role="alert" id="invalidoConfimacion" style="display: none">
+                          <label for="correoConfirmacionCelular" class="form-label">Confirma tu correo electrónico</label>
+                          <input type="email" class="form-control" id="correoConfirmacionCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoConfimacionCelular" style="display: none">
                             Los correos no coinciden
                           </div>
                         </div>
                   
                         <div class="col-md-6">
-                          <label for="contraseña" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="contraseña" required>
-                          <div class="alert alert-danger" role="alert" id="invalidoContraseña" style="display: none">
+                          <label for="contraseñaCelular" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="contraseñaCelular" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoContraseñaCelular" style="display: none">
                             Contraseña inválida
                           </div>
                         </div>
 
                         <div class="col-md-6">
-                          <label for="telefono" class="form-label">Celular</label>
-                          <input type="text" class="form-control" id="telefono" required>
-                          <div class="alert alert-danger" role="alert" id="invalidoTelefono" style="display: none">
+                          <label for="telefonoCelular" class="form-label">Celular</label>
+                          <input type="number" class="form-control" id="telefonoCelular" pattern="[0-9]+" required>
+                          <div class="alert alert-danger" role="alert" id="invalidoTelefonoCelular" style="display: none">
                             Numero no valido
                           </div>
                         </div>
 
                         <div class="text-center">
-                          <button class="btn btn-primary" id="btnCuenta" type="submit">Confirmar</button>
+                          <button class="btn btn-primary" id="btnCuentaCelular" type="submit">Confirmar</button>
                         </div>
                       </form>
                   </div>
@@ -269,35 +269,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <form class="row g-2 needs-validation" id="formDireccionCelular" novalidate>
 
                       <div class="col-md-12">
-                        <label for="calle" class="form-label">Calle</label>
-                        <input type="text" class="form-control" id="calle" required>
-                        <div class="alert alert-danger" role="alert" id="invalidaCalle" style="display: none">
+                        <label for="calleCelular" class="form-label">Calle</label>
+                        <input type="text" class="form-control" id="calleCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaCalleCelular" style="display: none">
                           Introduce un nombre válido
                         </div>
                       </div>
                 
                       <div class="col-md-12">
-                        <label for="colonia" class="form-label">Colonia</label>
-                        <input type="text" class="form-control" id="colonia" required>
-                        <div class="alert alert-danger" role="alert" id="invalidaColonia" style="display: none">
+                        <label for="coloniaCelular" class="form-label">Colonia</label>
+                        <input type="text" class="form-control" id="coloniaCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaColoniaCelular" style="display: none">
                           Introduce un nombre valido
                         </div>
                         </div>
                 
                       <div class="col-md-12">
-                        <label for="numeroCasa" class="form-label">Numero</label>
-                        <input type="text" class="form-control" id="numeroCasa" required>
-                        <div class="alert alert-danger" role="alert" id="invalidoNumeroCasa" style="display: none">
+                        <label for="numeroCasaCelular" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="numeroCasaCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumeroCasaCelular" style="display: none">
                           Introduce un numero valido
                         </div>
                       </div>
                 
                       <div class="col-md-12">
-                        <label for="estado" class="form-label">Estado</label>
-                        <select class="form-select" id="estado" required>
+                        <label for="estadoCelular" class="form-label">Estado</label>
+                        <select class="form-select" id="estadoCelular" required>
                           <option selected disabled value="">Elige...</option>
                           <option>Aguascalientes</option>
                             <option>Baja California </option>
@@ -332,20 +332,20 @@
                             <option>Yucatán </option>
                             <option>Zacatecas</option>
                         </select>
-                        <div class="alert alert-danger" role="alert" id="invalidoEstado" style="display: none;">
+                        <div class="alert alert-danger" role="alert" id="invalidoEstadoCelular" style="display: none;">
                           Por favor selecciona un estado
                         </div>
   
                       <div class="col-md-12">
-                        <label for="codigoPostal" class="form-label">CodigoPostal</label>
-                        <input type="text" class="form-control" id="codigoPostal" required>
-                        <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none">
+                        <label for="codigoPostalCelular" class="form-label">CodigoPostal</label>
+                        <input type="number" class="form-control" id="codigoPostalCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCodigoPostalCelular" style="display: none">
                           Por favor introduce un numero valido
                         </div>
                       </div>
   
                       <div class="text-center">
-                        <button class="btn btn-primary" id="btnDireccion" type="submit">Confirmar</button>
+                        <button class="btn btn-primary" id="btnDireccionCelular" type="submit">Confirmar</button>
                       </div>
                     </form>
                     </div>
@@ -374,43 +374,43 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
-                    <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                    <form class="row g-2 needs-validation" id="formTarjetaCelular" novalidate>
                       <div class="col-md-12">
-                        <label for="nombreTitula" class="form-label">Nombre del titular</label>
-                        <input type="text" class="form-control" id="nombreTitular" required>
-                        <div class="alert alert-danger" role="alert" id="invalidoTitular" style="display: none">
+                        <label for="nombreTitularCelular" class="form-label">Nombre del titular</label>
+                        <input type="text" class="form-control" id="nombreTitularCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoTitularCelular" style="display: none">
                           Introduce un nombre válido
                         </div>
                       </div>
                 
                       <div class="col-md-12">
-                        <label for="doceDigitos" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
-                        <input type="text" class="form-control" id="doceDigitos" required>
-                        <div class="alert alert-danger" role="alert" id="invalidoNumero" style="display: none">
-                          Introduce un correo válido
+                        <label for="numTarjetaCelular" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                        <input type="number" class="form-control" id="numTarjetaCelular"" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoNumTarjetaCelular" style="display: none">
+                          Introduce los 12 digitos de tu tarjeta
                         </div>
                         </div>
                 
                       <div class="col-md-12">
-                        <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
-                        <input type="month" class="form-control" id="vencimiento" required>
-                        <div class="alert alert-danger" role="alert" id="invalidaFecha" style="display: none">
-                          Los correos no coinciden
+                        <label for="vencimientoCelular" class="form-label">Fecha de vencimiento</label>
+                        <input type="month" class="form-control" id="vencimientoCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidaVencimiento" style="display: none">
+                          Fecha no valida
                         </div>
                       </div>
                 
                       <div class="col-md-12">
-                        <label for="cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cvv" required>
-                        <div class="alert alert-danger" role="alert" id="invalidoCvv" style="display: none">
-                          Contraseña inválida
+                        <label for="cvvCelular" class="form-label">CVV</label>
+                        <input type="number" class="form-control" id="cvvCelular" required>
+                        <div class="alert alert-danger" role="alert" id="invalidoCvvCelular" style="display: none">
+                          Numero invalido
                         </div>
                       </div>
   
                       </div>
   
                       <div class="text-center">
-                        <button class="btn btn-primary" id="btnTarjeta" type="submit">Confirmar</button>
+                        <button class="btn btn-primary" id="btnTarjetaCelular" type="submit">Confirmar</button>
                       </div>
                     </form>
                   </div>
@@ -429,15 +429,13 @@
 <!--FINALIZA EDICION DE METODO DE PAGO-->
 
  <!-- Este menu es para pantallas grandes y medianas -->
- <div class="saludo">
-    <img id="fotoPerfil2" src="../resources/logo/perritoTriste.png" alt="">
-    <div class="card-body">
-      <h4 id="card-title2"></h4>
-
-    </div>
-</div>
 
       <div class="col-md-12 d-md-block d-none">
+        <div class="saludo">
+          <img id="fotoPerfil" src="../resources/logo/perritoTriste.png" alt="">
+          <h4 id="card-title2"></h4>
+        </div>
+        
         <div class="rightMenuRow">
 
           <!--Tarjeta boton que redirige a la pagina lista de deseos-->
@@ -515,9 +513,9 @@
                 <div class="offcanvas-body">
                   <form class="row g-2 needs-validation" id="formCuenta" novalidate>
                     <div class="col-md-12">
-                      <label for="nombre" class="form-label">Nombre de usuario</label>
+                      <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
                       <input type="text" class="form-control" id="nombreUsuario" required>
-                      <div class="alert alert-danger" role="alert" id="invalido" style="display: none">
+                      <div class="alert alert-danger" role="alert" id="invalidoName" style="display: none">
                         Introduce un nombre válido
                       </div>
                     </div>
@@ -548,7 +546,7 @@
 
                     <div class="col-md-12">
                       <label for="telefono" class="form-label">Celular</label>
-                      <input type="text" class="form-control" id="telefono" required>
+                      <input type="number" class="form-control" id="telefono" required>
                       <div class="alert alert-danger" role="alert" id="invalidoTelefono" style="display: none">
                         Numero no valido
                       </div>
@@ -562,6 +560,7 @@
               </div>
 <!--TERMINA TARJETA PARA EDITAR CUENTA-->
 
+<!--INICIA TARJETA PARA EDITAR DIRECCION-->
               <!--Tarjeta boton que despliega offcanvas Envio-->
               <button class="btn btn-primary" id="btnEnvio" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingDireccion" aria-controls="offcanvasScrolling" style="border: none; background-color: white;">
                 <div class="card" id="card5" style="width: 360px; box-shadow: -8px 8px 8px #d9d8d8; border: solid 1px white;">
@@ -585,7 +584,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                  <form class="row g-2 needs-validation" id="formDireccion" novalidate>
 
                     <div class="col-md-12">
                       <label for="calle" class="form-label">Calle</label>
@@ -654,7 +653,7 @@
 
                     <div class="col-md-12">
                       <label for="codigoPostal" class="form-label">CodigoPostal</label>
-                      <input type="text" class="form-control" id="codigoPostal" required>
+                      <input type="number" class="form-control" id="codigoPostal" required>
                       <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none">
                         Por favor introduce un numero valido
                       </div>
@@ -691,7 +690,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form class="row g-2 needs-validation" id="formCuenta" novalidate>
+                  <form class="row g-2 needs-validation" id="formTarjeta" novalidate>
                     <div class="col-md-12">
                       <label for="nombreTitula" class="form-label">Nombre del titular</label>
                       <input type="text" class="form-control" id="nombreTitular" required>
@@ -701,10 +700,10 @@
                     </div>
               
                     <div class="col-md-12">
-                      <label for="doceDigitos" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
-                      <input type="text" class="form-control" id="doceDigitos" required>
-                      <div class="alert alert-danger" role="alert" id="invalidoNumero" style="display: none">
-                        Introduce un correo válido
+                      <label for="numTarjeta" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                      <input type="number" class="form-control" id="numTarjeta" required>
+                      <div class="alert alert-danger" role="alert" id="invalidoNumTarjeta" style="display: none">
+                        Introduce los 12 digitos de tu tarjeta
                       </div>
                       </div>
               
@@ -712,15 +711,15 @@
                       <label for="vencimiento" class="form-label">Fecha de vencimiento</label>
                       <input type="month" class="form-control" id="vencimiento" required>
                       <div class="alert alert-danger" role="alert" id="invalidaFecha" style="display: none">
-                        Los correos no coinciden
+                        Por favor introduce la fecha de vencimiento
                       </div>
                     </div>
               
                     <div class="col-md-12">
                       <label for="cvv" class="form-label">CVV</label>
-                      <input type="text" class="form-control" id="cvv" required>
+                      <input type="number" class="form-control" id="cvv" required>
                       <div class="alert alert-danger" role="alert" id="invalidoCvv" style="display: none">
-                        Contraseña inválida
+                        Cvv invalido
                       </div>
                     </div>
 
