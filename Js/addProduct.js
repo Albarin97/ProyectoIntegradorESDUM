@@ -1,25 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene los elementos Id de cada archivo.
 const form = document.getElementById("form");
-const file = document.getElementById('foto');
 const img = document.getElementById('img');
 
 // Establece una ruta predeterminada para la imagen que esta por default.
-const defaultFile = "../resources/logo/Subir.jpg";
+// const defaultFile = "../resources/logo/Subir.jpg";
 
-// Agrega un event listener al cambio del elemento de archivo.
-file.addEventListener('change', event => {
-    if (event.target.files[0]) {  // Verifica si se ha seleccionado un archivo.
-        const reader = new FileReader();
-        reader.onload = function (event) {
-            img.src = event.target.result;
-        }
-        reader.readAsDataURL(event.target.files[0])
-    } else {
-        // Si no se selecciona un archivo, muestra la imagen predeterminada.
-        img.src = defaultFile;
-    }
-});
+// // Agrega un event listener al cambio del elemento de archivo.
+// file.addEventListener('change', event => {
+//     if (event.target.files[0]) {  // Verifica si se ha seleccionado un archivo.
+//         const reader = new FileReader();
+//         reader.onload = function (event) {
+//             img.src = event.target.result;
+//         }
+//         reader.readAsDataURL(event.target.files[0])
+//     } else {
+//         // Si no se selecciona un archivo, muestra la imagen predeterminada.
+//         img.src = defaultFile;
+//     }
+// });
 
 // Agrega un event listener al formulario para el evento "submit", que se llama validarFormulario cuando se envía el formulario.
 form.addEventListener("submit", validarFormulario);
@@ -32,10 +31,11 @@ function validarFormulario(evento) {
     const datos = {
         // Crea un objeto "datos" con valores de los campos del formulario.
         nombreProducto: document.getElementById("nombreProducto").value,
+        id: document.getElementById("id_product").value,
         precio: document.getElementById("precio").value,
         categoria: document.getElementById("categoria").value,
         descripcion: document.getElementById("descripcion").value,
-        imagen: ""
+        imagen: document.getElementById("imagenFuente").value
     };
 
     //***  Validaciones   ****//
@@ -44,6 +44,11 @@ function validarFormulario(evento) {
     if (datos.nombreProducto.trim() === "") {
         // Comprueba si el campo está en blanco.
         mostrarAlerta("Por favor, ingrese un nombre de producto.", "alertaNombreProducto");
+        return;
+    }
+    // Validar id
+    if(datos.id.trim()===""){
+        mostrarAlerta("Por favor, ingrese un ID de producto.", "alertaidProducto");
         return;
     }
 
@@ -71,20 +76,11 @@ function validarFormulario(evento) {
         return;
     }
     // Validar que se haya seleccionado una imagen
-    const fileInput = document.getElementById('foto');
-    if (fileInput.files.length === 0) {
+    if (datos.imagen.trim() === "") {
         // Comprueba si no se ha seleccionado un archivo de imagen.
-        mostrarAlerta("Por favor, seleccione una imagen.", "alertaFoto");
+        mostrarAlerta("Por favor, ingrese una ruta para la imagen.", "alertaFoto");
         return;
     }
-
-    /*** FIN Validaciones ****/
-
-    const reader = new FileReader();
-    reader.onload = function (event) {
-        // Cuando se carga la imagen, se ejecuta esta función.
-        datos.imagen = event.target.result;
-        // Asigna la imagen cargada a los datos.
 
     let datosValidos = localStorage.getItem("datosIngresados");
     if(datosValidos!=null && datosValidos){
@@ -98,18 +94,19 @@ function validarFormulario(evento) {
         localStorage.setItem('datosIngresados', JSON.stringify(Listanueva));
     }
 
+    
+
     mostrarAlerta("Formulario enviado con éxito.", "success");
     // Restablece el formulario después de enviar los datos.
     form.reset();
 
-    // Restablecer el valor del campo de archivo (imagen)
-    fileInput.value = "";
-    // Restablecer la imagen predeterminada
-    img.src = defaultFile;
-    };
-    // Lee la imagen seleccionada como una URL de datos y activa el evento onload.
-    reader.readAsDataURL(fileInput.files[0]);
-}
+    // // Restablecer el valor del campo de archivo (imagen)
+    // fileInput.value = "";
+    // // Restablecer la imagen predeterminada
+    // img.src = defaultFile;
+    // };
+    // // Lee la imagen seleccionada como una URL de datos y activa el evento onload.
+    // reader.readAsDataURL(fileInput.files[0]);
 
 // Esta función muestra alertas en el formulario.
 function mostrarAlerta(mensaje, tipo) {
@@ -130,7 +127,7 @@ function mostrarAlerta(mensaje, tipo) {
             alerta.style.display = 'none';
         }, 3000);
     }
-}
+}}
 });
 
 

@@ -42,6 +42,13 @@
                     </div>
 
                     <div class="form-group mt-5">
+                        <label for="id_product" class="form-label colorLabel">ID del Producto</label>
+                        <input type="text" class="form-control" id="id_product" name="nombreProducto">
+                        <!-- Contenedor de alerta para errores en el nombre del producto. -->
+                        <div id="alertaidProducto" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-group mt-5">
                         <label for="precio" class="form-label colorLabel">Precio</label>
                         <input type="number" class="form-control" id="precio"  name="precio" placeholder="$">
                         <!-- Contenedor de alerta para errores en el precio. -->
@@ -67,16 +74,15 @@
                         <div id="alertaDescripcion" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
                     </div>
 
-                    <div class="  mt-2 imagen">
-                        <div class="d-flex justify-content-center">
+                    <div class="container  mt-2 imagen">
+                        <div>
+                            <label for="imagenFuente" class="form-label colorLabel">Imagen Link</label>
+                            <input type="text" class="form-control" id="imagenFuente" name="imagen">
+                            <div id="alertaFoto" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
+                        </div>
+                        <!-- <div class="d-flex justify-content-center">
                             <img class="img-fluid imgEjemplo" src="../resources/logo/Subir.jpg" alt="avatar" id="img">
-                        </div>
-                        <input type="file" name="imagen" id="foto" accept="image/*"/>
-                        <!-- Contenedor de alerta para errores en imagen. -->
-                        <div id="alertaFoto" class="alert alert-danger mt-2 " role="alert" style="display: none;"></div>
-                        <div class="d-flex justify-content-center">
-                            <label class="mt-2" for="foto">Subir foto</label>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- Botón para enviar el formulario. -->

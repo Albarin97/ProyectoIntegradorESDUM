@@ -16,19 +16,8 @@
     font-size: 25px;
 }
 
-.imagen input{
-    display: none;
-}
 
 .imgEjemplo{
     width: 350px;
     height: auto;
-}
-
-.imagen label{
-    background-color: #EF5268;
-    color: white;
-    padding: 6px 20px;
-    cursor: pointer;
-    border-radius: 3px;
 }
