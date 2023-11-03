@@ -1,11 +1,21 @@
+-- Para el diseño de la base de datos se implementó el uso de base de datos relacional.
+
+-- Para el modelo de base de datos, se comenzo diseñando un diagrama entidad/relacion que emplea la normalizacion para reducir la redundancia y optimizar la integridad de la informacion, posteriormente se realizaron migraciones de base de datos que permiten mantenerla versionada para llevar un control historico y realizar regresiones  
+
+-- Se desarrollaron tablas catalogo que permiten tener la informacion organizada y evita registros repetidos asi como evitar la corrupcion de valores que seran constantemente reutilizados en nuestro modelo de negocio 
+
+-- En una base de datos relacional organizamos la informacion en filas y columnas, donde es cada una de las filas un registro con un identificador unico, que nos sirve como llave primaria y las columnas delimitan cada campo que sera contenido por las filas, estableciendo su tipo de dato asi como cualquier reestriccion que se haya establecido (es decir, que sea un valor único en la tabla, que prohiba los datos nullos o vacios o que permita unicamente nuestros valores normalizados mediante el uso de una llave foranea)
+
+-- En la tabla roles almacenamos de manera organizada un catalogo de los posibles niveles de privilegios que puede tener un usuario
 CREATE TABLE roles (
-    id BIGINT AUTO_INCREMENT AUTO_INCREMENT,
+    id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_roles PRIMARY KEY (id),
     title VARCHAR(100) UNIQUE NOT NULL,
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En la tabla usuarios almacenamos los diferentes tipos de usuarios conteniendo: nombre completo dividido en dos campos de nombres y apellidos, email, contraseña cifrada y una referencia como llave foranea que apunta hacia el rol que tiene cada registro, asi evitamos tener informacion redundante y desnormalizada (roles de usuario con diferentes caracteres de letras, mayusculas y minusculas en ordenes diferentes)
 CREATE TABLE users (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_users PRIMARY KEY (id),
@@ -19,6 +29,7 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- A pesar de que obviamente planeamos nuestra presencia unicamente dentro de la republica mexicana haciendo uso del principio Open/Closed permitimos que nuestro sistema este abierto a ser extendido pero cerrado a la modificacion, es decir ya tenemos las tablas que pueden contener distintos paises, estados para cada pais y ciudades para cada estado, permitiendo almacenar tales datos de ubicacion 
 CREATE TABLE country (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_country PRIMARY KEY (id),
@@ -49,6 +60,7 @@ CREATE TABLE city (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En la tabla de direccion almacenamos los datos de numero exterior, calle, numero interior, vecindario/colonia, codigo postal y una referencia a un registro de la tabla de ciudades, permitiendo almacenar de manera escalonada la jerarquia domicilio-vecinario-ciudad-estado-pais
 CREATE TABLE addresses (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_addresses PRIMARY KEY (id),
@@ -63,6 +75,7 @@ CREATE TABLE addresses (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos la informacion de un medio de pago que para cada uno de sus registros incluye nombre del titular, numero de tarjeta, fecha de expiracion y codigo de seguridad
 CREATE TABLE payment (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_payment PRIMARY KEY (id),
@@ -74,6 +87,7 @@ CREATE TABLE payment (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla intermedia almacenamos la relacion muchos a muchos que existe entre los usuarios y sus direcciones. A pesar de que se pudo realizar de uno a muchos, de esta manera permite una mayor escalabilidad funcional 
 CREATE TABLE user_address (
     user_id BIGINT,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
@@ -83,6 +97,7 @@ CREATE TABLE user_address (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla intermedia almacenamos la relacion muchos a muchos que existe entre los usuarios y sus metodos de pago.
 CREATE TABLE user_payment (
     user_id BIGINT,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
@@ -92,6 +107,7 @@ CREATE TABLE user_payment (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos de forma normalizada las categorias de nuestros productos (ropa, amigurumis y accesorios para distinguirlos en grandes grupos )
 CREATE TABLE category (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_category PRIMARY KEY (id),
@@ -114,6 +130,7 @@ CREATE TABLE product (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos los distintos estados que puede presentar una orden de compra (orden realizada, en proceso de embalaje, enviado, entregado, satisfecho o cancelado)
 CREATE TABLE order_status (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_order_status PRIMARY KEY (id),
@@ -122,6 +139,7 @@ CREATE TABLE order_status (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos el registro de una orden de compra haciendo una referencia al cliente que la realizo, el subtotal de su orden, costo de envio, el costo tributario de los impuestos trasladados y la direccion a la que se envia
 CREATE TABLE orders (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_orders PRIMARY KEY (id),
@@ -130,10 +148,13 @@ CREATE TABLE orders (
     subtotal DOUBLE PRECISION DEFAULT 0 NOT NULL,
     shipping DOUBLE PRECISION DEFAULT 0 NOT NULL,
     taxes DOUBLE PRECISION DEFAULT 0 NOT NULL,
+    address_id BIGINT,
+    FOREIGN KEY (address_id) REFERENCES addresses (id) ON DELETE CASCADE,
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos de manera muchos a muchos una bitacora historica de las actualizaciones que puede tener una orden de compra con la fecha de tal actualizacion
 CREATE TABLE order_statuses (
     order_id BIGINT,
     FOREIGN KEY (order_id) REFERENCES orders (id) ON DELETE CASCADE,
@@ -143,6 +164,7 @@ CREATE TABLE order_statuses (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+-- En esta tabla almacenamos la relacion muchos a muchos entre una orden de compra y cada producto que incluye asi como tambien el precio unitario que tuvo en el momento de la compra aegurandonos de conocer el valor de precio historico y la cantidad de tal producto
 CREATE TABLE order_product (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_order_product PRIMARY KEY (id),
@@ -152,10 +174,13 @@ CREATE TABLE order_product (
     FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE CASCADE,
     unit_price DOUBLE PRECISION DEFAULT 0 NOT NULL,
     product_count BIGINT DEFAULT 0 NOT NULL,
+-- Cada una de nuestras tablas incluyen tres campos de tipo timestamp que nos permite registrar cuando se crea, actualiza o se elimina cada registro, permitiendo un borrado suave. En esencia cuando eliminemos un registro en lugar de utilizar el comando DELETE utilizamos el campo deleted_at pasando de tener un valor nulo a tener el valor de la fecha instantanea de eliminacion. 
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+
+
 INSERT INTO roles (title)
 VALUES ('Owner'),
     ('Admin'),
@@ -353,8 +378,32 @@ INSERT INTO product (
         stock,
         price
     )
-VALUES (
-        'Amigurumi Jengibre',
+VALUES 
+    (
+        'Amigurumi Freddie Mercury',
+        'Amigurumi del cantante de Queen',
+        '',
+        2,
+        20,
+        1545.67
+    ),
+    (
+        'Gorrito Minion',
+        'Gorrito de Minion con la lengua de fuera',
+        '',
+        1,
+        46,
+        567.39
+    ),
+    (
+        'Cobija de Mike Wazowski',
+        'Una cobija de 1.5 x 1 metro',
+        '',
+        3,
+        167,
+        1567.39
+    ),
+    (     'Amigurumi Jengibre',
         'Figura navideña de hombre de jengibre',
         '../resources/logo/jengibre.jpeg',
         2,
@@ -384,30 +433,6 @@ VALUES (
         2,
         10,
         150
-    ),
-    (
-        'Amigurumi Freddie Mercury',
-        'Amigurumi del cantante de Queen',
-        '',
-        2,
-        20,
-        1545.67
-    ),
-    (
-        'Gorrito Minion',
-        'Gorrito de Minion con la lengua de fuera',
-        '',
-        1,
-        46,
-        567.39
-    ),
-    (
-        'Cobija de Mike Wazowski',
-        'Una cobija de 1.5 x 1 metro',
-        '',
-        3,
-        167,
-        1567.39
     );
 INSERT INTO order_status (title)
 VALUES ('Placed'),
