@@ -354,6 +354,38 @@ INSERT INTO product (
         price
     )
 VALUES (
+        'Amigurumi Jengibre',
+        'Figura navideña de hombre de jengibre',
+        '../resources/logo/jengibre.jpeg',
+        2,
+        3,
+        300,
+    ),
+    (
+        'Amigurumi Sirena',
+        'Figura amigurumi en forma de Sirena',
+        '../resources/logo/sirena.jpeg',
+        2,
+        5,
+        220
+    ),
+    (
+        'Amigurumi Aguacates',
+        'Figuras Aguacates con corazon',
+        '../resources/logo/aguacate.jpeg',
+        2,
+        8,
+        160
+    ),
+    (
+        'Amigurumi Jake',
+        'Personaje Jake de hora de aventura',
+        '../resources/logo/jakeElPerro.jpeg',
+        2,
+        10,
+        150
+    ),
+    (
         'Amigurumi Freddie Mercury',
         'Amigurumi del cantante de Queen',
         '',
