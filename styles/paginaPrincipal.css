@@ -55,8 +55,18 @@
     font-family:'Century Gothic', sans-serif;
 }
 
+.fotoProductoJengi {
+    width:170px;
+    height:100px;
+}
+
 .fotoProducto {
-    width:200px;
+    width:250px;
+    height:auto;
+}
+
+.fotoProductoSomb{
+    width:300px;
     height:auto;
 }
 
@@ -128,3 +138,13 @@
     transform: translateY(-15px);
     box-shadow: 0 10px 10px 10px #d9d8d8;
 }
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  
+  
