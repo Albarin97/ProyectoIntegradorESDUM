@@ -1,4 +1,58 @@
-body {
+/*Navbar*/
+.material-symbols-outlined {
+  color: #fda2ef;
+}
+
+.busqueda {
+  border: #fda2ef;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.menucollapse{
+  background-color: transparent;
+  border: 0;
+}
+
+.entrada:focus{
+  outline: none;
+}
+
+.letrasCanvas{
+  color: #808080;
+}
+
+.btn:hover {
+  color: #4964f3;
+
+}
+
+* {
+  font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+  background-color: #4964F3;
+  color: white;
+}
+
+.footer-content {
+  color: black;
+}
+
+.copy-footer {
+  color: white;
+}
+
+.border-0{
+  border-radius: 100px;
+  width: 100px;
+}
+
+ /*Fin Navbar*/
+
+body{
   font-family: "Century Gothic", sans-serif;
 }
 
