@@ -24,7 +24,7 @@ function renderizarProductos(Productos) {
         const IMAGEN = document.createElement('img');
         IMAGEN.setAttribute("src", info.imagen);
         // Agregamos clases de imagen 
-        IMAGEN.classList.add("col-md-4", "img-fluid");
+        IMAGEN.classList.add("img-product","img-fluid");
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
         // Cargamos descripcion en el contenedor de descripcion y su titulo
