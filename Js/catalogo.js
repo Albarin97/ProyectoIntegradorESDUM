@@ -279,7 +279,6 @@ function eventoPrecio() {
     const barra = document.getElementById("customRange1");
     barra.setAttribute("max", obtenerPrecioMaximo());
     barra.setAttribute("min", obtenerPrecioMinimo());
-    
 }
 
 eventoPrecio();
