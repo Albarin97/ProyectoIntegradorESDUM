@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos ingresados</title>
+
+    <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div id="datosMostrados">
+        <!-- Aquí se mostrarán los datos ingresados -->
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recupera los datos del localStorage
+            const datosJSON = localStorage.getItem('datosIngresados');
+            let ListaProductos = JSON.parse(datosJSON); // Parse es para convertir el texto a formato JS
+
+            if (datosJSON) {
+                // Convierte los datos JSON en un objeto
+                const datos = JSON.parse(datosJSON);
+
+                const datosMostradosDiv = document.getElementById('datosMostrados');
+                datos.forEach(element => {
+                    const cardBody = document.createElement('div');
+                    const divTitulo =document.createElement('div');
+                    cardBody.classList.add("d-flex","flex-row");
+                    const header = document.createElement('h2');
+                    const imagen = document.createElement('img');
+                    const nombreProducto = document.createElement('p');
+                    const precio = document.createElement('p');
+                    const categoria = document.createElement('p');
+                    const descripcion = document.createElement('p');
+                    const boton = document.createElement('button');
+
+                    header.textContent = "informacion Producto";
+                    imagen.setAttribute("src", element.imagen);
+                    nombreProducto.textContent = element.nombreProducto;
+                    precio.textContent = element.precio;
+                    categoria.textContent = element.categoria;
+                    descripcion.textContent = element.descripcion;
+                    boton.textContent = "Eliminar producto";
+                    boton.addEventListener("click", (element) => {
+                        console.log(element);
+                        let ListaProductos = localStorage.getItem("datosIngresados");
+                        ListaProductos = JSON.parse(ListaProductos);
+                        // ListaProductos = ListaProductos.filter((element) => {
+                        //     if (item.id != element.id) {
+                        //         return item;
+                        //     };
+                        // });
+                        console.log(ListaProductos);
+                        if (ListaProductos.length > 0) {
+                            localStorage.setItem("datosIngresados", JSON.stringify(ListaProductos));
+                        } else {
+                            localStorage.removeItem("datosIngresados");
+                        }
+                        //window.location.reload();
+                    });
+                    divTitulo.append(header);
+                    cardBody.append(imagen);
+                    cardBody.append(nombreProducto);
+                    cardBody.append(precio);
+                    cardBody.append(categoria);
+                    cardBody.append(descripcion);
+                    cardBody.append(boton);
+                    datosMostradosDiv.append(divTitulo);
+                    datosMostradosDiv.append(cardBody);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
