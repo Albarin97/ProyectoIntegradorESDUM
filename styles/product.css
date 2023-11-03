@@ -88,6 +88,11 @@ header{
 .texto {
     font-family: 'Century Gothic', sans-serif;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.contenedorComentarios{
+  height: 500px;
 }
 
 .product-name h1 {
@@ -163,10 +168,12 @@ header{
     background-color: #EF5268 !important;
 }
 
+
 .btn-wl {
     background-color: #EF5268 !important;
 }
 
+<<<<<<< Updated upstream
 .containerFooter-fluid{
   display: flex;
   flex-direction: column;
@@ -281,3 +288,19 @@ header{
   text-align: center;
   font-size: 15px;
 }
+=======
+.boton{
+  background-color: #4964f3;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.boton:hover{
+  background-color: #EF5268;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+}
+>>>>>>> Stashed changes

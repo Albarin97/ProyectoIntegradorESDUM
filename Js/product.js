@@ -59,7 +59,21 @@ if (productoId !== null && productoId !== "") {
   for (let i = 0; i < contenedorTarjetas.childElementCount; i++) {
     modificarTarjetas(contenedorTarjetas.children[i]);
   }
+  // Configuramos el evento de los comentarios.
+  const botonComentario = document.getElementById("comentarioPush");
+  botonComentario.addEventListener("click", ()=>publicarComentario());
+}
 
+// Funcio que publica un comentario
+function publicarComentario() {
+  const divComentarios = document.getElementById("modal_comments");
+  const divcomentario = document.createElement("div");
+  divcomentario.classList.add("d-flex","flex-row","justify-content-start");
+  const p = document.createElement("p");
+  const inputText = document.getElementById("commentValue");
+  p.textContent = inputText.value;
+  divcomentario.append(p);
+  divComentarios.append(divcomentario);
 }
 
 // funcion que modifica las tarjetas de mas productos
@@ -74,6 +88,9 @@ function modificarTarjetas(tarjeta) {
   tarjeta.children[1].children[0].textContent = productoActual.modelo;
   tarjeta.children[1].children[1].textContent = productoActual.descripcion;
   tarjeta.children[1].children[2].textContent = "$ " + productoActual.precio;
+  tarjeta.children[1].children[3].classList.add("boton","texto");
+  tarjeta.children[1].children[3].setAttribute("href","../views/product.html?id="+productoActual.id);
+
 }
 
 // funcion que realiza la compra directa de un producto
@@ -145,9 +162,9 @@ function agregarLD(producto) {
     console.log(listadeseos);
     // Se actualiza el icono
     const icono = document.getElementById("add_wishList");
-    icono.replaceWith(icono.cloneNode(true));
     icono.classList.remove("bi-heart");
     icono.classList.add("bi-heart-fill");
+    icono.replaceWith(icono.cloneNode(true));
     //Se actualiza carrito en local Storage
     localStorage.setItem("listadeseos", JSON.stringify(ListaD));
   }
@@ -158,9 +175,9 @@ function agregarLD(producto) {
     console.log(listaD);
     // Se actualiza el icono
     const icono = document.getElementById("add_wishList");
-    icono.replaceWith(icono.cloneNode(true));
     icono.classList.remove("bi-heart");
     icono.classList.add("bi-heart-fill");
+    icono.replaceWith(icono.cloneNode(true));
     //Se actualiza carrito en local Storage
     localStorage.setItem("listadeseos", JSON.stringify(listaD));
   }
