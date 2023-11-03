@@ -12,7 +12,8 @@ function renderizarProductos(Productos) {
         // Div donde estara el producto
         const CARTA = document.createElement('div');
         CARTA.id = info.id;
-        CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3");
+        CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3", "mb-4");
+        //CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
         const CONTENEDORIMAGEN = document.createElement('div');
         CONTENEDORIMAGEN.classList.add("contenedorImagen", "d-flex", "justify-content-center");
@@ -63,7 +64,7 @@ function renderizarProductos(Productos) {
             botonFavoritos.addEventListener("click", () => agregarLD(info));
         }
         
-        botonFavoritos.innerHTML = '<i class="fas fa-heart"></i>';
+        botonFavoritos.innerHTML = '<i class="far fa-heart"></i>';
         //Enevnto para agregar en favoritos
         //botonFavoritos.addEventListener('click', () => {
         //const id = info.id; // Obtener el ID del objeto
@@ -90,7 +91,7 @@ function renderizarProductos(Productos) {
 }
 
 
-
+let ordenCategorias = [];
 //Se añaden los eventos a los botones de filtrado 
 //Se crea función que añada eventos 
 
@@ -142,7 +143,8 @@ function categoriasEventos() {
     });
 }
 
-// Evaluamos que valor recibimos desde paginaPrincipal para seleccionar checkbox
+// Función con la que evaluamos que valor recibimos desde paginaPrincipal para seleccionar checkbox
+function desdePrincipal(){
 const parametro = new URLSearchParams(window.location.search);
 const seleccionarCheckbox = parametro.get("seleccionarCheckbox");
 
@@ -150,23 +152,31 @@ if (seleccionarCheckbox) {
     document.getElementById(seleccionarCheckbox).checked = true;
     //console.log(seleccionarCheckbox);
     if (seleccionarCheckbox == "flexCheckAmigurumis") {
+        ordenCategorias.push("Amigurumi");
         filtrarProductos("Amigurumi");
+
+        
     } else {
         if (seleccionarCheckbox == "flexCheckRopa") {
+            ordenCategorias.push("Ropa");
             filtrarProductos("Ropa");
+            
         } else {
             if (seleccionarCheckbox == "flexCheckAccesorios") {
+                ordenCategorias.push("Accesorio");
                 filtrarProductos("Accesorio");
+                
             }
         }
     }
 }
-
+}
+desdePrincipal();
 
 
 categoriasEventos();
 
-let ordenCategorias = [];
+
 
 //Funcion que ordena las categorias segun fueron marcadas, importante para renderizar con barra de precios
 function ordendeCategorias() {
@@ -175,7 +185,7 @@ function ordendeCategorias() {
     const categoriaAccesorios = document.getElementById("flexCheckAccesorios");
     categoriaAmigurumi.addEventListener('change', () => {
         if (categoriaAmigurumi.checked) {
-            filtrarProductos("Amigurumi");
+           // filtrarProductos("Amigurumi");
             ordenCategorias.push("Amigurumi");
         } else { //para eliminar categoria del vector cuando se deseleccione el checkbox
             let eliminarCategoria = "Amigurumi";
@@ -189,7 +199,8 @@ function ordendeCategorias() {
 
     categoriaRopa.addEventListener('change', () => {
         if (categoriaRopa.checked) {
-            filtrarProductos("Ropa");
+            console.log("chequeado");
+           // filtrarProductos("Ropa");
             ordenCategorias.push("Ropa");
         } else {
             let eliminarCategoria = "Ropa";
@@ -203,7 +214,7 @@ function ordendeCategorias() {
 
     categoriaAccesorios.addEventListener('change', () => {
         if (categoriaAccesorios.checked) {
-            filtrarProductos("Accesorio");
+           // filtrarProductos("Accesorio");
             ordenCategorias.push("Accesorio");
         } else {
             let eliminarCategoria = "Accesorio";
@@ -222,7 +233,6 @@ ordendeCategorias();
 
 // Se crea la función que renderiza lo seleccionado en checkbox
 function filtrarProductos(categoria) {
-
     let categoriaSeleccionada = baseDeDatos.filter(producto => producto.clase === categoria);
     renderizarProductos(categoriaSeleccionada);
 }
@@ -274,8 +284,6 @@ function precioSeleccionado() {
 precioSeleccionado();
 
 
-
-
 // Función que filtra por precio y categoría
 function filtrarProductosPrecioyCategoria() {
     const precioMaximo = document.getElementById("customRange1").value;
@@ -291,6 +299,7 @@ function filtrarProductosPrecioyCategoria() {
         const productosDeCategoria = productosFiltrados.filter((producto) => producto.clase === categoria);
         productosOrdenados.push(...productosDeCategoria);
     });
+
 
     //limpia "principal"
     const principal = document.querySelector(".principal");
@@ -386,6 +395,19 @@ function agregarLD(producto) {
       localStorage.setItem("listadeseos", JSON.stringify(listaD));
     }
   }
+
+// function agregarLD(producto) {
+//   const listadeseos = localStorage.getItem("listadeseos");
+//   const ListaD = listadeseos ? JSON.parse(listadeseos) : [];
+
+//   ListaD.push(producto);
+
+//   const boton = document.getElementById("add_wishList" + producto.id);
+//   boton.disabled = true;
+
+//   localStorage.setItem("listadeseos", JSON.stringify(ListaD));
+// }
+
   
   // Esta funcion lee la lista de deseos para ver si un producto se encuentra en el mismo.
   function estaEnListaD(info) {

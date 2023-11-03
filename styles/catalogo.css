@@ -110,14 +110,14 @@
 
 .btn.btn-primary{
     background-color: #4964F3;
-    color: #FFDFE2; 
+    color: white; 
     border-radius: 12px;
     border-color: transparent;
 }
 
 .btn.btn-primary:hover{
     background-color: #EF5268;
-    color: #FFDFE2; 
+    color: white; 
     border-radius: 12px;
     border-color: transparent;
 }
