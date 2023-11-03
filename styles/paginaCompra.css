@@ -57,9 +57,10 @@ body {
 
 .shopping-cart figure img {
   width: 160px;
-  height: 160px;
+  height: 170px;
   border-radius: 10px;
-  object-fit: cover;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .shopping-cart p {
@@ -70,6 +71,8 @@ body {
 #products {
   color: #EF5268;
   font-size: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .direction-user {
@@ -120,7 +123,8 @@ div .item-quantity,
 div .item-price,
 div .item-total {
   color: #4964f3;
-  font-size: 20px;
+  font-size: 18px;
+  margin-right: 70px;
 }
 
 div .total-general {
@@ -144,7 +148,7 @@ div .total-general {
   font-size: 20px;
 }
 
-/* Consulta de medios para pantallas más pequeñas */
+/* Estilos  para pantallas más pequeñas */
 @media only screen and (max-width: 768px) {
   .my-order-container {
     width: 100%;
@@ -155,12 +159,13 @@ div .total-general {
   }
 
   .shopping-cart figure img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 
   .product-container {
     flex-direction: column;
     align-items: center;
+
   }
 }
