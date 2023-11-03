@@ -446,3 +446,12 @@ document.getElementById('formTarjeta').addEventListener('submit', function(event
 
 })
 //FIN DE LA EDICION DE TARJETA VISTAS GRANDES
+
+document.addEventListener("DOMContentLoaded", function(){
+    const btnCerrarSesion = document.getElementById("cerrarSesion");
+
+    btnCerrarSesion.addEventListener("click", function(){
+        localStorage.setItem("sesionIniciada", "false");
+        window.location.href = "../views/inicioSesion.html";
+    });
+});
