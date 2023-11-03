@@ -279,7 +279,7 @@ function agregarProductoCarrito(producto) {
         // Se actualiza el boton, cambiamos su contenido
         const divcarta = document.getElementById(producto.id);
         const button = divcarta.getElementsByClassName("botonCarrito");
-        button[0].textContent = "Producto agregado al carrito";
+        button[0].textContent = "Agregado al carrito";
         button[0].disabled = true;
         //Se actualiza carrito en local Storage
         localStorage.setItem("carrito", JSON.stringify(carrito));
