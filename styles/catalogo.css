@@ -160,6 +160,8 @@ header{
     box-shadow: 5px 5px 10px #4964F3; 
     border-radius: 10px; 
     margin-top: 5px;
+    margin-left:13px;
+    margin-right: 13px;
 }
 
 
@@ -169,7 +171,10 @@ header{
     font-weight: bold;
 }
 
-
+.img-product{
+    height: 150px;
+    width: 130px;
+}
 /*Footer*/
 .containerFooter-fluid{
   display: flex;
