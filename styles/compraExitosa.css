@@ -264,3 +264,8 @@ header{
     text-align: center;
     font-size: 15px;
 }
+
+purchase--btn {
+  /* ... (tu estilo actual) */
+  margin-top: 20px; /* Ajusta según sea necesario */
+}
