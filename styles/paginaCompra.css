@@ -151,12 +151,15 @@ body{
   margin-top: 40px;
   margin-left: 20px;
   margin-right: 20px;
-  border: #4964f3;
+  border: white;
   border-radius: 10px;
   border-style: solid;
   border-width: 1px;
+  box-shadow: -10px 0px 10px #949393;
+}
+.product-container:hover{
   box-shadow: -10px 0px 10px #FFDFE2;
-  animation: moverSombra 10s infinite alternate;
+  animation: moverSombra 3s infinite alternate;
 }
 
 @keyframes moverSombra {
