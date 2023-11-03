@@ -389,7 +389,7 @@ document.getElementById('formDireccion').addEventListener('submit', function(eve
 })
 //FIN DE LA EDICION DE LA DIRECCION VISTAS GRANDES
 
-//EDITAR LOS DATOS DE LA TARJETA VISTA CELULAR
+//EDITAR LOS DATOS DE LA TARJETA VISTAS GRANDES
 document.getElementById('formTarjeta').addEventListener('submit', function(event){
     event.preventDefault();
     
@@ -445,4 +445,4 @@ document.getElementById('formTarjeta').addEventListener('submit', function(event
     window.location.href='../views/paginaUsuario.html'
 
 })
-//FIN DE LA EDICION DE TARJETA VISTA CELULAR
+//FIN DE LA EDICION DE TARJETA VISTAS GRANDES

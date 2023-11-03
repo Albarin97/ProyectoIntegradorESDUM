@@ -84,6 +84,7 @@ var datos = {
   correoDato: correo,
   correoConfirmacionDato: correoConfirmacion,
   direccionDato: direccion,
+  contraseñaDato:contraseña,
   estadoDato: estado,
   codigoPostalDato: codigoPostal,
 
@@ -93,6 +94,7 @@ var datos = {
 var name=nombreUsuario;
 var email=correo;
 var emailConfirm=correoConfirmacion;
+var password=contraseña;
 var address=direccion;
 var state=estado;
 var zipCode= codigoPostal;
@@ -102,6 +104,7 @@ localStorage.setItem("datosRegistro", JSON.stringify(datos));
 localStorage.setItem("nombreUsuarioDato", JSON.stringify(name));
 localStorage.setItem("correoDato", JSON.stringify(email));
 localStorage.setItem("correoConfirmacionDato", JSON.stringify(emailConfirm));
+localStorage.getItem("contraseñaDato", JSON.stringify(password))
 localStorage.setItem("direccionDato", JSON.stringify(address));
 localStorage.setItem("estadoDato", JSON.stringify(state));
 localStorage.setItem("codigoPostalDato", JSON.stringify(zipCode));
@@ -116,3 +119,4 @@ console.log(JSON.stringify(zipCode));
 }
 
 });
+

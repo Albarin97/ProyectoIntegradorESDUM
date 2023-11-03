@@ -11,31 +11,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //Se obtienen el correo y la contraseña ingresados 
             // Crea un objeto "datos" con valores de los campos del formulario.
-            const correo= document.getElementById("correo").value;
-            const contraseña= document.getElementById("contraseña").value;
+            const correoInicio= document.getElementById("correoInicio").value;
+            const contraseñaInicio= document.getElementById("contraseñaInicio").value;
 
         //Vamos a obtener los datos de registro del LocalStorage
-        const datosGuardados= localStorage.getItem("datosUsuario");
+        const datosGuardados= JSON.parse(localStorage.getItem("datosRegistro"));
 
-        if (datosGuardados){
-            //Parseamos los datos del local storage
-            const datos= JSON.parse(datosGuardados);
+        if (datosGuardados && correoInicio === datosGuardados.correoDato && contraseñaInicio === datosGuardados.contraseñaDato) {
+            console.log("Sesión iniciada");
+            localStorage.setItem("sesionIniciada", "true");
+            window.location.href = "../views/paginaPrincipal.html";
+        } 
+              
+        if(contraseñaInicio!== datosGuardados.contraseñaDato) {
+            //Validar contraseña
+            mostrarAlerta("Contraseña incorrecta", "alertaContraseña");
+        } else{
+            
+        }
 
-              //***  Validaciones   ****//
-              if (correo === datos.correo && contraseña === datos.contraseña) {
-                console.log("Sesion iniciada");
-                //Almacenamos en cookie el estado de la sesion
-                localStorage.setItem("sesionIniciada","true")
-                window.location.href="../views/paginaPrincipal.html";
-              } else {
-                //Validar contraseña
-                mostrarAlerta("Contraseña incorrecta", "alertaContraseña");
-              }
-            } else {
-                //Validar correo
-                mostrarAlerta("Ups! Parece que no estas registrado", "alertaCorreo")
-                 /*** FIN Validaciones ****/
-            }
+        if(correoInicio!== datosGuardados.correoDato) {
+        //Validar correo
+        mostrarAlerta("Ups! Parece que no estas registrado", "alertaCorreo")
+            /*** FIN Validaciones ****/
+        }
+        
         }
 
     // Esta función muestra alertas en el formulario.
@@ -58,17 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 3000);
         }
     }
-
-    let datosGuardados= localStorage.getItem("datosRegistro");
-
-    console.log(nombreGuardado);
-    
-    if(datosGuardados) {
-        var datos=JSON.parse(datosGuardados);
-    } else {
-    
-    }
-    console.log(JSON.stringify(datos));
-
 });
-
