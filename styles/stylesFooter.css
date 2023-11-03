@@ -1,42 +1,106 @@
 .container-fluid{
-    border: 10px black solid;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    font-family:'Century Gothic', sans-serif;
+    background-color: #4964F3;
+    color: white;
+    font-size: 20px;
 }
 
 .redes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    border: 2px solid green;
 }
 
-.right{
-
-    border: 1px solid red;
+.saludo{
+    flex: 6;
+    font-size: 44px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .iconosRedes{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: end;
-    border: 1px blue solid;
-    padding: 10px;
-    width: 400px;
+    align-items: center;
+    flex: 3;
+    justify-content: space-between;
+
 }
 
-.me-4{
-    color: blue;
+#facebook, #instagram, #tiktok, #whatsapp{
+    color: white;
+    font-size: 55px;
+}
+
+#facebook:hover, #instagram:hover, #tiktok:hover, #whatsapp:hover{
+    transform: scale(1.2);
 }
 
 .cuerpo{
-    border: 1px fuchsia solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deCrochet{
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.links{
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.contacto{
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#comentarios {
+    text-decoration: none;
+    color: white;
+}
+
+#telefono, #correo, #localizacion, #iconoComentario{
+    color: white;
+    font-size: 20px;
+}
+
+.titulo{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.text-reset{
+    text-decoration: none;
+}
+
+.copyright{
+    background-color: #4964F3;
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
