@@ -21,11 +21,9 @@ const productoId = parametro.get("id");
 // Si el producto existe, obtener su información de la base de datos
 if (productoId !== null && productoId !== "") {
   let productoActual = baseDeDatos.find(producto => producto.id == productoId);
-  console.log(productoActual);
   console.log("ID del producto:", productoId);
   // modificamos la pagina con la información del producto
   const titulo = document.getElementById("productTitle");
-  console.log(titulo);
   titulo.textContent = productoActual.modelo;
   const imagen = document.getElementById("img-product");
   imagen.setAttribute("src", productoActual.imagen);
@@ -56,8 +54,15 @@ if (productoId !== null && productoId !== "") {
   botonCompraRapida.addEventListener("click", () => comprarProductoCarrito(productoActual));
   // Modificamos las tarjetas de mas productos
   const contenedorTarjetas = document.getElementById("tarjetas");
+  let listaRandom = [];
+  while(listaRandom.length<=5){
+    let idrandom = Math.floor(Math.random() * (baseDeDatos.length - 1)) + 1;
+    if(!listaRandom.includes(idrandom)){
+      listaRandom.push(idrandom);
+    }
+  }
   for (let i = 0; i < contenedorTarjetas.childElementCount; i++) {
-    modificarTarjetas(contenedorTarjetas.children[i]);
+    modificarTarjetas(contenedorTarjetas.children[i],listaRandom[i]);
   }
   // Configuramos el evento de los comentarios.
   const botonComentario = document.getElementById("comentarioPush");
@@ -67,20 +72,37 @@ if (productoId !== null && productoId !== "") {
 // Funcio que publica un comentario
 function publicarComentario() {
   const divComentarios = document.getElementById("modal_comments");
+  const tarjetaFinal = document.createElement("div");
+  tarjetaFinal.classList.add("d-flex","flex-column","individuales","h-auto");
   const divcomentario = document.createElement("div");
+  const divCabecera = document.createElement("div");
+  divCabecera.classList.add("d-flex","flex-row","justify-content-between");
   divcomentario.classList.add("d-flex","flex-row","justify-content-start");
+  // Cargamos el comentario con el input de la pagina
   const p = document.createElement("p");
+  p.classList.add("d-flex","flex-row");
   const inputText = document.getElementById("commentValue");
   p.textContent = inputText.value;
+  // Cargamos el nombre de usuario del localStorage
+  const user = document.createElement("p");
+  user.textContent = JSON.parse(localStorage.getItem("nombreUsuarioDato"));
+  console.log(JSON.parse(localStorage.getItem("nombreUsuarioDato")));
+  //Cargamos la fecha de donde se elaboro el comentario
+  const tiempoTranscurrido = Date.now();
+  const hoy = new Date(tiempoTranscurrido);
+  const fecha = document.createElement("p");
+  fecha.textContent = hoy.toLocaleDateString();
+  divCabecera.append(user);
+  divCabecera.append(fecha);
   divcomentario.append(p);
-  divComentarios.append(divcomentario);
+  tarjetaFinal.append(divCabecera);
+  tarjetaFinal.append(divcomentario);
+  divComentarios.append(tarjetaFinal);
 }
 
 // funcion que modifica las tarjetas de mas productos
-function modificarTarjetas(tarjeta) {
-  let idrandom = Math.floor(Math.random() * (baseDeDatos.length - 1)) + 1
+function modificarTarjetas(tarjeta,idrandom) {
   let productoActual = baseDeDatos.find(producto => producto.id == idrandom);
-  console.log(productoActual);
   tarjeta.children[0].children[0].setAttribute("src", productoActual.imagen);
   tarjeta.children[0].children[0].addEventListener("click",()=>{
     window.location.href = "../views/product.html?id="+productoActual.id;
