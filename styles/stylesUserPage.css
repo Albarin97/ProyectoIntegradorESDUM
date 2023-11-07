@@ -1,5 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 /*Navbar*/
+.barranav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
+  }
+
 .material-symbols-outlined {
     color: #fda2ef;
 }
