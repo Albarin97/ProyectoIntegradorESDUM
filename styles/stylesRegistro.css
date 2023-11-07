@@ -7,6 +7,10 @@
   z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
 }
 
+#sizeIcons{
+  font-size: 35px;
+}
+
 header{
   color: #FFDFE2;
   background-color: #4964F3;

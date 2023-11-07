@@ -8,6 +8,10 @@
     z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
   }
 
+  #sizeIcons{
+    font-size: 35px;
+}
+
 .material-symbols-outlined {
     color: #fda2ef;
 }
