@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene los elementos Id de cada archivo.
 const form = document.getElementById("form");
@@ -129,5 +131,7 @@ function mostrarAlerta(mensaje, tipo) {
     }
 }}
 });
+
+
 
 

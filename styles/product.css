@@ -82,9 +82,30 @@ header{
     width: 100px;
 }
 
-.tarjetaP{
-    height: 400px;
+
+.individuales{
+  margin: 10px;
+  box-shadow: -10px 0px 10px #b2b2b2;
+  padding: 10px;
 }
+
+.individuales:hover{
+  box-shadow: -10px 0px 10px #b2b2b2;
+  animation: moverSombra 10s infinite alternate;
+}
+
+@keyframes moverSombra {
+  from {
+      box-shadow: -10px 0px 10px #4964F3;
+  }
+  to {
+      box-shadow: 10px 0px 10px #FDA2EF;
+  }
+
+}
+
+
+
 
 .subtitulo {
     font-family: 'Century Gothic', sans-serif;
