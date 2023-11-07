@@ -65,13 +65,25 @@ header{
     font-family:'Century Gothic', sans-serif;
 }
 
+.prueba {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
 .tarjeta{
-    margin-top: 40px;
-    border: white;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: -10px 0px 10px #b2b2b2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: solid 1px white;
+  border-radius: 10px;
+  box-shadow: -10px 0px 10px #b2b2b2;
+  padding: 10px;
 }
 
 .tarjeta:hover{

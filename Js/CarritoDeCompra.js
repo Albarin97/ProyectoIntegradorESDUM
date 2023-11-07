@@ -40,7 +40,7 @@ function renderizarProductos(listaProductos) {
         const DESCRIPCION = document.createElement('p');
         DESCRIPCION.classList.add("texto");
         TITULO.textContent = element.modelo;
-        DESCRIPCION.textContent = "Descripción: " + element.descripcion;
+        DESCRIPCION.textContent = element.descripcion;
         const PRECIO = document.createElement('p');
         PRECIO.classList.add("texto");
         PRECIO.textContent = "Precio: " + String(element.precio * element.cantidadacomprar);
