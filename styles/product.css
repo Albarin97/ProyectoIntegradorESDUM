@@ -84,6 +84,7 @@ header{
 
 
 .individuales{
+  border-radius: 20px;
   margin: 10px;
   box-shadow: -10px 0px 10px #b2b2b2;
   padding: 10px;
@@ -91,7 +92,7 @@ header{
 
 .individuales:hover{
   box-shadow: -10px 0px 10px #b2b2b2;
-  animation: moverSombra 10s infinite alternate;
+  animation: moverSombra 1.5s infinite alternate;
 }
 
 @keyframes moverSombra {
