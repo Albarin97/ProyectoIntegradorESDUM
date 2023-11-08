@@ -16,6 +16,7 @@
 }
 
 .saludoFooter{
+    font-weight: bold;
     flex: 6;
     font-size: 40px;
     color: white;
@@ -27,19 +28,13 @@
 }
 
 .iconosRedesFooter{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    flex: 5;
-    justify-content: space-around;
+    margin: 10px 10px;
     margin-bottom: 25px;
 }
 
 #facebook, #instagram, #tiktok, #whatsapp{
     color: white;
-    font-size: 55px;
+    font-size: 40px;
 }
 
 #facebook:hover, #instagram:hover, #tiktok:hover, #whatsapp:hover{
@@ -53,56 +48,86 @@
     justify-content: center;
 }
 
+.imagenLogo{
+    width: 310px;
+}
+
 .logoFooter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    margin-left: 20px;
 }
+
+
 
 .deCrochetFooter{
     flex: 3;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: justify;
+    font-size:13px;
 }
 
-.linksFooter{
-    flex: 3;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-}
+
 
 .contactoFooter{
     flex: 3;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding-left: 100px;
 }
 
-#comentarios {
+.conocenos, .telefono, .localizacion, #contactanos {
     text-decoration: none;
     color: white;
+    font-size:13px;
 }
 
-#telefono, #correo, #localizacion, #iconoComentario, #contactanos{
+
+#telefono, #correo, #localizacion, #iconoComentario{
     color: white;
     font-size: 15px;
     text-decoration: none;
 }
 
-.tituloFooter{
+.linksFooter{
+    padding-top:40px;
+    padding-left: 20px;
+}
+
+.tituloFooterContacto{
     color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 15px;
+    font-size: 20px;
+    text-align: left;
+    padding-top:38px;
+    margin-bottom: 20px;
+}
+
+.tituloFooterCrochet{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    
+}
+
+.tituloFooterCondiciones{
+    color: white;
+    font-size: 20px;
+    text-align: left;
     margin-bottom: 20px;
 }
 
 .text-reset{
     text-decoration: none;
+    font-size:13px;
+    
 }
 
 .copyrightFooter{
