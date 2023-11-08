@@ -1,0 +1,12 @@
+CREATE TABLE addresses (
+    id BIGSERIAL PRIMARY KEY,
+    ext_number TEXT NOT NULL,
+    street TEXT NOT NULL,
+    int_number TEXT DEFAULT '' NOT NULL,
+    neighborhood TEXT NOT NULL,
+    zip_code TEXT NOT NULL,
+    city_id BIGSERIAL REFERENCES city (id) ON DELETE CASCADE NOT NULL,
+    deleted_at TIMESTAMP WITH TIME ZONE DEFAULT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL
+);
