@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:15'
+    environment:
+      - 'POSTGRES_DB=e_commerce_db'
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=secret'
+    ports:
+      - '5433:5432'

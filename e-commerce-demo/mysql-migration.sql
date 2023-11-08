@@ -1,19 +1,11 @@
-
--- En la tabla roles almacenamos de manera organizada un catalogo de los posibles niveles de privilegios que puede tener un usuario
 CREATE TABLE roles (
-    id BIGINT AUTO_INCREMENT,
+    id BIGINT AUTO_INCREMENT AUTO_INCREMENT,
     CONSTRAINT PK_roles PRIMARY KEY (id),
     title VARCHAR(100) UNIQUE NOT NULL,
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
-INSERT INTO roles (title)
-VALUES ('Owner'),
-    ('Admin'),
-    ('Client');
-
--- En la tabla usuarios almacenamos los diferentes tipos de usuarios conteniendo: nombre completo dividido en dos campos de nombres y apellidos, email, contraseña cifrada y una referencia como llave foranea que apunta hacia el rol que tiene cada registro, asi evitamos tener informacion redundante y desnormalizada (roles de usuario con diferentes caracteres de letras, mayusculas y minusculas en ordenes diferentes)
 CREATE TABLE users (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_users PRIMARY KEY (id),
@@ -27,7 +19,6 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- A pesar de que obviamente planeamos nuestra presencia unicamente dentro de la republica mexicana haciendo uso del principio Open/Closed permitimos que nuestro sistema este abierto a ser extendido pero cerrado a la modificacion, es decir ya tenemos las tablas que pueden contener distintos paises, estados para cada pais y ciudades para cada estado, permitiendo almacenar tales datos de ubicacion 
 CREATE TABLE country (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_country PRIMARY KEY (id),
@@ -58,7 +49,6 @@ CREATE TABLE city (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En la tabla de direccion almacenamos los datos de numero exterior, calle, numero interior, vecindario/colonia, codigo postal y una referencia a un registro de la tabla de ciudades, permitiendo almacenar de manera escalonada la jerarquia domicilio-vecinario-ciudad-estado-pais
 CREATE TABLE addresses (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_addresses PRIMARY KEY (id),
@@ -73,7 +63,6 @@ CREATE TABLE addresses (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos la informacion de un medio de pago que para cada uno de sus registros incluye nombre del titular, numero de tarjeta, fecha de expiracion y codigo de seguridad
 CREATE TABLE payment (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_payment PRIMARY KEY (id),
@@ -85,7 +74,6 @@ CREATE TABLE payment (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla intermedia almacenamos la relacion muchos a muchos que existe entre los usuarios y sus direcciones. A pesar de que se pudo realizar de uno a muchos, de esta manera permite una mayor escalabilidad funcional 
 CREATE TABLE user_address (
     user_id BIGINT,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
@@ -95,7 +83,6 @@ CREATE TABLE user_address (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla intermedia almacenamos la relacion muchos a muchos que existe entre los usuarios y sus metodos de pago.
 CREATE TABLE user_payment (
     user_id BIGINT,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
@@ -105,7 +92,6 @@ CREATE TABLE user_payment (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos de forma normalizada las categorias de nuestros productos (ropa, amigurumis y accesorios para distinguirlos en grandes grupos )
 CREATE TABLE category (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_category PRIMARY KEY (id),
@@ -128,7 +114,6 @@ CREATE TABLE product (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos los distintos estados que puede presentar una orden de compra (orden realizada, en proceso de embalaje, enviado, entregado, satisfecho o cancelado)
 CREATE TABLE order_status (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_order_status PRIMARY KEY (id),
@@ -137,8 +122,7 @@ CREATE TABLE order_status (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos el registro de una orden de compra haciendo una referencia al cliente que la realizo, el subtotal de su orden, costo de envio, el costo tributario de los impuestos trasladados y la direccion a la que se envia
-    CREATE TABLE orders (
+CREATE TABLE orders (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_orders PRIMARY KEY (id),
     customer_id BIGINT,
@@ -154,7 +138,6 @@ CREATE TABLE order_status (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos de manera muchos a muchos una bitacora historica de las actualizaciones que puede tener una orden de compra con la fecha de tal actualizacion
 CREATE TABLE order_statuses (
     order_id BIGINT,
     FOREIGN KEY (order_id) REFERENCES orders (id) ON DELETE CASCADE,
@@ -164,7 +147,6 @@ CREATE TABLE order_statuses (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
--- En esta tabla almacenamos la relacion muchos a muchos entre una orden de compra y cada producto que incluye asi como tambien el precio unitario que tuvo en el momento de la compra aegurandonos de conocer el valor de precio historico y la cantidad de tal producto
 CREATE TABLE order_product (
     id BIGINT AUTO_INCREMENT,
     CONSTRAINT PK_order_product PRIMARY KEY (id),
@@ -173,18 +155,20 @@ CREATE TABLE order_product (
     product_id BIGINT,
     FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE CASCADE,
     unit_price DOUBLE PRECISION DEFAULT 0 NOT NULL,
-    product_count BIGINT DEFAULT 0 NOT NULL, 
+    product_count BIGINT DEFAULT 0 NOT NULL,
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
-
-
+INSERT INTO roles (title)
+VALUES ('Owner'),
+    ('Admin'),
+    ('Customer');
 INSERT INTO users (given_name, surname, email, passwords, role_id)
 VALUES (
         'Jani Selene',
         'Arenas Sanchez',
-        'janiarenassanchez@gmail.com',
+        'janisarsa@gmail.com',
         'secret',
         1
     ),
@@ -332,7 +316,7 @@ VALUES (
         '723'
     ),
     (
-        'BRANDON JIMENEZ LOZANO',
+        'Brandon Jimenez Lozano',
         '1203 9751 4735 9121',
         '07/28',
         '924'
@@ -373,8 +357,7 @@ INSERT INTO product (
         stock,
         price
     )
-VALUES 
-    (
+VALUES (
         'Amigurumi Freddie Mercury',
         'Amigurumi del cantante de Queen',
         '',
@@ -397,37 +380,6 @@ VALUES
         3,
         167,
         1567.39
-    ),
-    (     'Amigurumi Jengibre',
-        'Figura navideña de hombre de jengibre',
-        '../resources/logo/jengibre.jpeg',
-        2,
-        3,
-        300,
-    ),
-    (
-        'Amigurumi Sirena',
-        'Figura amigurumi en forma de Sirena',
-        '../resources/logo/sirena.jpeg',
-        2,
-        5,
-        220
-    ),
-    (
-        'Amigurumi Aguacates',
-        'Figuras Aguacates con corazon',
-        '../resources/logo/aguacate.jpeg',
-        2,
-        8,
-        160
-    ),
-    (
-        'Amigurumi Jake',
-        'Personaje Jake de hora de aventura',
-        '../resources/logo/jakeElPerro.jpeg',
-        2,
-        10,
-        150
     );
 INSERT INTO order_status (title)
 VALUES ('Placed'),
@@ -438,7 +390,6 @@ VALUES ('Placed'),
     ('On route'),
     ('Arrived'),
     ('Fulfilled');
-    ('Canceled')
 INSERT INTO orders (customer_id, subtotal, shipping, taxes, address_id, payment_id)
 VALUES (1, 7200, 360, 1152, 4, 1),
     (2, 9800, 490, 1568, 1, 1),
@@ -446,7 +397,7 @@ VALUES (1, 7200, 360, 1152, 4, 1),
     (4, 4150, 207.5, 664, 2, 4),
     (4, 960, 48, 153.6, 2, 3),
     (5, 1500, 75, 240, 6, 5),
-    (5, 3100, 155, 496. 6, 5);
+    (5, 3100, 155, 496, 6, 5);
 INSERT INTO order_statuses (order_id, status_id)
 VALUES (1, 8),
     (2, 8),
