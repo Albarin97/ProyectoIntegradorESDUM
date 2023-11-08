@@ -1,10 +1,3 @@
--- Para el diseño de la base de datos se implementó el uso de base de datos relacional.
-
--- Para el modelo de base de datos, se comenzo diseñando un diagrama entidad/relacion que emplea la normalizacion para reducir la redundancia y optimizar la integridad de la informacion, posteriormente se realizaron migraciones de base de datos que permiten mantenerla versionada para llevar un control historico y realizar regresiones  
-
--- Se desarrollaron tablas catalogo que permiten tener la informacion organizada y evita registros repetidos asi como evitar la corrupcion de valores que seran constantemente reutilizados en nuestro modelo de negocio 
-
--- En una base de datos relacional organizamos la informacion en filas y columnas, donde es cada una de las filas un registro con un identificador unico, que nos sirve como llave primaria y las columnas delimitan cada campo que sera contenido por las filas, estableciendo su tipo de dato asi como cualquier reestriccion que se haya establecido (es decir, que sea un valor único en la tabla, que prohiba los datos nullos o vacios o que permita unicamente nuestros valores normalizados mediante el uso de una llave foranea)
 
 -- En la tabla roles almacenamos de manera organizada un catalogo de los posibles niveles de privilegios que puede tener un usuario
 CREATE TABLE roles (
@@ -15,6 +8,11 @@ CREATE TABLE roles (
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
+INSERT INTO roles (title)
+VALUES ('Owner'),
+    ('Admin'),
+    ('Client');
+
 -- En la tabla usuarios almacenamos los diferentes tipos de usuarios conteniendo: nombre completo dividido en dos campos de nombres y apellidos, email, contraseña cifrada y una referencia como llave foranea que apunta hacia el rol que tiene cada registro, asi evitamos tener informacion redundante y desnormalizada (roles de usuario con diferentes caracteres de letras, mayusculas y minusculas en ordenes diferentes)
 CREATE TABLE users (
     id BIGINT AUTO_INCREMENT,
@@ -175,18 +173,13 @@ CREATE TABLE order_product (
     product_id BIGINT,
     FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE CASCADE,
     unit_price DOUBLE PRECISION DEFAULT 0 NOT NULL,
-    product_count BIGINT DEFAULT 0 NOT NULL,
--- Cada una de nuestras tablas incluyen tres campos de tipo timestamp que nos permite registrar cuando se crea, actualiza o se elimina cada registro, permitiendo un borrado suave. En esencia cuando eliminemos un registro en lugar de utilizar el comando DELETE utilizamos el campo deleted_at pasando de tener un valor nulo a tener el valor de la fecha instantanea de eliminacion. 
+    product_count BIGINT DEFAULT 0 NOT NULL, 
     deleted_at TIMESTAMP DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
     created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
 
 
-INSERT INTO roles (title)
-VALUES ('Owner'),
-    ('Admin'),
-    ('Customer');
 INSERT INTO users (given_name, surname, email, passwords, role_id)
 VALUES (
         'Jani Selene',
