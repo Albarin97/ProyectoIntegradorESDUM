@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago</title>
-    <link rel="stylesheet" href="../styles/pagoCompra.css">
-
+    <link rel="stylesheet" href="../styles/pagoCompra.css"> 
+    
 
         <!--JS para el estado de la sesion-->
         <script src="../Js/estadoSesion.js"></script>
@@ -53,48 +53,35 @@
                             fill="#253B80"></path>
                     </svg>
                 </button>
-                <g>
-                </svg>
-                </button>
-                </g>
-                <defs>
-                    <clipPath id="clip0_134_34">
-                        <rect fill="white" height="38.1" width="80"></rect>
-                    </clipPath>
-                </defs>
-                </svg>
-                </button>
             </div>
-            <div class="separator">
-                <hr class="line">
-                <p>o ingresa tu tarjeta de crédito o débito</p>
-                <hr class="line">
-            </div>
-            <div class="credit-card-info--form">
-                <div class="input_container">
-                    <label for="password_field" class="input_label">Nombre en la tarjeta</label>
-                    <input id="password_field" class="input_field" type="text" name="input-name" title="Input title"
-                        placeholder="Ingresa tu nombre completo">
+                <div class="separator">
+                    <hr class="line">
+                    <p>o ingresa tu tarjeta de crédito o débito</p>
+                    <hr class="line">
                 </div>
-                <div class="input_container">
-                    <label for="password_field" class="input_label">Número de tarjeta</label>
-                    <input id="password_field" class="input_field" type="number" name="input-name"
-                        placeholder="0000 0000 0000 0000">
-                </div>
-                <div class="input_container">
-                    <label for="password_field" class="input_label">Fecha de expiración / CVV </label>
-                    <div class="split">
-                        <input id="password_field" class="input_field" type="text" name="input-name"
-                            placeholder="00/00">
-                        <input id="password_field" class="input_field" type="number" name="cvv"
-                            placeholder="cvv">
+                <div class="credit-card-info--form">
+                    <div class="input_container">
+                        <label for="name_field" class="input_label">Nombre en la tarjeta</label>
+                        <input id="name_field" class="input_field" type="text" name="input-name" title="Input title" placeholder="Ingresa tu nombre completo">
                     </div>
-                </div>
+                    <div class="input_container">
+                        <label for="card_number_field" class="input_label">Número de tarjeta</label>
+                        <input id="card_number_field" class="input_field" type="number" name="input-name" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="input_container">
+                        <label for="expiration_field" class="input_label">Fecha de expiración / CVV </label>
+                        <div class="split">
+                            <input id="expiration_field" class="input_field" type="text" name="input-name" placeholder="00/00">
+                            <input id="cvv_field" class="input_field" type="number" name="cvv" placeholder="cvv">
+                        </div>
+                    </div>
+                </form>
+                
+
             </div>
-        </form>
-        <a href="./compraExitosa.html"><button class="purchase--btn-continuar">Continuar</button></a>
-    </div>
-
-</body>
-
-</html>
+            <div class="center">
+                <a href="./compraExitosa.html"><button class="purchase--btn">Continuar</button></a>
+            </div>
+        </body>
+    
+    </html>
