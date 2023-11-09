@@ -132,6 +132,11 @@
     box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #e6a9b1;
     transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
   }
+
+  .center {
+    text-align: center;
+    margin-top: 20px; /* Puedes ajustar el margen superior según tus preferencias */
+}
   
   .purchase--btn:hover {
     box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #EF5268;
