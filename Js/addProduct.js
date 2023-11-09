@@ -86,6 +86,20 @@ function validarFormulario(evento) {
 
     let datosValidos = localStorage.getItem("datosIngresados");
     if(datosValidos!=null && datosValidos){
+        // // Metodo Post
+        // let fetchData = {
+        //     method: 'POST',
+        //     body: datosValidos,
+        //     headers: new Headers()
+        // }
+        // fetch(url, fetchData)
+        // .then(function() {
+        //     console.log('Respuesta del servidor:', responseData);
+        //     // Handle response you get from the server
+        // })
+        // .catch(error => {
+        //     console.error('Error al enviar datos al servidor:', error.message);
+        // });
         console.log("Existe");
         let ArrayProduct = JSON.parse(datosValidos);
         ArrayProduct.push(datos);
@@ -96,7 +110,6 @@ function validarFormulario(evento) {
         localStorage.setItem('datosIngresados', JSON.stringify(Listanueva));
     }
 
-    
 
     mostrarAlerta("Formulario enviado con éxito.", "success");
     // Restablece el formulario después de enviar los datos.

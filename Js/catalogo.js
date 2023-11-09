@@ -5,6 +5,24 @@ import baseDeDatos from '../baseDeDatos/baseDeDatos.js';
 console.log(baseDeDatos);
 
 
+// async function getBaseDatos() {
+//     url = "localhost:8080/api/v1/products"
+//     const response = await fetch(url);
+//     const baseDeDatos = JSON.parse(response);
+//     return baseDeDatos;
+// }
+// baseDeDatos = []
+// url = "localhost:8080/api/v1/products"
+// async function getAllProducts() {
+//     fetch(url)
+//       .then(response => response.json())
+//       .then(productos => baseDeDatos=productos)
+//       .catch(error => console.error('Error al obtener productos', error));
+// }
+
+// getAllProducts();
+
+
 function renderizarProductos(Productos) {
     const DomContainer = document.getElementsByClassName("principal");
 
