@@ -23,13 +23,15 @@ async function getAllProducts() {
 getAllProducts();
 
 
+
+
 function renderizarProductos(baseDeDatos) {
     const DomContainer = document.getElementsByClassName("principal");
 
     baseDeDatos.forEach((info) => {
         // Div donde estara el producto
         const CARTA = document.createElement('div');
-        CARTA.id = info.id;
+        CARTA.id = info.idProduct;
         CARTA.classList.add("carta", "col-12", "col-sm-6", "col-md-4", "col-lg-3", "mb-4");
         //CARTA.classList.add("carta", "d-flex", "justify-content-sm-center", "pb-3", "row", "col-md-3");
         //Creamos tres divs. Uno para imagen, otro para descripcion y otro para los botones
@@ -60,7 +62,7 @@ function renderizarProductos(baseDeDatos) {
         // Agregar botón de carrito
         const botonCarrito = document.createElement('button');
         botonCarrito.classList.add("btn", "btn-primary", "m-2");
-        botonCarrito.id = "add_cart" + info.id;
+        botonCarrito.id = "add_cart" + info.idProduct;
         botonCarrito.innerHTML = '<i class="fas fa-shopping-cart"></i>';
         //botonCarrito.addEventListener('click', () => {
         if (estaEnCarrito(info)) {
@@ -75,7 +77,7 @@ function renderizarProductos(baseDeDatos) {
         // Agregar botón de favoritos
         const botonFavoritos = document.createElement('button');
         botonFavoritos.classList.add("btn", "btn-primary", "m-2");
-        botonFavoritos.id = "add_wishList" + info.id;
+        botonFavoritos.id = "add_wishList" + info.idProduct;
         if (estaEnListaD(info)) {
             botonFavoritos.disabled = true;
         } else {
@@ -92,7 +94,7 @@ function renderizarProductos(baseDeDatos) {
 
         // Evento imagen redirecciona a página producto (se envía el id)
         IMAGEN.addEventListener('click', () => {
-            window.location.href = `../views/product.html?id=${info.id}`;
+            window.location.href = `../views/product.html?id=${info.idProduct}`;
         });
 
         CONTENEDORDESCRIPCION.appendChild(TITULO);
@@ -259,6 +261,10 @@ function filtrarProductos(categoria) {
 function obtenerPrecioMaximo() {
     let precioMaximo = 0;
     baseDeDatos.forEach(producto => {
+<<<<<<< Updated upstream
+=======
+        console.log(producto);
+>>>>>>> Stashed changes
         if (producto.price > precioMaximo) {
             precioMaximo = producto.price;
         }
@@ -290,13 +296,19 @@ function removerProductos(categoria) {
 
 //Función que muestra el precio máximo de los productos al inicializar la página
 function eventoPrecio() {
+    console.log("precios");
     const precioMaximo = document.getElementsByClassName("precioMaximo");
-    precioMaximo[0].textContent = "$" + obtenerPrecioMaximo();
+    // precioMaximo[0].textContent = "$" + obtenerPrecioMaximo();
+    precioMaximo[0].textContent = "$" + "350";
     const precioMinimo = document.getElementsByClassName("precioMinimo");
-    precioMinimo[0].textContent = "$" + obtenerPrecioMinimo();
+
+    // precioMinimo[0].textContent = "$" + obtenerPrecioMinimo();
+    precioMinimo[0].textContent = "$" + "100";
     const barra = document.getElementById("customRange1");
-    barra.setAttribute("max", obtenerPrecioMaximo());
-    barra.setAttribute("min", obtenerPrecioMinimo());
+    // barra.setAttribute("max", obtenerPrecioMaximo());
+    // barra.setAttribute("min", obtenerPrecioMinimo());
+    barra.setAttribute("max",350);
+    barra.setAttribute("min",100);
 }
 
 eventoPrecio();
@@ -364,7 +376,7 @@ function agregarProductoCarrito(producto) {
         carritoLs.push(producto);
         console.log(carrito);
         // Se actualiza el boton, cambiamos su contenido
-        const button = document.getElementById("add_cart" + producto.id);
+        const button = document.getElementById("add_cart" + producto.idProduct);
         button.disabled = true;
         //Se actualiza carrito en local Storage
         localStorage.setItem("carrito", JSON.stringify(carritoLs));
@@ -375,7 +387,7 @@ function agregarProductoCarrito(producto) {
         ncarrito.push(producto);
         console.log(ncarrito);
         // Se actualiza el boton, cambiamos su contenido
-        const button = document.getElementById("add_cart" + producto.id);
+        const button = document.getElementById("add_cart" + producto.idProduct);
         button.disabled = true;
         //Se actualiza carrito en local Storage
         localStorage.setItem("carrito", JSON.stringify(ncarrito));
@@ -391,7 +403,7 @@ function estaEnCarrito(info) {
         const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));
         if (copiaCarrito != null && copiaCarrito) {
             copiaCarrito.forEach(producto => {
-                if (producto.id == info.id) {
+                if (producto.idProduct == info.idProduct) {
                     encontrado = true;
                 }
             });
@@ -410,7 +422,7 @@ function agregarLD(producto) {
       ListaD.push(producto);
       console.log(listadeseos);
       // Se actualiza el icono
-      const boton = document.getElementById("add_wishList"+producto.id);
+      const boton = document.getElementById("add_wishList"+producto.idProduct);
       boton.disabled = true;
       //Se actualiza carrito en local Storage
       localStorage.setItem("listadeseos", JSON.stringify(ListaD));
@@ -421,7 +433,7 @@ function agregarLD(producto) {
       listaD.push(producto);
       console.log(listaD);
       // Se actualiza el icono
-      const boton = document.getElementById("add_wishList"+producto.id);
+      const boton = document.getElementById("add_wishList"+producto.idProduct);
       boton.disabled = true;
       //Se actualiza carrito en local Storage
       localStorage.setItem("listadeseos", JSON.stringify(listaD));
@@ -448,7 +460,7 @@ function agregarLD(producto) {
       const copiaCarrito = JSON.parse(localStorage.getItem("listadeseos"));
       if (copiaCarrito != null && copiaCarrito) {
         copiaCarrito.forEach(producto => {
-          if (producto.id == info.id) {
+          if (producto.idProduct == info.idProduct) {
             encontrado = true;
           }
         });
