@@ -71,10 +71,10 @@ function renderizar(baseDeDatos) {
     let listaRandom = [];
     while (listaRandom.length <= 5) {
       let idrandom = Math.floor(Math.random() * (baseDeDatos.length - 1)) + 1;
-      // if (!listaRandom.includes(idrandom)) {
-      //   listaRandom.push(idrandom);
-      // }
-      listaRandom.push(idrandom);
+      if (!listaRandom.includes(idrandom)) {
+        listaRandom.push(idrandom);
+      }
+      // listaRandom.push(idrandom);
     }
     for (let i = 0; i < contenedorTarjetas.childElementCount; i++) {
       modificarTarjetas(contenedorTarjetas.children[i], listaRandom[i]);
