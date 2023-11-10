@@ -26,23 +26,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (datosUsuario.email === correoInicio && contraseñaInicio === datosUsuario.password) {
             console.log("Sesión iniciada");
 
-            const urlUserValidation = "http://rest-api-decrochet.onrender.com/DeCrochet/users/validate"
-            fetch(urlUserValidation, {
-                method: "POST",
-                body: JSON.stringify(datosUsuario),
-                headers: { "Content-type": "application/json; charset=UTF-8" }
-              })
-            .then(response => response.json())
-            .then(json => {
-                console.log(json);
-                if(json==true){
-                    localStorage.setItem("sesionIniciada", "true");
-                    window.location.href = "../views/paginaPrincipal.html";
-                }
-            })
-            .catch(err => console.log(err));
-            // localStorage.setItem("sesionIniciada", "true");
-            // window.location.href = "../views/paginaPrincipal.html";
+            // const urlUserValidation = "http://rest-api-decrochet.onrender.com/DeCrochet/users/validate"
+            // fetch(urlUserValidation, {
+            //     method: "POST",
+            //     body: JSON.stringify(datosUsuario),
+            //     headers: { "Content-type": "application/json; charset=UTF-8" }
+            //   })
+            // .then(response => response.json())
+            // .then(json => {
+            //     console.log(json);
+            //     if(json==true){
+            //         localStorage.setItem("sesionIniciada", "true");
+            //         window.location.href = "../views/paginaPrincipal.html";
+            //     }
+            // })
+            // .catch(err => console.log(err));
+            localStorage.setItem("sesionIniciada", "true");
+            window.location.href = "../views/paginaPrincipal.html";
         }
 
         if (contraseñaInicio !== datosGuardados.contraseñaDato) {
