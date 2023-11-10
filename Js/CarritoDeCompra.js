@@ -134,6 +134,7 @@ function renderizarBotonesFinales(listaProductos) {
 
 // Funcion que calcula el valor total a pagar
 function obtenerPrecioTotal(listaProductos) {
+    console.log(listaProductos);
     if (listaProductos.length == 0) {
         const divBotonesFinales = document.getElementById("final2");
         divBotonesFinales.children[1].children[0].innerText = "Total: $ 0";
@@ -160,7 +161,7 @@ function borrarProductoCarrito(element) {
     let carritoActualizado = localStorage.getItem("carrito");
     carritoActualizado = JSON.parse(carritoActualizado);
     carritoActualizado = carritoActualizado.filter((element, item) => {
-        if (item.idProduct != element.idProduct) {
+        if (item.id != element.idProduct) {
             return item;
         }
     })

@@ -1,57 +1,57 @@
 console.log("Conectado");
 // Variables
-const baseDeDatosAux = [
-    {
-        id: 1,
-        clase: 'Amigurumi',
-        modelo: 'Buho',
-        descripcion: 'Rosa',
-        precio: 200,
-        cantidad: 10,
-        cantidadacomprar: 1,
-        imagen: "https://images.saymedia-content.com/.image/t_share/MTc2NDY0ODQ1MjQyMTgxNTk0/free-crochet-pattern-pink-owl-amigurumi-doll.jpg"
-    },
-    {
-        id: 2,
-        clase: 'Amigurumi',
-        modelo: 'Panda',
-        descripcion: 'Mediano',
-        precio: 180,
-        cantidad: 15,
-        cantidadacomprar: 1,
-        imagen: 'https://i.pinimg.com/originals/43/d5/f3/43d5f3715ba492858d8fe947f4472090.jpg'
-    },
-    {
-        id: 3,
-        clase: 'Amigurumi',
-        modelo: 'Buho',
-        descripcion: 'Petite Morado',
-        precio: 150,
-        cantidad: 10,
-        cantidadacomprar: 1,
-        imagen: 'https://i.pinimg.com/736x/94/3c/df/943cdfe611cce6689558bc7ed7d9781a.jpg'
-    },
-    {
-        id: 4,
-        clase: 'Amigurumi',
-        modelo: 'Koala',
-        descripcion: 'Petite',
-        precio: 150,
-        cantidad: 10,
-        cantidadacomprar: 1,
-        imagen: 'https://4.bp.blogspot.com/-bqcbXYSkCxI/WLklNFGJypI/AAAAAAAACOM/lh9Ec5vqWXMuSw-ycv1rBtDbm-gN7hRUwCEw/s1600/KoalaFront.jpg'
-    },
-    {
-        id: 5,
-        clase: 'Amigurumi',
-        modelo: 'Oso',
-        descripcion: 'Cafe',
-        precio: 150,
-        cantidad: 3,
-        cantidadacomprar: 1,
-        imagen: 'https://images4-g.ravelrycache.com/uploads/PatchworkMoose/481838697/Theo_1_Photo_background_Ravelry_medium.jpg'
-    }
-];
+// const baseDeDatosAux = [
+//     {
+//         id: 1,
+//         clase: 'Amigurumi',
+//         modelo: 'Buho',
+//         descripcion: 'Rosa',
+//         precio: 200,
+//         cantidad: 10,
+//         cantidadacomprar: 1,
+//         imagen: "https://images.saymedia-content.com/.image/t_share/MTc2NDY0ODQ1MjQyMTgxNTk0/free-crochet-pattern-pink-owl-amigurumi-doll.jpg"
+//     },
+//     {
+//         id: 2,
+//         clase: 'Amigurumi',
+//         modelo: 'Panda',
+//         descripcion: 'Mediano',
+//         precio: 180,
+//         cantidad: 15,
+//         cantidadacomprar: 1,
+//         imagen: 'https://i.pinimg.com/originals/43/d5/f3/43d5f3715ba492858d8fe947f4472090.jpg'
+//     },
+//     {
+//         id: 3,
+//         clase: 'Amigurumi',
+//         modelo: 'Buho',
+//         descripcion: 'Petite Morado',
+//         precio: 150,
+//         cantidad: 10,
+//         cantidadacomprar: 1,
+//         imagen: 'https://i.pinimg.com/736x/94/3c/df/943cdfe611cce6689558bc7ed7d9781a.jpg'
+//     },
+//     {
+//         id: 4,
+//         clase: 'Amigurumi',
+//         modelo: 'Koala',
+//         descripcion: 'Petite',
+//         precio: 150,
+//         cantidad: 10,
+//         cantidadacomprar: 1,
+//         imagen: 'https://4.bp.blogspot.com/-bqcbXYSkCxI/WLklNFGJypI/AAAAAAAACOM/lh9Ec5vqWXMuSw-ycv1rBtDbm-gN7hRUwCEw/s1600/KoalaFront.jpg'
+//     },
+//     {
+//         id: 5,
+//         clase: 'Amigurumi',
+//         modelo: 'Oso',
+//         descripcion: 'Cafe',
+//         precio: 150,
+//         cantidad: 3,
+//         cantidadacomprar: 1,
+//         imagen: 'https://images4-g.ravelrycache.com/uploads/PatchworkMoose/481838697/Theo_1_Photo_background_Ravelry_medium.jpg'
+//     }
+// ];
 
 // localStorage.setItem('carrito',[]);
 let carrito = [];
