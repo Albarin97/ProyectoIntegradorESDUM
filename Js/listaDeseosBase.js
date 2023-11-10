@@ -13,21 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-let baseDeDatos = [];
-const url = "http://localhost:8080/DeCrochet/products/"
-async function getAllProducts() {
-    fetch(url)
-      .then(response => response.json())
-      .then(productos => baseDeDatos=productos)
-      .catch(error => console.error('Error al obtener productos', error));
-}
+// let baseDeDatos = [];
+// const url = "http://localhost:8080/DeCrochet/products/"
+// async function getAllProducts() {
+//     fetch(url)
+//       .then(response => response.json())
+//       .then(productos => baseDeDatos=productos)
+//       .catch(error => console.error('Error al obtener productos', error));
+// }
 
-getAllProducts();
+// getAllProducts();
 
 
 
 function renderizarProductos(baseDeDatos) {
     const DomContainer = document.getElementsByClassName("principal");
+    console.log(DomContainer);
     // const idAlmacenado = localStorage.getItem('Id');
     // console.log(`mi id es: ${idAlmacenado}`);
 
@@ -157,7 +158,7 @@ function estaEnCarrito(info) {
         const copiaCarrito = JSON.parse(localStorage.getItem("carrito"));
         if (copiaCarrito != null && copiaCarrito) {
             copiaCarrito.forEach(producto => {
-                if (producto.id == info.idProduct) {
+                if (producto.idProduct == info.idProduct) {
                     encontrado = true;
                 }
             });
@@ -191,7 +192,7 @@ function eliminarProductoCarrito(evento) {
     let carritoActualizado = localStorage.getItem("listadeseos");
     carritoActualizado = JSON.parse(carritoActualizado);
     carritoActualizado = carritoActualizado.filter((element, item) => {
-        if (item.id != element.idProduct) {
+        if (item.idProduct != element.idProduct) {
             return item;
         }
     })
