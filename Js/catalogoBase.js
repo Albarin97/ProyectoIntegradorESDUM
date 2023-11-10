@@ -1,7 +1,7 @@
 console.log("Conectado");
 // Variables
-import baseDeDatos from '../baseDeDatos/baseDeDatos.js';
-console.log(baseDeDatos);
+// import baseDeDatos from '../baseDeDatos/baseDeDatos.js';
+// console.log(baseDeDatos);
 
 
 // async function getBaseDatos() {
@@ -10,16 +10,17 @@ console.log(baseDeDatos);
 //     const baseDeDatos = JSON.parse(response);
 //     return baseDeDatos;
 // }
-// baseDeDatos = []
-// url = "localhost:8080/api/v1/products"
-// async function getAllProducts() {
-//     fetch(url)
-//       .then(response => response.json())
-//       .then(productos => baseDeDatos=productos)
-//       .catch(error => console.error('Error al obtener productos', error));
-// }
 
-// getAllProducts();
+let baseDeDatos = []
+const url = "http://localhost:8080/DeCrochet/products/"
+async function getAllProducts() {
+    fetch(url)
+      .then(response => response.json())
+      .then(productos => baseDeDatos=productos)
+      .catch(error => console.error('Error al obtener productos', error));
+}
+
+getAllProducts();
 
 
 function renderizarProductos(baseDeDatos) {
@@ -51,7 +52,7 @@ function renderizarProductos(baseDeDatos) {
         const PRECIO = document.createElement('p');
         PRECIO.classList.add("precio");
         DESCRIPCION.classList.add("descripcion");
-        TITULO.textContent = info.name_model;
+        TITULO.textContent = info.nameModel;
         DESCRIPCION.textContent = info.description;
         DESCRIPCION.textContent = DESCRIPCION.textContent
         PRECIO.textContent = "Precio:" + String(info.price);
