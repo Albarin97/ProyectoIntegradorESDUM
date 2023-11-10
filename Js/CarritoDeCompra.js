@@ -43,7 +43,7 @@ function renderizarProductos(listaProductos) {
         DESCRIPCION.textContent = element.description;
         const PRECIO = document.createElement('p');
         PRECIO.classList.add("texto");
-        PRECIO.textContent = "Precio: " + String(element.price * element.cantidadacomprar);
+        PRECIO.textContent = "Precio: " + String(element.price * 1);
         CONTENEDORDESCRIPCION.classList.add("col-md-4");
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
@@ -60,11 +60,12 @@ function renderizarProductos(listaProductos) {
 
         // Boton e input para elegir la cantidad de element
         const inputCantidadProducto = document.createElement('input');
+        inputCantidadProducto.id = "cantidadAComprar" + String(element.idProduct);
         inputCantidadProducto.classList.add("inputCantidadElementos","mt-3","w-100");
         inputCantidadProducto.type = "number";
         inputCantidadProducto.min = 1;
         inputCantidadProducto.max = element.stock;
-        inputCantidadProducto.value = element.cantidadacomprar;
+        inputCantidadProducto.value = 1;
         inputCantidadProducto.addEventListener("change", () => estableCantidadAComprar(listaProductos, element, inputCantidadProducto.value));
         inputCantidadProducto.addEventListener("change", () => obtenerPrecioTotal(listaProductos));
 
@@ -142,7 +143,8 @@ function obtenerPrecioTotal(listaProductos) {
     else {
         let precioTotal = 0;
         listaProductos.forEach(element => {
-            precioTotal += element.price * element.cantidadacomprar;
+            const cantidadacomprar = document.getElementById("cantidadAComprar"+ String(element.idProduct));
+            precioTotal += element.price * cantidadacomprar.value;
         });
         // de momento borra el contenido de los div, investigar
         const divBotonesFinales = document.getElementById("final2");
