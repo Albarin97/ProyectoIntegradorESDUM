@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 //////////////////////////////////////////////////////////////////
-// Obtén el formulario y el campo de entrada por sus IDs
+
 document.getElementById('searchButton').addEventListener('click', function() {
 
     searchTerm = document.getElementById('searchInput').value.toLowerCase();
@@ -50,7 +50,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
 
        default:
    
-           console.log("no termino");
+           //console.log("no termino");
            break;
    }
 });
