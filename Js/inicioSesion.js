@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtiene los elementos Id de cada archivo.
     const form = document.getElementById("form");
+    let datosUsuario = [];
+
+    const informaciónUsuariolocal = localStorage.getItem("infocuenta");
+    datosUsuario = JSON.parse(informaciónUsuariolocal);
+    console.log(datosUsuario);
+
 
     // Agrega un event listener al formulario para el evento "submit", que se llama validarFormulario cuando se envía el formulario.
     form.addEventListener("submit", iniciarSesion);
@@ -10,33 +16,49 @@ document.addEventListener("DOMContentLoaded", function () {
         evento.preventDefault();
 
         //Se obtienen el correo y la contraseña ingresados 
-            // Crea un objeto "datos" con valores de los campos del formulario.
-            const correoInicio= document.getElementById("correoInicio").value;
-            const contraseñaInicio= document.getElementById("contraseñaInicio").value;
+        // Crea un objeto "datos" con valores de los campos del formulario.
+        const correoInicio = document.getElementById("correoInicio").value;
+        const contraseñaInicio = document.getElementById("contraseñaInicio").value;
 
         //Vamos a obtener los datos de registro del LocalStorage
-        const datosGuardados= JSON.parse(localStorage.getItem("datosRegistro"));
+        const datosGuardados = JSON.parse(localStorage.getItem("datosRegistro"));
 
-        if (datosGuardados && correoInicio === datosGuardados.correoDato && contraseñaInicio === datosGuardados.contraseñaDato) {
+        if (datosUsuario.email === correoInicio && contraseñaInicio === datosUsuario.password) {
             console.log("Sesión iniciada");
-            localStorage.setItem("sesionIniciada", "true");
-            window.location.href = "../views/paginaPrincipal.html";
-        } 
-              
-        if(contraseñaInicio!== datosGuardados.contraseñaDato) {
+
+            const urlUserValidation = "http://localhost:8080/DeCrochet/users/validate"
+            fetch(urlUserValidation, {
+                method: "POST",
+                body: JSON.stringify(datosUsuario),
+                headers: { "Content-type": "application/json; charset=UTF-8" }
+              })
+            .then(response => response.json())
+            .then(json => {
+                console.log(json);
+                if(json==true){
+                    localStorage.setItem("sesionIniciada", "true");
+                    window.location.href = "../views/paginaPrincipal.html";
+                }
+            })
+            .catch(err => console.log(err));
+            // localStorage.setItem("sesionIniciada", "true");
+            // window.location.href = "../views/paginaPrincipal.html";
+        }
+
+        if (contraseñaInicio !== datosGuardados.contraseñaDato) {
             //Validar contraseña
             mostrarAlerta("Contraseña incorrecta", "alertaContraseña");
-        } else{
-            
+        } else {
+
         }
 
-        if(correoInicio!== datosGuardados.correoDato) {
-        //Validar correo
-        mostrarAlerta("Ups! Parece que no estas registrado", "alertaCorreo")
+        if (correoInicio !== datosGuardados.correoDato) {
+            //Validar correo
+            mostrarAlerta("Ups! Parece que no estas registrado", "alertaCorreo")
             /*** FIN Validaciones ****/
         }
-        
-        }
+
+    }
 
     // Esta función muestra alertas en el formulario.
     function mostrarAlerta(mensaje, tipo) {

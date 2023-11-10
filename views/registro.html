@@ -150,7 +150,7 @@
   
   <div class="contenedor">
     <!--Inicia formulario-->
-    <form class="row g-2 needs-validation" id="form" novalidate>
+    <div class="row g-2 needs-validation" id="form" novalidate>
     
     <h1 class="subtitulo">Usuario</h1>
       <div class="col-md-6">
@@ -185,7 +185,7 @@
         </div>
       </div>
 
-      <h1 class="subtitulo">Dirección</h1>
+      <!-- <h1 class="subtitulo">Dirección</h1>
       <div class="col-md-6">
         <label for="direccion" class="form-label">Calle, número y colonia</label>
         <input type="text" class="form-control" id="direccion" required>
@@ -242,7 +242,7 @@
         <div class="alert alert-danger" role="alert" id="invalidoCodigoPostal" style="display: none;">
           Por favor escribe tu código postal
         </div>
-      </div>
+      </div> -->
 
       <div class="alert alert-success" role="alert" id="exito" style="display:none;">
         Registro Completado con Éxito!
@@ -250,9 +250,9 @@
       <!--Termina formulario-->
       
       <div class="text-center">
-        <button class="btn btn-primary" type="submit">Regístrate</button>
+        <button class="btn btn-primary" type="submit" id="RegisterForm">Regístrate</button>
       </div>
-    </form>
+    </div>
 
     <!-- <div id="imagen">
       <img class="vaquita img-fluid" src="../resources/logo/Vaquita-removebg-preview.png" width=450px" alt="Vaquita Crochet">
