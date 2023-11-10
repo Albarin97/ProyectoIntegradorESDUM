@@ -19,15 +19,19 @@ console.log(productoId);
 //   }
 
 let baseDeDatos = [];
+console.log(baseDeDatos);
 const url = "http://localhost:8080/DeCrochet/products/";
 function getAllProducts(baseDeDatos) {
   fetch(url)
     .then(response => response.json())
-    .then(productos => baseDeDatos = productos)
+    .then(productos => baseDeDatos=productos)
     .catch(error => console.error('Error al obtener productos', error));
 }
 
 getAllProducts();
+setTimeout(function(){
+  console.log("Esperando fetch");
+}, 2000);
 
 function renderizar(baseDeDatos) {
   console.log(baseDeDatos);
