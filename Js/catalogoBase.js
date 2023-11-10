@@ -296,7 +296,7 @@ function eventoPrecio() {
     console.log("precios");
     const precioMaximo = document.getElementsByClassName("precioMaximo");
     // precioMaximo[0].textContent = "$" + obtenerPrecioMaximo();
-    precioMaximo[0].textContent = "$" + "350";
+    precioMaximo[0].textContent = "$" + "800";
     const precioMinimo = document.getElementsByClassName("precioMinimo");
 
     // precioMinimo[0].textContent = "$" + obtenerPrecioMinimo();
@@ -304,7 +304,7 @@ function eventoPrecio() {
     const barra = document.getElementById("customRange1");
     // barra.setAttribute("max", obtenerPrecioMaximo());
     // barra.setAttribute("min", obtenerPrecioMinimo());
-    barra.setAttribute("max",350);
+    barra.setAttribute("max",800);
     barra.setAttribute("min",100);
 }
 

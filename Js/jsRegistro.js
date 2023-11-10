@@ -103,7 +103,7 @@ document.getElementById('RegisterForm').addEventListener('click', function (even
   // var zipCode = codigoPostal;
 
 
-  const urlUser = "http://localhost:8080/DeCrochet/users/add"
+  const urlUser = "http://rest-api-decrochet.onrender.com/DeCrochet/users/add"
   let usuario = {
     email: email,
     phoneNumber: "5544332210",
