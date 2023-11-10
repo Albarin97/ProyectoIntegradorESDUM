@@ -12,7 +12,8 @@ console.log("Conectado");
 // }
 
 let baseDeDatos = [];
-const url = "http://localhost:8080/DeCrochet/products/"
+// const url = "http://localhost:8080/DeCrochet/products/"
+const url = "https://rest-api-decrochet.onrender.com/DeCrochet/products"
 async function getAllProducts() {
     fetch(url)
       .then(response => response.json())
