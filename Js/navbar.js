@@ -25,3 +25,32 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     })
 })
+
+
+//////////////////////////////////////////////////////////////////
+// Obtén el formulario y el campo de entrada por sus IDs
+document.getElementById('searchButton').addEventListener('click', function() {
+
+    searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+
+   switch (searchTerm) {
+       case 'catalogo':
+           window.location.href = 'catalogo.html'; 
+           break;
+       case 'carrito':
+           window.location.href = 'carritoCompra.html'; 
+           break;
+       case 'favoritos':
+           window.location.href = 'listaDeseos.html'; 
+           break;
+        case 'inicio':
+            window.location.href = 'paginaPrincipal.html'; 
+           break;
+
+       default:
+   
+           console.log("no termino");
+           break;
+   }
+});

@@ -15,6 +15,9 @@
 
         <!--JS para el estado de la sesion-->
         <script src="../Js/estadoSesion.js"></script>
+
+    <!--JS para botones de la navbar-->
+    <script async defer src="../Js/navbar.js"></script>
 </head>
 <body>
    
@@ -25,10 +28,10 @@
         <!-- Input de busqueda en el catalogo -->
         <div class="d-flex mt-3 w-25 d-none d-md-block">
             <div class="d-flex flex-row w-100 busqueda">
-                <button class="btn d-flex justify-content-center border-0" type="submit">
+                <button id="searchButton" class="btn d-flex justify-content-center border-0" type="submit">
                     <i class="material-symbols-outlined">Search</i>
                 </button>
-                <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                <input id="searchInput" class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
             </div>
         </div>
         <!-- Logo -->
