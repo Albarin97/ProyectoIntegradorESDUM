@@ -25,220 +25,219 @@
 </head>
 <body>
 
-    <header class="d-none d-sm-block" >DeCrochet, tu imaginacion en un tejido</header>
-
-     <!-- Barra de navegacion -->
-     <nav class="barranav">
-        <div class="d-flex align-items-center justify-content-center" id="navbarNav">
-            <!-- Input de busqueda en el catalogo -->
-            <div class="d-flex mt-3 w-25 d-none d-md-block">
-                <div class="d-flex flex-row w-75 busqueda">
+<!-- Barra de navegacion -->
+<nav class="barranav">
+    <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
+    <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+        <!-- Input de busqueda en el catalogo -->
+        <div class="d-flex mt-3 w-25 d-none d-md-block">
+            <div class="d-flex flex-row w-100 busqueda">
+                <button class="btn d-flex justify-content-center border-0" type="submit">
+                    <i class="material-symbols-outlined">Search</i>
+                </button>
+                <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+            </div>
+        </div>
+        <!-- Logo -->
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand " href="./paginaPrincipal.html">
+                <img src="../resources/logo/logo.png" width="270" height="100"
+                    class="d-inline-block align-top img-fluid" alt="">
+            </a>
+        </div>
+        <!-- Botones  -->
+        <div class="d-flex flex-row align-items-center justify-content-end w-25">
+            <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                <a class="navbar-brand" id="btnCorazon" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                    <i class="material-symbols-outlined" id="sizeIcons">Favorite</i>
+                </a>
+            </div>
+            <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                <a class="Person-icon" id="btnUser" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                            class="d-inline-block align-text-top"> -->
+                    <i class="material-symbols-outlined" id="sizeIcons">Person</i>
+                </a>
+            </div>
+            <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                <a class="shopping-cart-icon" id="btnCarrito" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                    <i class="material-symbols-outlined" id="sizeIcons">Shopping_Cart</i>
+                </a>
+            </div>
+            <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                <a class="menu-icon" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                    <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                            class="material-symbols-outlined " style="font-size: 30px;">Menu</i></button>
+                </a>
+            </div>
+        </div>
+        <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <div class="container-fluid d-flex justify-content-evenly w-50">
+                    <a class="navbar-brand " href="#">
+                        <img src="../resources/logo/logo.png" width="270" height="100"
+                            class="d-inline-block align-top img-fluid" alt="">
+                    </a>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="d-flex w-100">
+                <div class="d-flex flex-row w-100 busqueda">
                     <button class="btn d-flex justify-content-center border-0" type="submit">
                         <i class="material-symbols-outlined ">Search</i>
                     </button>
                     <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
                 </div>
             </div>
-            <!-- Logo -->
-            <div class="container-fluid d-flex justify-content-center w-50">
-                <a class="navbar-brand " href="./paginaPrincipal.html">
-                    <img src="../resources/logo/logo.png" width="270" height="100"
-                        class="d-inline-block align-top img-fluid" alt="">
+            <div class="d-flex ms-3 mt-2 justify-content-start">
+                <a class="navbar-brand" id="btnDeseos" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                class="d-inline-block align-text-top"> -->
+                    <div class="letrasCanvas d-flex flex-row">
+                        <i class="material-symbols-outlined">Favorite</i>
+                        <p class="ms-3">Carrito de Compra</p>
+                    </div>
                 </a>
             </div>
-            <!-- Botones  -->
-            <div class="d-flex flex-row align-items-center justify-content-end w-25">
-                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="navbar-brand" id="btnCorazon" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <i class="material-symbols-outlined">Favorite</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="Person-icon" id="btnUser" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                class="d-inline-block align-text-top"> -->
+            <div class="d-flex ms-3 mt-2 justify-content-start">
+                <a class="navbar-brand" id="btnPerfil" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                            class="d-inline-block align-text-top"> -->
+                    <div class="letrasCanvas d-flex flex-row">
                         <i class="material-symbols-outlined">Person</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
-                    <a class="shopping-cart-icon" id="btnCarrito" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <i class="material-symbols-outlined">Shopping_Cart</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 justify-content-start d-block d-md-none">
-                    <a class="menu-icon" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
-                                class="material-symbols-outlined">Menu</i></button>
-                    </a>
-                </div>
+                        <p class="ms-3">Perfil</p>
+                    </div>
+                </a>
             </div>
-            <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <div class="container-fluid d-flex justify-content-center w-50">
-                        <a class="navbar-brand " href="#">
-                            <img src="../resources/logo/logo.png" width="270" height="100"
-                                class="d-inline-block align-top img-fluid" alt="">
-                        </a>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="d-flex w-100">
-                    <div class="d-flex flex-row w-100 busqueda">
-                        <button class="btn d-flex justify-content-center border-0" type="submit">
-                            <i class="material-symbols-outlined ">Search</i>
-                        </button>
-                        <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
-                    </div>
-                </div>
-                <div class="d-flex ms-3 mt-3 justify-content-start">
-                    <a class="navbar-brand" id="btnDeseos" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Favorite</i>
-                            <p class="ms-3">Carrito de Compra</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" id="btnPerfil" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+            <div class="d-flex ms-3 mt-2 justify-content-start">
+                <a class="navbar-brand" id="btnCompras" href="#">
+                    <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                 class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Person</i>
-                            <p class="ms-3">Perfil</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" id="btnCompras" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Shopping_Cart</i>
-                            <p class="ms-3">Carrito de Compra</p>
-                        </div>
-                    </a>
-                </div>
+                    <div class="letrasCanvas d-flex flex-row">
+                        <i class="material-symbols-outlined">Shopping_Cart</i>
+                        <p class="ms-3">Carrito de Compra</p>
+                    </div>
+                </a>
             </div>
         </div>
-        <div class="navbar-nav"></div>
-    </nav>
-    <!--Fin Navbar-->
+    </div>
+    <div class="navbar-nav"></div>
+</nav>
+<div class="space"></div>
 
-    <div class="d-flex align-items-center justify-content-center">
-        <div class="success mt-5 mb-5">
-          <div class="flex divprincipal">
-            <div class="flex-shrink-0">
+<!--Fin Navbar-->
+
+<p class="titulo">Compra finalizada</p>
+
+    <div class="contenedor">
               
+        <div class="orden">
+            <div class="subtitulo">
               <svg class="succes-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
+                ¡Orden exitosa!
             </div>
-            <div class="success-prompt-wrap">
-              <p class="success-prompt-heading">¡Orden completa!
-              </p><div class="success-prompt-prompt">
-                <p> Tu compra ha sido realizada con éxito. <br> No olvides seguir explorando nuestros productos. <br> Gracias </p>
-              </div>
-                <div class="success-button-container mt-4 mb-3">
-                  <a href="./catalogo.html"><button type="button" class="success-button-main">Seguir explorando</button></a>
-                  <a href="./paginaPrincipal.html"><button type="button" class="success-button-main">Cerrar</button></a>
+
+            <div class="mensajeExito">
+                <p> Tu compra ha sido realizada con éxito. </p>
+                <p>No olvides seguir explorando nuestros productos. <br> Gracias </p>
+            </div>
+                <div class="botones">
+                  <a href="./paginaPrincipal.html"><button type="button" class="seguir">Seguir explorando</button></a>
                 </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
-      <!--Footer-->
-
-      <footer class="containerFooter-fluid">
+    <!-- Footer -->
+    <footer class="containerFooter-fluid">
 
         <div class="redesFooter" >
 
-            <div class="saludoFooter">
-                Conoce mas sobre nosotros
+            <div class="saludoFooter mt-4">
+                Conoce más sobre nosotros
             </div>
 
         </div>
 
-        <div class="iconosRedesFooter">
-            <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL">
+        <div class="iconosRedesFooter d-flex justify-content-center align-items-center">
+            <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL" class="mx-3">
                 <i class="fa-brands fa-facebook-f" id="facebook"></i>
             </a>
-            <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands">
+            <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands mx-3">
                 <i class="fa-brands fa-instagram" id="instagram"></i>
             </a>
-            <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands">
+            <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands mx-3">
                 <i class="fa-brands fa-tiktok" id="tiktok"></i>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands">
+            <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands mx-3">
                 <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
             </a>
         </div>
         
         <div class="cuerpoFooter">
-            <div class="logoFooter">
-                <img src="../resources/logo/logo.png" width="200px" alt="">
-                Tu imaginacion en un tejido
+            <div class="logoFooter ml-3">
+                <img src="../resources/logo/logo_rosa.png" width="200px" alt="" class="imagenLogo">
+                Tu imaginación en un tejido
             </div>
 
             <div class="deCrochetFooter">
-                <h6 class="tituloFooter">
+                <h6 class="tituloFooterCrochet">
                     DeCrochet
                 </h6>
                 <p>
-                    En deCrochet encontraras diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de Jani Arenas, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
+                    En DeCrochet encontrarás diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de <span><b>Jani Arenas</b></span>, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
                     
                 </p>
             </div>
             <div class="linksFooter">
                 <!-- Links -->
-                <h6 class="tituloFooter">
-                    Terminos y Condiciones
-                </h6>
-                <p>
+                <h5 class="tituloFooterCondiciones mb-2">
+                    Terminos y condiciones
+                </h5>
+                <p class="mb-2">
                     <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
                 </p>
-                <p>
+                <p class="mb-2">
                     <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
                 </p>
-                <p>
+                <p class="mb-2">
                     <a href="#!" class="text-reset">Terminos de Servicio</a>
                 </p>
-                <p>
+                <p class="mb-2">
                     <a href="#!" class="text-reset">Aviso De Privacidad</a>
                 </p>
             </div>
 
             <div class="contactoFooter">
                 <!-- Links -->
-                <h6 class="tituloFooter">Contacto</h6>
+                <h6 class="tituloFooterContacto mb-2">Contacto</h6>
 
-                <p class="iconoTextoFooter">
+                <p class="iconoTextoFooter mb-2">
                     <i class="fas fa-print me-2" id="iconoComentario"></i> 
-                    <a href="sobreNosotros.html" id="comentarios">Conocenos</a>
+                    <a href="sobreNosotros.html" id="comentarios" class="conocenos">Conócenos</a>
                 </p>
 
-                <p>
+                <p class="mb-2 localizacion">
                     <i class="fas fa-home me-2" id="localizacion"></i> 
                     Ciudad de México
                 </p>
 
-                <p>
+                <p class="mb-2">
                 <i class="fas fa-envelope me-2" id="correo"></i>
-                <a href="../views/contact.html" id="contactanos">Dejanos un comentario</a>
+                <a href="../views/contact.html" id="contactanos">Déjanos un comentario</a>
                 </p>
                 
-                <p>
+                <p class="mb-2 telefono">
                     <i class="fas fa-phone me-2" id="telefono"></i> 
                     5529334567
                 </p>
@@ -247,10 +246,7 @@
 
         </div>
             
-        <div class="copyrightFooter">
-            copyright
-        </div>
     </footer>
-    
+    <!-- Footer -->
 </body>
 </html>

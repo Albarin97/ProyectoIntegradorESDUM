@@ -19,116 +19,115 @@
 </head>
 
 <body>
-
-  <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
-
-      <!-- Barra de navegacion -->
-      <nav class="barranav">
-        <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
-            <!-- Input de busqueda en el catalogo -->
-            <div class="d-flex mt-3 w-25 d-none d-md-block">
-                <div class="d-flex flex-row w-75 busqueda">
-                    <button class="btn d-flex justify-content-center border-0" type="submit">
-                        <i class="material-symbols-outlined ">Search</i>
-                    </button>
-                    <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
-                </div>
-            </div>
-            <!-- Logo -->
-            <div class="container-fluid d-flex justify-content-center w-50">
-                <a class="navbar-brand " href="./paginaPrincipal.html">
-                    <img src="../resources/logo/logo.png" width="270" height="100"
-                        class="d-inline-block align-top img-fluid" alt="">
-                </a>
-            </div>
-            <!-- Botones  -->
-            <div class="d-flex flex-row align-items-center justify-content-end w-25">
-                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="navbar-brand" id="btnCorazon" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <i class="material-symbols-outlined">Favorite</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 justify-content-start d-none d-md-block">
-                    <a class="Person-icon" id="btnUser" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                class="d-inline-block align-text-top"> -->
-                        <i class="material-symbols-outlined">Person</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
-                    <a class="shopping-cart-icon" id="btnCarrito" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <i class="material-symbols-outlined">Shopping_Cart</i>
-                    </a>
-                </div>
-                <div class="d-flex ms-4 justify-content-start d-block d-md-none">
-                    <a class="menu-icon" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
-                                class="material-symbols-outlined">Menu</i></button>
-                    </a>
-                </div>
-            </div>
-            <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <div class="container-fluid d-flex justify-content-center w-50">
-                        <a class="navbar-brand " href="#">
-                            <img src="../resources/logo/logo.png" width="270" height="100"
-                                class="d-inline-block align-top img-fluid" alt="">
-                        </a>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="d-flex w-100">
-                    <div class="d-flex flex-row w-100 busqueda">
-                        <button class="btn d-flex justify-content-center border-0" type="submit">
-                            <i class="material-symbols-outlined ">Search</i>
-                        </button>
-                        <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
-                    </div>
-                </div>
-                <div class="d-flex ms-3 mt-3 justify-content-start">
-                    <a class="navbar-brand" id="btnDeseos" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Favorite</i>
-                            <p class="ms-3">Carrito de Compra</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" id="btnPerfil" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Person</i>
-                            <p class="ms-3">Perfil</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="d-flex ms-3 mt-2 justify-content-start">
-                    <a class="navbar-brand" id="btnCompras" href="#">
-                        <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
-                                    class="d-inline-block align-text-top"> -->
-                        <div class="letrasCanvas d-flex flex-row">
-                            <i class="material-symbols-outlined">Shopping_Cart</i>
-                            <p class="ms-3">Carrito de Compra</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="navbar-nav"></div>
-    </nav>
-    <!--Fin Navbar-->
+    <!-- Barra de navegacion -->
+    <nav class="barranav">
+      <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
+      <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+          <!-- Input de busqueda en el catalogo -->
+          <div class="d-flex mt-3 w-25 d-none d-md-block">
+              <div class="d-flex flex-row w-100 busqueda">
+                  <button class="btn d-flex justify-content-center border-0" type="submit">
+                      <i class="material-symbols-outlined">Search</i>
+                  </button>
+                  <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+              </div>
+          </div>
+          <!-- Logo -->
+          <div class="container-fluid d-flex justify-content-center">
+              <a class="navbar-brand " href="./paginaPrincipal.html">
+                  <img src="../resources/logo/logo.png" width="270" height="100"
+                      class="d-inline-block align-top img-fluid" alt="">
+              </a>
+          </div>
+          <!-- Botones  -->
+          <div class="d-flex flex-row align-items-center justify-content-end w-25">
+              <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                  <a class="navbar-brand" id="btnCorazon" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                      <i class="material-symbols-outlined" id="sizeIcons">Favorite</i>
+                  </a>
+              </div>
+              <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                  <a class="Person-icon" id="btnUser" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                              class="d-inline-block align-text-top"> -->
+                      <i class="material-symbols-outlined" id="sizeIcons">Person</i>
+                  </a>
+              </div>
+              <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                  <a class="shopping-cart-icon" id="btnCarrito" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                      <i class="material-symbols-outlined" id="sizeIcons">Shopping_Cart</i>
+                  </a>
+              </div>
+              <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                  <a class="menu-icon" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                      <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                          data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                              class="material-symbols-outlined " style="font-size: 30px;">Menu</i></button>
+                  </a>
+              </div>
+          </div>
+          <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
+              aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                  <div class="container-fluid d-flex justify-content-evenly w-50">
+                      <a class="navbar-brand " href="#">
+                          <img src="../resources/logo/logo.png" width="270" height="100"
+                              class="d-inline-block align-top img-fluid" alt="">
+                      </a>
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="d-flex w-100">
+                  <div class="d-flex flex-row w-100 busqueda">
+                      <button class="btn d-flex justify-content-center border-0" type="submit">
+                          <i class="material-symbols-outlined ">Search</i>
+                      </button>
+                      <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                  </div>
+              </div>
+              <div class="d-flex ms-3 mt-2 justify-content-start">
+                  <a class="navbar-brand" id="btnDeseos" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                      <div class="letrasCanvas d-flex flex-row">
+                          <i class="material-symbols-outlined">Favorite</i>
+                          <p class="ms-3">Carrito de Compra</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="d-flex ms-3 mt-2 justify-content-start">
+                  <a class="navbar-brand" id="btnPerfil" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                              class="d-inline-block align-text-top"> -->
+                      <div class="letrasCanvas d-flex flex-row">
+                          <i class="material-symbols-outlined">Person</i>
+                          <p class="ms-3">Perfil</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="d-flex ms-3 mt-2 justify-content-start">
+                  <a class="navbar-brand" id="btnCompras" href="#">
+                      <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                      <div class="letrasCanvas d-flex flex-row">
+                          <i class="material-symbols-outlined">Shopping_Cart</i>
+                          <p class="ms-3">Carrito de Compra</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="navbar-nav"></div>
+  </nav>
+  <div class="space"></div>
+  <!--Fin Navbar-->
 
   <!-- Se centra texto, agrega clase para color, margin button y top  de 4 -->
   <h1 class="text-center mt-3 titulo">Sobre Nosotros</h1>
@@ -158,7 +157,12 @@
       <!-- Inicio div que divide 2 columnas (imagen y texto) -->
       <div class="col order-last">
         <h2 class="titulo mt-2 mb-4">Misión</h2>
-        <img class="imgMisionVision mb-4" src="../resources/logo/Mision.png" alt="Imagen Mision">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin: 20px;" width="150" height="150" fill="#4964F3" class="bi bi-bullseye" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+          <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+        </svg>
       </div>
       <div class="col textMisionVision">
         <p>Ofrecemos una alternativa a los canales de venta tradicionales acercando a nuestro
@@ -185,7 +189,10 @@
         </div>
         <div class="col-md">
           <h2 class="titulo mt-2 mb-4">Visión</h2>
-          <img class="imgMisionVision mb-4" src="../resources/logo/Vision.png" alt="Imagen Mision">
+          <svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 20px;" width="180" height="180" fill="#4964F3" class="bi bi-eye" viewBox="0 0 16 16">
+            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+          </svg>
         </div>
       </div>
 
@@ -275,54 +282,98 @@
       <div class="devs text-center">
         <div class="row justify-content-between align-items-baseline">
           <div class="col-md-3 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Albar">
+            <img class="imageDev" src="../resources/logo/AlbarPerrito.png" alt="Foto Albar">
             <h3 class="subtitulo">Albar De La Torre Garcia</h3>
-            <a href="https://github.com/Albarin97" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/albar-de-la-torre-garcia-195692257/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
-            </a>
+
+            <div>
+              <a href="https://www.linkedin.com/in/albar-de-la-torre-garcia-195692257/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
+              </a>
+
+              <a href="https://github.com/Albarin97" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+                style="fill:#4964f3;" class="bi">
+                <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+                </svg>
+              </a>
+            </div>
+
             <p class="descriptionDev">Java Full Stack Developer | Phython Dev <br> Ingeniero en Sistemas Computacionales
               (ITSJ) </p>
           </div>
 
+
           <div class="col-md-3 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Brandon">
+            <img class="imageDev" src="../resources/logo/jengibre.jpeg" alt="Foto Brandon">
              <h3 class="subtitulo">Brandon Jiménez Lozano</h3>
-            <a href="https://github.com/Brand1121" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/brandon-jimenez-lozano/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
-            </a>
+             
+             <div>
+                <a href="https://www.linkedin.com/in/brandon-jimenez-lozano/" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
+                </a>
+                <a href="https://github.com/Brand1121" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+                  style="fill:#4964f3;" class="bi">
+                  <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+                  </svg>
+                </a>
+            </div>
+
             <p class="descriptionDev"> Java Full Stack Developer Jr. <br> Ingeniero en Computación por el Instituto
               Politécnico Nacional. </p>
           </div>
 
+
           <div class="col-md-3 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Ceci">
+            <img class="imageDev" src="../resources/logo/ceciGallo.png" alt="Foto Ceci">
             <h3 class="subtitulo">Cecilia Cañedo Lozada</h3>
-            <a href="https://github.com/CeciCanedo" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
+
+            <div>
             <a href="https://www.linkedin.com/in/ceciliacanedolozada/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
             </a>
+
+
+            <a href="https://github.com/CeciCanedo" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+                  style="fill:#4964f3;" class="bi">
+                  <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+                  </svg>
+            </a>
+          </div>
+
             <p class="descriptionDev"> Java Full Stack Developer Jr. | Generation MX <br> Ingeniera petrolera por el
               Instituto Politécnico Nacional.</p>
           </div>
 
+
           <br> <br>
           <div class="col-md-3 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Francisco">
+            <img class="imageDev" src="../resources/logo/franJirafa.png" alt="Foto Francisco">
             <h3 class="subtitulo">Juan Francisco Llamas Castañeda</h3>
-            <a href="https://github.com/franciscollamas" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="Github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/juan-francisco-llamas-casta%C3%B1eda/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
-            </a>
+            <div>
+              <a href="https://www.linkedin.com/in/juan-francisco-llamas-casta%C3%B1eda/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/franciscollamas" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+                  style="fill:#4964f3;" class="bi">
+                  <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+                  </svg>
+              </a>
+            </div>
             <p class="descriptionDev"> Java Full Stack Developer Jr. <br> Ingeniero en Transporte por el Insituto
               Politécnico Nacional.</p>
           </div>
@@ -333,40 +384,69 @@
       <div class="devs text-center">
         <div class="row align-items-baseline">
           <div class="col-md-4 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Gonzalo">
+            <img class="imageDev" src="../resources/logo/gonzaloDragon.png" alt="Foto Gonzalo">
             <h3 class="subtitulo">Gonzalo Andrei Malpica Santes</h3>
-            <a href="https://github.com/andr4i" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
+
+            <div>
             <a href="https://www.linkedin.com/in/gonzalo-andrei-malpica-santes-149001290/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
             </a>
+            <a href="https://github.com/andr4i" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+                  style="fill:#4964f3;" class="bi">
+                  <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+                  </svg>
+            </a>
+          </div>
+
             <p class="descriptionDev">Java Full Stack Developer Jr. | Generation MX <br>
               Ingeniero en Sistemas Computacionales por el Instituto Politécnico Nacional. </p>
           </div>
 
           <div class="col-md-4 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Jani">
-            <h3 class="subtitulo">Jani Selene Arenas Sánchez</h3>
-            <a href="https://github.com/janisarsa" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
+            <img class="imageDev" src="../resources/logo/janiGatito.png" alt="Foto Jani">
+            <h3 class="subtitulo">Jani Selene   <br>Arenas Sánchez</h3>
+            <div>
             <a href="https://mx.linkedin.com/in/jani-selene-arenas" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
             </a>
+
+            <a href="https://github.com/janisarsa" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+              style="fill:#4964f3;" class="bi">
+              <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+              </svg>
+            </a>
+          </div>
+
             <p class="descriptionDev">Java Full Stack Developer Jr. | Generation MX <br>
               Contadora Pública por el Instituto Politécnico Nacional </p>
           </div>
 
           <div class="col-md-4 mb-4">
-            <img class="imageDev" src="../resources/logo/Usuario.png" alt="Foto Zyanya">
-            <h3 class="subtitulo">Zyanya Martínez Núñez</h3>
-            <a href="https://github.com/ZyanyaMN" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github" title="GitHub"></i>
-            </a>
+            <img class="imageDev" src="../resources/logo/zyanPuerquit.png" alt="Foto Zyanya">
+            <h3 class="subtitulo">Zyanya Martínez  <br>Núñez</h3>
+          <div>
             <a href="https://www.linkedin.com/in/zyanya-mart%C3%ADnez/" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin" title="Linkedin"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+                style="fill:#4964f3;" class="bi">
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                </svg>
             </a>
+
+            <a href="https://github.com/ZyanyaMN" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 64 64"
+              style="fill:#4964f3;" class="bi">
+              <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
+              </svg>
+            </a>
+          </div>
             <p class="descriptionDev">Java Full Stack Developer Jr. | Generation Mx <br> Bioingeniera médica por la
               Universidad Autónoma del Estado de México. </p>
           </div>
@@ -376,98 +456,96 @@
     </div>
     </div>
 
-    <!--Footer-->
-    <footer class="containerFooter-fluid">
+        <!-- Footer -->
+        <footer class="containerFooter-fluid">
 
-      <div class="redesFooter" >
-
-          <div class="saludoFooter">
-              Conoce mas sobre nosotros
+          <div class="redesFooter" >
+  
+              <div class="saludoFooter mt-4">
+                  Conoce más sobre nosotros
+              </div>
+  
           </div>
-
-      </div>
-
-      <div class="iconosRedesFooter">
-          <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL">
-              <i class="fa-brands fa-facebook-f" id="facebook"></i>
-          </a>
-          <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands">
-              <i class="fa-brands fa-instagram" id="instagram"></i>
-          </a>
-          <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands">
-              <i class="fa-brands fa-tiktok" id="tiktok"></i>
-          </a>
-          <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands">
-              <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
-          </a>
-      </div>
-      
-      <div class="cuerpoFooter">
-          <div class="logoFooter">
-              <img src="../resources/logo/logo.png" width="200px" alt="">
-              Tu imaginacion en un tejido
+  
+          <div class="iconosRedesFooter d-flex justify-content-center align-items-center">
+              <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL" class="mx-3">
+                  <i class="fa-brands fa-facebook-f" id="facebook"></i>
+              </a>
+              <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands mx-3">
+                  <i class="fa-brands fa-instagram" id="instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands mx-3">
+                  <i class="fa-brands fa-tiktok" id="tiktok"></i>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands mx-3">
+                  <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+              </a>
           </div>
-
-          <div class="deCrochetFooter">
-              <h6 class="tituloFooter">
-                  DeCrochet
-              </h6>
-              <p>
-                  En deCrochet encontraras diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de Jani Arenas, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
-                  
-              </p>
-          </div>
-          <div class="linksFooter">
-              <!-- Links -->
-              <h6 class="tituloFooter">
-                  Terminos y Condiciones
-              </h6>
-              <p>
-                  <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
-              </p>
-              <p>
-                  <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
-              </p>
-              <p>
-                  <a href="#!" class="text-reset">Terminos de Servicio</a>
-              </p>
-              <p>
-                  <a href="#!" class="text-reset">Aviso De Privacidad</a>
-              </p>
-          </div>
-
-          <div class="contactoFooter">
-              <!-- Links -->
-              <h6 class="tituloFooter">Contacto</h6>
-
-              <p class="iconoTextoFooter">
-                  <i class="fas fa-print me-2" id="iconoComentario"></i> 
-                  <a href="sobreNosotros.html" id="comentarios">Conocenos</a>
-              </p>
-
-              <p>
-                  <i class="fas fa-home me-2" id="localizacion"></i> 
-                  Ciudad de México
-              </p>
-
-              <p>
-              <i class="fas fa-envelope me-2" id="correo"></i>
-              <a href="../views/contact.html" id="contactanos">Dejanos un comentario</a>
-              </p>
-              
-              <p>
-                  <i class="fas fa-phone me-2" id="telefono"></i> 
-                  5529334567
-              </p>
-              
-          </div>
-
-      </div>
           
-      <div class="copyrightFooter">
-          copyright
-      </div>
-  </footer>
+          <div class="cuerpoFooter">
+              <div class="logoFooter ml-3">
+                  <img src="../resources/logo/logo_rosa.png" width="200px" alt="" class="imagenLogo">
+                  Tu imaginación en un tejido
+              </div>
+  
+              <div class="deCrochetFooter">
+                  <h6 class="tituloFooterCrochet">
+                      DeCrochet
+                  </h6>
+                  <p>
+                      En DeCrochet encontrarás diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de <span><b>Jani Arenas</b></span>, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
+                      
+                  </p>
+              </div>
+              <div class="linksFooter">
+                  <!-- Links -->
+                  <h5 class="tituloFooterCondiciones mb-2">
+                      Terminos y condiciones
+                  </h5>
+                  <p class="mb-2">
+                      <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
+                  </p>
+                  <p class="mb-2">
+                      <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
+                  </p>
+                  <p class="mb-2">
+                      <a href="#!" class="text-reset">Terminos de Servicio</a>
+                  </p>
+                  <p class="mb-2">
+                      <a href="#!" class="text-reset">Aviso De Privacidad</a>
+                  </p>
+              </div>
+  
+              <div class="contactoFooter">
+                  <!-- Links -->
+                  <h6 class="tituloFooterContacto mb-2">Contacto</h6>
+  
+                  <p class="iconoTextoFooter mb-2">
+                      <i class="fas fa-print me-2" id="iconoComentario"></i> 
+                      <a href="sobreNosotros.html" id="comentarios" class="conocenos">Conócenos</a>
+                  </p>
+  
+                  <p class="mb-2 localizacion">
+                      <i class="fas fa-home me-2" id="localizacion"></i> 
+                      Ciudad de México
+                  </p>
+  
+                  <p class="mb-2">
+                  <i class="fas fa-envelope me-2" id="correo"></i>
+                  <a href="../views/contact.html" id="contactanos">Déjanos un comentario</a>
+                  </p>
+                  
+                  <p class="mb-2 telefono">
+                      <i class="fas fa-phone me-2" id="telefono"></i> 
+                      5529334567
+                  </p>
+                  
+              </div>
+  
+          </div>
+              
+      </footer>
+      <!-- Footer -->
 
     <!-- Etiqueta js para bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
