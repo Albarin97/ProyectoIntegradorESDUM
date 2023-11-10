@@ -18,22 +18,18 @@ console.log(productoId);
 //     });
 //   }
 
-let baseDeDatos = [];
-console.log(baseDeDatos);
+
 const url = "http://localhost:8080/DeCrochet/products/";
-function getAllProducts(baseDeDatos) {
-  fetch(url)
-    .then(response => response.json())
-    .then(productos => baseDeDatos=productos)
-    .catch(error => console.error('Error al obtener productos', error));
+async function getAllProducts() {
+  const response = await fetch(url)
+  const data = await response.json();
+  return data;
 }
 
-getAllProducts();
-setTimeout(function(){
-  console.log("Esperando fetch");
-}, 2000);
+const baseDatos = await getAllProducts();
 
 function renderizar(baseDeDatos) {
+  
   console.log(baseDeDatos);
   // Si el producto existe, obtener su información de la base de datos
   if (productoId !== null && productoId !== "") {
@@ -74,9 +70,10 @@ function renderizar(baseDeDatos) {
     let listaRandom = [];
     while (listaRandom.length <= 5) {
       let idrandom = Math.floor(Math.random() * (baseDeDatos.length - 1)) + 1;
-      if (!listaRandom.includes(idrandom)) {
-        listaRandom.push(idrandom);
-      }
+      // if (!listaRandom.includes(idrandom)) {
+      //   listaRandom.push(idrandom);
+      // }
+      listaRandom.push(idrandom);
     }
     for (let i = 0; i < contenedorTarjetas.childElementCount; i++) {
       modificarTarjetas(contenedorTarjetas.children[i], listaRandom[i]);
@@ -87,7 +84,7 @@ function renderizar(baseDeDatos) {
   }
 }
 
-renderizar();
+renderizar(baseDatos);
 
 
 // Funcio que publica un comentario
@@ -123,7 +120,7 @@ function publicarComentario() {
 
 // funcion que modifica las tarjetas de mas productos
 function modificarTarjetas(tarjeta, idrandom) {
-  let productoActual = baseDeDatos.find(producto => producto.idProduct == idrandom);
+  let productoActual = baseDatos.find(producto => producto.idProduct == idrandom);
   tarjeta.children[0].children[0].setAttribute("src", productoActual.image);
   tarjeta.children[0].children[0].addEventListener("click", () => {
     window.location.href = "../views/product.html?id=" + productoActual.id;
