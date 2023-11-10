@@ -43,7 +43,7 @@ function renderizarProductos(listaProductos) {
         DESCRIPCION.textContent = element.descripcion;
         const PRECIO = document.createElement('p');
         PRECIO.classList.add("texto");
-        PRECIO.textContent = "Precio: " + String(element.precio * element.cantidadacomprar);
+        PRECIO.textContent = "Precio: $" + String(element.precio * element.cantidadacomprar);
         CONTENEDORDESCRIPCION.classList.add("col-md-4");
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
@@ -92,7 +92,7 @@ function estableCantidadAComprar(listaProductos, element, valor) {
     // Actualizamos el precio individual de 
     const divDescripcion = document.getElementById(element.id);
     const nuevaCantidad = element.precio * element.cantidadacomprar;
-    divDescripcion.children[1].children[2].textContent = "Precio: " + String(nuevaCantidad);
+    divDescripcion.children[1].children[2].textContent = "Precio: $" + String(nuevaCantidad);
 }
 
 
@@ -145,7 +145,7 @@ function obtenerPrecioTotal(listaProductos) {
         });
         // de momento borra el contenido de los div, investigar
         const divBotonesFinales = document.getElementById("final2");
-        divBotonesFinales.children[1].children[0].innerText = "Total: "+precioTotal;
+        divBotonesFinales.children[1].children[0].innerText = "Total: $"+precioTotal;
     }
 
 }

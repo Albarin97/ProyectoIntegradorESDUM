@@ -7,6 +7,7 @@
     background-color: #4964F3;
     color: white;
     font-size: 15px;
+    bottom: 0px;
 }
 
 .redesFooter{
@@ -54,14 +55,12 @@
 
 .logoFooter{
     display: flex;
+    flex: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    margin-left: 20px;
 }
-
-
 
 .deCrochetFooter{
     flex: 3;
@@ -72,8 +71,6 @@
     text-align: justify;
     font-size:13px;
 }
-
-
 
 .contactoFooter{
     flex: 3;
@@ -88,7 +85,6 @@
     font-size:13px;
 }
 
-
 #telefono, #correo, #localizacion, #iconoComentario{
     color: white;
     font-size: 15px;
@@ -96,8 +92,8 @@
 }
 
 .linksFooter{
-    padding-top:40px;
-    padding-left: 20px;
+    padding-top: 30px;
+    padding-left: 15px;
 }
 
 .tituloFooterContacto{
@@ -128,11 +124,4 @@
     text-decoration: none;
     font-size:13px;
     
-}
-
-.copyrightFooter{
-    background-color: #4964F3;
-    color: white;
-    text-align: center;
-    font-size: 15px;
 }
