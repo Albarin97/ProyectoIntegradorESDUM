@@ -12,7 +12,7 @@ function renderizarProductos(listaProductos) {
     // Verificamos que exista algun contenido en la lista de productos
     listaProductos.forEach(element => {
         const Tarjeta = document.createElement("div");
-        Tarjeta.id = element.id;
+        Tarjeta.id = element.idProduct;
         Tarjeta.classList.add("tarjeta","d-flex","ms-2","mt-2","flex-column","flex-md-row","flex-lg-row");
         Tarjeta.classList.add("align-items-center","justify-content-md-around","mb-2","mt-4");   
         // Creamos los contenedores para imagen, descripcion y botones
@@ -26,10 +26,10 @@ function renderizarProductos(listaProductos) {
 
         // Cargamos imagen en el contenedor de imagen 
         const IMAGEN = document.createElement('img');
-        IMAGEN.setAttribute("src", element.imagen);
+        IMAGEN.setAttribute("src", element.image);
         IMAGEN.classList.add("img-fluid","h-100");
         IMAGEN.addEventListener("click",()=>{
-            window.location.href = "../views/product.html?id="+element.id;
+            window.location.href = "../views/product.html?id="+element.idProduct;
         })
         CONTENEDORIMAGEN.appendChild(IMAGEN);
 
@@ -39,11 +39,11 @@ function renderizarProductos(listaProductos) {
         TITULO.classList.add("subtitulo");
         const DESCRIPCION = document.createElement('p');
         DESCRIPCION.classList.add("texto");
-        TITULO.textContent = element.modelo;
-        DESCRIPCION.textContent = element.descripcion;
+        TITULO.textContent = element.nameModel;
+        DESCRIPCION.textContent = element.description;
         const PRECIO = document.createElement('p');
         PRECIO.classList.add("texto");
-        PRECIO.textContent = "Precio: $" + String(element.precio * element.cantidadacomprar);
+        PRECIO.textContent = "Precio: " + String(element.price * element.cantidadacomprar);
         CONTENEDORDESCRIPCION.classList.add("col-md-4");
         CONTENEDORDESCRIPCION.appendChild(TITULO);
         CONTENEDORDESCRIPCION.appendChild(DESCRIPCION);
@@ -63,7 +63,7 @@ function renderizarProductos(listaProductos) {
         inputCantidadProducto.classList.add("inputCantidadElementos","mt-3","w-100");
         inputCantidadProducto.type = "number";
         inputCantidadProducto.min = 1;
-        inputCantidadProducto.max = element.cantidad;
+        inputCantidadProducto.max = element.stock;
         inputCantidadProducto.value = element.cantidadacomprar;
         inputCantidadProducto.addEventListener("change", () => estableCantidadAComprar(listaProductos, element, inputCantidadProducto.value));
         inputCantidadProducto.addEventListener("change", () => obtenerPrecioTotal(listaProductos));
@@ -90,9 +90,9 @@ function estableCantidadAComprar(listaProductos, element, valor) {
     // Lo guardamos en la memoria del navegador
     localStorage.setItem("carrito", JSON.stringify(listaProductos));
     // Actualizamos el precio individual de 
-    const divDescripcion = document.getElementById(element.id);
-    const nuevaCantidad = element.precio * element.cantidadacomprar;
-    divDescripcion.children[1].children[2].textContent = "Precio: $" + String(nuevaCantidad);
+    const divDescripcion = document.getElementById(element.idProduct);
+    const nuevaCantidad = element.price * element.cantidadacomprar;
+    divDescripcion.children[1].children[2].textContent = "Precio: " + String(nuevaCantidad);
 }
 
 
@@ -141,7 +141,7 @@ function obtenerPrecioTotal(listaProductos) {
     else {
         let precioTotal = 0;
         listaProductos.forEach(element => {
-            precioTotal += element.precio * element.cantidadacomprar;
+            precioTotal += element.price * element.cantidadacomprar;
         });
         // de momento borra el contenido de los div, investigar
         const divBotonesFinales = document.getElementById("final2");
@@ -153,14 +153,14 @@ function obtenerPrecioTotal(listaProductos) {
 // Funcion que borrra un elemento del carrito 
 function borrarProductoCarrito(element) {
     // Primero lo borramos del Dom
-    const elementToRemove = document.getElementById(element.id);
+    const elementToRemove = document.getElementById(element.idProduct);
     elementToRemove.remove();
     // Actualizar el local Storage
     // Se uso la funcion filter para devolver todos los elementos menos el que vamos a borrar
     let carritoActualizado = localStorage.getItem("carrito");
     carritoActualizado = JSON.parse(carritoActualizado);
     carritoActualizado = carritoActualizado.filter((element, item) => {
-        if (item.id != element.id) {
+        if (item.idProduct != element.idProduct) {
             return item;
         }
     })
