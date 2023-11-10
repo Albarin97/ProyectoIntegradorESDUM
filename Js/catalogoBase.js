@@ -11,7 +11,7 @@ console.log("Conectado");
 //     return baseDeDatos;
 // }
 
-let baseDeDatos = []
+let baseDeDatos = [];
 const url = "http://localhost:8080/DeCrochet/products/"
 async function getAllProducts() {
     fetch(url)
@@ -21,7 +21,6 @@ async function getAllProducts() {
 }
 
 getAllProducts();
-
 
 
 
