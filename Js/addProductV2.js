@@ -14,7 +14,6 @@ function validarFormulario(evento) {
     const datos = {
         // Crea un objeto "datos" con valores de los campos del formulario.
         nombreProducto: document.getElementById("nombreProducto").value,
-        id: document.getElementById("id_product").value,
         precio: document.getElementById("precio").value,
         categoria: document.getElementById("categoria").value,
         descripcion: document.getElementById("descripcion").value,
@@ -27,11 +26,6 @@ function validarFormulario(evento) {
     if (datos.nombreProducto.trim() === "") {
         // Comprueba si el campo está en blanco.
         mostrarAlerta("Por favor, ingrese un nombre de producto.", "alertaNombreProducto");
-        return;
-    }
-    // Validar id
-    if(datos.id.trim()===""){
-        mostrarAlerta("Por favor, ingrese un ID de producto.", "alertaidProducto");
         return;
     }
 
@@ -82,7 +76,6 @@ function validarFormulario(evento) {
     mostrarAlerta("Formulario enviado con éxito.", "success");
 
     document.getElementById("nombreProducto").value = "";
-    document.getElementById("id_product").value = "";
     document.getElementById("precio").value = "";
     document.getElementById("categoria").value = "";
     document.getElementById("descripcion").value = "";

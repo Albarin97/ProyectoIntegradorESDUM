@@ -22,7 +22,10 @@
     <!-- Incluye el script de Bootstrap para el funcionamiento de los elementos Bootstrap. -->
 
         <!--JS para el estado de la sesion-->
-        <script src="../Js/estadoSesion.js"></script>
+        <!-- <script src="../Js/estadoSesion.js"></script> -->
+
+        <!-- Link pagina JS -->
+        <script defer sync src="../Js/addProduct.js"></script>
 
 </head>
 
@@ -45,17 +48,17 @@
                     </div>
 
                     <div class="form-group mt-5">
-                        <label for="id_product" class="form-label colorLabel">ID del Producto</label>
-                        <input type="text" class="form-control" id="id_product" name="nombreProducto">
-                        <!-- Contenedor de alerta para errores en el nombre del producto. -->
-                        <div id="alertaidProducto" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
-                    </div>
-
-                    <div class="form-group mt-5">
                         <label for="precio" class="form-label colorLabel">Precio</label>
                         <input type="number" class="form-control" id="precio"  name="precio" placeholder="$">
                         <!-- Contenedor de alerta para errores en el precio. -->
                         <div id="alertaPrecio" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-group mt-5">
+                        <label for="precio" class="form-label colorLabel">Stock</label>
+                        <input type="number" class="form-control" id="stock"  name="stock">
+                        <!-- Contenedor de alerta para errores en el precio. -->
+                        <div id="alertaStock" class="alert alert-danger mt-2" role="alert" style="display: none;"></div>
                     </div>
 
                     <div class="form-group mt-5">
@@ -97,9 +100,6 @@
         </div>
     </form>
     <div id="datosIngresados"></div>
-
-    <!-- Link pagina JS -->
-    <script src="../Js/addProduct.js"></script>
 </body>
 
 </html>
