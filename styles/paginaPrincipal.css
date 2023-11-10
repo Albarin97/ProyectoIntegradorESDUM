@@ -7,18 +7,28 @@ header{
     border: #FFDFE2 solid 3px;
 }
 
+.space{
+    height: 120px;
+  }
+  
 /*Navbar*/
 .barranav {
     position: fixed;
-    top: 0;
+    top: 20;
     width: 100%;
     background-color: white;
     z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
   }
 
 #sizeIcons{
-    font-size: 35px;
+    font-size: 30px;
 }
+
+#sizeIcons:hover{
+    transform: scale(1.3);
+    transition-duration: 1s;
+  
+  }
 
 .material-symbols-outlined {
     color: #fda2ef;
@@ -28,6 +38,7 @@ header{
     border: #fda2ef;
     border-radius: 20px;
     border-style: solid;
+    margin-left: 15px;
 }
 
 .menucollapse{
@@ -157,17 +168,19 @@ header{
     filter: brightness(0.7);
 }
 
+.Productos-fluid{
+    padding: 15px;
+    width: 100vh;
+}
 .divTarget{
-    width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
+    padding: 0px;
 }
 
 .divTarget .productos{
     border-radius: 8px;
     box-shadow: 0 2px 2px #808080;
-    overflow: hidden;
     transition: all 0.25s;
 }
 
@@ -186,19 +199,17 @@ to {
 }
 }
 
-
-
-
 .custom-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 25px;
+     /* Ajusta la altura según tus necesidades */
   }
   
-  
-  /*footer*/
+/*footer*/
   .containerFooter-fluid{
     display: flex;
     flex-direction: column;
@@ -208,7 +219,6 @@ to {
     background-color: #4964F3;
     color: white;
     font-size: 15px;
-    margin-top: 30px;
 }
 
 .redesFooter{
@@ -218,6 +228,7 @@ to {
 }
 
 .saludoFooter{
+    font-weight: bold;
     flex: 6;
     font-size: 40px;
     color: white;
@@ -229,19 +240,13 @@ to {
 }
 
 .iconosRedesFooter{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    flex: 5;
-    justify-content: space-around;
+    margin: 10px 10px;
     margin-bottom: 25px;
 }
 
 #facebook, #instagram, #tiktok, #whatsapp{
     color: white;
-    font-size: 55px;
+    font-size: 40px;
 }
 
 #facebook:hover, #instagram:hover, #tiktok:hover, #whatsapp:hover{
@@ -255,8 +260,13 @@ to {
     justify-content: center;
 }
 
+.imagenLogo{
+    width: 310px;
+}
+
 .logoFooter{
     display: flex;
+    flex: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -267,49 +277,62 @@ to {
     flex: 3;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-}
-
-.linksFooter{
-    flex: 3;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+    padding-left: 50px;
+    padding-right: 100px;
+    text-align: justify;
+    font-size:13px;
 }
 
 .contactoFooter{
     flex: 3;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding-left: 100px;
 }
 
-#comentarios {
+.conocenos, .telefono, .localizacion, #contactanos {
     text-decoration: none;
     color: white;
+    font-size:13px;
 }
 
-#telefono, #correo, #localizacion, #iconoComentario, #contactanos{
+#telefono, #correo, #localizacion, #iconoComentario{
     color: white;
     font-size: 15px;
     text-decoration: none;
 }
 
-.tituloFooter{
+.linksFooter{
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+.tituloFooterContacto{
     color: white;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 15px;
+    font-size: 20px;
+    text-align: left;
+    padding-top:38px;
+    margin-bottom: 20px;
+}
+
+.tituloFooterCrochet{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    
+}
+
+.tituloFooterCondiciones{
+    color: white;
+    font-size: 20px;
+    text-align: left;
     margin-bottom: 20px;
 }
 
 .text-reset{
     text-decoration: none;
-}
-
-.copyrightFooter{
-    background-color: #4964F3;
-    color: white;
-    text-align: center;
-    font-size: 15px;
+    font-size:13px;
+    
 }

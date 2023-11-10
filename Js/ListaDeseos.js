@@ -115,7 +115,7 @@ function renderizarProductos(baseDeDatos) {
         titulo.textContent = info.modelo;
         descripcion.textContent = info.descripcion;
         descripcion.textContent = descripcion.textContent
-        precio.textContent = "Precio:" + String(info.precio);
+        precio.textContent = "Precio: $" + String(info.precio);
         CONTENEDORDESCRIPCION.classList.add("col-md-4");
         CONTENEDORDESCRIPCION.appendChild(titulo);
         CONTENEDORDESCRIPCION.appendChild(descripcion);
@@ -130,13 +130,13 @@ function renderizarProductos(baseDeDatos) {
         // Boton agregar al carrito - se verifica que algun producto ya este en el carrito.
         const agregarCarrito = document.createElement('button');
         if (estaEnCarrito(info)) {
-            agregarCarrito.textContent = "Ya está en carrito";
-            agregarCarrito.classList.add("botonCarrito", "w-75","h-auto");
+            agregarCarrito.textContent = "Agregado al carrito";
+            agregarCarrito.classList.add("botonCarrito", "w-100","h-auto");
             agregarCarrito.disabled = true;
         }
         else {
             agregarCarrito.textContent = "Agregar al carrito";
-            agregarCarrito.classList.add("botonCarrito", "w-auto");
+            agregarCarrito.classList.add("botonCarrito", "w-100");
             agregarCarrito.dataset.item = info;
             agregarCarrito.addEventListener('click', () => agregarProductoCarrito(info));
         }

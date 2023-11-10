@@ -20,7 +20,7 @@ const loadItems = () => {
     const div = document.createElement("div");
     div.classList.add("w-75");
 
-    div.classList.add("product-container", "justify-content-around", "align-items-center","mb-1","pb-3","pt-3","me-2" );
+    div.classList.add("product-container" );
 
     const img = document.createElement("img");
     img.src = item.imagen;
@@ -35,16 +35,16 @@ const loadItems = () => {
     const newline = document.createElement("br");
 
     name.id = "products";
-    name.innerHTML = `${item.clase} ${item.modelo} ${item.descripcion}`;
+    name.innerHTML = ` ${item.modelo} `;
 
     quantity.classList.add("item-quantity");
     quantity.innerHTML = `Cantidad: ${item.cantidadacomprar}`;
 
     price.classList.add("item-price"); 
-    price.innerHTML = `Precio por unidad: \$${item.precio}`;
+    price.innerHTML = `Precio: \$${item.precio}`;
 
     totalPerItem.classList.add("item-total"); 
-    totalPerItem.innerHTML = `Total por producto: \$${item.precio * item.cantidadacomprar}`;
+    totalPerItem.innerHTML = `Total: \$${item.precio * item.cantidadacomprar}`;
 
     totalAmount += item.precio * item.cantidadacomprar;
 

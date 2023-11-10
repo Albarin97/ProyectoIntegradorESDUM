@@ -1,108 +1,84 @@
+header{
+  color: #FFDFE2;
+  background-color: #4964F3;
+  font-size: 20px;
+  padding: 8px;
+  text-align: center;
+  border: #FFDFE2 solid 3px;
+
+}
+
+.space{
+  height: 120px;
+}
+
 /*Navbar*/
 .barranav {
   position: fixed;
-  top: 0;
+  top: 20;
   width: 100%;
   background-color: white;
-  z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
+  z-index: 10; /* Asegura que la barra de navegación esté en la parte superior */
 }
 
 #sizeIcons{
-  font-size: 35px;
+  font-size: 30px;
+}
+
+#sizeIcons:hover{
+  transform: scale(1.3);
+  transition-duration: 1s;
+
 }
 
 .material-symbols-outlined {
-    color: #fda2ef;
-  }
-  
-  .busqueda {
-    border: #fda2ef;
-    border-radius: 20px;
-    border-style: solid;
-  }
-  
-  .menucollapse{
-    background-color: transparent;
-    border: 0;
-  }
-  
-  .entrada:focus{
-    outline: none;
-  }
-  
-  .letrasCanvas{
-    color: #808080;
-  }
-  
-  .btn:hover {
-    color: #4964f3;
-  
-  }
-  
-  * {
-    font-family: 'Century Gothic', sans-serif;
-  
-  }
-  
-  .copy-footer {
-    background-color: #4964F3;
-    color: white;
-  }
-  
-  .footer-content {
-    color: black;
-  }
-  
-  .copy-footer {
-    color: white;
-  }
-  
-  .border-0{
-    border-radius: 100px;
-    width: 100px;
-  }
-
-   /*Fin Navbar*/
-   
-.contact-us {
-    color: palevioletred;
+  color: #fda2ef;
 }
 
-.redes {
-    color: #4964F3;
-    text-decoration: none;
+.busqueda {
+  border: #fda2ef;
+  border-radius: 20px;
+  border-style: solid;
+  margin-left: 15px;
 }
 
-.navbar-item,
-.main-item {
-    width: 100% !important;
-    height: 300px;
+.menucollapse{
+  background-color: transparent;
+  border: 0;
 }
 
-.footer-item {
-    width: 100% !important;
-    height: 700px !important;
+.entrada:focus{
+  outline: none;
 }
 
-.wrapper {
-    min-height: 100vh;
-    /* Establece el alto mínimo del wrapper al alto de la ventana del navegador */
-    display: flex;
-    flex-direction: column;
+.letrasCanvas{
+  color: #808080;
 }
 
-.footer-div {
-    display: flex;
-    flex-direction: column;
+.btn:hover {
+  color: #4964f3;
+
 }
 
-.footer-div iframe {
-    flex-grow: 1;
-    border: none;
-    /* Para eliminar el borde del iframe si lo deseas */
+* {
+  font-family: 'Century Gothic', sans-serif;
+
 }
 
-.img-product {
-    height: 400px;
-    width: 400px;
+.copy-footer {
+  background-color: #4964F3;
+  color: white;
+}
+
+.footer-content {
+  color: black;
+}
+
+.copy-footer {
+  color: white;
+}
+
+.border-0{
+  border-radius: 100px;
+  width: 100px;
 }
