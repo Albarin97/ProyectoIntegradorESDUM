@@ -405,10 +405,13 @@ document.getElementById('formDireccion').addEventListener('submit', function (ev
         datosActualesDireccion.nuevoCodigoPostalDato = nuevoCodigoPostal;
     }
     let caracteresCalle = nuevaCalle.split(",");
-    
+    let idInfo =  JSON.parse(localStorage.getItem("infocuenta"));
+    console.log(idInfo.idUsuario);
+    let usuarioInfo = JSON.parse(localStorage.getItem("infocuenta"));
+    // usuarioInfo = usuarioInfo.
     //// Construccion objeto PUT///
     let address = {
-        
+        user: usuarioInfo,
         street: caracteresCalle[0],
         intNumber: caracteresCalle[1],
         extNumber: nuevoNumeroCasa,
@@ -420,8 +423,7 @@ document.getElementById('formDireccion').addEventListener('submit', function (ev
 
     console.log(address);
 
-    let idInfo =  JSON.parse(localStorage.getItem("infocuenta"));
-    console.log(idInfo.idUsuario);
+    
     const urlAddress = "http://localhost:8080/DeCrochet/address/" + String(idInfo.idUsuario);
 
     // Metodo Post ///
