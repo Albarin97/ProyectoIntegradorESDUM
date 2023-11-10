@@ -23,7 +23,7 @@ const loadItems = () => {
     div.classList.add("product-container" );
 
     const img = document.createElement("img");
-    img.src = item.imagen;
+    img.src = item.image;
 
     const figure = document.createElement("figure");
     figure.appendChild(img);
@@ -35,18 +35,18 @@ const loadItems = () => {
     const newline = document.createElement("br");
 
     name.id = "products";
-    name.innerHTML = ` ${item.modelo} `;
+    name.innerHTML = ` ${item.nameModel} `;
 
     quantity.classList.add("item-quantity");
     quantity.innerHTML = `Cantidad: ${item.cantidadacomprar}`;
 
     price.classList.add("item-price"); 
-    price.innerHTML = `Precio: \$${item.precio}`;
+    price.innerHTML = `Precio: \$${item.price}`;
 
     totalPerItem.classList.add("item-total"); 
-    totalPerItem.innerHTML = `Total: \$${item.precio * item.cantidadacomprar}`;
+    totalPerItem.innerHTML = `Total: \$${item.price * item.cantidadacomprar}`;
 
-    totalAmount += item.precio * item.cantidadacomprar;
+    totalAmount += item.price * item.cantidadacomprar;
 
     div.appendChild(figure);
     div.appendChild(name);
