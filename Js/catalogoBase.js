@@ -261,10 +261,7 @@ function filtrarProductos(categoria) {
 function obtenerPrecioMaximo() {
     let precioMaximo = 0;
     baseDeDatos.forEach(producto => {
-<<<<<<< Updated upstream
-=======
-        console.log(producto);
->>>>>>> Stashed changes
+        // console.log(producto);
         if (producto.price > precioMaximo) {
             precioMaximo = producto.price;
         }
