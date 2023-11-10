@@ -103,7 +103,8 @@ function publicarComentario() {
   p.textContent = inputText.value;
   // Cargamos el nombre de usuario del localStorage
   const user = document.createElement("p");
-  user.textContent = JSON.parse(localStorage.getItem("nombreUsuarioDato"));
+  const infoCuenta = JSON.parse(localStorage.getItem("infocuenta"));
+  user.textContent = infoCuenta.name;
   console.log(JSON.parse(localStorage.getItem("nombreUsuarioDato")));
   //Cargamos la fecha de donde se elaboro el comentario
   const tiempoTranscurrido = Date.now();
