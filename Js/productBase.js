@@ -19,7 +19,8 @@ console.log(productoId);
 //   }
 
 
-const url = "http://localhost:8080/DeCrochet/products/";
+// const url = "http://localhost:8080/DeCrochet/products/";
+const url = "https://rest-api-decrochet.onrender.com/DeCrochet/products"
 async function getAllProducts() {
   const response = await fetch(url)
   const data = await response.json();
