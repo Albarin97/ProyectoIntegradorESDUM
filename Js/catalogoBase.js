@@ -259,7 +259,7 @@ function filtrarProductos(categoria) {
 function obtenerPrecioMaximo() {
     let precioMaximo = 0;
     baseDeDatos.forEach(producto => {
-        if (producto.precio > precioMaximo) {
+        if (producto.price > precioMaximo) {
             precioMaximo = producto.price;
         }
     })
