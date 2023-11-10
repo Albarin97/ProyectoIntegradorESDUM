@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (datosUsuario.email === correoInicio && contraseñaInicio === datosUsuario.password) {
             console.log("Sesión iniciada");
 
-            const urlUserValidation = "http://localhost:8080/DeCrochet/users/validate"
+            const urlUserValidation = "http://rest-api-decrochet.onrender.com/DeCrochet/users/validate"
             fetch(urlUserValidation, {
                 method: "POST",
                 body: JSON.stringify(datosUsuario),

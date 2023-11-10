@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const urlProduct = "http://localhost:8080/DeCrochet/products/add"
+        const urlProduct = "http://rest-api-decrochet.onrender.com/DeCrochet/products/add"
         let datosValidos = localStorage.getItem("datosIngresados");
         if (datosValidos != null && datosValidos) {
             // Metodo Post

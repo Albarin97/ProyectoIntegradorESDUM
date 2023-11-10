@@ -34,11 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Trae el  nombre del usuario del local Storage para ponerlo en la pagina
-var nombre = JSON.parse(localStorage.getItem('nombreUsuarioDato'));
-console.log(nombre);
+let infoName = localStorage.getItem("infocuenta");
+infoName = JSON.parse(infoName);
+var nombre = infoName.name;
 document.getElementById('card-title').innerHTML = "Hola! " + nombre;
 
-var nombre = JSON.parse(localStorage.getItem('nombreUsuarioDato'));
+// var nombre = JSON.parse(localStorage.getItem('nombreUsuarioDato'));
 console.log(nombre);
 document.getElementById('card-title2').innerHTML = "Hola! " + nombre;
 
@@ -404,7 +405,7 @@ document.getElementById('formDireccion').addEventListener('submit', function (ev
         datosActualesDireccion.nuevoCodigoPostalDato = nuevoCodigoPostal;
     }
     let caracteresCalle = nuevaCalle.split(",");
-
+    
     //// Construccion objeto PUT///
     let address = {
         
