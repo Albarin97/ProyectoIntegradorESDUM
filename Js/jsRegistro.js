@@ -110,21 +110,21 @@ document.getElementById('RegisterForm').addEventListener('click', function (even
     name: name,
     password: contrasena,
   }
- 
+  localStorage.setItem("infocuenta",JSON.stringify(usuario));
 
-  // Metodo Post
-  fetch(urlUser, {
-    method: "POST",
-    body: JSON.stringify(usuario),
-    headers: { "Content-type": "application/json; charset=UTF-8" }
-  })
-    .then(response => response.json())
-    .then(json => {
-      localStorage.setItem("infocuenta", JSON.stringify(json));
-    })
-    .catch(err => console.log(err));
+  // // Metodo Post
+  // fetch(urlUser, {
+  //   method: "POST",
+  //   body: JSON.stringify(usuario),
+  //   headers: { "Content-type": "application/json; charset=UTF-8" }
+  // })
+  //   .then(response => response.json())
+  //   .then(json => {
+  //     localStorage.setItem("infocuenta", JSON.stringify(json));
+  //   })
+  //   .catch(err => console.log(err));
 
-    console.log("hOLA");
+  //   console.log("hOLA");
 
 
   //  Separar por , el input de address
