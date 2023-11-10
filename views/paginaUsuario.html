@@ -39,21 +39,21 @@
 
 </head>
 <body>
-  <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
-         <!-- Barra de navegacion -->
+    <!-- Barra de navegacion -->
     <nav class="barranav">
+      <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
       <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
           <!-- Input de busqueda en el catalogo -->
           <div class="d-flex mt-3 w-25 d-none d-md-block">
-              <div class="d-flex flex-row w-75 busqueda">
+              <div class="d-flex flex-row w-100 busqueda">
                   <button class="btn d-flex justify-content-center border-0" type="submit">
-                      <i class="material-symbols-outlined ">Search</i>
+                      <i class="material-symbols-outlined">Search</i>
                   </button>
                   <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
               </div>
           </div>
           <!-- Logo -->
-          <div class="container-fluid d-flex justify-content-center w-50">
+          <div class="container-fluid d-flex justify-content-center">
               <a class="navbar-brand " href="./paginaPrincipal.html">
                   <img src="../resources/logo/logo.png" width="270" height="100"
                       class="d-inline-block align-top img-fluid" alt="">
@@ -65,21 +65,21 @@
                   <a class="navbar-brand" id="btnCorazon" href="#">
                       <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                   class="d-inline-block align-text-top"> -->
-                      <i class="material-symbols-outlined">Favorite</i>
+                      <i class="material-symbols-outlined" id="sizeIcons">Favorite</i>
                   </a>
               </div>
               <div class="d-flex ms-4 justify-content-start d-none d-md-block">
                   <a class="Person-icon" id="btnUser" href="#">
                       <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                               class="d-inline-block align-text-top"> -->
-                      <i class="material-symbols-outlined">Person</i>
+                      <i class="material-symbols-outlined" id="sizeIcons">Person</i>
                   </a>
               </div>
               <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
                   <a class="shopping-cart-icon" id="btnCarrito" href="#">
                       <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                   class="d-inline-block align-text-top"> -->
-                      <i class="material-symbols-outlined">Shopping_Cart</i>
+                      <i class="material-symbols-outlined" id="sizeIcons">Shopping_Cart</i>
                   </a>
               </div>
               <div class="d-flex ms-4 justify-content-start d-block d-md-none">
@@ -88,7 +88,7 @@
                                   class="d-inline-block align-text-top"> -->
                       <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
                           data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
-                              class="material-symbols-outlined">Menu</i></button>
+                              class="material-symbols-outlined " style="font-size: 30px;">Menu</i></button>
                   </a>
               </div>
           </div>
@@ -96,7 +96,7 @@
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
               aria-labelledby="offcanvasExampleLabel">
               <div class="offcanvas-header">
-                  <div class="container-fluid d-flex justify-content-center w-50">
+                  <div class="container-fluid d-flex justify-content-evenly w-50">
                       <a class="navbar-brand " href="#">
                           <img src="../resources/logo/logo.png" width="270" height="100"
                               class="d-inline-block align-top img-fluid" alt="">
@@ -112,7 +112,7 @@
                       <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
                   </div>
               </div>
-              <div class="d-flex ms-3 mt-3 justify-content-start">
+              <div class="d-flex ms-3 mt-2 justify-content-start">
                   <a class="navbar-brand" id="btnDeseos" href="#">
                       <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
                                   class="d-inline-block align-text-top"> -->
@@ -146,6 +146,7 @@
       </div>
       <div class="navbar-nav"></div>
   </nav>
+  <div class="space"></div>
   <!--Fin Navbar-->
     <!--Inicia pagina usuario-->
     <div class="container-fluid w-100">
@@ -282,7 +283,7 @@
                     <form class="row g-2 needs-validation" id="formDireccionCelular" novalidate>
 
                       <div class="col-md-12">
-                        <label for="calleCelular" class="form-label">Calle, NumInt, Ciudad</label>
+                        <label for="calleCelular" class="form-label">Calle</label>
                         <input type="text" class="form-control" id="calleCelular" required>
                         <div class="alert alert-danger" role="alert" id="invalidaCalleCelular" style="display: none">
                           Introduce un nombre válido
@@ -416,12 +417,12 @@
                           Numero invalido
                         </div>
                       </div>
-  
+                        <div class="text-center">
+                          <button class="btn btn-primary" id="btnTarjetaCelular" type="submit">Confirmar</button>
+                        </div>
                       </div>
   
-                      <div class="text-center">
-                        <button class="btn btn-primary" id="btnTarjetaCelular" type="submit">Confirmar</button>
-                      </div>
+
                     </form>
                   </div>
                   </div>
@@ -598,7 +599,7 @@
                   <form class="row g-2 needs-validation" id="formDireccion" novalidate>
 
                     <div class="col-md-12">
-                      <label for="calle" class="form-label">Calle, NumInt, Ciudad</label>
+                      <label for="calle" class="form-label">Calle</label>
                       <input type="text" class="form-control" id="calle" required>
                       <div class="alert alert-danger" role="alert" id="invalidaCalle" style="display: none">
                         Introduce un nombre válido
@@ -750,86 +751,86 @@
     </div>
 
 
-    <!--Footer-->
-    <footer class="containerFoot-fluid">
+    <!-- Footer -->
+    <footer class="containerFooter-fluid">
 
-      <div class="redesFooter">
+      <div class="redesFooter" >
 
-          <div class="saludoFooter">
-              Conoce mas sobre nosotros
+          <div class="saludoFooter mt-4">
+              Conoce más sobre nosotros
           </div>
 
       </div>
 
-      <div class="iconosRedesFooter">
-        <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL">
-            <i class="fa-brands fa-facebook-f" id="facebook"></i>
-        </a>
-        <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands">
-            <i class="fa-brands fa-instagram" id="instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands">
-            <i class="fa-brands fa-tiktok" id="tiktok"></i>
-        </a>
-        <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands">
-            <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
-        </a>
-    </div>
-
+      <div class="iconosRedesFooter d-flex justify-content-center align-items-center">
+          <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL" class="mx-3">
+              <i class="fa-brands fa-facebook-f" id="facebook"></i>
+          </a>
+          <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands mx-3">
+              <i class="fa-brands fa-instagram" id="instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands mx-3">
+              <i class="fa-brands fa-tiktok" id="tiktok"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands mx-3">
+              <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+          </a>
+      </div>
+      
       <div class="cuerpoFooter">
-          <div class="logoFooter">
-              <img src="../resources/logo/logo copy.png" width="200px" alt="">
-              Tu imaginacion en un tejido
+          <div class="logoFooter ml-3">
+              <img src="../resources/logo/logo_rosa.png" width="200px" alt="" class="imagenLogo">
+              Tu imaginación en un tejido
           </div>
 
           <div class="deCrochetFooter">
-              <h6 class="tituloFooter">
+              <h6 class="tituloFooterCrochet">
                   DeCrochet
               </h6>
               <p>
-                  En deCrochet encontraras diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de Jani Arenas, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
+                  En DeCrochet encontrarás diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de <span><b>Jani Arenas</b></span>, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
                   
               </p>
           </div>
           <div class="linksFooter">
               <!-- Links -->
-              <h6 class="tituloFooter">
-                  Terminos y Condiciones
-              </h6>
-              <p>
+              <h5 class="tituloFooterCondiciones mb-2">
+                  Terminos y condiciones
+              </h5>
+              <p class="mb-2">
                   <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
               </p>
-              <p>
+              <p class="mb-2">
                   <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
               </p>
-              <p>
+              <p class="mb-2">
                   <a href="#!" class="text-reset">Terminos de Servicio</a>
               </p>
-              <p>
+              <p class="mb-2">
                   <a href="#!" class="text-reset">Aviso De Privacidad</a>
               </p>
           </div>
 
           <div class="contactoFooter">
               <!-- Links -->
-              <h6 class="tituloFooter">Contacto</h6>
+              <h6 class="tituloFooterContacto mb-2">Contacto</h6>
 
-              <p class="iconoTextoFooter">
+              <p class="iconoTextoFooter mb-2">
                   <i class="fas fa-print me-2" id="iconoComentario"></i> 
-                  <a href="sobreNosotros.html" id="comentarios">Conocenos</a>
+                  <a href="sobreNosotros.html" id="comentarios" class="conocenos">Conócenos</a>
               </p>
 
-              <p>
+              <p class="mb-2 localizacion">
                   <i class="fas fa-home me-2" id="localizacion"></i> 
                   Ciudad de México
               </p>
 
-              <p>
+              <p class="mb-2">
               <i class="fas fa-envelope me-2" id="correo"></i>
-              <a href="../views/contact.html" id="contactanos">Dejanos un comentario</a>
+              <a href="../views/contact.html" id="contactanos">Déjanos un comentario</a>
               </p>
               
-              <p>
+              <p class="mb-2 telefono">
                   <i class="fas fa-phone me-2" id="telefono"></i> 
                   5529334567
               </p>
@@ -838,10 +839,8 @@
 
       </div>
           
-      <div class="copyrightFooter">
-          copyright
-      </div>
   </footer>
+  <!-- Footer -->
 
 
     <script src="../Js/jsUserPage.js"></script>

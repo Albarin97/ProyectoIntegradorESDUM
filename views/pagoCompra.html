@@ -7,13 +7,297 @@
     <title>Pago</title>
     <link rel="stylesheet" href="../styles/pagoCompra.css"> 
     
+        <!--Bootstrap Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--Bootstrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Fontawesome Iconos-->
+    <script src="https://kit.fontawesome.com/991fef38dd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!--JS para botones de la navbar-->
+    <script src="../Js/navbar.js"></script>
 
         <!--JS para el estado de la sesion-->
         <script src="../Js/estadoSesion.js"></script>
 </head>
 
+
+
 <body>
-    <div class="modal">
+        <!-- Barra de navegacion -->
+        <nav class="barranav">
+          <header class="d-none d-sm-block">DeCrochet, tu imaginacion en un tejido</header>
+          <div class="d-flex flex-row justify-content-evenly" id="navbarNav">
+              <!-- Input de busqueda en el catalogo -->
+              <div class="d-flex mt-3 w-25 d-none d-md-block">
+                  <div class="d-flex flex-row w-100 busqueda">
+                      <button class="btn d-flex justify-content-center border-0" type="submit">
+                          <i class="material-symbols-outlined">Search</i>
+                      </button>
+                      <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                  </div>
+              </div>
+              <!-- Logo -->
+              <div class="container-fluid d-flex justify-content-center">
+                  <a class="navbar-brand " href="./paginaPrincipal.html">
+                      <img src="../resources/logo/logo.png" width="270" height="100"
+                          class="d-inline-block align-top img-fluid" alt="">
+                  </a>
+              </div>
+              <!-- Botones  -->
+              <div class="d-flex flex-row align-items-center justify-content-end w-25">
+                  <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                      <a class="navbar-brand" id="btnCorazon" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                      class="d-inline-block align-text-top"> -->
+                          <i class="material-symbols-outlined" id="sizeIcons">Favorite</i>
+                      </a>
+                  </div>
+                  <div class="d-flex ms-4 justify-content-start d-none d-md-block">
+                      <a class="Person-icon" id="btnUser" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                          <i class="material-symbols-outlined" id="sizeIcons">Person</i>
+                      </a>
+                  </div>
+                  <div class="d-flex ms-4 me-3 justify-content-start d-none d-md-block">
+                      <a class="shopping-cart-icon" id="btnCarrito" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                      class="d-inline-block align-text-top"> -->
+                          <i class="material-symbols-outlined" id="sizeIcons">Shopping_Cart</i>
+                      </a>
+                  </div>
+                  <div class="d-flex ms-4 justify-content-start d-block d-md-none">
+                      <a class="menu-icon" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                      class="d-inline-block align-text-top"> -->
+                          <button class="menucollapse" type="button" data-bs-toggle="offcanvas"
+                              data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"><i
+                                  class="material-symbols-outlined " style="font-size: 30px;">Menu</i></button>
+                      </a>
+                  </div>
+              </div>
+              <!-- Este es el div que colapsa cuando la pantalla es de un movil -->
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu"
+                  aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header">
+                      <div class="container-fluid d-flex justify-content-evenly w-50">
+                          <a class="navbar-brand " href="#">
+                              <img src="../resources/logo/logo.png" width="270" height="100"
+                                  class="d-inline-block align-top img-fluid" alt="">
+                          </a>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="d-flex w-100">
+                      <div class="d-flex flex-row w-100 busqueda">
+                          <button class="btn d-flex justify-content-center border-0" type="submit">
+                              <i class="material-symbols-outlined ">Search</i>
+                          </button>
+                          <input class="border-0 entrada" type="search" placeholder="Buscar" aria-label="Search">
+                      </div>
+                  </div>
+                  <div class="d-flex ms-3 mt-2 justify-content-start">
+                      <a class="navbar-brand" id="btnDeseos" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                      class="d-inline-block align-text-top"> -->
+                          <div class="letrasCanvas d-flex flex-row">
+                              <i class="material-symbols-outlined">Favorite</i>
+                              <p class="ms-3">Carrito de Compra</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="d-flex ms-3 mt-2 justify-content-start">
+                      <a class="navbar-brand" id="btnPerfil" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                  class="d-inline-block align-text-top"> -->
+                          <div class="letrasCanvas d-flex flex-row">
+                              <i class="material-symbols-outlined">Person</i>
+                              <p class="ms-3">Perfil</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="d-flex ms-3 mt-2 justify-content-start">
+                      <a class="navbar-brand" id="btnCompras" href="#">
+                          <!-- <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24"
+                                      class="d-inline-block align-text-top"> -->
+                          <div class="letrasCanvas d-flex flex-row">
+                              <i class="material-symbols-outlined">Shopping_Cart</i>
+                              <p class="ms-3">Carrito de Compra</p>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="navbar-nav"></div>
+      </nav>
+      <div class="space"></div>
+      <!--Fin Navbar-->
+      
+      
+          <!--Pagina inicio de sesion-->
+        <h1 class="titulo">Pagar</h1>
+        
+        <div class="contenedor">
+          <!--Inicia formulario-->
+          <form class="row g-2 needs-validation" id="form" novalidate>
+            <!--Etiqueta de cada campo, Boostrap-->
+      
+            <form class="row g-2 needs-validation" id="formTarjetaCelular" novalidate>
+                <div class="col-md-12">
+                  <label for="nombreTitularCelular" class="form-label">Nombre del titular</label>
+                  <input type="text" class="form-control" id="nombreTitularCelular" required>
+                  <div class="alert alert-danger" role="alert" id="invalidoTitularCelular" style="display: none">
+                    Introduce un nombre válido
+                  </div>
+                </div>
+          
+                <div class="col-md-12">
+                  <label for="numTarjetaCelular" class="form-label">Introduce los 12 digitos de tu tarjeta</label>
+                  <input type="number" class="form-control" id="numTarjetaCelular"" required>
+                  <div class="alert alert-danger" role="alert" id="invalidoNumTarjetaCelular" style="display: none">
+                    Introduce los 12 digitos de tu tarjeta
+                  </div>
+                  </div>
+          
+                <div class="col-md-12">
+                  <label for="vencimientoCelular" class="form-label">Fecha de vencimiento</label>
+                  <input type="month" class="form-control" id="vencimientoCelular" required>
+                  <div class="alert alert-danger" role="alert" id="invalidaVencimiento" style="display: none">
+                    Fecha no valida
+                  </div>
+                </div>
+          
+                <div class="col-md-12">
+                  <label for="cvvCelular" class="form-label">CVV</label>
+                  <input type="number" class="form-control" id="cvvCelular" required>
+                  <div class="alert alert-danger" role="alert" id="invalidoCvvCelular" style="display: none">
+                    Numero invalido
+                  </div>
+                </div>
+
+                </div>
+
+              </form>
+            </div>
+            </div>
+          </div>
+      
+            <!--Termina formulario-->
+            
+            <div class="text-center">
+                <a href="./compraExitosa.html"><button class="botonsillo">Continuar</button></a>
+            </div>
+      
+          </form>
+          
+      </div>
+          <!-- <div id="imagen">
+            <img class="vaquita img-fluid" src="../resources/logo/gorritoAppa.png" width="380px" alt="Gorrito Appa">
+          </div>
+        </div> -->
+      
+          <!-- Footer -->
+          <footer class="containerFooter-fluid">
+      
+              <div class="redesFooter" >
+      
+                  <div class="saludoFooter mt-4">
+                      Conoce más sobre nosotros
+                  </div>
+      
+              </div>
+      
+              <div class="iconosRedesFooter d-flex justify-content-center align-items-center">
+                  <a href="https://www.facebook.com/decrochetyotrostemas?mibextid=ZbWKwL" class="mx-3">
+                      <i class="fa-brands fa-facebook-f" id="facebook"></i>
+                  </a>
+                  <a href="https://instagram.com/decrochetyotrostemas?igshid=MzRlODBiNWFlZA==" class="fa-brands mx-3">
+                      <i class="fa-brands fa-instagram" id="instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@decrochetyotrostemas?_t=8gBULPs0gWU&_r=1" class="fa-brands mx-3">
+                      <i class="fa-brands fa-tiktok" id="tiktok"></i>
+                  </a>
+                  <a href="https://api.whatsapp.com/send?phone=%2B5215561570426&data=ARBG9bdNItOy8fdSIV0HoeXrqp1NztDUdDspJprW3NShVEUAZILM8BnaEna13A5Hy7Tot-wjbFDCStJAQtLoJ_zPcSSki83t8lIreRGbqVtN6nhQpjTm1NB5LYKAjJxOS21SfGDpwcXAVTb5fIn_X5jV9g&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR1KQ6433VzVVcAGzqzYfuudiASNiEumHT0PZx74qMdyYIsXxVvYTNIP4VM" class="fa-brands mx-3">
+                      <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+                  </a>
+              </div>
+              
+              <div class="cuerpoFooter">
+                  <div class="logoFooter ml-3">
+                      <img src="../resources/logo/logo_rosa.png" width="200px" alt="" class="imagenLogo">
+                      Tu imaginación en un tejido
+                  </div>
+      
+                  <div class="deCrochetFooter">
+                      <h6 class="tituloFooterCrochet">
+                          DeCrochet
+                      </h6>
+                      <p>
+                          En DeCrochet encontrarás diferentes modelos de ropa, accesorios y amigurumis tejidos por las manos de <span><b>Jani Arenas</b></span>, quien se enorgullece de presentarte sus productos y agradece inmensamente tu visita.
+                          
+                      </p>
+                  </div>
+                  <div class="linksFooter">
+                      <!-- Links -->
+                      <h5 class="tituloFooterCondiciones mb-2">
+                          Terminos y condiciones
+                      </h5>
+                      <p class="mb-2">
+                          <a href="https://www.youtube.com/channel/UCVcKV6KzBqDiItZph5cdPpg" class="text-reset">Videos de Tejido</a>
+                      </p>
+                      <p class="mb-2">
+                          <a href="https://www.facebook.com/decrochetyotrostemas/posts/pfbid02JMQ8nxa3ACAkFPWVyyvp6gJ74scBdfx7Zn6wrY5yCR2yETy2gRrsoAH88yxL859el" class="text-reset">Aviso Legal</a>
+                      </p>
+                      <p class="mb-2">
+                          <a href="#!" class="text-reset">Terminos de Servicio</a>
+                      </p>
+                      <p class="mb-2">
+                          <a href="#!" class="text-reset">Aviso De Privacidad</a>
+                      </p>
+                  </div>
+      
+                  <div class="contactoFooter">
+                      <!-- Links -->
+                      <h6 class="tituloFooterContacto mb-2">Contacto</h6>
+      
+                      <p class="iconoTextoFooter mb-2">
+                          <i class="fas fa-print me-2" id="iconoComentario"></i> 
+                          <a href="sobreNosotros.html" id="comentarios" class="conocenos">Conócenos</a>
+                      </p>
+      
+                      <p class="mb-2 localizacion">
+                          <i class="fas fa-home me-2" id="localizacion"></i> 
+                          Ciudad de México
+                      </p>
+      
+                      <p class="mb-2">
+                      <i class="fas fa-envelope me-2" id="correo"></i>
+                      <a href="../views/contact.html" id="contactanos">Déjanos un comentario</a>
+                      </p>
+                      
+                      <p class="mb-2 telefono">
+                          <i class="fas fa-phone me-2" id="telefono"></i> 
+                          5529334567
+                      </p>
+                      
+                  </div>
+      
+              </div>
+                  
+          </footer>
+          <!-- Footer -->
+      
+        <script src="../Js/inicioSesion.js"></script>
+      </body>
+    <!-- <div class="modal">
+        <p class="titulo">Pagar</p>
         <form class="form">
             <h3 id="open">Selecciona tu método de pago</h3>
             <div class="payment--options">
@@ -82,6 +366,4 @@
             <div class="center">
                 <a href="./compraExitosa.html"><button class="purchase--btn">Continuar</button></a>
             </div>
-        </body>
-    
-    </html>
+</body> -->

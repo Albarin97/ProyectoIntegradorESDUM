@@ -5,73 +5,85 @@ header{
   padding: 8px;
   text-align: center;
   border: #FFDFE2 solid 3px;
+
+}
+
+.space{
+  height: 150px;
 }
 
 /*Navbar*/
 .barranav {
   position: fixed;
-  top: 0;
+  top: 20;
   width: 100%;
   background-color: white;
-  z-index: 1000; /* Asegura que la barra de navegación esté en la parte superior */
+  z-index: 10; /* Asegura que la barra de navegación esté en la parte superior */
 }
 
 #sizeIcons{
-  font-size: 35px;
+  font-size: 30px;
+}
+
+#sizeIcons:hover{
+  transform: scale(1.3);
+  transition-duration: 1s;
+
 }
 
 .material-symbols-outlined {
-    color: #fda2ef;
-  }
-  
-  .busqueda {
-    border: #fda2ef;
-    border-radius: 20px;
-    border-style: solid;
-  }
-  
-  .menucollapse{
-    background-color: transparent;
-    border: 0;
-  }
-  
-  .entrada:focus{
-    outline: none;
-  }
-  
-  .letrasCanvas{
-    color: #808080;
-  }
-  
-  .btn:hover {
-    color: #4964f3;
-  
-  }
-  
-  * {
-    font-family: 'Century Gothic', sans-serif;
-  
-  }
-  
-  .copy-footer {
-    background-color: #4964F3;
-    color: white;
-  }
-  
-  .footer-content {
-    color: black;
-  }
-  
-  .copy-footer {
-    color: white;
-  }
-  
-  .border-0{
-    border-radius: 100px;
-    width: 100px;
-  }
+  color: #fda2ef;
+}
 
-   /*Fin Navbar*/
+.busqueda {
+  border: #fda2ef;
+  border-radius: 20px;
+  border-style: solid;
+  margin-left: 15px;
+}
+
+.menucollapse{
+  background-color: transparent;
+  border: 0;
+}
+
+.entrada:focus{
+  outline: none;
+}
+
+.letrasCanvas{
+  color: #808080;
+}
+
+.btn:hover {
+  color: #4964f3;
+
+}
+
+* {
+  font-family: 'Century Gothic', sans-serif;
+
+}
+
+.copy-footer {
+  background-color: #4964F3;
+  color: white;
+}
+
+.footer-content {
+  color: black;
+}
+
+.copy-footer {
+  color: white;
+}
+
+.border-0{
+  border-radius: 100px;
+  width: 100px;
+}
+
+/*Fin Navbar*/
 
    .container-fluid{
     display: flex;
@@ -85,7 +97,7 @@ header{
   .titulo{
     color: #EF5268;
     font-family:'Century Gothic', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     margin-top: 15px;
   }
@@ -107,11 +119,13 @@ header{
   width: 500px;
   height: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   font-family:'Century Gothic', sans-serif;
   font-size: 20px;
   border-radius: 15px;
+  padding: 25px;
   box-shadow: -10px 0px 10px #FFDFE2;
-  animation: moverSombra 10s infinite alternate;
+  animation: moverSombra 7s infinite alternate;
 }
 
 @keyframes moverSombra {
@@ -125,20 +139,24 @@ header{
 
 .btn{
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: #4964F3;
-  border: #4964F3 solid 1px;
-  border-radius: 10px;
-  color: #FFDFE2;
 }
 
-.btn:hover{
-  background-color: #EF5268;
-  border: #EF5268 solid 1px;
+.boton{
+  background-color: #4964f3;
   color: #FFDFE2;
-  align-items: center;
-  justify-content: center;
+  border-color: transparent;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+}
+
+.boton:hover{
+  background-color: #EF5268;
+  color: white;
+  border-color: transparent;
+
 }
 
 /*Footer*/
@@ -151,7 +169,7 @@ header{
   background-color: #4964F3;
   color: white;
   font-size: 15px;
-  margin-top: 45px;
+  bottom: 0px;
 }
 
 .redesFooter{
@@ -161,6 +179,7 @@ header{
 }
 
 .saludoFooter{
+  font-weight: bold;
   flex: 6;
   font-size: 40px;
   color: white;
@@ -172,19 +191,13 @@ header{
 }
 
 .iconosRedesFooter{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  flex: 5;
-  justify-content: space-around;
+  margin: 10px 10px;
   margin-bottom: 25px;
 }
 
 #facebook, #instagram, #tiktok, #whatsapp{
   color: white;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 #facebook:hover, #instagram:hover, #tiktok:hover, #whatsapp:hover{
@@ -198,8 +211,13 @@ header{
   justify-content: center;
 }
 
+.imagenLogo{
+  width: 310px;
+}
+
 .logoFooter{
   display: flex;
+  flex: 5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -210,49 +228,62 @@ header{
   flex: 3;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-}
-
-.linksFooter{
-  flex: 3;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  padding-left: 50px;
+  padding-right: 100px;
+  text-align: justify;
+  font-size:13px;
 }
 
 .contactoFooter{
   flex: 3;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding-left: 100px;
 }
 
-#comentarios {
+.conocenos, .telefono, .localizacion, #contactanos {
   text-decoration: none;
   color: white;
+  font-size:13px;
 }
 
-#telefono, #correo, #localizacion, #iconoComentario, #contactanos{
+#telefono, #correo, #localizacion, #iconoComentario{
   color: white;
   font-size: 15px;
   text-decoration: none;
 }
 
-.tituloFooter{
+.linksFooter{
+  padding-top: 30px;
+  padding-left: 15px;
+}
+
+.tituloFooterContacto{
   color: white;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 15px;
+  font-size: 20px;
+  text-align: left;
+  padding-top:38px;
+  margin-bottom: 20px;
+}
+
+.tituloFooterCrochet{
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 35px;
+  margin-bottom: 20px;
+  
+}
+
+.tituloFooterCondiciones{
+  color: white;
+  font-size: 20px;
+  text-align: left;
   margin-bottom: 20px;
 }
 
 .text-reset{
   text-decoration: none;
-}
-
-.copyrightFooter{
-  background-color: #4964F3;
-  color: white;
-  text-align: center;
-  font-size: 15px;
+  font-size:13px;
+  
 }
